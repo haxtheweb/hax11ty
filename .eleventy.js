@@ -11,11 +11,11 @@ module.exports = function (eleventyConfig) {
         parent: null
       };
     });
-    return { 
+    return JSON.stringify({ 
       id: "3474a06d-9d3b-4ec7-ba9b-0a448a6e685e",
       title: "Site Title",
       author: "author",
-      description: "",
+      description: "haxtheme-app",
       license: "MIT",
       metadata: {
         siteName: "Site Title",
@@ -24,6 +24,6 @@ module.exports = function (eleventyConfig) {
         }
       },
       items
-    };
+    });
   });
 };
