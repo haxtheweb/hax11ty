@@ -1,3 +1,3 @@
-// import "./components/haxtheme-app.js"
-// import "./components/haxtheme-item-list.js"
-import "./components/haxtheme-item.js"
+import "./components/haxtheme-item.js";
+import "./components/haxtheme-banner.js";
+import "./components/theme-toggle.js";

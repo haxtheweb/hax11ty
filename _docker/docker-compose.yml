@@ -1,0 +1,9 @@
+version: '3'
+services:
+
+  prod:
+    build: ../
+    volumes: 
+      - ./_site:/usr/share/nginx/html:ro
+    ports:
+      - 80:80

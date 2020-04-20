@@ -1,5 +1,4 @@
 ---
 title: Post 1
+banner: /assets/images/photo-1498050108023-c5249f4df085.jpeg
 ---
-
-# {{title}}
