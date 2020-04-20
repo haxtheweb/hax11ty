@@ -1,4 +1,5 @@
 import { LitElement, html, css } from "https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/lit-element/lit-element.js";
+// import "https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/r-coder/r-coder.js";
 
 class HaxthemeItem extends LitElement {
   static get properties() {
@@ -16,6 +17,7 @@ class HaxthemeItem extends LitElement {
   render() {
     return html`
       <a href="${this.url}">${this.title}</a>
+      <!-- <r-coder></r-coder> -->
     `;
   }
 }
