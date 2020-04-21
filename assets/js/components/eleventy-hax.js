@@ -3,7 +3,6 @@ import {
   html,
   css,
 } from "https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/lit-element/lit-element.js";
-import "https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/h-a-x/h-a-x.js";
 
 /**
  * `cms-hax`
@@ -233,7 +232,7 @@ class EleventyHax extends LitElement {
     hidePreferencesButton,
     elementAlign
   ) {
-    if (window.HaxStore.ready) {
+    if (window.HaxStore && window.HaxStore.ready) {
       // double check because this can cause issues
       if (allowedTags) {
         window.HaxStore.instance.validTagList = allowedTags;
@@ -306,6 +305,11 @@ class EleventyHax extends LitElement {
   }
   updated(changedProperties) {
     changedProperties.forEach((oldValue, propName) => {
+      if (propName == "enabled") {
+        if (this.enabled === true) {
+          import("https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/h-a-x/h-a-x.js");
+        }
+      }
       if (propName == "redirectLocation") {
         this.redirectOnSave = this._computeRedirectOnSave(this[propName]);
       }
