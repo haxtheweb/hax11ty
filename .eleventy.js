@@ -3,12 +3,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setTemplateFormats(["html", "md"]);
   eleventyConfig.addCollection("haxcms", function (collection) {
     // const items = collection.items.map((i) => Object.keys(i))
-    const items = collection.items.map(({ outputPath, url, data }) => {
+    const items = collection.items.map(({ outputPath, inputPath, url, data }) => {
       return {
-        id: outputPath.split(',').join('-'),
-        location: outputPath,
+        id: url.split(' ').join('-'),
+        location: inputPath,
         title: data.title,
-        parent: null
+        parent: data.parent || null
       };
     });
     return JSON.stringify({ 
@@ -26,7 +26,4 @@ module.exports = function (eleventyConfig) {
       items
     });
   });
-  return {
-    haxEnabled: 'asdf'
-  }
 };

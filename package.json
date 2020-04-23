@@ -2,7 +2,7 @@
   "license": "MIT",
   "scripts": {
     "start": "NODE_ENV=development concurrently \"npm run start:eleventy --watch\" \"npm run start:esdev\"",
-    "start:eleventy": "eleventy --watch",
+    "start:eleventy": "NODE_ENV=development eleventy --watch",
     "start:esdev": "es-dev-server --node-resolve --open --watch --root-dir ./_site",
     "build": "eleventy"
   },

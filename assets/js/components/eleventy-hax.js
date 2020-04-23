@@ -413,7 +413,20 @@ class EleventyHax extends LitElement {
   _saveFired(e) {
     // generate sanitized content
     const content = window.HaxStore.instance.activeHaxBody.haxToContent();
-    console.log('content:', content)
+    fetch('/system/api/saveNode', {
+      headers: {
+        'Content-Type': "application/json",
+        'Accept': "application/json"
+      },
+      method: "POST",
+      body: JSON.stringify({
+        node: {
+          body: content
+        }
+      })
+    }).then(res => {
+      console.log(res)
+    })
   }
 
   /**

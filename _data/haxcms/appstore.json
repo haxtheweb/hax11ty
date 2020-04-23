@@ -788,8 +788,8 @@
           "tags": ["media"]
         },
         "connection": {
-          "protocol": "https",
-          "url": "iam.hax.psu.edu/mgp140/",
+          "protocol": "http",
+          "url": "localhost:3000/",
           "operations": {
             "browse": {
               "method": "GET",
