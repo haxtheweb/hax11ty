@@ -1,14 +1,10 @@
 {
   "license": "MIT",
   "scripts": {
-    "start": "NODE_ENV=development concurrently \"npm run start:eleventy --watch\" \"npm run start:esdev\"",
-    "start:eleventy": "NODE_ENV=development eleventy --watch",
-    "start:esdev": "es-dev-server --node-resolve --open --watch --root-dir ./_site",
-    "build": "eleventy"
+    "start": "haxcms-server start",
+    "build": "haxcms-server build"
   },
   "devDependencies": {
-    "@11ty/eleventy": "0.10.0",
-    "es-dev-server": "^1.46.4",
-    "concurrently": "^5.1.0"
+    "@haxcms/server": "^0.0.9"
   }
 }
