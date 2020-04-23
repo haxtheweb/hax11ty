@@ -107,11 +107,11 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addCollection("haxcms", function (collection) {
     // const items = collection.items.map((i) => Object.keys(i))
-    const items = collection.items.map(({ outputPath, url, data }, i) => {
+    const items = collection.items.map(({ outputPath, inputPath, url, data }, i) => {
       return {
-        id: outputPath.split(',').join('-'),
+        id: inputPath,
         indent: 0,
-        location: outputPath,
+        location: url,
         order: i,
         title: data.title ? data.title : 'Title',
         description: data.title ? data.title : 'Description',
@@ -174,12 +174,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("getGlobal", function(name) {
     return (globals[name] ? globals[name] : null);
   });
+
   eleventyConfig.addShortcode("getLicenseInfo", function(varName) {
     return getLicenseInfo(globals.siteLicense)[varName];
   });
-  return {
-    haxEnabled: 'asdf'
-  }
 };
 /**
  * License data for common open license

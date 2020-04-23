@@ -1,5 +1,5 @@
 module.exports = () => {
-  if (process.env.NODE_ENV === "development") {
+  if (process.env.HAXCMS_ENABLED) {
     return "enabled"
   }
   else {
