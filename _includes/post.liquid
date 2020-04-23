@@ -4,7 +4,7 @@ layout: base.liquid
 <haxtheme-banner title="{{title}}" image="{{banner}}"></haxtheme-banner>
 
 <main>
-  <haxtheme-hax-content>
+  <eleventy-hax {{haxcms.enabled}}>
     {{content}}
-  </haxtheme-hax-content>
+  </eleventy-hax>
 </main>

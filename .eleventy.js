@@ -26,4 +26,7 @@ module.exports = function (eleventyConfig) {
       items
     });
   });
+  return {
+    haxEnabled: 'asdf'
+  }
 };
