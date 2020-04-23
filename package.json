@@ -5,6 +5,15 @@
     "build": "haxcms-server build"
   },
   "devDependencies": {
-    "@haxcms/server": "^0.0.9"
+    "@haxcms/server": "^0.0.9",
+    "@11ty/eleventy": "0.10.0",
+    "@11ty/eleventy-plugin-rss": "1.0.7",
+    "eleventy-xml-plugin": "0.1.0",
+    "concurrently": "^5.1.0",
+    "es-dev-server": "^1.46.4",
+    "crypto": "1.0.1"
+  },
+  "dependencies": {
+    "es-module-shims": "^0.4.6"
   }
 }

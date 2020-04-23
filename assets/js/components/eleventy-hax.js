@@ -2,7 +2,7 @@ import {
   LitElement,
   html,
   css,
-} from "https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/lit-element/lit-element.js";
+} from "lit-element/lit-element.js";
 
 /**
  * `cms-hax`
@@ -300,7 +300,7 @@ class EleventyHax extends LitElement {
     this.bodyValue = "";
     this.hideMessage = false;
     this.__imported = false;
-    import("https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/simple-toast/simple-toast.js").then(() => {
+    import("@lrnwebcomponents/simple-toast/simple-toast.js").then(() => {
       window.SimpleToast.requestAvailability();
     });
   }
@@ -311,7 +311,7 @@ class EleventyHax extends LitElement {
     changedProperties.forEach((oldValue, propName) => {
       if (propName == "enabled") {
         if (this.enabled === true) {
-          import("https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/h-a-x/h-a-x.js");
+          import("@lrnwebcomponents/h-a-x/h-a-x.js");
         }
       }
       if (propName == "redirectLocation") {
