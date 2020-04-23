@@ -73,6 +73,9 @@ class EleventyHax extends LitElement {
       __ready: {
         type: Boolean
       },
+      __lightDomCss: {
+        type: String
+      },
       /**
        * Default the panel to open
        */
@@ -278,6 +281,7 @@ class EleventyHax extends LitElement {
    */
   constructor() {
     super();
+    // get the lightdom css
     window.addEventListener(
       "hax-store-property-updated",
       this._haxStorePropertyUpdated.bind(this)
@@ -348,6 +352,7 @@ class EleventyHax extends LitElement {
       this._observer.disconnect();
       this._observer = null;
     }
+    window.removeEventListener("hax-store-ready", this.injectHaxStyles.bind(this));
     super.disconnectedCallback();
   }
   /**
@@ -356,8 +361,21 @@ class EleventyHax extends LitElement {
    */
   connectedCallback() {
     super.connectedCallback();
-    // 
     this.__applyMO();
+    window.addEventListener("hax-store-ready", this.injectHaxStyles.bind(this));
+  }
+  /**
+   * Inject core styles
+   */
+  injectHaxStyles() {
+    const styleTag = document.createElement('style');
+    const hax = this.shadowRoot.querySelector('h-a-x').shadowRoot;
+    fetch('/assets/css/styles.css')
+      .then(res => res.text())
+      .then(res => {
+        styleTag.innerText = res;
+        hax.appendChild(styleTag);
+      })
   }
   __applyMO() {
     // notice ANY change to body and bubble up, only when we are attached though
