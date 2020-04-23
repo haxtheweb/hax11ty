@@ -3,7 +3,7 @@ title: HAXcms Eleventy Blog
 layout: base.liquid
 ---
 
-<haxtheme-banner size="large" image="/assets/images/photo-1497493292307-31c376b6e479.jpeg" title="IST 402" details="Emerging Technology"></haxtheme-banner>
+<haxtheme-banner size="large" image="{% getGlobal 'siteLogo' %}" title="{% getGlobal 'siteName' %}" details="{% getGlobal 'siteDescription' %}"></haxtheme-banner>
 
 <main>
 {%- for post in collections.post -%}

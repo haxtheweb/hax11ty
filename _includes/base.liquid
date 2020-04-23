@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{title}}</title>
   <base href="/" />
-  <link rel="preconnect" crossorigin href="https://cdn.webcomponents.psu.edu/">
-  <link rel="preconnect" crossorigin href="https://fonts.googleapis.com">
-  <link rel="preconnect" crossorigin href="https://cdnjs.cloudflare.com">
-  <link rel="preconnect" crossorigin href="https://i.creativecommons.org">
-  <link rel="preconnect" crossorigin href="https://licensebuttons.net">
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
-  <link rel="stylesheet" type="text/css" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/haxcms-elements/lib/base.css">
+  <link rel="preconnect" crossorigin href="{% getGlobal "preconnect" %}" />
+  <link rel="preconnect" crossorigin href="https://fonts.googleapis.com" />
+  <link rel="preconnect" crossorigin href="https://cdnjs.cloudflare.com" />
+  <link rel="preconnect" crossorigin href="https://i.creativecommons.org" />
+  <link rel="preconnect" crossorigin href="https://licensebuttons.net" />
+  <link rel="modulepreload" href="/assets/js/app.js" as="script" />
+  <link rel="modulepreload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@lrnwebcomponents/haxcms-elements/lib/core/haxcms-site-builder.js" as="script" crossorigin="anonymous" />	
+  <link rel="stylesheet" type="text/css" href="{% getGlobal "cdn" %}build/es6/node_modules/@lrnwebcomponents/haxcms-elements/lib/base.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="/assets/css/styles.css" />
   <script type="module" src="/assets/js/app.js"></script>
-  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=yes">
-  <meta name="generator" content="HAXcms">
-  <meta name="description" content="A HAXCMS site">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=yes" />
+  <meta name="generator" content="HAXcms" />
+  <meta name="description" content="A HAXCMS site" />
   <meta name="theme-color" content="#3f51b5">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name=”robots” content=”index, follow”>
+  <meta name="robots" content="index, follow">
   <meta name="application-name" content="My site">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -42,8 +44,6 @@
 </head>
 <body no-js vocab="http://schema.org/" prefix="oer:http://oerschema.org cc:http://creativecommons.org/ns dc:http://purl.org/dc/terms/">
   {{content}}
-  <script>document.body.removeAttribute('no-js');window.__appCDN="https://cdn.webcomponents.psu.edu/cdn/";window.__appForceUpgrade=false;</script><script src="https://cdn.webcomponents.psu.edu/cdn/build.js"></script>
-  <!-- https://instant.page/tech -->
-  <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+  <script>document.body.removeAttribute('no-js');window.__appCDN="{% getGlobal 'cdn' %}";window.__appForceUpgrade=false;</script><script src="{% getGlobal 'cdn' %}build.js"></script>
 </body>
 </html>
