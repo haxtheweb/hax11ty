@@ -3,12 +3,18 @@
   "scripts": {
     "start": "NODE_ENV=development concurrently \"npm run start:eleventy --watch\" \"npm run start:esdev\"",
     "start:eleventy": "eleventy --watch",
-    "start:esdev": "es-dev-server --node-resolve --open --watch --root-dir ./_site",
-    "build": "eleventy"
+    "start:esdev": "es-dev-server --open --watch --root-dir ./_site --http2",
+    "build": "eleventy --watch"
   },
   "devDependencies": {
     "@11ty/eleventy": "0.10.0",
+    "@11ty/eleventy-plugin-rss": "1.0.7",
+    "eleventy-xml-plugin": "0.1.0",
+    "concurrently": "^5.1.0",
     "es-dev-server": "^1.46.4",
-    "concurrently": "^5.1.0"
+    "crypto": "1.0.1"
+  },
+  "dependencies": {
+    "es-module-shims": "^0.4.6"
   }
 }
