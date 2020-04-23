@@ -5,9 +5,9 @@ module.exports = function (eleventyConfig) {
     // const items = collection.items.map((i) => Object.keys(i))
     const items = collection.items.map(({ outputPath, inputPath, url, data }, i) => {
       return {
-        id: outputPath.split(',').join('-'),
+        id: inputPath,
         indent: 0,
-        location: outputPath,
+        location: url,
         order: i,
         title: data.title ? data.title : 'Title',
         description: data.title ? data.title : 'Description',
@@ -17,8 +17,7 @@ module.exports = function (eleventyConfig) {
           updated: 1584404503,
           readtime: 0,
           contentDetails: {},
-          files: [],
-          origin: inputPath
+          files: []
         }
       };
     });
