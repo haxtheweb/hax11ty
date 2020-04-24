@@ -2,7 +2,7 @@
   "license": "MIT",
   "scripts": {
     "start": "hax11ty serve",
-    "build": "hax11ty build"
+    "build": "HAXCMS_SERVICE_WORKER=true hax11ty build"
   },
   "devDependencies": {
     "@haxcms/11ty": "^0.0.11",

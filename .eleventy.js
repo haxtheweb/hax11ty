@@ -30,7 +30,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary("njk", nunjucksEnvironment);
   eleventyConfig.addPlugin(xmlFiltersPlugin);
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("assets, service-worker.js");
   eleventyConfig.setTemplateFormats(["html", "md", "njk"]);
   eleventyConfig.addCollection("manifest", function (collection) {
     return {
