@@ -10,8 +10,14 @@
   <link rel="preconnect" crossorigin href="https://cdnjs.cloudflare.com" />
   <link rel="preconnect" crossorigin href="https://i.creativecommons.org" />
   <link rel="preconnect" crossorigin href="https://licensebuttons.net" />
-  <link rel="preload" as="script" crossorigin="anonymous" href="{% getGlobal 'cdnBuild' %}@lrnwebcomponents/wc-autoload/wc-autoload.js"/>	
-  <link rel="modulepreload" href="{% getGlobal 'cdnBuild' %}@lrnwebcomponents/wc-autoload/wc-autoload.js"/>	
+  <link rel="preload" href="{% getGlobal 'cdn' %}build.js" as="script" />
+  <link rel="preload" href="{% getGlobal 'cdn' %}wc-registry.json" as="fetch" crossorigin="anonymous" />
+  <link rel="preload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@lrnwebcomponents/dynamic-import-registry/dynamic-import-registry.js" as="script" crossorigin="anonymous" />
+  <link rel="modulepreload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@lrnwebcomponents/dynamic-import-registry/dynamic-import-registry.js" />
+  <link rel="preload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@lrnwebcomponents/wc-autoload/wc-autoload.js" as="script" crossorigin="anonymous" />
+  <link rel="modulepreload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@lrnwebcomponents/wc-autoload/wc-autoload.js" />
+  <link rel="preload" href="{% getGlobal 'cdn' %}build/es6/node_modules/web-animations-js/web-animations-next-lite.min.js" as="script" />
+  
   <link rel="preload" as="script" href="{% getGlobal 'cdnBuild' %}@lrnwebcomponents/deduping-fix/deduping-fix.js" />	
   <link rel="preload" as="script" href="/assets/js/es-module-shims.min.js" />
   <link rel="manifest" href="/manifest.json">
