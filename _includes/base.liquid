@@ -130,17 +130,32 @@
   <script>document.body.removeAttribute('no-js');window.__appCDN="{% getGlobal 'cdn' %}";window.__appForceUpgrade=true;</script>
   <script src="{% getGlobal 'cdn' %}build.js"></script>
   <script src="{% getGlobal 'cdnBuild' %}@lrnwebcomponents/deduping-fix/deduping-fix.js"></script>
-  <script defer src="/assets/js/es-module-shims.min.js"></script>
-  <script type="importmap-shim">
-  {
-    "imports": {
-      "lit-element/": "{% getGlobal 'cdnBuild' %}lit-element/",
-      "@lrnwebcomponents/": "{% getGlobal 'cdnBuild' %}@lrnwebcomponents/"
-    }
-  }
-  </script>
-  <script type="module-shim">
-    import "/assets/js/app.js";
+  <script>
+    fetch(window.__appCDN + "wc-registry.json").then((e) => {
+      return e.json();
+    }).then((data) => {
+      var imports = {
+        "imports": {
+          "lit-element/": "{% getGlobal 'cdnBuild' %}lit-element/"
+        }
+      }
+      for (var i in data) {
+        imports.imports[data[i]] = "{% getGlobal 'cdnBuild' %}" + data[i];
+      }
+      var s = document.createElement('script');
+      s.type = "importmap-shim";
+      s.innerHTML = JSON.stringify(imports, null, 2);
+      document.body.appendChild(s);
+      s = document.createElement('script');
+      s.type = "module-shim";
+      s.innerHTML = 'import "/assets/js/app.js";';
+      document.body.appendChild(s);
+      // process the dynamic importmap
+      s = document.createElement('script');
+      s.defer = true;
+      s.src = '/assets/js/es-module-shims.min.js';
+      document.body.appendChild(s);
+    });
   </script>
   <link rel="stylesheet" type="text/css" href="/assets/css/styles.css" />
   <link rel="stylesheet" type="text/css" href="{% getGlobal 'cdnBuild' %}@lrnwebcomponents/haxcms-elements/lib/base.css">
