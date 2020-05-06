@@ -31,6 +31,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(xmlFiltersPlugin);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("service-worker.js");
   eleventyConfig.setTemplateFormats(["html", "md", "njk"]);
   eleventyConfig.addCollection("manifest", function (collection) {
     return {

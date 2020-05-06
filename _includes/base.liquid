@@ -60,6 +60,7 @@
       margin: 0;
     }
   </style>
+  {% if haxcms.serviceWorker == true %}
   <script>
     if ('serviceWorker' in navigator) {
       var sitePath = "{% getGlobal 'basePath' %}";
@@ -124,6 +125,7 @@
       });
     }
   </script>
+  {% endif %}
 </head>
 <body no-js vocab="http://schema.org/" prefix="oer:http://oerschema.org cc:http://creativecommons.org/ns dc:http://purl.org/dc/terms/">
   {{content}}
