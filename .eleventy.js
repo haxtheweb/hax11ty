@@ -1,21 +1,33 @@
 let Nunjucks = require("nunjucks");  
 const crypto = require('crypto');
+const fs = require('fs');
+const path = require('path');
+const matter = require('gray-matter');
 const xmlFiltersPlugin = require('eleventy-xml-plugin');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 module.exports = function (eleventyConfig) {
+  // establish environment nunjuck things for templating
   let nunjucksEnvironment = new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader("_includes")
   );
   eleventyConfig.setLibrary("njk", nunjucksEnvironment);
+  eleventyConfig.setTemplateFormats(["html","md", "njk"]);
+  // copy this directory but DO NOT inject grey matter
+  // this allows HAXcms to render content bare but with DX writing title data in head matter
+  copyFolderSyncWithoutGreyMatter('posts', 'pages')
+
+  // add plugins to handle xml and rss files
   eleventyConfig.addPlugin(xmlFiltersPlugin);
   eleventyConfig.addPlugin(pluginRss);
+
+  // copy these assets but don't process them
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("build");
-  eleventyConfig.addPassthroughCopy({"posts" : "pages"});
   eleventyConfig.addPassthroughCopy("build.js");
   eleventyConfig.addPassthroughCopy("wc-registry.json");
   eleventyConfig.addPassthroughCopy("service-worker.js");
-  eleventyConfig.setTemplateFormats(["html","md", "njk"]);
+
+  // collections make it easier to work with the data in templates
   eleventyConfig.addCollection("manifest", function (collection) {
     const settings = collection.items[0].data.haxcms.settings;
     return JSON.stringify({
@@ -199,6 +211,27 @@ module.exports = function (eleventyConfig) {
     return getLicenseInfo(license)[varName];
   });
 };
+/**
+ * This strips off the grey matter from input files and writes to output folder
+ */
+function copyFolderSyncWithoutGreyMatter(from, to, appendBase = true) {
+  if (appendBase) {
+    from = process.cwd() + '/' + from;
+    to = process.cwd() + '/_site/' + to;
+  }
+  if (!fs.existsSync(to)) {
+    fs.mkdirSync(to);
+  }
+  fs.readdirSync(from).forEach(element => {
+    if (fs.lstatSync(path.join(from, element)).isFile()) {
+      const fileData = matter.read(path.join(from, element));
+      fileData.data = {};
+      fs.writeFileSync(path.join(to, element), matter.stringify(fileData));
+    } else {
+      copyFolderSyncWithoutGreyMatter(path.join(from, element), path.join(to, element), false);
+    }
+  });
+}
 /**
  * License data for common open license
  */

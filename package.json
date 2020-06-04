@@ -8,7 +8,8 @@
     "@haxcms/11ty": "^0.0.11",
     "@11ty/eleventy-plugin-rss": "1.0.7",
     "eleventy-xml-plugin": "0.1.0",
-    "crypto": "1.0.1"
+    "crypto": "1.0.1",
+    "gray-matter": "4.0.2"
   },
   "dependencies": {
     "es-module-shims": "^0.4.6"
