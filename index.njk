@@ -2,6 +2,7 @@
 layout: base.liquid
 ---
 <haxtheme-banner size="large" image="{% getGlobal 'siteLogo' %}" title="{% getGlobal 'siteName' %}" details="{% getGlobal 'siteDescription' %}"></haxtheme-banner>
+
 <main>
 <site-menu></site-menu>
 {%- for post in collections.post -%}

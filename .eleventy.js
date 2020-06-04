@@ -125,7 +125,7 @@ module.exports = function (eleventyConfig) {
         return {
           id: inputPath,
           indent: 0,
-          location: url,
+          location: inputPath,
           slug: url,
           order: i,
           title: data.title ? data.title : 'Title',
@@ -187,7 +187,7 @@ module.exports = function (eleventyConfig) {
           }
         },
         theme: {
-          element: ""
+          element: "learn-two-theme"
         }
       },
       items: pageItems
