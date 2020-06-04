@@ -1,0 +1,5 @@
+---
+title: Cool Stuff
+banner: /assets/images/photo-1498050108023-c5249f4df085.jpeg
+---
+<p>This is some stupid stuff here</p>

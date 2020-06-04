@@ -122,6 +122,13 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("haxcms", function (collection) {
     const items = collection.items.map(({ outputPath, inputPath, url, data }, i) => {
       if (url.includes("/posts/")) {
+        // parent test
+        let test = inputPath.split('/');
+        test.pop();
+        // @todo try and wire this up after verifying this file exists
+        // if the file exists then we know it's a parent of the current folder in the tree
+        // which means we can set the parent id and it'll work
+        console.log(test.join('/') + '/index.md')
         return {
           id: inputPath,
           indent: 0,
