@@ -1,6 +1,11 @@
 // @todo should be able to auto gen much of this / peg it to a JSON file
-const cdnBase = "https://cdn.webcomponents.psu.edu";
+//const cdnBase = "https://cdn.webcomponents.psu.edu";
+const cdnBase = "/";
 const globals = {
+  //cdnBuild: cdnBase + "/cdn/build/es6/node_modules/",
+  //cdn: cdnBase + "/cdn/",
+  cdnBuild: cdnBase + "build/es6/node_modules/",
+  cdn: cdnBase,
   basePath: "/",
   url: "https://localhost:8000",
   siteUuid: "3474a06d-9d3b-4ec7-ba9b-0a448a6e685e",
@@ -13,8 +18,6 @@ const globals = {
   siteDescription: "Emerging Technology",
   siteLogo: "/assets/images/photo-1497493292307-31c376b6e479.jpeg",
   preconnect: cdnBase,
-  cdnBuild: cdnBase + "/cdn/build/es6/node_modules/",
-  cdn: cdnBase + "/cdn/",
   hexCode: "#FFFF00",
   lang: "en",
   twitterName: "elmsln"
@@ -31,59 +34,62 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(xmlFiltersPlugin);
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("build");
+  eleventyConfig.addPassthroughCopy("build.js");
+  eleventyConfig.addPassthroughCopy("wc-registry.json");
   eleventyConfig.addPassthroughCopy("service-worker.js");
-  eleventyConfig.setTemplateFormats(["html", "md", "njk"]);
+  eleventyConfig.setTemplateFormats(["md", "njk"]);
   eleventyConfig.addCollection("manifest", function (collection) {
-    return {
+    return JSON.stringify({
       name: globals.siteName,
       short_name: globals.siteName,
       description: globals.siteDescription,
       icons: [
         {
-          "src": "/assets/android-icon-36x36.png",
+          "src": globals.basePath + "assets/android-icon-36x36.png",
           "sizes": "36x36",
           "type": "image/png",
           "density": "0.75"
         },
         {
-          "src": "/assets/android-icon-48x48.png",
+          "src": globals.basePath + "assets/android-icon-48x48.png",
           "sizes": "48x48",
           "type": "image/png",
           "density": "1.0"
         },
         {
-          "src": "/assets/android-icon-72x72.png",
+          "src": globals.basePath + "assets/android-icon-72x72.png",
           "sizes": "72x72",
           "type": "image/png",
           "density": "1.5"
         },
         {
-          "src": "/assets/android-icon-96x96.png",
+          "src": globals.basePath + "assets/android-icon-96x96.png",
           "sizes": "96x96",
           "type": "image/png",
           "density": "2.0"
         },
         {
-          "src": "/assets/android-icon-144x144.png",
+          "src": globals.basePath + "assets/android-icon-144x144.png",
           "sizes": "144x144",
           "type": "image/png",
           "density": "3.0"
         },
         {
-          "src": "/assets/android-icon-192x192.png",
+          "src": globals.basePath + "assets/android-icon-192x192.png",
           "sizes": "192x192",
           "type": "image/png",
           "density": "4.0"
         },
         {
-          "src": "/assets/ms-icon-310x310.png",
+          "src": globals.basePath + "assets/ms-icon-310x310.png",
           "sizes": "512x512",
           "type": "image/png",
           "density": "4.0"
         }
       ],
       scope: globals.basePath,
-      start_url: globals.url,
+      start_url: globals.basePath,
       display: "standalone",
       theme_color: globals.hexCode,
       background_color: globals.hexCode,
@@ -91,40 +97,55 @@ module.exports = function (eleventyConfig) {
       lang: globals.lang,
       screenshots: [],
       orientation: "portrait"
-    };
+    });
   });
   eleventyConfig.addCollection("swHashData", function (collection) {
-    // const items = collection.items.map((i) => Object.keys(i))
     const items = collection.items.map(({ outputPath, url, data }, i) => {
-      return [
-        url,
-        hashFromValue(data.page.date.toString()).substr(0, 16).replace(/\//g,'z').replace(/\+/g,'y').replace(/\=/g,'x').replace(/\-/g,'w')
-      ];
+      if (!url.includes("/build/")) {
+        return [
+          url,
+          hashFromValue(data.page.date.toString()).substr(0, 16).replace(/\//g,'z').replace(/\+/g,'y').replace(/\=/g,'x').replace(/\-/g,'w')
+        ];
+      }
     });
-    return JSON.stringify(items, null, 2);
+    const itemsFiltered = items.filter((item) => {
+      if (item && item.length > 0) {
+        return true;
+      }
+      return false;
+    });
+    return JSON.stringify(itemsFiltered, null, 2);
   });
   eleventyConfig.addCollection("globals", function (collection) {
     return globals;
   });
   eleventyConfig.addCollection("haxcms", function (collection) {
-    // const items = collection.items.map((i) => Object.keys(i))
     const items = collection.items.map(({ outputPath, inputPath, url, data }, i) => {
-      return {
-        id: inputPath,
-        indent: 0,
-        location: url,
-        order: i,
-        title: data.title ? data.title : 'Title',
-        description: data.title ? data.title : 'Description',
-        parent: null,
-        metadata: {
-          created: 1565898366,
-          updated: 1584404503,
-          readtime: 0,
-          contentDetails: {},
-          files: []
-        }
-      };
+      if (!url.includes("/build/")) {
+        return {
+          id: inputPath,
+          indent: 0,
+          location: url,
+          slug: url,
+          order: i,
+          title: data.title ? data.title : 'Title',
+          description: data.title ? data.title : 'Description',
+          parent: null,
+          metadata: {
+            created: Date.now(),
+            updated: Date.now(),
+            readtime: 0,
+            contentDetails: {},
+            files: []
+          }
+        };
+      }
+    });
+    const pageItems = items.filter((item) => {
+      if (item && item.slug) {
+        return true;
+      }
+      return false;
     });
     return JSON.stringify({ 
       id: globals.siteUuid,
@@ -141,8 +162,8 @@ module.exports = function (eleventyConfig) {
         },
         site: {
           name: globals.siteMachineName,
-          created: 1565898366,
-          updated: 1586461733,
+          created: Date.now(),
+          updated: Date.now(),
           git: {
             autoPush: false,
             branch: "master",
@@ -169,7 +190,7 @@ module.exports = function (eleventyConfig) {
           element: ""
         }
       },
-      items
+      items: pageItems
     });
   });
   eleventyConfig.addShortcode("getGlobal", function(name) {

@@ -141,6 +141,7 @@
           "lit-element/": "{% getGlobal 'cdnBuild' %}lit-element/"
         }
       }
+      // @todo this causes a dedup issue.. something in timing here for sure
       for (var i in data) {
         imports.imports[data[i]] = "{% getGlobal 'cdnBuild' %}" + data[i];
       }

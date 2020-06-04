@@ -1,3 +1,7 @@
+---
+  permalink: "service-worker.js"
+  eleventyExcludeFromCollections: true
+---
 /**
  * Copyright 2016 Google Inc. All rights reserved.
  *
@@ -36,8 +40,7 @@
 /* eslint-env worker, serviceworker */
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
-
-var precacheConfig = {{ collections.swHashData | json }};
+var precacheConfig = {{ collections.swHashData | safe }};
 var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');
 
 
