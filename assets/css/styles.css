@@ -19,8 +19,12 @@ p,ul,blockquote {
   font-weight: 100;
 }
 
-
 main {
   max-width: 900px;
   margin: auto;
+}
+
+site-menu {
+  left: 0;
+  position: absolute;
 }

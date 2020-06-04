@@ -128,6 +128,7 @@
   {% endif %}
 </head>
 <body no-js vocab="http://schema.org/" prefix="oer:http://oerschema.org cc:http://creativecommons.org/ns dc:http://purl.org/dc/terms/">
+  <haxcms-site-store source="site.json"></haxcms-site-store>
   {{content}}
   <script>document.body.removeAttribute('no-js');window.__appCDN="{% getGlobal 'cdn' %}";window.__appForceUpgrade=true;</script>
   <script src="{% getGlobal 'cdn' %}build.js"></script>

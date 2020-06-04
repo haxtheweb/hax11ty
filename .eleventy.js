@@ -121,7 +121,7 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addCollection("haxcms", function (collection) {
     const items = collection.items.map(({ outputPath, inputPath, url, data }, i) => {
-      if (!url.includes("/build/")) {
+      if (url.includes("/posts/")) {
         return {
           id: inputPath,
           indent: 0,

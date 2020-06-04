@@ -3,6 +3,7 @@ layout: base.liquid
 ---
 <paper-button raised style="top:0;left:0;position:fixed;"><a href="/" tabindex="-1">Home</a></paper-button>
 <haxtheme-banner title="{{title}}" image="{{banner}}"></haxtheme-banner>
+<site-menu></site-menu>
 <main>
   <eleventy-hax {{haxcms.enabled}}>
     {{content}}
