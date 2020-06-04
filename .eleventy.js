@@ -1,27 +1,3 @@
-// @todo should be able to auto gen much of this / peg it to a JSON file
-//const cdnBase = "https://cdn.webcomponents.psu.edu";
-const cdnBase = "/";
-const globals = {
-  //cdnBuild: cdnBase + "/cdn/build/es6/node_modules/",
-  //cdn: cdnBase + "/cdn/",
-  cdnBuild: cdnBase + "build/es6/node_modules/",
-  cdn: cdnBase,
-  basePath: "/",
-  url: "https://localhost:8000",
-  siteUuid: "3474a06d-9d3b-4ec7-ba9b-0a448a6e685e",
-  siteMachineName: "ist402",
-  siteAuthorName: "EdTechJoker",
-  siteAuthorEmail: "bto108@psu.edu",
-  siteAuthorImage: "https://btopro.com/files/headshot511743.1799999904.jpg",
-  siteName: "IST 402",
-  siteLicense: "by-sa",
-  siteDescription: "Emerging Technology",
-  siteLogo: "/assets/images/photo-1497493292307-31c376b6e479.jpeg",
-  preconnect: cdnBase,
-  hexCode: "#FFFF00",
-  lang: "en",
-  twitterName: "elmsln"
-};
 let Nunjucks = require("nunjucks");  
 const crypto = require('crypto');
 const xmlFiltersPlugin = require('eleventy-xml-plugin');
@@ -35,76 +11,79 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("build");
+  eleventyConfig.addPassthroughCopy({"posts" : "pages"});
   eleventyConfig.addPassthroughCopy("build.js");
   eleventyConfig.addPassthroughCopy("wc-registry.json");
   eleventyConfig.addPassthroughCopy("service-worker.js");
-  eleventyConfig.setTemplateFormats(["md", "njk"]);
+  eleventyConfig.setTemplateFormats(["html","md", "njk"]);
   eleventyConfig.addCollection("manifest", function (collection) {
+    const settings = collection.items[0].data.haxcms.settings;
     return JSON.stringify({
-      name: globals.siteName,
-      short_name: globals.siteName,
-      description: globals.siteDescription,
+      name: settings.siteName,
+      short_name: settings.siteName,
+      description: settings.siteDescription,
       icons: [
         {
-          "src": globals.basePath + "assets/android-icon-36x36.png",
+          "src": settings.basePath + "assets/android-icon-36x36.png",
           "sizes": "36x36",
           "type": "image/png",
           "density": "0.75"
         },
         {
-          "src": globals.basePath + "assets/android-icon-48x48.png",
+          "src": settings.basePath + "assets/android-icon-48x48.png",
           "sizes": "48x48",
           "type": "image/png",
           "density": "1.0"
         },
         {
-          "src": globals.basePath + "assets/android-icon-72x72.png",
+          "src": settings.basePath + "assets/android-icon-72x72.png",
           "sizes": "72x72",
           "type": "image/png",
           "density": "1.5"
         },
         {
-          "src": globals.basePath + "assets/android-icon-96x96.png",
+          "src": settings.basePath + "assets/android-icon-96x96.png",
           "sizes": "96x96",
           "type": "image/png",
           "density": "2.0"
         },
         {
-          "src": globals.basePath + "assets/android-icon-144x144.png",
+          "src": settings.basePath + "assets/android-icon-144x144.png",
           "sizes": "144x144",
           "type": "image/png",
           "density": "3.0"
         },
         {
-          "src": globals.basePath + "assets/android-icon-192x192.png",
+          "src": settings.basePath + "assets/android-icon-192x192.png",
           "sizes": "192x192",
           "type": "image/png",
           "density": "4.0"
         },
         {
-          "src": globals.basePath + "assets/ms-icon-310x310.png",
+          "src": settings.basePath + "assets/ms-icon-310x310.png",
           "sizes": "512x512",
           "type": "image/png",
           "density": "4.0"
         }
       ],
-      scope: globals.basePath,
-      start_url: globals.basePath,
+      scope: settings.basePath,
+      start_url: settings.basePath,
       display: "standalone",
-      theme_color: globals.hexCode,
-      background_color: globals.hexCode,
-      url: globals.url,
-      lang: globals.lang,
+      theme_color: settings.hexCode,
+      background_color: settings.hexCode,
+      url: settings.url,
+      lang: settings.lang,
       screenshots: [],
       orientation: "portrait"
     });
   });
   eleventyConfig.addCollection("swHashData", function (collection) {
+    const settings = collection.items[0].data.haxcms.settings;
     const items = collection.items.map(({ outputPath, url, data }, i) => {
       if (!url.includes("/build/")) {
         return [
           url,
-          hashFromValue(data.page.date.toString()).substr(0, 16).replace(/\//g,'z').replace(/\+/g,'y').replace(/\=/g,'x').replace(/\-/g,'w')
+          hashFromValue(data.page.date.toString()).substr(0, 16).replace(/\//g,'z').replace(/\+/g,'y').replace(/\=/g,'x').replace(/\-/g,'w', collection.items[0].data.haxcms.settings.siteUuid)
         ];
       }
     });
@@ -116,28 +95,44 @@ module.exports = function (eleventyConfig) {
     });
     return JSON.stringify(itemsFiltered, null, 2);
   });
+  // simplify access to the flobal settings
   eleventyConfig.addCollection("globals", function (collection) {
-    return globals;
+    return collection.items[0].data.haxcms.settings;
   });
   eleventyConfig.addCollection("haxcms", function (collection) {
+    const settings = collection.items[0].data.haxcms.settings;
     const items = collection.items.map(({ outputPath, inputPath, url, data }, i) => {
       if (url.includes("/posts/")) {
-        // parent test
+        let parentID = null;
+        // parent test path
         let test = inputPath.split('/');
         test.pop();
+        // you have to use index.whatever for accurate parent nesting
+        test = (test.join('/') + '/index.').replace(/\./g,'-').replace(/\//g,'-');
+        // ensure that we don't set ourselves as the parent
+        if (test != inputPath.replace('md', '').replace('html', '').replace('njk', '').replace(/\./g,'-').replace(/\//g,'-')) {
+          data.collections.post.forEach((item) => {
+            if (item.inputPath.replace('md', '').replace('html', '').replace('njk', '').replace(/\./g,'-').replace(/\//g,'-') == test) {
+              parentID = item.inputPath.replace(/\./g,'-').replace(/\//g,'-');
+            }
+          });
+        }
         // @todo try and wire this up after verifying this file exists
         // if the file exists then we know it's a parent of the current folder in the tree
         // which means we can set the parent id and it'll work
-        console.log(test.join('/') + '/index.md')
+        let slug = url.split('/');
+        slug.pop();
+        slug.shift();
+        slug = slug.join('/');
         return {
-          id: inputPath,
+          id: inputPath.replace(/\./g,'-').replace(/\//g,'-'),
           indent: 0,
-          location: inputPath,
-          slug: url,
+          location: inputPath.replace('/posts/','/pages/'),
+          slug: slug,
           order: i,
           title: data.title ? data.title : 'Title',
           description: data.title ? data.title : 'Description',
-          parent: null,
+          parent: parentID,
           metadata: {
             created: Date.now(),
             updated: Date.now(),
@@ -155,20 +150,20 @@ module.exports = function (eleventyConfig) {
       return false;
     });
     return JSON.stringify({ 
-      id: globals.siteUuid,
-      title: globals.siteName,
-      author: globals.siteAuthorName,
-      description: globals.siteDescription,
-      license: globals.siteLicense,
+      id: settings.siteUuid,
+      title: settings.siteName,
+      author: settings.siteAuthorName,
+      description: settings.siteDescription,
+      license: settings.siteLicense,
       metadata: {
         author: {
-          image: globals.siteAuthorImage,
-          name: globals.siteAuthorName,
-          email: globals.siteAuthorEmail,
-          socialLink: "https://twitter.com/" + globals.twitterName
+          image: settings.siteAuthorImage,
+          name: settings.siteAuthorName,
+          email: settings.siteAuthorEmail,
+          socialLink: "https://twitter.com/" + settings.twitterName
         },
         site: {
-          name: globals.siteMachineName,
+          name: settings.siteMachineName,
           created: Date.now(),
           updated: Date.now(),
           git: {
@@ -181,7 +176,7 @@ module.exports = function (eleventyConfig) {
           },
           version: "1.1.2",
           domain: "",
-          logo: globals.siteLogo,
+          logo: settings.siteLogo,
           static: {
             cdn: "build",
             offline: false
@@ -200,12 +195,9 @@ module.exports = function (eleventyConfig) {
       items: pageItems
     });
   });
-  eleventyConfig.addShortcode("getGlobal", function(name) {
-    return (globals[name] ? globals[name] : null);
-  });
 
-  eleventyConfig.addShortcode("getLicenseInfo", function(varName) {
-    return getLicenseInfo(globals.siteLicense)[varName];
+  eleventyConfig.addShortcode("getLicenseInfo", function(license, varName) {
+    return getLicenseInfo(license)[varName];
   });
 };
 /**
@@ -254,9 +246,9 @@ function getLicenseInfo(license = 'by-sa')
     }
     return {};
 }
-function hashFromValue(value = '')
+function hashFromValue(value = '', uuid = '')
 {
-  return hmacBase64(value, globals.siteUuid);
+  return hmacBase64(value, uuid);
 }
 function hmacBase64(data, key)
 {

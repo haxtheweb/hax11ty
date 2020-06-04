@@ -6,7 +6,7 @@ eleventyExcludeFromCollections: true
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     {% for page in collections.all %}
         <url>
-            <loc>{% getGlobal 'url' %}{{ page.url | url }}</loc>
+            <loc>{{ haxcms.settings.url }}{{ page.url | url }}</loc>
             <lastmod>{{ page.date | 'date_to_xmlschema' }}</lastmod>
             <changefreq>daily</changefreq>
             <priority>1.0</priority>

@@ -2,7 +2,7 @@
 permalink: "robots.txt"
 eleventyExcludeFromCollections: true
 ---
-Sitemap: {% getGlobal 'url' %}/sitemap.xml
+Sitemap: {{ haxcms.settings.url }}/sitemap.xml
 User-agent: *
 Crawl-delay: 10
 # CSS, JS, Images

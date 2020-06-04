@@ -1,11 +1,14 @@
 ---
 layout: base.liquid
 ---
-<haxtheme-banner size="large" image="{% getGlobal 'siteLogo' %}" title="{% getGlobal 'siteName' %}" details="{% getGlobal 'siteDescription' %}"></haxtheme-banner>
-
+{% if haxcms.settings.mode == "haxcms" %}
+  <haxcms-site-builder file="site.json"></haxcms-site-builder>
+{% else %}
+<haxtheme-banner size="large" image="{{ haxcms.settings.siteLogo }}" title="{{ haxcms.settings.siteName }}" details="{{ haxcms.settings.siteDescription }}"></haxtheme-banner>
 <main>
 <site-menu></site-menu>
 {%- for post in collections.post -%}
   <haxtheme-item title="{{post.data.title}}" url="{{post.url}}" date="{{post.date}}"></haxtheme-item>
 {%- endfor -%}
 </main>
+{% endif %}

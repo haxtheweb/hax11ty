@@ -4,18 +4,18 @@
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{% getGlobal 'siteName' %}</title>
-  <subtitle>{% getGlobal 'siteDescription' %}</subtitle>
-  <link href="{% getGlobal 'url' %}/rss.xml" rel="self"/>
-  <link href="{% getGlobal 'url' %}"/>
+  <title>{{ haxcms.settings.siteName }}</title>
+  <subtitle>{{ haxcms.settings.siteDescription }}</subtitle>
+  <link href="{{ haxcms.settings.url }}/rss.xml" rel="self"/>
+  <link href="{{ haxcms.settings.url }}"/>
   <updated>{{ collections.all | rssLastUpdatedDate }}</updated>
-  <id>{% getGlobal 'url' %}</id>
+  <id>{{ haxcms.settings.url }}</id>
   <author>
-    <name>{% getGlobal 'siteAuthorName' %}</name>
-    <email>{% getGlobal 'siteAuthorEmail' %}
+    <name>{{ haxcms.settings.siteAuthorName }}</name>
+    <email>{{ haxcms.settings.siteAuthorEmail }}
   </author>
   {%- for post in collections.all %}
-  {% set absolutePostUrl %}{% getGlobal 'url' %}{{ post.url | url }}{% endset %}
+  {% set absolutePostUrl %}{{ haxcms.settings.url }}{{ post.url | url }}{% endset %}
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>

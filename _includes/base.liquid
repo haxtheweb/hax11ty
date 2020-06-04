@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% getGlobal 'siteName' %}</title>
-  <base href="{% getGlobal 'basePath' %}" />
-  <link rel="preconnect" crossorigin href="{% getGlobal "preconnect" %}" />
+  <title>{{ haxcms.settings.siteName }}</title>
+  <base href="{{ haxcms.settings.basePath }}" />
+  <link rel="preconnect" crossorigin href="{{ haxcms.settings.preconnect }}" />
   <link rel="preconnect" crossorigin href="https://fonts.googleapis.com" />
   <link rel="preconnect" crossorigin href="https://cdnjs.cloudflare.com" />
   <link rel="preconnect" crossorigin href="https://i.creativecommons.org" />
   <link rel="preconnect" crossorigin href="https://licensebuttons.net" />
-  <link rel="preload" href="{% getGlobal 'cdn' %}build.js" as="script" />
-  <link rel="preload" href="{% getGlobal 'cdn' %}wc-registry.json" as="fetch" crossorigin="anonymous" />
-  <link rel="preload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@lrnwebcomponents/dynamic-import-registry/dynamic-import-registry.js" as="script" crossorigin="anonymous" />
-  <link rel="modulepreload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@lrnwebcomponents/dynamic-import-registry/dynamic-import-registry.js" />
-  <link rel="preload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@lrnwebcomponents/wc-autoload/wc-autoload.js" as="script" crossorigin="anonymous" />
-  <link rel="modulepreload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@lrnwebcomponents/wc-autoload/wc-autoload.js" />
-  <link rel="preload" href="{% getGlobal 'cdn' %}build/es6/node_modules/web-animations-js/web-animations-next-lite.min.js" as="script" />
+  <link rel="preload" href="{{ haxcms.settings.cdn }}build.js" as="script" />
+  <link rel="preload" href="{{ haxcms.settings.cdn }}wc-registry.json" as="fetch" crossorigin="anonymous" />
+  <link rel="preload" href="{{ haxcms.settings.cdn }}build/es6/node_modules/@lrnwebcomponents/dynamic-import-registry/dynamic-import-registry.js" as="script" crossorigin="anonymous" />
+  <link rel="modulepreload" href="{{ haxcms.settings.cdn }}build/es6/node_modules/@lrnwebcomponents/dynamic-import-registry/dynamic-import-registry.js" />
+  <link rel="preload" href="{{ haxcms.settings.cdn }}build/es6/node_modules/@lrnwebcomponents/wc-autoload/wc-autoload.js" as="script" crossorigin="anonymous" />
+  <link rel="modulepreload" href="{{ haxcms.settings.cdn }}build/es6/node_modules/@lrnwebcomponents/wc-autoload/wc-autoload.js" />
+  <link rel="preload" href="{{ haxcms.settings.cdn }}build/es6/node_modules/web-animations-js/web-animations-next-lite.min.js" as="script" />
   
-  <link rel="preload" as="script" href="{% getGlobal 'cdnBuild' %}@lrnwebcomponents/deduping-fix/deduping-fix.js" />	
+  <link rel="preload" as="script" href="{{ haxcms.settings.cdnBuild }}@lrnwebcomponents/deduping-fix/deduping-fix.js" />	
   <link rel="preload" as="script" href="/assets/js/es-module-shims.min.js" />
   <link rel="manifest" href="/manifest.json">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=yes" />
@@ -26,10 +26,10 @@
   <meta name="theme-color" content="#3f51b5">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="robots" content="index, follow">
-  <meta name="application-name" content="{% getGlobal 'siteName' %}">
+  <meta name="application-name" content="{{ haxcms.settings.siteName }}">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="{% getGlobal 'siteName' %}">
+  <meta name="apple-mobile-web-app-title" content="{{ haxcms.settings.siteName }}">
   <meta name="msapplication-TileImage" content="/assets/icon-144x144.png">
   <meta name="msapplication-TileColor" content="#3f51b5">
   <meta name="msapplication-tap-highlight" content="no">
@@ -40,21 +40,20 @@
   <link rel="apple-touch-icon" sizes="144x144" href="/assets/icon-144x144.png">
   <link rel="apple-touch-icon" sizes="192x192" href="/assets/icon-192x192.png">
 
-  <meta name="description" content="{% getGlobal 'siteDescription' %}" />
-  <meta name="og:sitename" property="og:sitename" content="{% getGlobal 'siteName' %}" />
-  <meta name="og:title" property="og:title" content="{% getGlobal 'siteName' %}" />
+  <meta name="description" content="{{ haxcms.settings.siteDescription }}" />
+  <meta name="og:sitename" property="og:sitename" content="{{ haxcms.settings.siteName }}" />
+  <meta name="og:title" property="og:title" content="{{ haxcms.settings.siteName }}" />
   <meta name="og:type" property="og:type" content="article" />
-  <meta name="og:url" property="og:url" content="{% getGlobal 'url' %}" />
-  <meta name="og:description" property="og:description" content="{% getGlobal 'siteDescription' %}" />
+  <meta name="og:url" property="og:url" content="{{ haxcms.settings.url }}" />
+  <meta name="og:description" property="og:description" content="{{ haxcms.settings.siteDescription }}" />
   <meta name="og:image" property="og:image" content="/assets/banner.jpg" />
   <meta name="twitter:card" property="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" property="twitter:site" content="{% getGlobal 'url' %}" />
-  <meta name="twitter:title" property="twitter:title" content="{% getGlobal 'siteName' %}" />
-  <meta name="twitter:description" property="twitter:description" content="{% getGlobal 'siteDescription' %}" />
+  <meta name="twitter:site" property="twitter:site" content="{{ haxcms.settings.url }}" />
+  <meta name="twitter:title" property="twitter:title" content="{{ haxcms.settings.siteName }}" />
+  <meta name="twitter:description" property="twitter:description" content="{{ haxcms.settings.siteDescription }}" />
   <meta name="twitter:image" property="twitter:image" content="/assets/banner.jpg" />
-  <meta rel="cc:license" href="{% getLicenseInfo 'link' %}" content="License: {% getLicenseInfo 'name' %}"/>
-  <meta name="twitter:creator" content="@{% getGlobal 'twitterName' %}" />
-  <!-- <script defer async src="/connectionSettings"></script> -->
+  <meta rel="cc:license" href="{% getLicenseInfo haxcms.settings.siteLicense,'link' %}" content="License: {% getLicenseInfo haxcms.settings.siteLicense,'name' %}"/>
+  <meta name="twitter:creator" content="@{{ haxcms.settings.twitterName }}" />
   <style>
     body {
       margin: 0;
@@ -63,7 +62,7 @@
   {% if haxcms.serviceWorker == true %}
   <script>
     if ('serviceWorker' in navigator) {
-      var sitePath = "{% getGlobal 'basePath' %}";
+      var sitePath = "{{ haxcms.settings.basePath }}";
       // discover this path downstream of the root of the domain
       var swScope = window.location.pathname.substring(0, window.location.pathname.indexOf(sitePath)) + sitePath;
       if (swScope != document.head.getElementsByTagName('base')[0].href) {
@@ -130,21 +129,21 @@
 <body no-js vocab="http://schema.org/" prefix="oer:http://oerschema.org cc:http://creativecommons.org/ns dc:http://purl.org/dc/terms/">
   <haxcms-site-store source="site.json"></haxcms-site-store>
   {{content}}
-  <script>document.body.removeAttribute('no-js');window.__appCDN="{% getGlobal 'cdn' %}";window.__appForceUpgrade=true;</script>
-  <script src="{% getGlobal 'cdn' %}build.js"></script>
-  <script src="{% getGlobal 'cdnBuild' %}@lrnwebcomponents/deduping-fix/deduping-fix.js"></script>
+  <script>document.body.removeAttribute('no-js');window.__appCDN="{{ haxcms.settings.cdn }}";window.__appForceUpgrade=true;</script>
+  <script src="{{ haxcms.settings.cdn }}build.js"></script>
+  <script src="{{ haxcms.settings.cdnBuild }}@lrnwebcomponents/deduping-fix/deduping-fix.js"></script>
   <script>
     fetch(window.__appCDN + "wc-registry.json").then((e) => {
       return e.json();
     }).then((data) => {
       var imports = {
         "imports": {
-          "lit-element/": "{% getGlobal 'cdnBuild' %}lit-element/"
+          "lit-element/": "{{ haxcms.settings.cdnBuild }}lit-element/"
         }
       }
       // @todo this causes a dedup issue.. something in timing here for sure
       for (var i in data) {
-        imports.imports[data[i]] = "{% getGlobal 'cdnBuild' %}" + data[i];
+        imports.imports[data[i]] = "{{ haxcms.settings.cdnBuild }}" + data[i];
       }
       var s = document.createElement('script');
       s.type = "importmap-shim";
@@ -162,7 +161,7 @@
     });
   </script>
   <link rel="stylesheet" type="text/css" href="/assets/css/styles.css" />
-  <link rel="stylesheet" type="text/css" href="{% getGlobal 'cdnBuild' %}@lrnwebcomponents/haxcms-elements/lib/base.css">
+  <link rel="stylesheet" type="text/css" href="{{ haxcms.settings.cdnBuild }}@lrnwebcomponents/haxcms-elements/lib/base.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
 </body>
 </html>
