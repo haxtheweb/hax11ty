@@ -1,6 +1,11 @@
 ---
 layout: base.liquid
 ---
+{% if haxcms.settings.mode == "haxcms" %}
+  <haxcms-site-builder file="site.json">
+  {{content}}
+  </haxcms-site-builder>
+{% else %}
 <paper-button raised style="top:0;left:0;position:fixed;"><a href="/" tabindex="-1">Home</a></paper-button>
 <haxtheme-banner title="{{title}}" image="{{banner}}"></haxtheme-banner>
 <site-menu></site-menu>
@@ -9,3 +14,4 @@ layout: base.liquid
     {{content}}
   </eleventy-hax>
 </main>
+{% endif %}
