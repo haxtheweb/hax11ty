@@ -133,32 +133,15 @@
   <script src="{{ haxcms.settings.cdn }}build.js"></script>
   <script src="{{ haxcms.settings.cdnBuild }}@lrnwebcomponents/deduping-fix/deduping-fix.js"></script>
   <script>
-    fetch(window.__appCDN + "wc-registry.json").then((e) => {
-      return e.json();
-    }).then((data) => {
-      var imports = {
-        "imports": {
-          "lit-element/": "{{ haxcms.settings.cdnBuild }}lit-element/"
-        }
-      }
-      // @todo this causes a dedup issue.. something in timing here for sure
-      for (var i in data) {
-        imports.imports[data[i]] = "{{ haxcms.settings.cdnBuild }}" + data[i];
-      }
-      var s = document.createElement('script');
-      s.type = "importmap-shim";
-      s.innerHTML = JSON.stringify(imports, null, 2);
-      document.body.appendChild(s);
-      s = document.createElement('script');
-      s.type = "module-shim";
-      s.innerHTML = 'import "/assets/js/app.js";';
-      document.body.appendChild(s);
-      // process the dynamic importmap
-      s = document.createElement('script');
-      s.defer = true;
-      s.src = '/assets/js/es-module-shims.min.js';
-      document.body.appendChild(s);
-    });
+    var s = document.createElement('script');
+    s.type = "module-shim";
+    s.innerHTML = 'import "/assets/js/app.js";';
+    document.body.appendChild(s);
+    // process the dynamic importmap
+    s = document.createElement('script');
+    s.defer = true;
+    s.src = '/assets/js/es-module-shims.min.js';
+    document.body.appendChild(s);
   </script>
   <link rel="stylesheet" type="text/css" href="/assets/css/styles.css" />
   <link rel="stylesheet" type="text/css" href="{{ haxcms.settings.cdnBuild }}@lrnwebcomponents/haxcms-elements/lib/base.css">

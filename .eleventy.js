@@ -75,7 +75,7 @@ module.exports = function (eleventyConfig) {
       lang: settings.lang,
       screenshots: [],
       orientation: "portrait"
-    });
+    }, null, 2);
   });
   eleventyConfig.addCollection("swHashData", function (collection) {
     const settings = collection.items[0].data.haxcms.settings;
@@ -121,7 +121,6 @@ module.exports = function (eleventyConfig) {
         // if the file exists then we know it's a parent of the current folder in the tree
         // which means we can set the parent id and it'll work
         let slug = url.split('/');
-        slug.pop();
         slug.shift();
         slug = slug.join('/');
         return {
@@ -193,7 +192,7 @@ module.exports = function (eleventyConfig) {
         }
       },
       items: pageItems
-    });
+    }, null, 2);
   });
 
   eleventyConfig.addShortcode("getLicenseInfo", function(license, varName) {

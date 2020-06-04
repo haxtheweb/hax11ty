@@ -1,4 +1,4 @@
-import { LitElement, html, css } from "lit-element/lit-element.js";
+import { LitElement, html, css } from "../../../build/es6/node_modules/lit-element/lit-element.js";
 
 class HaxthemeItem extends LitElement {
   static get properties() {

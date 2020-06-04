@@ -2,7 +2,7 @@ import {
   LitElement,
   html,
   css,
-} from "lit-element/lit-element.js";
+} from "../../../build/es6/node_modules/lit-element/lit-element.js";
 
 /**
  * `cms-hax`
@@ -300,9 +300,6 @@ class EleventyHax extends LitElement {
     this.bodyValue = "";
     this.hideMessage = false;
     this.__imported = false;
-    import("@lrnwebcomponents/simple-toast/simple-toast.js").then(() => {
-      window.SimpleToast.requestAvailability();
-    });
   }
   _makeAppStore(val) {
     this.__appStore = this.decodeHTMLEntities(val);
@@ -311,7 +308,8 @@ class EleventyHax extends LitElement {
     changedProperties.forEach((oldValue, propName) => {
       if (propName == "enabled") {
         if (this.enabled === true) {
-          import("@lrnwebcomponents/h-a-x/h-a-x.js");
+          // magic that will hydrate this definition
+          window.DynamicImportRegistry.requestAvailability().loadDefinition("h-a-x");
         }
       }
       if (propName == "redirectLocation") {

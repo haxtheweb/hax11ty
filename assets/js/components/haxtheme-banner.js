@@ -2,7 +2,7 @@ import {
   LitElement,
   html,
   css,
-} from "lit-element/lit-element.js";
+} from "../../../build/es6/node_modules/lit-element/lit-element.js";
 
 class HaxthemeBanner extends LitElement {
   static get properties() {
