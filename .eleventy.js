@@ -81,8 +81,8 @@ module.exports = function (eleventyConfig) {
       scope: settings.basePath,
       start_url: settings.basePath,
       display: "standalone",
-      theme_color: settings.hexCode,
-      background_color: settings.hexCode,
+      theme_color: settings.themeHexCode,
+      background_color: settings.themeHexCode,
       url: settings.url,
       lang: settings.lang,
       screenshots: [],
@@ -177,15 +177,8 @@ module.exports = function (eleventyConfig) {
           name: settings.siteMachineName,
           created: Date.now(),
           updated: Date.now(),
-          git: {
-            autoPush: false,
-            branch: "master",
-            staticBranch: "gh-pages",
-            vendor: "github",
-            publicRepoUrl: "https://github.com/btopro/ist402/blob/master/",
-            url: "git@github.com:btopro/ist402.git"
-          },
-          version: "1.1.2",
+          git: settings.git,
+          version: settings.version,
           domain: "",
           logo: settings.siteLogo,
           static: {
@@ -200,7 +193,13 @@ module.exports = function (eleventyConfig) {
           }
         },
         theme: {
-          element: "learn-two-theme"
+          element: settings.themeElement,
+          variables: {
+            image: settings.themeImage,
+            hexCode: settings.themeHexCode,
+            cssVariable: "--simple-colors-default-theme-" + settings.themeColor + "-7",
+            logo: settings.themeLogo
+          }
         }
       },
       items: pageItems
