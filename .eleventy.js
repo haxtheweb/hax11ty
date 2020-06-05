@@ -5,6 +5,7 @@ const path = require('path');
 const matter = require('gray-matter');
 const xmlFiltersPlugin = require('eleventy-xml-plugin');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const settings = require('./_data/haxcms/settings.js')();
 module.exports = function (eleventyConfig) {
   // establish environment nunjuck things for templating
   let nunjucksEnvironment = new Nunjucks.Environment(
@@ -29,7 +30,6 @@ module.exports = function (eleventyConfig) {
 
   // collections make it easier to work with the data in templates
   eleventyConfig.addCollection("manifest", function (collection) {
-    const settings = collection.items[0].data.haxcms.settings;
     return JSON.stringify({
       name: settings.siteName,
       short_name: settings.siteName,
@@ -90,7 +90,6 @@ module.exports = function (eleventyConfig) {
     }, null, 2);
   });
   eleventyConfig.addCollection("swHashData", function (collection) {
-    const settings = collection.items[0].data.haxcms.settings;
     const items = collection.items.map(({ outputPath, url, data }, i) => {
       if (!url.includes("/build/")) {
         return [
@@ -112,7 +111,6 @@ module.exports = function (eleventyConfig) {
     return collection.items[0].data.haxcms.settings;
   });
   eleventyConfig.addCollection("haxcms", function (collection) {
-    const settings = collection.items[0].data.haxcms.settings;
     const items = collection.items.map(({ outputPath, inputPath, url, data }, i) => {
       if (url.includes("/posts/")) {
         let parentID = null;
@@ -135,6 +133,14 @@ module.exports = function (eleventyConfig) {
         let slug = url.split('/');
         slug.shift();
         slug = slug.join('/');
+        const pageData = data;
+        // strip off these globals we don't need
+        delete pageData.collections;
+        delete pageData.haxcms;
+        delete pageData.pkg ;
+        // this is actually page processing data so drop it too
+        delete pageData.page;
+        // load up headmatter
         return {
           id: inputPath.replace(/\./g,'-').replace(/\//g,'-'),
           indent: 0,
@@ -149,7 +155,8 @@ module.exports = function (eleventyConfig) {
             updated: Date.now(),
             readtime: 0,
             contentDetails: {},
-            files: []
+            files: [],
+            ...pageData
           }
         };
       }
@@ -179,7 +186,7 @@ module.exports = function (eleventyConfig) {
           updated: Date.now(),
           git: settings.git,
           version: settings.version,
-          domain: "",
+          domain: settings.domain,
           logo: settings.siteLogo,
           static: {
             cdn: "build",
@@ -223,7 +230,11 @@ function copyFolderSyncWithoutGreyMatter(from, to, appendBase = true) {
   }
   fs.readdirSync(from).forEach(element => {
     if (fs.lstatSync(path.join(from, element)).isFile()) {
-      const fileData = matter.read(path.join(from, element));
+      // read in data
+      var fileData = matter.read(path.join(from, element));
+      if (fs.lstatSync(path.join(from, element)).isFile()) {
+        fs.writeFileSync(path.join(to, element).replace('.md','.json').replace('.html','.json'), JSON.stringify(fileData.data, null, 2));
+      }
       fileData.data = {};
       fs.writeFileSync(path.join(to, element), matter.stringify(fileData));
     } else {
