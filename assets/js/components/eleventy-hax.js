@@ -401,7 +401,7 @@ class EleventyHax extends LitElement {
           }, 100);
         }
       });
-      this._observer.observe(window.HaxStore.instance.activeHaxBody, {
+      this._observer.observe(this, {
         childList: true,
         subtree: true
       });

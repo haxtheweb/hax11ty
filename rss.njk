@@ -4,18 +4,18 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ haxcms.settings.siteName }}</title>
-  <subtitle>{{ haxcms.settings.siteDescription }}</subtitle>
-  <link href="{{ haxcms.settings.url }}/rss.xml" rel="self"/>
-  <link href="{{ haxcms.settings.url }}"/>
+  <title>{{ settings.siteName }}</title>
+  <subtitle>{{ settings.siteDescription }}</subtitle>
+  <link href="{{ settings.url }}/rss.xml" rel="self"/>
+  <link href="{{ settings.url }}"/>
   <updated>{{ collections.all | rssLastUpdatedDate }}</updated>
-  <id>{{ haxcms.settings.url }}</id>
+  <id>{{ settings.url }}</id>
   <author>
-    <name>{{ haxcms.settings.siteAuthorName }}</name>
-    <email>{{ haxcms.settings.siteAuthorEmail }}
+    <name>{{ settings.siteAuthorName }}</name>
+    <email>{{ settings.siteAuthorEmail }}
   </author>
   {%- for post in collections.all %}
-  {% set absolutePostUrl %}{{ haxcms.settings.url }}{{ post.url | url }}{% endset %}
+  {% set absolutePostUrl %}{{ settings.url }}{{ post.url | url }}{% endset %}
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>

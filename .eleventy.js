@@ -5,7 +5,7 @@ const path = require('path');
 const matter = require('gray-matter');
 const xmlFiltersPlugin = require('eleventy-xml-plugin');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const settings = require('./_data/haxcms/settings.js')();
+const settings = require('./_data/settings.js')();
 module.exports = function (eleventyConfig) {
   // establish environment nunjuck things for templating
   let nunjucksEnvironment = new Nunjucks.Environment(
@@ -94,7 +94,7 @@ module.exports = function (eleventyConfig) {
       if (!url.includes("/build/")) {
         return [
           url,
-          hashFromValue(data.page.date.toString()).substr(0, 16).replace(/\//g,'z').replace(/\+/g,'y').replace(/\=/g,'x').replace(/\-/g,'w', collection.items[0].data.haxcms.settings.siteUuid)
+          hashFromValue(data.page.date.toString()).substr(0, 16).replace(/\//g,'z').replace(/\+/g,'y').replace(/\=/g,'x').replace(/\-/g,'w', settings.siteUuid)
         ];
       }
     });
@@ -108,7 +108,7 @@ module.exports = function (eleventyConfig) {
   });
   // simplify access to the flobal settings
   eleventyConfig.addCollection("globals", function (collection) {
-    return collection.items[0].data.haxcms.settings;
+    return collection.items[0].data.settings;
   });
   eleventyConfig.addCollection("haxcms", function (collection) {
     const items = collection.items.map(({ outputPath, inputPath, url, data }, i) => {

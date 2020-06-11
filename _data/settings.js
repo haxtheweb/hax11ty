@@ -29,7 +29,7 @@ module.exports = () => {
             url: "git@github.com:btopro/ist402.git"
         },
         // advanced settings
-        mode: "haxcms",
+        mode: "pro",
         lang: "en",
         version: "1.1.2-11ty",
         cdnBuild: cdnBase + cdnPart + "build/es6/node_modules/",
@@ -38,6 +38,6 @@ module.exports = () => {
         basePath: "/",
         domain: "https://localhost:8000",
         url: "https://localhost:8000",
-        siteUuid: "3474a06d-9d3b-4ec7-ba9b-0a448a6e685e",
+        siteUuid: "3474a06d-9d3b-4ec7-ba9b-0a448a6e685e"
     };
 };
