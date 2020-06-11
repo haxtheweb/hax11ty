@@ -15,6 +15,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setTemplateFormats(["html","md", "njk"]);
   // copy this directory but DO NOT inject grey matter
   // this allows HAXcms to render content bare but with DX writing title data in head matter
+  if (!fs.existsSync(process.cwd() + '/_site/')) {
+    fs.mkdirSync(process.cwd() + '/_site/');
+  }
   copyFolderSyncWithoutGreyMatter('posts', 'pages')
 
   // add plugins to handle xml and rss files
