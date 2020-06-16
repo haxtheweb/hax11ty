@@ -29,7 +29,7 @@ module.exports = () => {
             url: "git@github.com:btopro/ist402.git"
         },
         // advanced settings
-        mode: "pro",
+        mode: "haxcms",
         lang: "en",
         version: "1.1.2-11ty",
         cdnBuild: cdnBase + cdnPart + "build/es6/node_modules/",
