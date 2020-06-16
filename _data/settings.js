@@ -1,6 +1,6 @@
 module.exports = () => {
     var cdnBase = "/";
-    var cdnPart = "";
+    var cdnPart = "unbundled-webcomponents/app/dist/";
     if (process.env.HAXCMS_CDN) {
       cdnBase = "https://cdn.webcomponents.psu.edu";
       cdnPart = "/cdn/";

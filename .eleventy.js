@@ -26,9 +26,7 @@ module.exports = function (eleventyConfig) {
 
   // copy these assets but don't process them
   eleventyConfig.addPassthroughCopy("assets");
-  eleventyConfig.addPassthroughCopy("build");
-  eleventyConfig.addPassthroughCopy("build.js");
-  eleventyConfig.addPassthroughCopy("wc-registry.json");
+  eleventyConfig.addPassthroughCopy("unbundled-webcomponents");
   eleventyConfig.addPassthroughCopy("service-worker.js");
 
   // collections make it easier to work with the data in templates
