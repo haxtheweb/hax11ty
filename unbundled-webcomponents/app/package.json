@@ -12,7 +12,11 @@
     "promise-polyfill": "8.1.3",
     "web-animations-js": "2.3.2",
     "@lrnwebcomponents/haxcms-elements": "2.6.20",
-    "@lrnwebcomponents/learn-two-theme": "2.6.20"
+    "@lrnwebcomponents/learn-two-theme": "2.6.20",
+    "@lrnwebcomponents/clean-one": "2.6.23",
+    "@lrnwebcomponents/clean-two": "2.6.23",
+    "@lrnwebcomponents/outline-player": "2.6.23",
+    "@lrnwebcomponents/haxor-slevin": "2.6.23"
   },
   "flat": true,
   "private": false,
