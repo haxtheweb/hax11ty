@@ -14,7 +14,7 @@ module.exports = () => {
         siteLicense: "by-sa",
         siteDescription: "Emerging Technology",
         siteLogo: "/assets/images/photo-1497493292307-31c376b6e479.jpeg",
-        themeElement: "learn-two-theme",
+        themeElement: "clean-one", // clean-two, learn-two-theme, or any other valid HAXcms theme
         themeImage: "/assets/banner.jpg",
         themeHexCode: "#FFFF00",
         themeLogo: "lrn:network",
@@ -28,7 +28,7 @@ module.exports = () => {
             publicRepoUrl: "https://github.com/btopro/ist402/blob/master/",
             url: "git@github.com:btopro/ist402.git"
         },
-        // advanced settings
+        // advanced settings don't modify
         mode: "haxcms",
         lang: "en",
         version: "1.1.2-11ty",

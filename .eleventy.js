@@ -1,6 +1,6 @@
 let Nunjucks = require("nunjucks");  
 const crypto = require('crypto');
-const fs = require('fs');
+const fs = require('fs-extra');
 const path = require('path');
 const matter = require('gray-matter');
 const xmlFiltersPlugin = require('eleventy-xml-plugin');
@@ -134,11 +134,28 @@ module.exports = function (eleventyConfig) {
         let slug = url.split('/');
         slug.shift();
         slug = slug.join('/');
+        let order = (data.order ? data.order : i);
+        // get page contents to analyze
+        const pageContent = fs.readFileSync(process.cwd() + inputPath.replace('./','/'), "utf8");
+        // get read time
+        let readtime = Math.round(countWords(pageContent) / 200);
+        // get file stats
+        const stats = fs.statSync(inputPath);
+        let created = Math.round(stats.birthtimeMs / 1000);
+        let updated = Math.round(stats.mtimeMs / 1000);
+        // account for uber small body
+        if (readtime == 0) {
+          readtime = 1;
+        }
         const pageData = data;
         // strip off these globals we don't need
         delete pageData.collections;
         delete pageData.haxcms;
-        delete pageData.pkg ;
+        delete pageData.pkg;
+        delete pageData.haxcmsAppstore;
+        delete pageData.settings;
+        delete pageData.haxcmsServiceWorker;
+        delete pageData.HAXenabled;
         // this is actually page processing data so drop it too
         delete pageData.page;
         // load up headmatter
@@ -147,14 +164,14 @@ module.exports = function (eleventyConfig) {
           indent: 0,
           location: inputPath.replace('/posts/','/pages/'),
           slug: slug,
-          order: i,
+          order: order,
           title: data.title ? data.title : 'Title',
           description: data.title ? data.title : 'Description',
           parent: parentID,
           metadata: {
-            created: Date.now(),
-            updated: Date.now(),
-            readtime: 0,
+            created: created,
+            updated: updated,
+            readtime: readtime,
             contentDetails: {},
             files: [],
             ...pageData
@@ -241,6 +258,17 @@ function copyFolderSyncWithoutGreyMatter(from, to, appendBase = true) {
     } else {
       copyFolderSyncWithoutGreyMatter(path.join(from, element), path.join(to, element), false);
     }
+  });
+}
+/**
+ * Count words
+ */
+function countWords(str) {
+  return str.trim().split(/\s+/).length;
+}
+function array_unique(array){
+  return array.filter(function(el, index, arr) {
+      return index == arr.indexOf(el);
   });
 }
 /**

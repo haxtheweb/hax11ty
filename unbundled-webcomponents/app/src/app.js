@@ -12,4 +12,9 @@
 // import "@lrnwebcomponents/wysiwyg-hax/wysiwyg-hax.js";
 // HAXcms + theme we support by default
 import "@lrnwebcomponents/haxcms-elements/lib/core/haxcms-site-builder.js";
-import "@lrnwebcomponents/learn-two-theme/learn-two-theme.js";
+// disable these if you don't want them in your build but they are all valid HAXcms themes
+import "@lrnwebcomponents/clean-one/clean-one.js"; // most well developed
+import "@lrnwebcomponents/clean-two/clean-two.js"; // most well developed
+import "@lrnwebcomponents/learn-two-theme/learn-two-theme.js"; // decent learning theme
+import "@lrnwebcomponents/haxor-slevin/haxor-slevin.js"; // blogger theme
+import "@lrnwebcomponents/outline-player/outline-player.js"; // incredibly simple presentation

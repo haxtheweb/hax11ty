@@ -1,1 +1,0 @@
-define(["../node_modules/@lrnwebcomponents/haxcms-elements/lib/core/haxcms-site-builder.js","../node_modules/@lrnwebcomponents/learn-two-theme/learn-two-theme.js"],function(_haxcmsSiteBuilder,_learnTwoTheme){"use strict"});
