@@ -1,0 +1,142 @@
+{
+  "entrypoint": "dist/build.html",
+  "fragments": [],
+  "sources": [
+    "dist/build.html"
+  ],
+  "extraDependencies": [
+    "bower_components/webcomponentsjs/*.js",
+    "manifest.json",
+    "node_modules/@polymer/app-localize-behavior/app-localize-behavior.js",
+    "node_modules/@polymer/iron-swipeable-container/iron-swipeable-container.js",
+    "node_modules/@vowo/chart-elements/*.js",
+    "node_modules/intl-messageformat/src/*.js",
+    "node_modules/intl-messageformat-parser/src/*.js",
+    "node_modules/@material/*/*.js",
+    "node_modules/tslib/tslib.es6.js",
+    "node_modules/tslib/tslib.js",
+    "node_modules/@lrnwebcomponents/*/*.js",
+    "node_modules/@lrnwebcomponents/*/lib/*",
+    "node_modules/@lrnwebcomponents/*/lib/*/*.js",
+    "node_modules/@lrnwebcomponents/*/lib/*/*",
+    "node_modules/@lrnwebcomponents/*/lib/*/*/*.js",
+    "node_modules/lit-html/*.*.map",
+    "node_modules/lit-html/*.js",
+    "node_modules/lit-html/*/*.*.map",
+    "node_modules/lit-html/*/*.js",
+    "node_modules/lit-element/lit-element.js",
+    "node_modules/lit-element/lib/*.*.map",
+    "node_modules/lit-element/node_modules/lit-html/*.*.map",
+    "node_modules/lit-element/node_modules/lit-html/*.js",
+    "node_modules/lit-element/node_modules/lit-html/*/*.*.map",
+    "node_modules/lit-element/node_modules/lit-html/*/*.js",
+    "node_modules/lit-element/*.*.map",
+    "node_modules/@polymer/app-layout/*/*.js",
+    "node_modules/@vaadin/**",
+    "node_modules/vmsg/*",
+    "node_modules/fetch-ie8/fetch.js",
+    "node_modules/promise-polyfill/dist/polyfill.min.js",
+    "node_modules/web-animations-js/*.map",
+    "node_modules/web-animations-js/*.js",
+    "node_modules/@lrnwebcomponents/wc-autoload/wc-autoload.js",
+    "node_modules/@lrnwebcomponents/product-card/lib/fields.json",
+    "node_modules/@lrnwebcomponents/dynamic-import-registry/dynamic-import-registry.js",
+    "node_modules/@polymer/marked-element/node_modules/marked/lib/marked.js",
+    "node_modules/@lrnwebcomponents/a11y-media-player/lib/screenfull/dist/screenfull.js",
+    "node_modules/@lrnwebcomponents/img-pan-zoom/lib/openseadragon/build/openseadragon/openseadragon.min.js",
+    "node_modules/@lrnwebcomponents/elmsln-apps/lib/*/*.js",
+    "node_modules/@lrnwebcomponents/wave-player/lib/wavesurferjs/dist/wavesurfer.js",
+    "!node_modules/@lrnwebcomponents/wave-player/lib/wavesurferjs/src/*",
+    "node_modules/@webcomponents/webcomponentsjs/*.js",
+    "node_modules/@webcomponents/webcomponentsjs/bundles/*.js",
+    "node_modules/@webcomponents/webcomponentsjs/webcomponents-bundle.js.map",
+    "node_modules/monaco-editor/min/**",
+    "node_modules/monaco-editor/min-maps/**",
+    "node_modules/lunr/lunr.js",
+    "!node_modules/@vaadin/*/test/*",
+    "node_modules/pdfjs-dist/build/pdf.js",
+    "node_modules/pdfjs-dist/build/pdf.worker.js",
+    "node_modules/msr/MediaStreamRecorder.min.js",
+    "node_modules/@lrnwebcomponents/chartist-render/lib/chartist/dist/chartist.min.js",
+    "!node_modules/@webcomponents/webcomponentsjs/gulpfile.js",
+    "!node_modules/@lrnwebcomponents/code-sample/lib/highlightjs/languages/*.js",
+    "node_modules/@lrnwebcomponents/code-sample/lib/highlightjs/languages/javascript.js",
+    "node_modules/@lrnwebcomponents/code-sample/lib/highlightjs/languages/yaml.js",
+    "node_modules/@lrnwebcomponents/code-sample/lib/highlightjs/languages/json.js",
+    "node_modules/@lrnwebcomponents/code-sample/lib/highlightjs/languages/xml.js",
+    "!node_modules/@lrnwebcomponents/storybook-utilities/storybook-utilities.js",
+    "!node_modules/@lrnwebcomponents/*/*.umd.js",
+    "!node_modules/@lrnwebcomponents/*/*.amd.js",
+    "!node_modules/@lrnwebcomponents/*/*.es6.js",
+    "!node_modules/@lrnwebcomponents/*/*.stories.js",
+    "!node_modules/@lrnwebcomponents/*/*.story.js",
+    "!rollup.config.js",
+    "!*.stories.js",
+    "!*.story.js",
+    "!*.umd.js",
+    "!*.amd.js",
+    "!*.es6.js"
+  ],
+  "builds": [
+    {
+      "name": "es6",
+      "browserCapabilities": [
+        "es2017",
+        "modules"
+      ],
+      "js": {
+        "minify": false,
+        "transformImportMeta": true
+      },
+      "css": {
+        "minify": false
+      },
+      "html": {
+        "minify": false
+      },
+      "bundle": false
+    },
+    {
+      "name": "es6-amd",
+      "browserCapabilities": [
+        "es2015"
+      ],
+      "js": {
+        "minify": false,
+        "transformModulesToAmd": true,
+        "transformImportMeta": true
+      },
+      "css": {
+        "minify": false
+      },
+      "html": {
+        "minify": false
+      },
+      "bundle": false
+    },
+    {
+      "name": "es5-amd",
+      "js": {
+        "compile": "es5",
+        "minify": false,
+        "transformModulesToAmd": true,
+        "transformImportMeta": true
+      },
+      "css": {
+        "minify": false
+      },
+      "html": {
+        "minify": false
+      },
+      "bundle": false
+    }
+  ],
+  "lint": {
+    "rules": [
+      "polymer-3"
+    ]
+  },
+  "npm": true,
+  "componentDir": "node_modules/",
+  "moduleResolution": "node"
+}
