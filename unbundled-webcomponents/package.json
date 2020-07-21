@@ -1,0 +1,35 @@
+{
+  "name": "unbundled-webcomponents",
+  "version": "0.0.0",
+  "description": "a boilerplate",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/elmsln/unbundled-webcomponents.git"
+  },
+  "author": {
+    "name": "btopro"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "gulp": "4.0.2",
+    "gulp-terser": "1.2.0",
+    "polymer-build": "3.1.4",
+    "polymer-cli": "1.9.11",
+    "glob": "^7.1.6"
+  },
+  "scripts": {
+    "postinstall": "cd app && yarn install && cd ../",
+    "build": "cd app && polymer build && cd ../ && yarn run move-build && yarn run terser && yarn run wc-autoloader",
+    "move-build": "gulp move-build --gulpfile=gulpfile.cjs",
+    "start": "yarn run build",
+    "terser": "gulp terser --gulpfile=gulpfile.cjs",
+    "wc-autoloader": "gulp wc-autoloader --gulpfile=gulpfile.cjs"
+  }
+}
