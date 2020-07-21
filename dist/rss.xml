@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>IST 402</title>
+  <subtitle>Emerging Technology</subtitle>
+  <link href="https://localhost:8000/rss.xml" rel="self"/>
+  <link href="https://localhost:8000"/>
+  <updated>2020-06-15T21:46:34.124-04:00</updated>
+  <id>https://localhost:8000</id>
+  <author>
+    <name>EdTechJoker</name>
+    <email>bto108@psu.edu
+  </author>
+  
+  <entry>
+    <title></title>
+    <link href="https://localhost:8000/assets/upgrade-browser/"/>
+    <updated>2020-04-24T14:30:59.889-04:00</updated>
+    <id>https://localhost:8000/assets/upgrade-browser/</id>
+    <content type="html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Modern browser required&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css&quot; crossorigin=&quot;&quot;&gt;
+  &lt;style&gt;
+    body {
+      margin: 0;
+      min-height: 100vh;
+    }
+    .header--lg {
+      color: #444;
+      font-size: 1.75rem;
+      font-weight: bold;
+      padding: 10px;
+      margin: 0;
+    }
+
+    .check-browser {
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .check-browser .message--warning {
+      background-color: #BB0000;
+      color: #ffffff;
+      padding: 2rem;
+      font-size: 26px;
+    }
+
+    .check-browser__icon-container {
+      display: inline-block;
+      color: #000000;
+      text-align: center;
+    }
+
+    a {
+      float: left;
+      width: 150px;
+      height: 150px;
+      display: block;
+      text-decoration: none;
+      margin: 1rem .5rem;
+      padding: 0;
+      outline-width: 10px;
+      outline-color: blueviolet;
+      color: black;
+    }
+
+    a .check-browser__icon {
+      clear: both;
+      padding: 2.5rem 2rem;
+      text-decoration: none;
+    }
+
+    .check-browser--chrome {
+      background-color: #ffb31a;
+    }
+
+    .check-browser--firefox {
+      background-color: #f78009;
+    }
+
+    .check-browser--edge {
+      background-color: #33ccff;
+    }
+
+    .check-browser--safari {
+      background-color: #0099ff;
+    }
+
+    .check-browser--opera {
+      background-color: #ff4d4d;
+    }
+
+    .icon--browser {
+      color: #fff;
+      font-size: 3rem;
+      padding-bottom: 1rem;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class=&quot;check-browser&quot;&gt;
+    &lt;h1 class=&quot;header--lg&quot;&gt;Outdated browser detected&lt;/h1&gt;
+    
+    &lt;p class=&quot;message--warning&quot;&gt;
+      This website requires a modern browser to give the best experience possible.
+    &lt;/p&gt;
+    &lt;p&gt;
+      Upgrade your browser to the latest version or download one of these browsers:
+    &lt;/p&gt;
+  
+    &lt;div class=&quot;check-browser__icon-container&quot;&gt;
+      &lt;a href=&quot;http://www.mozilla.com/firefox&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
+        &lt;div class=&quot;check-browser__icon check-browser--firefox&quot;&gt;
+            &lt;span&gt;&lt;i class=&quot;fa fa-firefox icon--browser&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+          &lt;br&gt;Firefox
+          &lt;br&gt;(Mozilla)
+        &lt;/div&gt;
+      &lt;/a&gt;
+      &lt;a href=&quot;https://www.google.com/chrome&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
+        &lt;div class=&quot;check-browser__icon check-browser--chrome&quot;&gt;
+            &lt;span&gt;&lt;i class=&quot;fa fa-chrome icon--browser&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+          &lt;br&gt;
+          Chrome
+          &lt;br&gt;(Google)
+        &lt;/div&gt;
+      &lt;/a&gt;
+      &lt;a href=&quot;https://www.microsoftedgeinsider.com/en-us/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
+        &lt;div class=&quot;check-browser__icon check-browser--edge&quot;&gt;
+            &lt;span&gt;&lt;i class=&quot;fa fa-edge icon--browser&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+          &lt;br&gt;Edge
+          &lt;br&gt;(Microsoft)
+        &lt;/div&gt;
+      &lt;/a&gt;
+      &lt;a href=&quot;https://support.apple.com/downloads/safari&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
+        &lt;div class=&quot;check-browser__icon check-browser--safari&quot;&gt;
+            &lt;span&gt;&lt;i class=&quot;fa fa-safari icon--browser&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+          &lt;br&gt;Safari
+          &lt;br&gt;(Apple)
+        &lt;/div&gt;
+      &lt;/a&gt;
+      &lt;a href=&quot;http://www.opera.com/download/&quot;&gt;
+        &lt;div class=&quot;check-browser__icon check-browser--opera&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;
+            &lt;span&gt;&lt;i class=&quot;fa fa-opera icon--browser&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+          
+          &lt;br&gt; Opera
+          &lt;br&gt; &amp;nbsp;
+        &lt;/div&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</content>
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://localhost:8000/"/>
+    <updated>2020-04-24T14:30:59.889-04:00</updated>
+    <id>https://localhost:8000/</id>
+    <content type="html">&lt;haxcms-site-builder id=&quot;site&quot; file=&quot;site.json&quot;&gt;&lt;/haxcms-site-builder&gt;</content>
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://localhost:8000/site.json"/>
+    <updated>2020-04-24T14:30:59.889-04:00</updated>
+    <id>https://localhost:8000/site.json</id>
+    <content type="html">{
+  &quot;id&quot;: &quot;3474a06d-9d3b-4ec7-ba9b-0a448a6e685e&quot;,
+  &quot;title&quot;: &quot;IST 402&quot;,
+  &quot;author&quot;: &quot;EdTechJoker&quot;,
+  &quot;description&quot;: &quot;Emerging Technology&quot;,
+  &quot;license&quot;: &quot;by-sa&quot;,
+  &quot;metadata&quot;: {
+    &quot;author&quot;: {
+      &quot;image&quot;: &quot;https://btopro.com/files/headshot511743.1799999904.jpg&quot;,
+      &quot;name&quot;: &quot;EdTechJoker&quot;,
+      &quot;email&quot;: &quot;bto108@psu.edu&quot;,
+      &quot;socialLink&quot;: &quot;https://twitter.com/elmsln&quot;
+    },
+    &quot;site&quot;: {
+      &quot;name&quot;: &quot;ist402&quot;,
+      &quot;created&quot;: 1595361150202,
+      &quot;updated&quot;: 1595361150202,
+      &quot;git&quot;: {
+        &quot;autoPush&quot;: false,
+        &quot;branch&quot;: &quot;master&quot;,
+        &quot;staticBranch&quot;: &quot;gh-pages&quot;,
+        &quot;vendor&quot;: &quot;github&quot;,
+        &quot;publicRepoUrl&quot;: &quot;https://github.com/btopro/ist402/blob/master/&quot;,
+        &quot;url&quot;: &quot;git@github.com:btopro/ist402.git&quot;
+      },
+      &quot;version&quot;: &quot;1.1.2-11ty&quot;,
+      &quot;domain&quot;: &quot;https://localhost:8000&quot;,
+      &quot;logo&quot;: &quot;/assets/images/photo-1497493292307-31c376b6e479.jpeg&quot;,
+      &quot;static&quot;: {
+        &quot;cdn&quot;: &quot;build&quot;,
+        &quot;offline&quot;: false
+      },
+      &quot;settings&quot;: {
+        &quot;pathauto&quot;: false,
+        &quot;publishPagesOn&quot;: false,
+        &quot;forceUpgrade&quot;: true,
+        &quot;sw&quot;: false
+      }
+    },
+    &quot;theme&quot;: {
+      &quot;element&quot;: &quot;clean-one&quot;,
+      &quot;variables&quot;: {
+        &quot;image&quot;: &quot;/assets/banner.jpg&quot;,
+        &quot;hexCode&quot;: &quot;#FFFF00&quot;,
+        &quot;cssVariable&quot;: &quot;--simple-colors-default-theme-green-7&quot;,
+        &quot;logo&quot;: &quot;lrn:network&quot;
+      }
+    }
+  },
+  &quot;items&quot;: [
+    {
+      &quot;id&quot;: &quot;--content-post-and-um-md&quot;,
+      &quot;indent&quot;: 0,
+      &quot;location&quot;: &quot;./pages/post-and-um.md&quot;,
+      &quot;slug&quot;: &quot;content/post-and-um/&quot;,
+      &quot;order&quot;: 3,
+      &quot;title&quot;: &quot;Page 1&quot;,
+      &quot;description&quot;: &quot;Page 1&quot;,
+      &quot;parent&quot;: null,
+      &quot;metadata&quot;: {
+        &quot;created&quot;: 1592271994,
+        &quot;updated&quot;: 1595357205,
+        &quot;readtime&quot;: 1,
+        &quot;contentDetails&quot;: {},
+        &quot;files&quot;: [],
+        &quot;tags&quot;: [
+          &quot;content&quot;
+        ],
+        &quot;layout&quot;: &quot;content.liquid&quot;,
+        &quot;title&quot;: &quot;Page 1&quot;,
+        &quot;banner&quot;: &quot;/assets/images/photo-1498050108023-c5249f4df085.jpeg&quot;
+      }
+    },
+    {
+      &quot;id&quot;: &quot;--content-post1-md&quot;,
+      &quot;indent&quot;: 0,
+      &quot;location&quot;: &quot;./pages/post1.md&quot;,
+      &quot;slug&quot;: &quot;content/post1/&quot;,
+      &quot;order&quot;: -10000,
+      &quot;title&quot;: &quot;Should be last&quot;,
+      &quot;description&quot;: &quot;Should be last&quot;,
+      &quot;parent&quot;: null,
+      &quot;metadata&quot;: {
+        &quot;created&quot;: 1588798156,
+        &quot;updated&quot;: 1594653684,
+        &quot;readtime&quot;: 1,
+        &quot;contentDetails&quot;: {},
+        &quot;files&quot;: [],
+        &quot;tags&quot;: [
+          &quot;content&quot;
+        ],
+        &quot;layout&quot;: &quot;content.liquid&quot;,
+        &quot;title&quot;: &quot;Should be last&quot;,
+        &quot;order&quot;: -10000
+      }
+    },
+    {
+      &quot;id&quot;: &quot;--content-post2-md&quot;,
+      &quot;indent&quot;: 0,
+      &quot;location&quot;: &quot;./pages/post2.md&quot;,
+      &quot;slug&quot;: &quot;content/post2/&quot;,
+      &quot;order&quot;: 5,
+      &quot;title&quot;: &quot;Post 2&quot;,
+      &quot;description&quot;: &quot;Post 2&quot;,
+      &quot;parent&quot;: null,
+      &quot;metadata&quot;: {
+        &quot;created&quot;: 1591232215,
+        &quot;updated&quot;: 1594652667,
+        &quot;readtime&quot;: 19,
+        &quot;contentDetails&quot;: {},
+        &quot;files&quot;: [],
+        &quot;tags&quot;: [
+          &quot;content&quot;
+        ],
+        &quot;layout&quot;: &quot;content.liquid&quot;,
+        &quot;title&quot;: &quot;Post 2&quot;,
+        &quot;banner&quot;: &quot;/assets/images/photo-1534972195531-d756b9bfa9f2.jpeg&quot;
+      }
+    },
+    {
+      &quot;id&quot;: &quot;--content-post3-md&quot;,
+      &quot;indent&quot;: 0,
+      &quot;location&quot;: &quot;./pages/post3.md&quot;,
+      &quot;slug&quot;: &quot;content/post3/&quot;,
+      &quot;order&quot;: -100,
+      &quot;title&quot;: &quot;Top of things&quot;,
+      &quot;description&quot;: &quot;Top of things&quot;,
+      &quot;parent&quot;: null,
+      &quot;metadata&quot;: {
+        &quot;created&quot;: 1588798156,
+        &quot;updated&quot;: 1594653662,
+        &quot;readtime&quot;: 1,
+        &quot;contentDetails&quot;: {},
+        &quot;files&quot;: [],
+        &quot;tags&quot;: [
+          &quot;content&quot;
+        ],
+        &quot;layout&quot;: &quot;content.liquid&quot;,
+        &quot;title&quot;: &quot;Top of things&quot;,
+        &quot;banner&quot;: &quot;/assets/images/photo-1562813733-b31f71025d54.jpeg&quot;,
+        &quot;order&quot;: -100
+      }
+    },
+    {
+      &quot;id&quot;: &quot;--content-other-things-cool-stuff-md&quot;,
+      &quot;indent&quot;: 0,
+      &quot;location&quot;: &quot;./pages/other-things/cool-stuff.md&quot;,
+      &quot;slug&quot;: &quot;content/other-things/cool-stuff/&quot;,
+      &quot;order&quot;: 7,
+      &quot;title&quot;: &quot;Cool Stuff&quot;,
+      &quot;description&quot;: &quot;Cool Stuff&quot;,
+      &quot;parent&quot;: &quot;--content-other-things-index-md&quot;,
+      &quot;metadata&quot;: {
+        &quot;created&quot;: 1591243714,
+        &quot;updated&quot;: 1591296919,
+        &quot;readtime&quot;: 1,
+        &quot;contentDetails&quot;: {},
+        &quot;files&quot;: [],
+        &quot;tags&quot;: [
+          &quot;content&quot;
+        ],
+        &quot;layout&quot;: &quot;content.liquid&quot;,
+        &quot;title&quot;: &quot;Cool Stuff&quot;,
+        &quot;banner&quot;: &quot;/assets/images/photo-1498050108023-c5249f4df085.jpeg&quot;
+      }
+    },
+    {
+      &quot;id&quot;: &quot;--content-other-things-yet-more-md&quot;,
+      &quot;indent&quot;: 0,
+      &quot;location&quot;: &quot;./pages/other-things/yet-more.md&quot;,
+      &quot;slug&quot;: &quot;content/other-things/yet-more/&quot;,
+      &quot;order&quot;: 8,
+      &quot;title&quot;: &quot;Yes...more&quot;,
+      &quot;description&quot;: &quot;Yes...more&quot;,
+      &quot;parent&quot;: &quot;--content-other-things-index-md&quot;,
+      &quot;metadata&quot;: {
+        &quot;created&quot;: 1591243734,
+        &quot;updated&quot;: 1594649565,
+        &quot;readtime&quot;: 1,
+        &quot;contentDetails&quot;: {},
+        &quot;files&quot;: [],
+        &quot;tags&quot;: [
+          &quot;content&quot;
+        ],
+        &quot;layout&quot;: &quot;content.liquid&quot;,
+        &quot;title&quot;: &quot;Yes...more&quot;
+      }
+    },
+    {
+      &quot;id&quot;: &quot;--content-other-things-index-md&quot;,
+      &quot;indent&quot;: 0,
+      &quot;location&quot;: &quot;./pages/other-things/index.md&quot;,
+      &quot;slug&quot;: &quot;content/other-things/&quot;,
+      &quot;order&quot;: 9,
+      &quot;title&quot;: &quot;Parent page&quot;,
+      &quot;description&quot;: &quot;Parent page&quot;,
+      &quot;parent&quot;: null,
+      &quot;metadata&quot;: {
+        &quot;created&quot;: 1591244061,
+        &quot;updated&quot;: 1591244072,
+        &quot;readtime&quot;: 1,
+        &quot;contentDetails&quot;: {},
+        &quot;files&quot;: [],
+        &quot;tags&quot;: [
+          &quot;content&quot;
+        ],
+        &quot;layout&quot;: &quot;content.liquid&quot;,
+        &quot;title&quot;: &quot;Parent page&quot;,
+        &quot;banner&quot;: &quot;/assets/images/photo-1498050108023-c5249f4df085.jpeg&quot;
+      }
+    }
+  ]
+}</content>
+  </entry>
+  
+  <entry>
+    <title>Should be last</title>
+    <link href="https://localhost:8000/content/post1/"/>
+    <updated>2020-05-06T16:49:16.074-04:00</updated>
+    <id>https://localhost:8000/content/post1/</id>
+    <content type="html">&lt;p&gt;&lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops=&quot;&quot;&gt;&lt;h2 id=&quot;header-3d9237b9-c3f8-2f79-2f23-c51273fdc87b&quot; slot=&quot;col-1&quot;&gt;Header This is cool!&lt;/h2&gt;&lt;/grid-plate&gt;&lt;/p&gt;
+&lt;p slot=&quot;col-2&quot;&gt;This was changed now!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Top of things</title>
+    <link href="https://localhost:8000/content/post3/"/>
+    <updated>2020-05-06T16:49:16.074-04:00</updated>
+    <id>https://localhost:8000/content/post3/</id>
+    <content type="html">&lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops=&quot;&quot;&gt;
+  &lt;p slot=&quot;col-1&quot;&gt;ffff&lt;/p&gt;
+  &lt;p slot=&quot;col-2&quot;&gt;fffffgh222&lt;/p&gt;
+&lt;/grid-plate&gt;
+&lt;meme-maker alt=&quot;Cat stalking a small toy&quot; image-url=&quot;https://cdn2.thecatapi.com/images/9j5.jpg&quot; top-text=&quot;I bring you&quot; bottom-text=&quot;Yummmmm&quot;&gt;
+  &lt;div&gt;I bring you&lt;/div&gt;
+  &lt;img src=&quot;https://cdn2.thecatapi.com/images/9j5.jpg&quot; alt=&quot;Cat stalking a small toy&quot; preload=&quot;lazy&quot;&gt;
+  &lt;div&gt;Yummmmm&lt;/div&gt;
+&lt;/meme-maker&gt;</content>
+  </entry>
+  
+  <entry>
+    <title>Post 2</title>
+    <link href="https://localhost:8000/content/post2/"/>
+    <updated>2020-06-03T20:56:55.241-04:00</updated>
+    <id>https://localhost:8000/content/post2/</id>
+    <content type="html">&lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops=&quot;&quot;&gt;
+&lt;p slot=&quot;col-1&quot;&gt;fgdfgdfgdfgdfgd&lt;/p&gt;
+&lt;p class=&quot;grid-plate-active-item&quot; slot=&quot;col-2&quot;&gt;fgdfgdfgdfgdfgd&lt;/p&gt;
+&lt;/grid-plate&gt;
+&lt;p&gt;Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v&lt;/p&gt;
+&lt;p&gt;Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v&lt;/p&gt;
+&lt;p&gt;Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v&lt;/p&gt;
+&lt;p&gt;Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v&lt;/p&gt;
+&lt;p&gt;Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v&lt;/p&gt;
+&lt;p&gt;Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v&lt;/p&gt;
+&lt;p&gt;Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v&lt;/p&gt;
+&lt;p&gt;Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v&lt;/p&gt;
+&lt;p&gt;Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v&lt;/p&gt;
+&lt;p&gt;Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v&lt;/p&gt;
+&lt;p&gt;Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <title>Cool Stuff</title>
+    <link href="https://localhost:8000/content/other-things/cool-stuff/"/>
+    <updated>2020-06-04T00:08:33.661-04:00</updated>
+    <id>https://localhost:8000/content/other-things/cool-stuff/</id>
+    <content type="html">&lt;meme-maker alt=&quot;Cat stalking a small toy&quot; image-url=&quot;https://cdn2.thecatapi.com/images/9j5.jpg&quot; top-text=&quot;I bring you&quot; bottom-text=&quot;the death&quot;&gt;
+    &lt;div&gt;I bring you&lt;/div&gt;
+      &lt;img src=&quot;https://cdn2.thecatapi.com/images/9j5.jpg&quot; alt=&quot;Cat stalking a small toy&quot; preload=&quot;lazy&quot;&gt;
+    &lt;div&gt;the death&lt;/div&gt;&lt;/meme-maker&gt;
+&lt;self-check accent-color=&quot;grey&quot; alt=&quot;&quot; resource=&quot;#4276f66d-387e-b2df-3f2e-beeb135bf950&quot; prefix=&quot;oer:http://oerschema.org/ schema:http://schema.org/ dc:http://purl.org/dc/terms/ foaf:http://xmlns.com/foaf/0.1/ cc:http://creativecommons.org/ns# bib:http://bib.schema.org &quot; title=&quot;Self-Check&quot; schema-resource-id=&quot;#4276f66d-387e-b2df-3f2e-beeb135bf950&quot;&gt;&lt;/self-check&gt;
+&lt;p&gt;This is some stupfdfdsfdsfdsfdsfdsfdsfds&lt;/p&gt;
+&lt;img&gt;&lt;hero-banner accent-color=&quot;grey&quot; title=&quot;Title&quot; details=&quot;Details&quot; button-text=&quot;Find out more&quot;&gt;&lt;/hero-banner&gt;
+&lt;p&gt;&lt;span&gt;fdfgdfgdfgdfdgfgd&lt;/span&gt;&lt;/p&gt;
+&lt;media-image size=&quot;wide&quot; offset=&quot;none&quot;&gt;&lt;/media-image&gt;
+&lt;p&gt;&lt;span&gt;fgdfgdfgdsfgdfghfghfghfgh&lt;/span&gt;&lt;/p&gt;
+&lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops=&quot;&quot;&gt;&lt;p slot=&quot;col-1&quot;&gt;&lt;span&gt;fdsfds&lt;/span&gt;&lt;/p&gt;
+&lt;p slot=&quot;col-2&quot;&gt;&lt;span&gt;id stuff here&lt;/span&gt;&lt;/p&gt;
+&lt;/grid-plate&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Yes...more</title>
+    <link href="https://localhost:8000/content/other-things/yet-more/"/>
+    <updated>2020-06-04T00:08:54.061-04:00</updated>
+    <id>https://localhost:8000/content/other-things/yet-more/</id>
+    <content type="html">&lt;p&gt;This is a new title\&lt;/p&gt;
+&lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops=&quot;&quot;&gt;&lt;wikipedia-query search=&quot;Drupal&quot; slot=&quot;col-1&quot;&gt;&lt;/wikipedia-query&gt;
+&lt;/grid-plate&gt;
+&lt;p&gt;jhust hax in context&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>Parent page</title>
+    <link href="https://localhost:8000/content/other-things/"/>
+    <updated>2020-06-04T00:14:20.923-04:00</updated>
+    <id>https://localhost:8000/content/other-things/</id>
+    <content type="html">&lt;p&gt;The parent is some stupid stuff here&lt;/p&gt;</content>
+  </entry>
+  
+  <entry>
+    <title>Page 1</title>
+    <link href="https://localhost:8000/content/post-and-um/"/>
+    <updated>2020-06-15T21:46:34.124-04:00</updated>
+    <id>https://localhost:8000/content/post-and-um/</id>
+    <content type="html">&lt;p&gt;&lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops=&quot;&quot;&gt;&lt;h2 id=&quot;header-3d9237b9-c3f8-2f79-2f23-c51273fdc87b&quot; slot=&quot;col-1&quot;&gt;Header This is cool!&lt;/h2&gt;&lt;/grid-plate&gt;&lt;/p&gt;
+&lt;p slot=&quot;col-2&quot;&gt;fdsfdsfdsfdsfds!&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+</content>
+  </entry>
+</feed>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<pre><code>&lt;url&gt;
+  &lt;loc&gt;https://localhost:8000/assets/upgrade-browser/&lt;/loc&gt;
+  &lt;lastmod&gt;2020-04-24T14:30:59+00:00&lt;/lastmod&gt;
+  &lt;changefreq&gt;daily&lt;/changefreq&gt;
+  &lt;priority&gt;1.0&lt;/priority&gt;
+&lt;/url&gt;
+
+&lt;url&gt;
+  &lt;loc&gt;https://localhost:8000/&lt;/loc&gt;
+  &lt;lastmod&gt;2020-04-24T14:30:59+00:00&lt;/lastmod&gt;
+  &lt;changefreq&gt;daily&lt;/changefreq&gt;
+  &lt;priority&gt;1.0&lt;/priority&gt;
+&lt;/url&gt;
+
+&lt;url&gt;
+  &lt;loc&gt;https://localhost:8000/site.json&lt;/loc&gt;
+  &lt;lastmod&gt;2020-04-24T14:30:59+00:00&lt;/lastmod&gt;
+  &lt;changefreq&gt;daily&lt;/changefreq&gt;
+  &lt;priority&gt;1.0&lt;/priority&gt;
+&lt;/url&gt;
+
+&lt;url&gt;
+  &lt;loc&gt;https://localhost:8000/content/post1/&lt;/loc&gt;
+  &lt;lastmod&gt;2020-05-06T16:49:16+00:00&lt;/lastmod&gt;
+  &lt;changefreq&gt;daily&lt;/changefreq&gt;
+  &lt;priority&gt;1.0&lt;/priority&gt;
+&lt;/url&gt;
+
+&lt;url&gt;
+  &lt;loc&gt;https://localhost:8000/content/post3/&lt;/loc&gt;
+  &lt;lastmod&gt;2020-05-06T16:49:16+00:00&lt;/lastmod&gt;
+  &lt;changefreq&gt;daily&lt;/changefreq&gt;
+  &lt;priority&gt;1.0&lt;/priority&gt;
+&lt;/url&gt;
+
+&lt;url&gt;
+  &lt;loc&gt;https://localhost:8000/content/post2/&lt;/loc&gt;
+  &lt;lastmod&gt;2020-06-03T20:56:55+00:00&lt;/lastmod&gt;
+  &lt;changefreq&gt;daily&lt;/changefreq&gt;
+  &lt;priority&gt;1.0&lt;/priority&gt;
+&lt;/url&gt;
+
+&lt;url&gt;
+  &lt;loc&gt;https://localhost:8000/content/other-things/cool-stuff/&lt;/loc&gt;
+  &lt;lastmod&gt;2020-06-04T00:08:33+00:00&lt;/lastmod&gt;
+  &lt;changefreq&gt;daily&lt;/changefreq&gt;
+  &lt;priority&gt;1.0&lt;/priority&gt;
+&lt;/url&gt;
+
+&lt;url&gt;
+  &lt;loc&gt;https://localhost:8000/content/other-things/yet-more/&lt;/loc&gt;
+  &lt;lastmod&gt;2020-06-04T00:08:54+00:00&lt;/lastmod&gt;
+  &lt;changefreq&gt;daily&lt;/changefreq&gt;
+  &lt;priority&gt;1.0&lt;/priority&gt;
+&lt;/url&gt;
+
+&lt;url&gt;
+  &lt;loc&gt;https://localhost:8000/content/other-things/&lt;/loc&gt;
+  &lt;lastmod&gt;2020-06-04T00:14:20+00:00&lt;/lastmod&gt;
+  &lt;changefreq&gt;daily&lt;/changefreq&gt;
+  &lt;priority&gt;1.0&lt;/priority&gt;
+&lt;/url&gt;
+
+&lt;url&gt;
+  &lt;loc&gt;https://localhost:8000/content/post-and-um/&lt;/loc&gt;
+  &lt;lastmod&gt;2020-06-15T21:46:34+00:00&lt;/lastmod&gt;
+  &lt;changefreq&gt;daily&lt;/changefreq&gt;
+  &lt;priority&gt;1.0&lt;/priority&gt;
+&lt;/url&gt;
+</code></pre>
+</urlset>

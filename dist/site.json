@@ -1,0 +1,213 @@
+{
+  "id": "3474a06d-9d3b-4ec7-ba9b-0a448a6e685e",
+  "title": "IST 402",
+  "author": "EdTechJoker",
+  "description": "Emerging Technology",
+  "license": "by-sa",
+  "metadata": {
+    "author": {
+      "image": "https://btopro.com/files/headshot511743.1799999904.jpg",
+      "name": "EdTechJoker",
+      "email": "bto108@psu.edu",
+      "socialLink": "https://twitter.com/elmsln"
+    },
+    "site": {
+      "name": "ist402",
+      "created": 1595361150202,
+      "updated": 1595361150202,
+      "git": {
+        "autoPush": false,
+        "branch": "master",
+        "staticBranch": "gh-pages",
+        "vendor": "github",
+        "publicRepoUrl": "https://github.com/btopro/ist402/blob/master/",
+        "url": "git@github.com:btopro/ist402.git"
+      },
+      "version": "1.1.2-11ty",
+      "domain": "https://localhost:8000",
+      "logo": "/assets/images/photo-1497493292307-31c376b6e479.jpeg",
+      "static": {
+        "cdn": "build",
+        "offline": false
+      },
+      "settings": {
+        "pathauto": false,
+        "publishPagesOn": false,
+        "forceUpgrade": true,
+        "sw": false
+      }
+    },
+    "theme": {
+      "element": "clean-one",
+      "variables": {
+        "image": "/assets/banner.jpg",
+        "hexCode": "#FFFF00",
+        "cssVariable": "--simple-colors-default-theme-green-7",
+        "logo": "lrn:network"
+      }
+    }
+  },
+  "items": [
+    {
+      "id": "--content-post-and-um-md",
+      "indent": 0,
+      "location": "./pages/post-and-um.md",
+      "slug": "content/post-and-um/",
+      "order": 3,
+      "title": "Page 1",
+      "description": "Page 1",
+      "parent": null,
+      "metadata": {
+        "created": 1592271994,
+        "updated": 1595357205,
+        "readtime": 1,
+        "contentDetails": {},
+        "files": [],
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "Page 1",
+        "banner": "/assets/images/photo-1498050108023-c5249f4df085.jpeg"
+      }
+    },
+    {
+      "id": "--content-post1-md",
+      "indent": 0,
+      "location": "./pages/post1.md",
+      "slug": "content/post1/",
+      "order": -10000,
+      "title": "Should be last",
+      "description": "Should be last",
+      "parent": null,
+      "metadata": {
+        "created": 1588798156,
+        "updated": 1594653684,
+        "readtime": 1,
+        "contentDetails": {},
+        "files": [],
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "Should be last",
+        "order": -10000
+      }
+    },
+    {
+      "id": "--content-post2-md",
+      "indent": 0,
+      "location": "./pages/post2.md",
+      "slug": "content/post2/",
+      "order": 5,
+      "title": "Post 2",
+      "description": "Post 2",
+      "parent": null,
+      "metadata": {
+        "created": 1591232215,
+        "updated": 1594652667,
+        "readtime": 19,
+        "contentDetails": {},
+        "files": [],
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "Post 2",
+        "banner": "/assets/images/photo-1534972195531-d756b9bfa9f2.jpeg"
+      }
+    },
+    {
+      "id": "--content-post3-md",
+      "indent": 0,
+      "location": "./pages/post3.md",
+      "slug": "content/post3/",
+      "order": -100,
+      "title": "Top of things",
+      "description": "Top of things",
+      "parent": null,
+      "metadata": {
+        "created": 1588798156,
+        "updated": 1594653662,
+        "readtime": 1,
+        "contentDetails": {},
+        "files": [],
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "Top of things",
+        "banner": "/assets/images/photo-1562813733-b31f71025d54.jpeg",
+        "order": -100
+      }
+    },
+    {
+      "id": "--content-other-things-cool-stuff-md",
+      "indent": 0,
+      "location": "./pages/other-things/cool-stuff.md",
+      "slug": "content/other-things/cool-stuff/",
+      "order": 7,
+      "title": "Cool Stuff",
+      "description": "Cool Stuff",
+      "parent": "--content-other-things-index-md",
+      "metadata": {
+        "created": 1591243714,
+        "updated": 1591296919,
+        "readtime": 1,
+        "contentDetails": {},
+        "files": [],
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "Cool Stuff",
+        "banner": "/assets/images/photo-1498050108023-c5249f4df085.jpeg"
+      }
+    },
+    {
+      "id": "--content-other-things-yet-more-md",
+      "indent": 0,
+      "location": "./pages/other-things/yet-more.md",
+      "slug": "content/other-things/yet-more/",
+      "order": 8,
+      "title": "Yes...more",
+      "description": "Yes...more",
+      "parent": "--content-other-things-index-md",
+      "metadata": {
+        "created": 1591243734,
+        "updated": 1594649565,
+        "readtime": 1,
+        "contentDetails": {},
+        "files": [],
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "Yes...more"
+      }
+    },
+    {
+      "id": "--content-other-things-index-md",
+      "indent": 0,
+      "location": "./pages/other-things/index.md",
+      "slug": "content/other-things/",
+      "order": 9,
+      "title": "Parent page",
+      "description": "Parent page",
+      "parent": null,
+      "metadata": {
+        "created": 1591244061,
+        "updated": 1591244072,
+        "readtime": 1,
+        "contentDetails": {},
+        "files": [],
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "Parent page",
+        "banner": "/assets/images/photo-1498050108023-c5249f4df085.jpeg"
+      }
+    }
+  ]
+}

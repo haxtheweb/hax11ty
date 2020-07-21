@@ -1,11 +1,11 @@
 {
   "license": "MIT",
   "scripts": {
-    "start": "hax11ty serve",
-    "build": "HAXCMS_SERVICE_WORKER=true hax11ty build"
+    "start": "cd src && hax11ty serve",
+    "build": "cd src && HAXCMS_CDN=true HAXCMS_SERVICE_WORKER=true HAXCMS_BUILDING=true hax11ty build"
   },
   "devDependencies": {
-    "@haxcms/11ty": "^0.0.11",
+    "@haxcms/11ty": "^0.0.13",
     "@11ty/eleventy-plugin-rss": "1.0.7",
     "eleventy-xml-plugin": "0.1.0",
     "crypto": "1.0.1",
