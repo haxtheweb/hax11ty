@@ -2,7 +2,8 @@
   "license": "MIT",
   "scripts": {
     "start": "cd src && hax11ty serve",
-    "build": "cd src && HAXCMS_CDN=true HAXCMS_SERVICE_WORKER=true HAXCMS_BUILDING=true hax11ty build"
+    "build": "cd src && HAXCMS_CDN=true HAXCMS_SERVICE_WORKER=true HAXCMS_BUILDING=true hax11ty build",
+    "build-gh": "yarn run build && cp -R dist docs"
   },
   "devDependencies": {
     "@haxcms/11ty": "^0.0.13",
