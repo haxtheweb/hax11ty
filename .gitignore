@@ -1,5 +1,5 @@
 node_modules
-_site
 yarn.lock
 .DS_Store
 /dist/
+/files/

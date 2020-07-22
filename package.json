@@ -1,9 +1,9 @@
 {
   "license": "MIT",
   "scripts": {
-    "start": "cd src && hax11ty serve",
-    "build": "cd src && HAXCMS_CDN=true HAXCMS_SERVICE_WORKER=true HAXCMS_GITHUB=true hax11ty build",
-    "local-build": "cd src && HAXCMS_LOCAL=true hax11ty build"
+    "start": "cd app && hax11ty serve",
+    "build": "cd app && HAXCMS_CDN=true HAXCMS_SERVICE_WORKER=true HAXCMS_GITHUB=true hax11ty build",
+    "local-build": "cd app && HAXCMS_LOCAL=true hax11ty build"
   },
   "devDependencies": {
     "@haxcms/11ty": "^0.0.13",
