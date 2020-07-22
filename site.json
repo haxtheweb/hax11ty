@@ -1,5 +1,5 @@
 {
-  "id": "#de8f1dbf-eeb3-792f-a9af-93aca348ae14",
+  "id": "#db469970-db5c-3c48-706b-f03c55160f92",
   "title": "IST 402",
   "author": "EdTechJoker",
   "description": "Emerging Technology",
@@ -13,8 +13,8 @@
     },
     "site": {
       "name": "ist402",
-      "created": 1595450291362,
-      "updated": 1595450291362,
+      "created": 1595451268615,
+      "updated": 1595451268615,
       "git": {
         "autoPush": false,
         "branch": "master",
@@ -58,8 +58,8 @@
       "description": "Page 1",
       "parent": null,
       "metadata": {
-        "created": 1595450271,
-        "updated": 1595450271,
+        "created": 1595451250,
+        "updated": 1595451250,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -81,8 +81,8 @@
       "description": "Should be last",
       "parent": null,
       "metadata": {
-        "created": 1595450271,
-        "updated": 1595450271,
+        "created": 1595451250,
+        "updated": 1595451250,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -95,6 +95,29 @@
       }
     },
     {
+      "id": "--content-post2-md",
+      "indent": 0,
+      "location": "./pages/post2.md",
+      "slug": "content/post2/",
+      "order": 2,
+      "title": "Post 2",
+      "description": "Post 2",
+      "parent": null,
+      "metadata": {
+        "created": 1595451250,
+        "updated": 1595451250,
+        "readtime": 19,
+        "contentDetails": {},
+        "files": [],
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "Post 2",
+        "banner": "/assets/images/photo-1534972195531-d756b9bfa9f2.jpeg"
+      }
+    },
+    {
       "id": "--content-post3-md",
       "indent": 0,
       "location": "./pages/post3.md",
@@ -104,8 +127,8 @@
       "description": "Top of things",
       "parent": null,
       "metadata": {
-        "created": 1595450271,
-        "updated": 1595450271,
+        "created": 1595451250,
+        "updated": 1595451250,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -119,29 +142,6 @@
       }
     },
     {
-      "id": "--content-post2-md",
-      "indent": 0,
-      "location": "./pages/post2.md",
-      "slug": "content/post2/",
-      "order": 3,
-      "title": "Post 2",
-      "description": "Post 2",
-      "parent": null,
-      "metadata": {
-        "created": 1595450271,
-        "updated": 1595450271,
-        "readtime": 19,
-        "contentDetails": {},
-        "files": [],
-        "tags": [
-          "content"
-        ],
-        "layout": "content.liquid",
-        "title": "Post 2",
-        "banner": "/assets/images/photo-1534972195531-d756b9bfa9f2.jpeg"
-      }
-    },
-    {
       "id": "--content-other-things-cool-stuff-md",
       "indent": 0,
       "location": "./pages/other-things/cool-stuff.md",
@@ -151,8 +151,8 @@
       "description": "Cool Stuff",
       "parent": "--content-other-things-index-md",
       "metadata": {
-        "created": 1595450271,
-        "updated": 1595450271,
+        "created": 1595451250,
+        "updated": 1595451250,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -165,17 +165,39 @@
       }
     },
     {
+      "id": "--content-other-things-yet-more-md",
+      "indent": 0,
+      "location": "./pages/other-things/yet-more.md",
+      "slug": "content/other-things/yet-more/",
+      "order": 5,
+      "title": "Yes...more",
+      "description": "Yes...more",
+      "parent": "--content-other-things-index-md",
+      "metadata": {
+        "created": 1595451250,
+        "updated": 1595451250,
+        "readtime": 1,
+        "contentDetails": {},
+        "files": [],
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "Yes...more"
+      }
+    },
+    {
       "id": "--content-other-things-index-md",
       "indent": 0,
       "location": "./pages/other-things/index.md",
       "slug": "content/other-things/",
-      "order": 5,
+      "order": 6,
       "title": "Parent page",
       "description": "Parent page",
       "parent": null,
       "metadata": {
-        "created": 1595450271,
-        "updated": 1595450271,
+        "created": 1595451250,
+        "updated": 1595451250,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -185,28 +207,6 @@
         "layout": "content.liquid",
         "title": "Parent page",
         "banner": "/assets/images/photo-1498050108023-c5249f4df085.jpeg"
-      }
-    },
-    {
-      "id": "--content-other-things-yet-more-md",
-      "indent": 0,
-      "location": "./pages/other-things/yet-more.md",
-      "slug": "content/other-things/yet-more/",
-      "order": 6,
-      "title": "Yes...more",
-      "description": "Yes...more",
-      "parent": "--content-other-things-index-md",
-      "metadata": {
-        "created": 1595450271,
-        "updated": 1595450271,
-        "readtime": 1,
-        "contentDetails": {},
-        "files": [],
-        "tags": [
-          "content"
-        ],
-        "layout": "content.liquid",
-        "title": "Yes...more"
       }
     }
   ]
