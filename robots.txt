@@ -1,4 +1,4 @@
-Sitemap: https://localhost:8000/sitemap.xml
+Sitemap: https://btopro.github.io/ist402/sitemap.xml
 User-agent: *
 Crawl-delay: 10
 # CSS, JS, Images

@@ -27,7 +27,7 @@ class EleventyHax extends LitElement {
   renderTemplate() {
     if (this.enabled) {
       return html`
-        <h-a-x app-store='{"url": "appstore.json"}' element-align="right"></h-a-x>
+        <h-a-x app-store='{"url": "dist/dev/appstore.json"}' element-align="right"></h-a-x>
       `;
     }
     else {

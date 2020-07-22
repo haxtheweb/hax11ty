@@ -38,44 +38,32 @@
 'use strict';
 var precacheConfig = [
   [
-    "/site.json",
-    "PPp6yrGQ5nTlZFve"
-  ],
-  [
-    "/assets/upgrade-browser/",
-    "PPp6yrGQ5nTlZFve"
-  ],
-  [
-    "/",
-    "PPp6yrGQ5nTlZFve"
-  ],
-  [
     "/content/post-and-um/",
-    "SGidlhay8aSWRvUJ"
+    "d0yffqbVDbx40KAR"
   ],
   [
     "/content/post1/",
-    "rMEmRZrZMq4gXHAd"
-  ],
-  [
-    "/content/post2/",
-    "x0PUmiZREv9gWA2R"
+    "d0yffqbVDbx40KAR"
   ],
   [
     "/content/post3/",
-    "rMEmRZrZMq4gXHAd"
+    "d0yffqbVDbx40KAR"
+  ],
+  [
+    "/content/post2/",
+    "d0yffqbVDbx40KAR"
   ],
   [
     "/content/other-things/cool-stuff/",
-    "dmf3jy50jxdEMihG"
-  ],
-  [
-    "/content/other-things/yet-more/",
-    "M6gCi1gEz41F8J6W"
+    "d0yffqbVDbx40KAR"
   ],
   [
     "/content/other-things/",
-    "JkpieLHYL82QDkMy"
+    "d0yffqbVDbx40KAR"
+  ],
+  [
+    "/content/other-things/yet-more/",
+    "d0yffqbVDbx40KAR"
   ]
 ];
 var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');
