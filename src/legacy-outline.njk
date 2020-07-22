@@ -1,0 +1,19 @@
+---
+permalink: "legacy-outline.html"
+eleventyExcludeFromCollections: true
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+        <link rel="stylesheet" type="text/css"href="assets/legacy-outline.css">
+    </head>
+    <body>
+        <ul>
+        {% for page in collections.searchDataOrder %} 
+            <li><a href="{{ page.url }}">{{ page.data.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </body>
+</html>

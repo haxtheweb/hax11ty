@@ -1,5 +1,5 @@
 const SITEDIR = "_site";
-const OUTPUTDIR = "content";
+const CONTENTDIR = "content";
 let Nunjucks = require("nunjucks");  
 const crypto = require('crypto');
 const fs = require('fs-extra');
@@ -24,17 +24,22 @@ module.exports = function (eleventyConfig) {
   if (!fs.existsSync(process.cwd() + '/' + SITEDIR + '/')) {
     fs.mkdirSync(process.cwd() + '/' + SITEDIR + '/');
   }
-  copyFolderSyncWithoutGreyMatter(OUTPUTDIR, 'pages')
+  copyFolderSyncWithoutGreyMatter(CONTENTDIR, 'pages')
 
   // add plugins to handle xml and rss files
   eleventyConfig.addPlugin(xmlFiltersPlugin);
   eleventyConfig.addPlugin(pluginRss);
 
-  // copy these assets but don't process them
+  // copy these but don't process them
   eleventyConfig.addPassthroughCopy("assets");
-  eleventyConfig.addPassthroughCopy("unbundled-webcomponents");
-  eleventyConfig.addPassthroughCopy("service-worker.js");
-
+  eleventyConfig.addPassthroughCopy({
+    "theme": "theme",
+    "custom": "custom",
+    "unbundled-webcomponents/app/dist/assets": "assets",
+    "unbundled-webcomponents/app/dist/build": "build",
+    "unbundled-webcomponents/app/dist/build.js": "build.js",
+    "unbundled-webcomponents/app/dist/wc-registry.json": "wc-registry.json",
+  });
   // collections make it easier to work with the data in templates
   eleventyConfig.addCollection("manifest", function (collection) {
     return JSON.stringify({
@@ -43,43 +48,43 @@ module.exports = function (eleventyConfig) {
       description: settings.siteDescription,
       icons: [
         {
-          "src": settings.basePath + "assets/android-icon-36x36.png",
+          "src": "assets/android-icon-36x36.png",
           "sizes": "36x36",
           "type": "image/png",
           "density": "0.75"
         },
         {
-          "src": settings.basePath + "assets/android-icon-48x48.png",
+          "src": "assets/android-icon-48x48.png",
           "sizes": "48x48",
           "type": "image/png",
           "density": "1.0"
         },
         {
-          "src": settings.basePath + "assets/android-icon-72x72.png",
+          "src": "assets/android-icon-72x72.png",
           "sizes": "72x72",
           "type": "image/png",
           "density": "1.5"
         },
         {
-          "src": settings.basePath + "assets/android-icon-96x96.png",
+          "src":"assets/android-icon-96x96.png",
           "sizes": "96x96",
           "type": "image/png",
           "density": "2.0"
         },
         {
-          "src": settings.basePath + "assets/android-icon-144x144.png",
+          "src": "assets/android-icon-144x144.png",
           "sizes": "144x144",
           "type": "image/png",
           "density": "3.0"
         },
         {
-          "src": settings.basePath + "assets/android-icon-192x192.png",
+          "src": "assets/android-icon-192x192.png",
           "sizes": "192x192",
           "type": "image/png",
           "density": "4.0"
         },
         {
-          "src": settings.basePath + "assets/ms-icon-310x310.png",
+          "src": "assets/ms-icon-310x310.png",
           "sizes": "512x512",
           "type": "image/png",
           "density": "4.0"
@@ -96,9 +101,27 @@ module.exports = function (eleventyConfig) {
       orientation: "portrait"
     }, null, 2);
   });
+  eleventyConfig.addShortcode('excerpt', function(article) {
+    if (!article.hasOwnProperty('templateContent')) {
+      console.warn('Failed to extract excerpt: Document has no property "templateContent".');
+      return null;
+    }
+     
+    let excerpt = null;
+    const content = article.templateContent;
+    excerpt = content.replace(/<\/?[^>]+(>|$)/g, "").replace(/\\/g, " ").replace(/\n/g, "").substr(0, 1000).trim();
+    return excerpt;
+  });
+  eleventyConfig.addCollection("searchDataOrder", function(collection) {
+    return collection.getFilteredByGlob(CONTENTDIR + "/**/*.md").sort((a,b) => {
+      if(a.data.title < b.data.title) return -1;
+      if(a.data.title > b.data.title) return 1;
+      return 0;
+    });
+  });
   eleventyConfig.addCollection("swHashData", function (collection) {
     const items = collection.items.map(({ outputPath, url, data }, i) => {
-      if (!url.includes("/unbundled-webcomponents/")) {
+      if (!url.includes("/build/")) {
         return [
           url,
           hashFromValue(data.page.date.toString()).substr(0, 16).replace(/\//g,'z').replace(/\+/g,'y').replace(/\=/g,'x').replace(/\-/g,'w', settings.siteUuid)
@@ -122,7 +145,7 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addCollection("haxcms", function (collection) {
     const items = collection.items.map(({ outputPath, inputPath, url, data }, i) => {
-      if (url.includes("/" + OUTPUTDIR + "/")) {
+      if (url.includes("/" + CONTENTDIR + "/")) {
         let parentID = null;
         // parent test path
         let test = inputPath.split('/');
@@ -158,6 +181,7 @@ module.exports = function (eleventyConfig) {
         }
         const pageData = data;
         // strip off these globals we don't need
+        // @note DO NOT DELETE LAYOUT. 11ty needs this to process the templates
         delete pageData.collections;
         delete pageData.haxcms;
         delete pageData.pkg;
@@ -171,7 +195,7 @@ module.exports = function (eleventyConfig) {
         return {
           id: inputPath.replace(/\./g,'-').replace(/\//g,'-'),
           indent: 0,
-          location: inputPath.replace('/' + OUTPUTDIR + '/','/pages/'),
+          location: inputPath.replace('/' + CONTENTDIR + '/','/pages/'),
           slug: slug,
           order: order,
           title: data.title ? data.title : 'Title',

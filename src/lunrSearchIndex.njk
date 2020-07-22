@@ -1,0 +1,14 @@
+---
+permalink: "lunrSearchIndex.json"
+eleventyExcludeFromCollections: true
+---
+[
+{% for page in collections.searchDataOrder %}  {
+   "id":"{{page.data.title}}",
+   "title":"{{page.data.title}}",
+   "created": "{{page.data.date}}",
+   "location":"{{page.url}}",
+   "description":"{% excerpt page %}",
+   "text":"{% excerpt page %}"
+  }{% if loop.last == false %},{% endif %}
+{% endfor %}]

@@ -1,0 +1,19 @@
+---
+permalink: "dat.json"
+eleventyExcludeFromCollections: true
+---
+{
+    "title": "{{ settings.siteName }}",
+    "description": "{{ settings.siteDescription }}",
+    "type": [
+        "website", "HAXcms"
+    ],
+    "links": {
+        "license": [
+            {
+                "href": "{% getLicenseInfo settings.siteLicense,'link' %}",
+                "title": "{% getLicenseInfo settings.siteLicense,'name' %}"
+            }
+        ]
+    }
+}

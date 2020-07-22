@@ -11,4 +11,3 @@ This wrapper on 11ty provides conventions to simplify how you build and deploy H
 - Add pages into content directory, `.md` with greymatter allows you to set title of the page and order
 - `styles.css` has some default settings and styles which you can modify
 - `settings.js` - modify theme used, additional settings
-
