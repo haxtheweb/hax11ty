@@ -1,5 +1,12 @@
 module.exports = () => {
     var basePath = "/";
+    var gitOrg = "btopro";
+    var gitProject = "ist402";
+    var url = "https://localhost:8000";
+    if (process.env.HAXCMS_BUILDING) {
+        basePath = `/${gitProject}/`;
+        url = `https://${gitOrg}.github.io/${gitProject}`;
+    }
     var cdnBase = "/";
     var cdnPart = "unbundled-webcomponents/app/dist/";
     if (process.env.HAXCMS_CDN) {
@@ -10,7 +17,7 @@ module.exports = () => {
         siteMachineName: "ist402",
         siteAuthorName: "EdTechJoker",
         siteAuthorEmail: "bto108@psu.edu",
-        siteAuthorImage: "https://btopro.com/files/headshot511743.1799999904.jpg",
+        siteAuthorImage: "/files/headshot511743.1799999904.jpg",
         siteName: "IST 402",
         siteLicense: "by-sa",
         siteDescription: "Emerging Technology",
@@ -20,14 +27,14 @@ module.exports = () => {
         themeHexCode: "#FF5500",
         themeLogo: "lrn:network",
         themeColor: "green",
-        twitterName: "elmsln",
+        twitterName: "btopro",
         git: {
             autoPush: false,
             branch: "master",
             staticBranch: "gh-pages",
             vendor: "github",
-            publicRepoUrl: "https://github.com/btopro/ist402/blob/master/",
-            url: "git@github.com:btopro/ist402.git"
+            publicRepoUrl: `https://github.com/${gitOrg}/${gitProject}/blob/master/`,
+            url: `git@github.com:${gitOrg}/${gitProject}.git`
         },
         // advanced settings don't modify
         mode: "haxcms",
@@ -37,8 +44,8 @@ module.exports = () => {
         cdn: cdnBase + cdnPart,
         preconnect: cdnBase,
         basePath: basePath,
-        domain: "https://localhost:8000",
-        url: "https://localhost:8000",
+        domain: url,
+        url: url,
         siteUuid: "3474a06d-9d3b-4ec7-ba9b-0a448a6e685e"
     };
 };
