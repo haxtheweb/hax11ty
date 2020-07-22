@@ -39,31 +39,31 @@
 var precacheConfig = [
   [
     "/content/post-and-um/",
-    "d0yffqbVDbx40KAR"
+    "dylJHaE0NAS22EjO"
   ],
   [
     "/content/post1/",
-    "d0yffqbVDbx40KAR"
+    "dylJHaE0NAS22EjO"
   ],
   [
     "/content/post3/",
-    "d0yffqbVDbx40KAR"
+    "dylJHaE0NAS22EjO"
   ],
   [
     "/content/post2/",
-    "d0yffqbVDbx40KAR"
+    "dylJHaE0NAS22EjO"
   ],
   [
     "/content/other-things/cool-stuff/",
-    "d0yffqbVDbx40KAR"
+    "dylJHaE0NAS22EjO"
   ],
   [
     "/content/other-things/",
-    "d0yffqbVDbx40KAR"
+    "dylJHaE0NAS22EjO"
   ],
   [
     "/content/other-things/yet-more/",
-    "d0yffqbVDbx40KAR"
+    "dylJHaE0NAS22EjO"
   ]
 ];
 var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');

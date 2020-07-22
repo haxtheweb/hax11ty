@@ -1,5 +1,5 @@
 {
-  "id": "3474a06d-9d3b-4ec7-ba9b-0a448a6e685e",
+  "id": "#de8f1dbf-eeb3-792f-a9af-93aca348ae14",
   "title": "IST 402",
   "author": "EdTechJoker",
   "description": "Emerging Technology",
@@ -13,8 +13,8 @@
     },
     "site": {
       "name": "ist402",
-      "created": 1595449242440,
-      "updated": 1595449242440,
+      "created": 1595450291362,
+      "updated": 1595450291362,
       "git": {
         "autoPush": false,
         "branch": "master",
@@ -23,7 +23,7 @@
         "publicRepoUrl": "https://github.com/btopro/ist402/blob/master/",
         "url": "git@github.com:btopro/ist402.git"
       },
-      "version": "1.1.2-11ty",
+      "version": "1.2.9-11ty",
       "domain": "https://btopro.github.io/ist402",
       "logo": "assets/images/photo-1497493292307-31c376b6e479.jpeg",
       "static": {
@@ -42,7 +42,7 @@
       "variables": {
         "image": "assets/banner.jpg",
         "hexCode": "#FF5500",
-        "cssVariable": "--simple-colors-default-theme-green-7",
+        "cssVariable": "--simple-colors-default-theme-red-7",
         "logo": "lrn:network"
       }
     }
@@ -58,8 +58,8 @@
       "description": "Page 1",
       "parent": null,
       "metadata": {
-        "created": 1595449217,
-        "updated": 1595449217,
+        "created": 1595450271,
+        "updated": 1595450271,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -81,8 +81,8 @@
       "description": "Should be last",
       "parent": null,
       "metadata": {
-        "created": 1595449217,
-        "updated": 1595449217,
+        "created": 1595450271,
+        "updated": 1595450271,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -104,8 +104,8 @@
       "description": "Top of things",
       "parent": null,
       "metadata": {
-        "created": 1595449217,
-        "updated": 1595449217,
+        "created": 1595450271,
+        "updated": 1595450271,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -128,8 +128,8 @@
       "description": "Post 2",
       "parent": null,
       "metadata": {
-        "created": 1595449217,
-        "updated": 1595449217,
+        "created": 1595450271,
+        "updated": 1595450271,
         "readtime": 19,
         "contentDetails": {},
         "files": [],
@@ -151,8 +151,8 @@
       "description": "Cool Stuff",
       "parent": "--content-other-things-index-md",
       "metadata": {
-        "created": 1595449217,
-        "updated": 1595449217,
+        "created": 1595450271,
+        "updated": 1595450271,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -174,8 +174,8 @@
       "description": "Parent page",
       "parent": null,
       "metadata": {
-        "created": 1595449217,
-        "updated": 1595449217,
+        "created": 1595450271,
+        "updated": 1595450271,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -197,8 +197,8 @@
       "description": "Yes...more",
       "parent": "--content-other-things-index-md",
       "metadata": {
-        "created": 1595449217,
-        "updated": 1595449217,
+        "created": 1595450271,
+        "updated": 1595450271,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
