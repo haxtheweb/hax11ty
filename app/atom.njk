@@ -13,16 +13,15 @@ eleventyExcludeFromCollections: true
   </author>
   <id>{{ settings.url }}/atom.xml</id>
   {%- for post in collections.all %}
-  {% set absolutePostUrl %}{{ settings.url }}{{ post.url | url }}{% endset %}
   <entry>
     <title>{{ post.data.title }}</title>
-    <id>{{ absolutePostUrl }}</id>
+    <id>{{ settings.url }}{{ post.url | url }}</id>
     <updated>{{ post.date | rssDate }}</updated>
     <published>{{ post.date | rssDate }}</published>
     <summary>{{ post.data.description }}</summary>
-    <link href="{{ absolutePostUrl }}"/>
+    <link href="{{ settings.url }}{{ post.url | url }}"/>
     <content type="html">
-      {{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}
+      {{ post.templateContent }}
     </content>
   </entry>
   {%- endfor %}
