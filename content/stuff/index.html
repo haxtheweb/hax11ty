@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IST 402</title>
+  <base href="/ist402/" />
+  <link rel="preconnect" crossorigin href="https://cdn.webcomponents.psu.edu" />
+  <link rel="preconnect" crossorigin href="https://fonts.googleapis.com" />
+  <link rel="preconnect" crossorigin href="https://cdnjs.cloudflare.com" />
+  <link rel="preconnect" crossorigin href="https://i.creativecommons.org" />
+  <link rel="preconnect" crossorigin href="https://licensebuttons.net" />
+  <link rel="preload" href="/ist402/build.js" as="script" />
+  <link rel="preload" href="https://cdn.webcomponents.psu.edu/cdn/wc-registry.json" as="fetch" crossorigin="anonymous" />
+  <link rel="preload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/dynamic-import-registry/dynamic-import-registry.js" as="script" crossorigin="anonymous" />
+  <link rel="modulepreload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/dynamic-import-registry/dynamic-import-registry.js" />
+  <link rel="preload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/wc-autoload/wc-autoload.js" as="script" crossorigin="anonymous" />
+  <link rel="modulepreload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/wc-autoload/wc-autoload.js" />
+  <link rel="preload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/web-animations-js/web-animations-next-lite.min.js" as="script" />
+  
+  <link rel="manifest" href="/ist402/manifest.json">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=yes" />
+  <meta name="generator" content="HAXcms / Eleventy" />
+  <meta name="theme-color" content="#FF5500">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="robots" content="index, follow">
+  <meta name="application-name" content="IST 402">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="IST 402">
+  <meta name="msapplication-TileImage" content="/ist402/assets/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#FF5500">
+  <meta name="msapplication-tap-highlight" content="no">
+  <link rel="icon" href="/ist402/assets/favicon.ico">
+  <link rel="apple-touch-icon" href="/ist402/assets/icon-48x48.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/ist402/assets/icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="96x96" href="/ist402/assets/icon-96x96.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/ist402/assets/icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="/ist402/assets/icon-192x192.png">
+
+  <meta name="description" content="Emerging Technology" />
+  <meta name="og:sitename" property="og:sitename" content="IST 402" />
+  <meta name="og:title" property="og:title" content="IST 402" />
+  <meta name="og:type" property="og:type" content="article" />
+  <meta name="og:url" property="og:url" content="https://btopro.github.io/ist402" />
+  <meta name="og:description" property="og:description" content="Emerging Technology" />
+  <meta name="og:image" property="og:image" content="assets/banner.jpg" />
+  <meta name="twitter:card" property="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" property="twitter:site" content="https://btopro.github.io/ist402" />
+  <meta name="twitter:title" property="twitter:title" content="IST 402" />
+  <meta name="twitter:description" property="twitter:description" content="Emerging Technology" />
+  <meta name="twitter:image" property="twitter:image" content="assets/banner.jpg" />
+  <meta rel="cc:license" href="https://creativecommons.org/licenses/by-sa/4.0/" content="License: Creative Commons: Attribution Share a like"/>
+  <meta name="twitter:creator" content="@btopro" />
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+  
+  <style>
+    body {
+      margin: 0;
+      min-height: 98vh;
+    }
+    .use-modern-browser a {
+      font-size: 22px;
+    }
+    .use-modern-browser {
+      font-size: 22px;
+      text-align: center;
+      width: 100%;
+    }
+  </style>
+  <style id="loadingstyles">
+    haxcms-site-builder {
+      display: block;
+    }
+    body[no-js] haxcms-site-builder {
+      display: none !important;
+    }
+    #loading {
+      background-color: white;
+      bottom: 0px;
+      left: 0px;
+      opacity: 1;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      transition: all linear 300ms;
+      -webkit-transition: all linear 300ms;
+      z-index: 99999999;
+    }
+
+    #loading.loaded {
+      animation: fade-out .7s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    #loading div.messaging {
+      color: rgba(255,255,255, 0.7);
+      font-family: Roboto;
+      left: 0px;
+      margin-top: -75px;
+      position: absolute;
+      right: 0px;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    #loading div.messaging h1 {
+      color: white;
+      font-family: 'Open Sans', 'arial', 'serif';
+      font-size: 40px;
+      background-color: #FF5500;
+      transition: .4s ease-in-out all;
+    }
+    #loading img {
+      transition: .4s all ease-in-out;
+      width: 300px;
+      height: 300px;
+      margin-bottom: 50px;
+      border-radius: 50%;
+      border: 8px solid #FF5500;
+      box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.45);
+      -moz-box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.45);
+	    -webkit-box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.45);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
+    }
+    .progress-line,
+    .progress-line:before {
+      height: 8px;
+      width: 100%;
+      margin: auto;
+    }
+    .progress-line {
+      background-color: rgba(0,0,0, 0.05);
+      display: -webkit-flex;
+      display: flex;
+      width: 300px;
+    }
+    .progress-line:before {
+      background-color: #FF5500;
+      content: '';
+      animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    @keyframes running-progress {
+      0% {
+        margin-left: 0px;
+        margin-right: 100%;
+      }
+      50% {
+        margin-left: 25%;
+        margin-right: 0%;
+      }
+      100% {
+        margin-left: 100%;
+        margin-right: 0;
+      }
+    }
+    @keyframes fade-out {
+      0% {
+        opacity: 1;
+      }
+      99% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+  <script id="loadingscript">
+    window.addEventListener('load', function(e) {
+      // give the web components a second to build
+      setTimeout(function() {
+        document.querySelector('#loading').classList.add('loaded');
+        setTimeout(function() {
+          document.querySelector('#loading').parentNode.removeChild(document.querySelector('#loading'));
+          document.querySelector('#loadingstyles').parentNode.removeChild(document.querySelector('#loadingstyles'));
+          document.querySelector('#loadingscript').parentNode.removeChild(document.querySelector('#loadingscript'));
+        }, 600);
+      }, 1000)
+    });
+  </script>
+</head>
+<body no-js vocab="http://schema.org/" prefix="oer:http://oerschema.org cc:http://creativecommons.org/ns dc:http://purl.org/dc/terms/">
+  <div id="loading">
+    <div class="messaging">
+      <img src="assets/images/photo-1497493292307-31c376b6e479.jpeg" alt="" loading="lazy" height="300px" width="300px" />
+      <div class="progress-line"></div>
+      <h1>Loading IST 402</h1>
+    </div>
+  </div>
+  <haxcms-site-builder id="site" file="site.json">
+<grid-plate layout="1-1" responsive-size="sm" responsive-width="900" breakpoint-sm="900" breakpoint-md="1200" breakpoint-lg="1500" breakpoint-xl="1800" hide-ops>
+<p slot="col-1">fgdfgdfgdfgdfgd</p>
+<p class="grid-plate-active-item" slot="col-2">fgdfgdfgdfgdfgd</p>
+</grid-plate>
+<p>Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v</p>
+<p>Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v</p>
+<p>Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v</p>
+<p>Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v</p>
+<p>Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v</p>
+<p>Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v</p>
+<p>Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v</p>
+<p>Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v</p>
+<p>Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v</p>
+<p>Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v</p>
+<p>Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v</p>
+</haxcms-site-builder>
+  <div id="haxcmsoutdatedfallback">
+    <div id="haxcmsoutdatedfallbacksuperold"> 
+      <iframe id="outline" style="width:18%;float:left;height:90vh;padding:0;margin:0;" name="outline" id="frame1"
+        src="/ist402/legacy-outline.html" loading="lazy"></iframe>
+      <iframe id="content" style="width:80%;float:left;height:90vh;padding:0;margin:0;" name="content" id="frame2" src="" loading="lazy"></iframe>
+      <div class="use-modern-browser">Please use a modern browser to
+        view our website correctly. <a href="http://outdatedbrowser.com/">Update my browser now</a></div>
+    </div>
+  </div>
+  <script>document.body.removeAttribute('no-js');window.__appCDN="https://cdn.webcomponents.psu.edu/cdn/";window.__appForceUpgrade=true;</script>
+  <script src="/ist402/build.js"></script>
+  <script src="/ist402/build-haxcms.js"></script>
+  <link rel="stylesheet" type="text/css" href="/ist402/assets/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/haxcms-elements/lib/base.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+</body>
+</html>

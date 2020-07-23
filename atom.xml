@@ -3,106 +3,119 @@
   <title>IST 402</title>
   <link href="https://btopro.github.io/ist402/atom.xml" rel="self" />
   <subtitle>Emerging Technology</subtitle>
-  <updated>2020-07-22T20:56:50.485-00:00</updated>
+  <updated>2020-07-23T01:00:40.943-00:00</updated>
   <author>
       <name>EdTechJoker</name>
   </author>
   <id>https://btopro.github.io/ist402/atom.xml</id>
-  
   <entry>
     <title>Cool Stuff</title>
     <id>https://btopro.github.io/ist402/content/other-things/cool-stuff/</id>
-    <updated>2020-07-22T20:56:50.485-00:00</updated>
-    <published>2020-07-22T20:56:50.485-00:00</published>
+    <updated>2020-07-23T01:00:40.943-00:00</updated>
+    <published>2020-07-23T01:00:40.943-00:00</published>
     <summary></summary>
     <link href="https://btopro.github.io/ist402/content/other-things/cool-stuff/"/>
     <content type="html">
       &lt;meme-maker alt=&quot;Cat stalking a small toy&quot; image-url=&quot;https://cdn2.thecatapi.com/images/9j5.jpg&quot; top-text=&quot;I bring you&quot; bottom-text=&quot;the death&quot;&gt;
     &lt;div&gt;I bring you&lt;/div&gt;
-      &lt;img src=&quot;https://cdn2.thecatapi.com/images/9j5.jpg&quot; alt=&quot;Cat stalking a small toy&quot; preload=&quot;lazy&quot;&gt;
+      &lt;img src=&quot;https://cdn2.thecatapi.com/images/9j5.jpg&quot; alt=&quot;Cat stalking a small toy&quot; preload=&quot;lazy&quot;/&gt;
     &lt;div&gt;the death&lt;/div&gt;&lt;/meme-maker&gt;
 &lt;self-check accent-color=&quot;grey&quot; alt=&quot;&quot; resource=&quot;#4276f66d-387e-b2df-3f2e-beeb135bf950&quot; prefix=&quot;oer:http://oerschema.org/ schema:http://schema.org/ dc:http://purl.org/dc/terms/ foaf:http://xmlns.com/foaf/0.1/ cc:http://creativecommons.org/ns# bib:http://bib.schema.org &quot; title=&quot;Self-Check&quot; schema-resource-id=&quot;#4276f66d-387e-b2df-3f2e-beeb135bf950&quot;&gt;&lt;/self-check&gt;
 &lt;p&gt;This is some stupfdfdsfdsfdsfdsfdsfdsfds&lt;/p&gt;
-&lt;img&gt;&lt;hero-banner accent-color=&quot;grey&quot; title=&quot;Title&quot; details=&quot;Details&quot; button-text=&quot;Find out more&quot;&gt;&lt;/hero-banner&gt;
+&lt;img/&gt;&lt;hero-banner accent-color=&quot;grey&quot; title=&quot;Title&quot; details=&quot;Details&quot; button-text=&quot;Find out more&quot;&gt;&lt;/hero-banner&gt;
 &lt;p&gt;&lt;span&gt;fdfgdfgdfgdfdgfgd&lt;/span&gt;&lt;/p&gt;
 &lt;media-image size=&quot;wide&quot; offset=&quot;none&quot;&gt;&lt;/media-image&gt;
 &lt;p&gt;&lt;span&gt;fgdfgdfgdsfgdfghfghfghfgh&lt;/span&gt;&lt;/p&gt;
-&lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops=&quot;&quot;&gt;&lt;p slot=&quot;col-1&quot;&gt;&lt;span&gt;fdsfds&lt;/span&gt;&lt;/p&gt;
+&lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops&gt;&lt;p slot=&quot;col-1&quot;&gt;&lt;span&gt;fdsfds&lt;/span&gt;&lt;/p&gt;
 &lt;p slot=&quot;col-2&quot;&gt;&lt;span&gt;id stuff here&lt;/span&gt;&lt;/p&gt;
 &lt;/grid-plate&gt;
 
     </content>
   </entry>
-  
   <entry>
     <title>Parent page</title>
     <id>https://btopro.github.io/ist402/content/other-things/</id>
-    <updated>2020-07-22T20:56:50.485-00:00</updated>
-    <published>2020-07-22T20:56:50.485-00:00</published>
+    <updated>2020-07-23T01:00:40.943-00:00</updated>
+    <published>2020-07-23T01:00:40.943-00:00</published>
     <summary></summary>
     <link href="https://btopro.github.io/ist402/content/other-things/"/>
     <content type="html">
       &lt;p&gt;The parent is some stupid stuff here&lt;/p&gt;
     </content>
   </entry>
-  
   <entry>
     <title>Yes...more</title>
     <id>https://btopro.github.io/ist402/content/other-things/yet-more/</id>
-    <updated>2020-07-22T20:56:50.485-00:00</updated>
-    <published>2020-07-22T20:56:50.485-00:00</published>
+    <updated>2020-07-23T01:00:40.943-00:00</updated>
+    <published>2020-07-23T01:00:40.943-00:00</published>
     <summary></summary>
     <link href="https://btopro.github.io/ist402/content/other-things/yet-more/"/>
     <content type="html">
       &lt;p&gt;This is a new title\&lt;/p&gt;
-&lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops=&quot;&quot;&gt;&lt;wikipedia-query search=&quot;Drupal&quot; slot=&quot;col-1&quot;&gt;&lt;/wikipedia-query&gt;
+&lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops&gt;&lt;wikipedia-query search=&quot;Drupal&quot; slot=&quot;col-1&quot;&gt;&lt;/wikipedia-query&gt;
 &lt;/grid-plate&gt;
 &lt;p&gt;jhust hax in context&lt;/p&gt;
 
     </content>
   </entry>
-  
   <entry>
     <title>Page 1</title>
     <id>https://btopro.github.io/ist402/content/post-and-um/</id>
-    <updated>2020-07-22T20:56:50.485-00:00</updated>
-    <published>2020-07-22T20:56:50.485-00:00</published>
+    <updated>2020-07-23T01:00:40.943-00:00</updated>
+    <published>2020-07-23T01:00:40.943-00:00</published>
     <summary></summary>
     <link href="https://btopro.github.io/ist402/content/post-and-um/"/>
     <content type="html">
-      &lt;p&gt;&lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops=&quot;&quot;&gt;&lt;h2 id=&quot;header-3d9237b9-c3f8-2f79-2f23-c51273fdc87b&quot; slot=&quot;col-1&quot;&gt;Header This is cool!&lt;/h2&gt;&lt;/grid-plate&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops&gt;&lt;h2 id=&quot;header-3d9237b9-c3f8-2f79-2f23-c51273fdc87b&quot; slot=&quot;col-1&quot;&gt;Header This is cool!&lt;/h2&gt;&lt;/p&gt;
 &lt;p slot=&quot;col-2&quot;&gt;fdsfdsfdsfdsfds!&lt;/p&gt;
-
+&lt;/grid-plate&gt;
 &lt;p&gt;&lt;/p&gt;
 
     </content>
   </entry>
-  
   <entry>
-    <title>Should be last</title>
+    <title>fdsfdsfdsfds</title>
     <id>https://btopro.github.io/ist402/content/post1/</id>
-    <updated>2020-07-22T20:56:50.485-00:00</updated>
-    <published>2020-07-22T20:56:50.485-00:00</published>
+    <updated>2020-07-23T01:00:40.943-00:00</updated>
+    <published>2020-07-23T01:00:40.943-00:00</published>
     <summary></summary>
     <link href="https://btopro.github.io/ist402/content/post1/"/>
     <content type="html">
-      &lt;p&gt;&lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops=&quot;&quot;&gt;&lt;h2 id=&quot;header-3d9237b9-c3f8-2f79-2f23-c51273fdc87b&quot; slot=&quot;col-1&quot;&gt;Header This is cool!&lt;/h2&gt;&lt;/grid-plate&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops&gt;&lt;h2 id=&quot;header-3d9237b9-c3f8-2f79-2f23-c51273fdc87b&quot; slot=&quot;col-1&quot;&gt;Header This is cool!&lt;/h2&gt;&lt;/p&gt;
 &lt;p slot=&quot;col-2&quot;&gt;This was changed now!&lt;/p&gt;
-
+&lt;/grid-plate&gt;
 &lt;p&gt;&lt;/p&gt;
 
     </content>
   </entry>
-  
   <entry>
-    <title>Post 2</title>
-    <id>https://btopro.github.io/ist402/content/post2/</id>
-    <updated>2020-07-22T20:56:50.485-00:00</updated>
-    <published>2020-07-22T20:56:50.485-00:00</published>
+    <title>Top of things</title>
+    <id>https://btopro.github.io/ist402/content/post3/</id>
+    <updated>2020-07-23T01:00:40.943-00:00</updated>
+    <published>2020-07-23T01:00:40.943-00:00</published>
     <summary></summary>
-    <link href="https://btopro.github.io/ist402/content/post2/"/>
+    <link href="https://btopro.github.io/ist402/content/post3/"/>
     <content type="html">
-      &lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops=&quot;&quot;&gt;
+      &lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops&gt;
+  &lt;p slot=&quot;col-1&quot;&gt;ffff&lt;/p&gt;
+  &lt;p slot=&quot;col-2&quot;&gt;fffffgh222&lt;/p&gt;
+&lt;/grid-plate&gt;
+&lt;meme-maker alt=&quot;Cat stalking a small toy&quot; image-url=&quot;https://cdn2.thecatapi.com/images/9j5.jpg&quot; top-text=&quot;I bring you&quot; bottom-text=&quot;Yummmmm&quot;&gt;
+  &lt;div&gt;I bring you&lt;/div&gt;
+  &lt;img src=&quot;https://cdn2.thecatapi.com/images/9j5.jpg&quot; alt=&quot;Cat stalking a small toy&quot; preload=&quot;lazy&quot;/&gt;
+  &lt;div&gt;Yummmmm&lt;/div&gt;
+&lt;/meme-maker&gt;
+    </content>
+  </entry>
+  <entry>
+    <title>Things and Brad</title>
+    <id>https://btopro.github.io/ist402/content/stuff/</id>
+    <updated>2020-07-23T01:00:40.943-00:00</updated>
+    <published>2020-07-23T01:00:40.943-00:00</published>
+    <summary></summary>
+    <link href="https://btopro.github.io/ist402/content/stuff/"/>
+    <content type="html">
+      &lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops&gt;
 &lt;p slot=&quot;col-1&quot;&gt;fgdfgdfgdfgdfgd&lt;/p&gt;
 &lt;p class=&quot;grid-plate-active-item&quot; slot=&quot;col-2&quot;&gt;fgdfgdfgdfgdfgd&lt;/p&gt;
 &lt;/grid-plate&gt;
@@ -117,26 +130,6 @@
 &lt;p&gt;Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v&lt;/p&gt;
 &lt;p&gt;Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v&lt;/p&gt;
 &lt;p&gt;Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things v&lt;/p&gt;
-    </content>
-  </entry>
-  
-  <entry>
-    <title>Top of things</title>
-    <id>https://btopro.github.io/ist402/content/post3/</id>
-    <updated>2020-07-22T20:56:50.485-00:00</updated>
-    <published>2020-07-22T20:56:50.485-00:00</published>
-    <summary></summary>
-    <link href="https://btopro.github.io/ist402/content/post3/"/>
-    <content type="html">
-      &lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops=&quot;&quot;&gt;
-  &lt;p slot=&quot;col-1&quot;&gt;ffff&lt;/p&gt;
-  &lt;p slot=&quot;col-2&quot;&gt;fffffgh222&lt;/p&gt;
-&lt;/grid-plate&gt;
-&lt;meme-maker alt=&quot;Cat stalking a small toy&quot; image-url=&quot;https://cdn2.thecatapi.com/images/9j5.jpg&quot; top-text=&quot;I bring you&quot; bottom-text=&quot;Yummmmm&quot;&gt;
-  &lt;div&gt;I bring you&lt;/div&gt;
-  &lt;img src=&quot;https://cdn2.thecatapi.com/images/9j5.jpg&quot; alt=&quot;Cat stalking a small toy&quot; preload=&quot;lazy&quot;&gt;
-  &lt;div&gt;Yummmmm&lt;/div&gt;
-&lt;/meme-maker&gt;
     </content>
   </entry>
 </feed>
