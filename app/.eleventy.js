@@ -81,7 +81,8 @@ module.exports = function (eleventyConfig) {
           "src": "assets/android-icon-192x192.png",
           "sizes": "192x192",
           "type": "image/png",
-          "density": "4.0"
+          "density": "4.0",
+          "purpose": "any maskable" 
         },
         {
           "src": "assets/ms-icon-310x310.png",
