@@ -5,10 +5,10 @@ module.exports = () => {
     // will most likley want to change designated
     // github organization / username
     // github.com/WHATEVER
-    var gitOrg = "btopro";
+    var gitOrg = "elmsln";
     // project name
-    // github.com/btopro/WHATEVER
-    var gitProject = "ist402";
+    // github.com/elmsln/WHATEVER - hax11ty here implies building against the repo itself to produce it's own docs :)
+    var gitProject = "hax11ty";
     // URL, default for local testing
     var url = "https://localhost:8000";
     // CDN for requesting the location of the build directory
@@ -46,20 +46,20 @@ module.exports = () => {
     return {
         // this is where most things you'll want to change reside
         // folder / machine name to represent your site
-        siteMachineName: "ist402",
+        siteMachineName: "elmsln",
         // Your name as referenced as the author in files
         siteAuthorName: "EdTechJoker",
         // email address, optional
-        siteAuthorEmail: "bto108@psu.edu",
+        siteAuthorEmail: "hax@psu.edu",
         // an image of you, could be in the local files directory
         // this is used in some themes
         siteAuthorImage: "files/headshot511743.1799999904.jpg",
         // visual name of your site
-        siteName: "IST 402",
+        siteName: "HAX11TY doc site",
         // CC license, see https://creativecommons.org/licenses/ for a list
         siteLicense: "by-sa",
         // short description of the site for SEO
-        siteDescription: "Emerging Technology",
+        siteDescription: "HAX + 11ty = bliss",
         // logo to represent the site
         siteLogo: "assets/images/photo-1497493292307-31c376b6e479.jpeg",
         // theme to use HAXcms valid theme as it appears in the wc-factory listing
@@ -69,13 +69,13 @@ module.exports = () => {
         // banner image used in your theme
         themeImage: "assets/banner.jpg",
         // a HEX color code to represent / accent your theme
-        themeHexCode: "#FF5500",
+        themeHexCode: "#55FF55",
         // icon name if the theme uses one
         themeLogo: "lrn:network",
         // general theme color
-        themeColor: "red",
+        themeColor: "green",
         // optional twitter handle
-        twitterName: "btopro",
+        twitterName: "elmsln",
         // git configuration settings. This stuff is relatively specific to HAXcms
         // so set these things to your gitOrg / project from above as needed
         git: {
