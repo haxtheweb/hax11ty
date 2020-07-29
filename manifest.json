@@ -1,7 +1,7 @@
 {
-  "name": "IST 402",
-  "short_name": "IST 402",
-  "description": "Emerging Technology",
+  "name": "HAX11TY doc site",
+  "short_name": "HAX11TY doc site",
+  "description": "HAX + 11ty = bliss",
   "icons": [
     {
       "src": "assets/android-icon-36x36.png",
@@ -47,12 +47,12 @@
       "density": "4.0"
     }
   ],
-  "scope": "/ist402/",
-  "start_url": "/ist402/",
+  "scope": "/hax11ty/",
+  "start_url": "/hax11ty/",
   "display": "standalone",
-  "theme_color": "#FF5500",
-  "background_color": "#FF5500",
-  "url": "https://btopro.github.io/ist402",
+  "theme_color": "#55FF55",
+  "background_color": "#55FF55",
+  "url": "https://elmsln.github.io/hax11ty",
   "lang": "en",
   "screenshots": [],
   "orientation": "portrait"

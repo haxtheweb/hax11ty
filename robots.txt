@@ -1,4 +1,4 @@
-Sitemap: https://btopro.github.io/ist402/sitemap.xml
+Sitemap: https://elmsln.github.io/hax11ty/sitemap.xml
 User-agent: *
 Crawl-delay: 10
 # CSS, JS, Images
