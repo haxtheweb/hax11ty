@@ -1,9 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{% getGlobal 'lang' %}">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{% getGlobal 'siteName' %}</title>
+  <meta charset="utf-8" />
   <base href="{% getGlobal 'basePath' %}" />
   <link rel="preconnect" crossorigin href="{% getGlobal 'preconnect' %}" />
   <link rel="preconnect" crossorigin href="https://fonts.googleapis.com" />
@@ -11,16 +9,20 @@
   <link rel="preconnect" crossorigin href="https://i.creativecommons.org" />
   <link rel="preconnect" crossorigin href="https://licensebuttons.net" />
   <link rel="preload" href="{% getGlobal 'basePath' %}build.js" as="script" />
+  <link rel="preload" href="{% getGlobal 'basePath' %}build-haxcms.js" as="script" />
   <link rel="preload" href="{% getGlobal 'cdn' %}wc-registry.json" as="fetch" crossorigin="anonymous" />
   <link rel="preload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@lrnwebcomponents/dynamic-import-registry/dynamic-import-registry.js" as="script" crossorigin="anonymous" />
   <link rel="modulepreload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@lrnwebcomponents/dynamic-import-registry/dynamic-import-registry.js" />
   <link rel="preload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@lrnwebcomponents/wc-autoload/wc-autoload.js" as="script" crossorigin="anonymous" />
   <link rel="modulepreload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@lrnwebcomponents/wc-autoload/wc-autoload.js" />
-  <link rel="preload" href="{% getGlobal 'cdn' %}build/es6/node_modules/web-animations-js/web-animations-next-lite.min.js" as="script" />
-  
+  <link rel="preload" href="{% getGlobal 'cdn' %}build/es6/node_modules/{% getGlobal 'themePath' %}" as="script" crossorigin="anonymous" />
+  <link rel="modulepreload" href="{% getGlobal 'cdn' %}build/es6/node_modules/{% getGlobal 'themePath' %}" />
+  <link rel="preload" href="{% getGlobal 'cdn' %}build/es6/node_modules/web-animations-js/web-animations-next-lite.min.js" as="script" />  
+  <meta name="generator" content="HAX11ty" />
   <link rel="manifest" href="{% getGlobal 'basePath' %}manifest.json">
-  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=yes" />
-  <meta name="generator" content="HAXcms / Eleventy" />
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+  <title>{% getGlobal 'siteName' %}</title>
+  <link rel="icon" href="{% getGlobal 'basePath' %}assets/favicon.ico">
   <meta name="theme-color" content="{% getGlobal 'themeHexCode' %}">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="robots" content="index, follow">
@@ -28,16 +30,14 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="{% getGlobal 'siteName' %}">
-  <meta name="msapplication-TileImage" content="{% getGlobal 'basePath' %}assets/icon-144x144.png">
-  <meta name="msapplication-TileColor" content="{% getGlobal 'themeHexCode' %}">
-  <meta name="msapplication-tap-highlight" content="no">
-  <link rel="icon" href="{% getGlobal 'basePath' %}assets/favicon.ico">
-  <link rel="apple-touch-icon" href="{% getGlobal 'basePath' %}assets/icon-48x48.png">
+  <link rel="apple-touch-icon" sizes="48x48" href="{% getGlobal 'basePath' %}assets/icon-48x48.png">
   <link rel="apple-touch-icon" sizes="72x72" href="{% getGlobal 'basePath' %}assets/icon-72x72.png">
   <link rel="apple-touch-icon" sizes="96x96" href="{% getGlobal 'basePath' %}assets/icon-96x96.png">
   <link rel="apple-touch-icon" sizes="144x144" href="{% getGlobal 'basePath' %}assets/icon-144x144.png">
   <link rel="apple-touch-icon" sizes="192x192" href="{% getGlobal 'basePath' %}assets/icon-192x192.png">
-
+  <meta name="msapplication-TileImage" content="{% getGlobal 'basePath' %}assets/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="{% getGlobal 'themeHexCode' %}">
+  <meta name="msapplication-tap-highlight" content="no">
   <meta name="description" content="{% getGlobal 'siteDescription' %}" />
   <meta name="og:sitename" property="og:sitename" content="{% getGlobal 'siteName' %}" />
   <meta name="og:title" property="og:title" content="{% getGlobal 'siteName' %}" />
@@ -52,11 +52,6 @@
   <meta name="twitter:image" property="twitter:image" content="{% getGlobal 'themeImage' %}" />
   <meta rel="cc:license" href="{% getLicenseInfo settings.siteLicense,'link' %}" content="License: {% getLicenseInfo settings.siteLicense,'name' %}"/>
   <meta name="twitter:creator" content="@{% getGlobal 'twitterName' %}" />
-  <style>
-    body {
-      margin: 0;
-    }
-  </style>
   {% if haxcmsServiceWorker == true %}
   <script>
     if ('serviceWorker' in navigator) {
@@ -122,7 +117,7 @@
       });
     }
   </script>
-  {% endif %}
+{% else %}<!-- Service worker disabled via settings -->{% endif %}
   <style>
     body {
       margin: 0;
