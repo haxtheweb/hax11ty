@@ -1,5 +1,5 @@
 {
-  "id": "#b22eaf86-150e-33e6-1d03-8187eb559b91",
+  "id": "#b139328a-1f1f-5b34-268a-1490aaa5ab08",
   "title": "IST 402",
   "author": "EdTechJoker",
   "description": "Emerging Technology",
@@ -13,8 +13,8 @@
     },
     "site": {
       "name": "ist402",
-      "created": 1595466060633,
-      "updated": 1595466060633,
+      "created": 1596050106791,
+      "updated": 1596050106791,
       "git": {
         "autoPush": false,
         "branch": "master",
@@ -24,7 +24,7 @@
         "url": "git@github.com:btopro/ist402.git"
       },
       "version": "1.2.9-11ty",
-      "domain": "https://btopro.github.io/ist402",
+      "domain": "https://localhost:8000",
       "logo": "assets/images/photo-1497493292307-31c376b6e479.jpeg",
       "static": {
         "cdn": "build",
@@ -49,6 +49,29 @@
   },
   "items": [
     {
+      "id": "--content-post-and-um-md",
+      "indent": 0,
+      "location": "./pages/post-and-um.md",
+      "slug": "content/post-and-um/",
+      "order": 0,
+      "title": "Page 1",
+      "description": "Page 1",
+      "parent": null,
+      "metadata": {
+        "created": 1596050085,
+        "updated": 1596050085,
+        "readtime": 1,
+        "contentDetails": {},
+        "files": [],
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "Page 1",
+        "banner": "/assets/images/photo-1498050108023-c5249f4df085.jpeg"
+      }
+    },
+    {
       "id": "--content-post1-md",
       "indent": 0,
       "location": "./pages/post1.md",
@@ -58,8 +81,8 @@
       "description": "fdsfdsfdsfds",
       "parent": null,
       "metadata": {
-        "created": 1595466041,
-        "updated": 1595466041,
+        "created": 1596050085,
+        "updated": 1596050085,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -81,8 +104,8 @@
       "description": "Top of things",
       "parent": null,
       "metadata": {
-        "created": 1595466041,
-        "updated": 1595466041,
+        "created": 1596050085,
+        "updated": 1596050085,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -96,29 +119,6 @@
       }
     },
     {
-      "id": "--content-post-and-um-md",
-      "indent": 0,
-      "location": "./pages/post-and-um.md",
-      "slug": "content/post-and-um/",
-      "order": 2,
-      "title": "Page 1",
-      "description": "Page 1",
-      "parent": null,
-      "metadata": {
-        "created": 1595466041,
-        "updated": 1595466041,
-        "readtime": 1,
-        "contentDetails": {},
-        "files": [],
-        "tags": [
-          "content"
-        ],
-        "layout": "content.liquid",
-        "title": "Page 1",
-        "banner": "/assets/images/photo-1498050108023-c5249f4df085.jpeg"
-      }
-    },
-    {
       "id": "--content-stuff-md",
       "indent": 0,
       "location": "./pages/stuff.md",
@@ -128,8 +128,8 @@
       "description": "Things and Brad",
       "parent": null,
       "metadata": {
-        "created": 1595466041,
-        "updated": 1595466041,
+        "created": 1596050085,
+        "updated": 1596050085,
         "readtime": 19,
         "contentDetails": {},
         "files": [],
@@ -151,8 +151,8 @@
       "description": "Cool Stuff",
       "parent": "--content-other-things-index-md",
       "metadata": {
-        "created": 1595466041,
-        "updated": 1595466041,
+        "created": 1596050085,
+        "updated": 1596050085,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -174,8 +174,8 @@
       "description": "Parent page",
       "parent": null,
       "metadata": {
-        "created": 1595466041,
-        "updated": 1595466041,
+        "created": 1596050085,
+        "updated": 1596050085,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -197,8 +197,8 @@
       "description": "Yes...more",
       "parent": "--content-other-things-index-md",
       "metadata": {
-        "created": 1595466041,
-        "updated": 1595466041,
+        "created": 1596050085,
+        "updated": 1596050085,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
