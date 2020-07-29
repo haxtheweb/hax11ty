@@ -193,7 +193,6 @@ module.exports = function (eleventyConfig) {
         delete pageData.pkg;
         delete pageData.haxcmsAppstore;
         delete pageData.settings;
-        delete pageData.haxcmsServiceWorker;
         delete pageData.HAXenabled;
         // this is actually page processing data so drop it too
         delete pageData.page;
@@ -268,6 +267,13 @@ module.exports = function (eleventyConfig) {
       },
       items: pageItems
     }, null, 2);
+  });
+  // basePath always has / and 11ty always puts / in front of the URLs
+  // that it finds. This helps resolve the path based on what the exported
+  // location is. Publishing to a production environment vs local
+  // development one is what this is helping resolve the differences of
+  eleventyConfig.addShortcode("absoluteBasePath", function(url) {
+    return (settings.basePath + url).replace('//', '/');
   });
 
   eleventyConfig.addShortcode("getLicenseInfo", function(license, varName) {
