@@ -2,7 +2,7 @@
   "license": "MIT",
   "scripts": {
     "start": "cd app && hax11ty serve",
-    "build": "rm -rf dist/build && cd app && HAXCMS_CDN=true HAXCMS_SERVICE_WORKER=true HAXCMS_GITHUB=true hax11ty build",
+    "build": "rm -rf dist/build && cd app && HAXCMS_CDN=true HAXCMS_SERVICE_WORKER=true HAXCMS_GITHUB=true hax11ty build && cd ../ && rm dist/assets/styles.css && cp src/styles.css dist/assets/styles.css",
     "local-build": "cd app && HAXCMS_LOCAL=true hax11ty build"
   },
   "devDependencies": {
