@@ -1,28 +1,3 @@
-/**
- * Generate a uinque ID
- */
-function generateResourceID(base = "#") {
-    function idPart() {
-      return Math.floor((1 + Math.random()) * 0x10000)
-        .toString(16)
-        .substring(1);
-    }
-    return (
-      base +
-      idPart() +
-      idPart() +
-      "-" +
-      idPart() +
-      "-" +
-      idPart() +
-      "-" +
-      idPart() +
-      "-" +
-      idPart() +
-      idPart() +
-      idPart()
-    );
-  }
 module.exports = () => {
     // this file is how you can take full control of your HAX11ty site
     // as far as the mapping metadata and paths linked to the HAXcms data model
@@ -36,6 +11,20 @@ module.exports = () => {
     var gitProject = "ist402";
     // URL, default for local testing
     var url = "https://localhost:8000";
+    // CDN for requesting the location of the build directory
+    // from the unbundled process
+    var domain = url;
+    var cdnBase = "/";
+    var cdnPart = "";
+    // HAXCMS_CDN is set if we're publishing to a public source
+    // of available web components. If you've done some local
+    // development to build custom assets or modified files
+    // within the app directory you won't be able to use
+    // a public CDN
+    if (process.env.HAXCMS_CDN) {
+      cdnBase = "https://cdn.webcomponents.psu.edu"; // https://cdn.waxam.io/
+      cdnPart = "/cdn/"; // /
+    }
     // current year if desired
     var year = new Date().getFullYear();
     var basePath = "/";
@@ -53,20 +42,6 @@ module.exports = () => {
         // change these if you have a custom domain
         basePath = `/sites/${gitProject}/`;
         url = `https://${gitOrg}.github.io/${gitProject}`;
-    }
-    // CDN for requesting the location of the build directory
-    // from the unbundled process
-    var domain = url;
-    var cdnBase = "/";
-    var cdnPart = "";
-    // HAXCMS_CDN is set if we're publishing to a public source
-    // of available web components. If you've done some local
-    // development to build custom assets or modified files
-    // within the app directory you won't be able to use
-    // a public CDN
-    if (process.env.HAXCMS_CDN) {
-      cdnBase = "https://cdn.webcomponents.psu.edu"; // https://cdn.waxam.io/
-      cdnPart = "/cdn/"; // /
     }
     return {
         // this is where most things you'll want to change reside
@@ -124,3 +99,29 @@ module.exports = () => {
         segmentCount: segmentCount, // gh-pages 404 fallback helper
     };
 };
+
+/**
+ * Generate a uinque ID
+ */
+function generateResourceID(base = "#") {
+  function idPart() {
+    return Math.floor((1 + Math.random()) * 0x10000)
+      .toString(16)
+      .substring(1);
+  }
+  return (
+    base +
+    idPart() +
+    idPart() +
+    "-" +
+    idPart() +
+    "-" +
+    idPart() +
+    "-" +
+    idPart() +
+    "-" +
+    idPart() +
+    idPart() +
+    idPart()
+  );
+}
