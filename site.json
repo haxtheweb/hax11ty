@@ -1,5 +1,5 @@
 {
-  "id": "#e6f157b7-4934-0e04-6ce1-ebcf68a97741",
+  "id": "#b6a1643c-8d80-c275-6c72-f6a8728ca601",
   "title": "HAX11TY doc site",
   "author": "EdTechJoker",
   "description": "HAX + 11ty = bliss",
@@ -13,8 +13,8 @@
     },
     "site": {
       "name": "elmsln",
-      "created": 1596051496941,
-      "updated": 1596051496941,
+      "created": 1596052906005,
+      "updated": 1596052906005,
       "git": {
         "autoPush": false,
         "branch": "master",
@@ -58,40 +58,18 @@
       "description": "Page 1",
       "parent": null,
       "metadata": {
-        "created": 1596051474,
-        "updated": 1596051474,
+        "created": 1596052877,
+        "updated": 1596052877,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
+        "haxcmsServiceWorker": true,
         "tags": [
           "content"
         ],
         "layout": "content.liquid",
         "title": "Page 1",
         "banner": "/assets/images/photo-1498050108023-c5249f4df085.jpeg"
-      }
-    },
-    {
-      "id": "--content-post1-md",
-      "indent": 0,
-      "location": "./pages/post1.md",
-      "slug": "content/post1/",
-      "order": -10000,
-      "title": "fdsfdsfdsfds",
-      "description": "fdsfdsfdsfds",
-      "parent": null,
-      "metadata": {
-        "created": 1596051474,
-        "updated": 1596051474,
-        "readtime": 1,
-        "contentDetails": {},
-        "files": [],
-        "tags": [
-          "content"
-        ],
-        "layout": "content.liquid",
-        "title": "fdsfdsfdsfds",
-        "order": -10000
       }
     },
     {
@@ -104,11 +82,12 @@
       "description": "Top of things",
       "parent": null,
       "metadata": {
-        "created": 1596051474,
-        "updated": 1596051474,
+        "created": 1596052877,
+        "updated": 1596052877,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
+        "haxcmsServiceWorker": true,
         "tags": [
           "content"
         ],
@@ -116,6 +95,30 @@
         "title": "Top of things",
         "banner": "/assets/images/photo-1562813733-b31f71025d54.jpeg",
         "order": -100
+      }
+    },
+    {
+      "id": "--content-post1-md",
+      "indent": 0,
+      "location": "./pages/post1.md",
+      "slug": "content/post1/",
+      "order": -10000,
+      "title": "fdsfdsfdsfds",
+      "description": "fdsfdsfdsfds",
+      "parent": null,
+      "metadata": {
+        "created": 1596052877,
+        "updated": 1596052877,
+        "readtime": 1,
+        "contentDetails": {},
+        "files": [],
+        "haxcmsServiceWorker": true,
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "fdsfdsfdsfds",
+        "order": -10000
       }
     },
     {
@@ -128,11 +131,12 @@
       "description": "Things and Brad",
       "parent": null,
       "metadata": {
-        "created": 1596051474,
-        "updated": 1596051474,
+        "created": 1596052877,
+        "updated": 1596052877,
         "readtime": 19,
         "contentDetails": {},
         "files": [],
+        "haxcmsServiceWorker": true,
         "tags": [
           "content"
         ],
@@ -142,20 +146,45 @@
       }
     },
     {
+      "id": "--content-other-things-cool-stuff-md",
+      "indent": 0,
+      "location": "./pages/other-things/cool-stuff.md",
+      "slug": "content/other-things/cool-stuff/",
+      "order": 4,
+      "title": "Cool Stuff",
+      "description": "Cool Stuff",
+      "parent": "--content-other-things-index-md",
+      "metadata": {
+        "created": 1596052877,
+        "updated": 1596052877,
+        "readtime": 1,
+        "contentDetails": {},
+        "files": [],
+        "haxcmsServiceWorker": true,
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "Cool Stuff",
+        "banner": "/assets/images/photo-1498050108023-c5249f4df085.jpeg"
+      }
+    },
+    {
       "id": "--content-other-things-index-md",
       "indent": 0,
       "location": "./pages/other-things/index.md",
       "slug": "content/other-things/",
-      "order": 4,
+      "order": 5,
       "title": "Parent page",
       "description": "Parent page",
       "parent": null,
       "metadata": {
-        "created": 1596051474,
-        "updated": 1596051474,
+        "created": 1596052877,
+        "updated": 1596052877,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
+        "haxcmsServiceWorker": true,
         "tags": [
           "content"
         ],
@@ -169,44 +198,22 @@
       "indent": 0,
       "location": "./pages/other-things/yet-more.md",
       "slug": "content/other-things/yet-more/",
-      "order": 5,
+      "order": 6,
       "title": "Yes...more",
       "description": "Yes...more",
       "parent": "--content-other-things-index-md",
       "metadata": {
-        "created": 1596051474,
-        "updated": 1596051474,
+        "created": 1596052877,
+        "updated": 1596052877,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
+        "haxcmsServiceWorker": true,
         "tags": [
           "content"
         ],
         "layout": "content.liquid",
         "title": "Yes...more"
-      }
-    },
-    {
-      "id": "--content-other-things-cool-stuff-md",
-      "indent": 0,
-      "location": "./pages/other-things/cool-stuff.md",
-      "slug": "content/other-things/cool-stuff/",
-      "order": 6,
-      "title": "Cool Stuff",
-      "description": "Cool Stuff",
-      "parent": "--content-other-things-index-md",
-      "metadata": {
-        "created": 1596051474,
-        "updated": 1596051474,
-        "readtime": 1,
-        "contentDetails": {},
-        "files": [],
-        "tags": [
-          "content"
-        ],
-        "layout": "content.liquid",
-        "title": "Cool Stuff",
-        "banner": "/assets/images/photo-1498050108023-c5249f4df085.jpeg"
       }
     }
   ]

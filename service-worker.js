@@ -39,31 +39,31 @@
 var precacheConfig = [
   [
     "/content/post-and-um/",
-    "V1REZgPpGyEhG25L"
-  ],
-  [
-    "/content/post1/",
-    "V1REZgPpGyEhG25L"
+    "W4DdnIyPuUvUFbHR"
   ],
   [
     "/content/post3/",
-    "V1REZgPpGyEhG25L"
+    "W4DdnIyPuUvUFbHR"
+  ],
+  [
+    "/content/post1/",
+    "W4DdnIyPuUvUFbHR"
   ],
   [
     "/content/stuff/",
-    "V1REZgPpGyEhG25L"
-  ],
-  [
-    "/content/other-things/",
-    "V1REZgPpGyEhG25L"
-  ],
-  [
-    "/content/other-things/yet-more/",
-    "V1REZgPpGyEhG25L"
+    "W4DdnIyPuUvUFbHR"
   ],
   [
     "/content/other-things/cool-stuff/",
-    "V1REZgPpGyEhG25L"
+    "W4DdnIyPuUvUFbHR"
+  ],
+  [
+    "/content/other-things/",
+    "W4DdnIyPuUvUFbHR"
+  ],
+  [
+    "/content/other-things/yet-more/",
+    "W4DdnIyPuUvUFbHR"
   ]
 ];
 var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');
