@@ -36,10 +36,15 @@ module.exports = function (eleventyConfig) {
     "theme": "theme",
     "custom": "custom",
     "unbundled-webcomponents/app/dist/assets": "assets",
-    "unbundled-webcomponents/app/dist/build": "build",
     "unbundled-webcomponents/app/dist/build.js": "build.js",
     "unbundled-webcomponents/app/dist/wc-registry.json": "wc-registry.json",
   });
+  // don't copy the build directory if we are using a CDN
+  if (!process.env.HAXCMS_CDN) {
+    eleventyConfig.addPassthroughCopy({
+      "unbundled-webcomponents/app/dist/build": "build",
+    });
+  }
   // collections make it easier to work with the data in templates
   eleventyConfig.addCollection("manifest", function (collection) {
     return JSON.stringify({
