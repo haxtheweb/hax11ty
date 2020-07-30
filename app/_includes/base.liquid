@@ -17,7 +17,7 @@
   <link rel="modulepreload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@lrnwebcomponents/wc-autoload/wc-autoload.js" />
   <link rel="preload" href="{% getGlobal 'cdn' %}build/es6/node_modules/{% getGlobal 'themePath' %}" as="script" crossorigin="anonymous" />
   <link rel="modulepreload" href="{% getGlobal 'cdn' %}build/es6/node_modules/{% getGlobal 'themePath' %}" />
-  <link rel="preload" href="{% getGlobal 'cdn' %}build/es6/node_modules/web-animations-js/web-animations-next-lite.min.js" as="script" />  
+{% getContentPreloads content %}  <link rel="preload" href="{% getGlobal 'cdn' %}build/es6/node_modules/web-animations-js/web-animations-next-lite.min.js" as="script" />  
   <meta name="generator" content="HAX11ty" />
   <link rel="manifest" href="{% getGlobal 'basePath' %}manifest.json">
   <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">

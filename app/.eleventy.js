@@ -8,6 +8,7 @@ const matter = require('gray-matter');
 const xmlFiltersPlugin = require('eleventy-xml-plugin');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const settings = require('./_data/settings.js')();
+const wcRegistry = require('./unbundled-webcomponents/app/dist/wc-registry.json');
 module.exports = function (eleventyConfig) {
   if (!eleventyConfig.dir) {
     eleventyConfig.dir = {};
@@ -106,6 +107,30 @@ module.exports = function (eleventyConfig) {
       screenshots: [],
       orientation: "portrait"
     }, null, 2);
+  });
+  // Read off the content and generate preload statements to match
+  eleventyConfig.addShortcode('getContentPreloads', function(content){
+    if (!content) {
+      return '';
+    }
+    const regex = /<(?:\"-[^\"]*\"['\"]*|'[^']*'['\"]*|[^'\">])+>/g;
+    const found = content.match(regex);
+    let preloadTags = [];
+    found.map((val, i) => {
+      let test = val.replace('>', '').replace('</', '');
+      if (test.includes('-') && test != 'haxcms-site-builder') {
+        preloadTags.push(test);
+      }
+    });
+    let contentPreload = '';
+    // load wc-registry.json
+    for (var tag in preloadTags) {
+      if (wcRegistry[preloadTags[tag]]) {
+        contentPreload += '  <link rel="preload" href="' + settings.cdn + 'build/es6/node_modules/' + wcRegistry[preloadTags[tag]] + '" as="script" crossorigin="anonymous" />' + "\n";
+        contentPreload += '  <link rel="modulepreload" href="' + settings.cdn + 'build/es6/node_modules/' + wcRegistry[preloadTags[tag]] + '" />' + "\n";
+      }
+    }
+    return contentPreload;
   });
   // get the context from
   eleventyConfig.addShortcode('getHAXCMSContext', function(){
