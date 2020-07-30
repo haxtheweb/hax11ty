@@ -1,5 +1,5 @@
 {
-  "id": "#21515603-9be7-78b3-49cb-4f8f1cbb38b4",
+  "id": "#fd943aa1-616c-c043-46ed-e0a03c86c614",
   "title": "HAX11TY doc site",
   "author": "EdTechJoker",
   "description": "HAX + 11ty = bliss",
@@ -13,8 +13,8 @@
     },
     "site": {
       "name": "elmsln",
-      "created": 1596135037455,
-      "updated": 1596135037455,
+      "created": 1596137099532,
+      "updated": 1596137099532,
       "git": {
         "autoPush": false,
         "branch": "master",
@@ -49,17 +49,41 @@
   },
   "items": [
     {
+      "id": "--content-3_why-md",
+      "indent": 0,
+      "location": "./pages/3_why.md",
+      "slug": "why",
+      "order": 0,
+      "title": "Why HAX11ty",
+      "description": "Why HAX11ty",
+      "parent": null,
+      "metadata": {
+        "created": 1596137032,
+        "updated": 1596137032,
+        "readtime": 1,
+        "contentDetails": {},
+        "files": [],
+        "haxcmsServiceWorker": true,
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "Why HAX11ty",
+        "slug": "why"
+      }
+    },
+    {
       "id": "--content-1_about-md",
       "indent": 0,
       "location": "./pages/1_about.md",
-      "slug": "content/1_about/",
-      "order": 0,
+      "slug": "about",
+      "order": 1,
       "title": "About",
       "description": "About",
       "parent": null,
       "metadata": {
-        "created": 1596134985,
-        "updated": 1596134985,
+        "created": 1596137032,
+        "updated": 1596137032,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -76,14 +100,14 @@
       "id": "--content-2_install-md",
       "indent": 0,
       "location": "./pages/2_install.md",
-      "slug": "content/2_install/",
-      "order": 1,
+      "slug": "install",
+      "order": 2,
       "title": "Installation",
       "description": "Installation",
       "parent": null,
       "metadata": {
-        "created": 1596134985,
-        "updated": 1596134985,
+        "created": 1596137032,
+        "updated": 1596137032,
         "readtime": 1,
         "contentDetails": {},
         "files": [],

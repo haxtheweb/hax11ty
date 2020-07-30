@@ -1,6 +1,6 @@
 <code-sample copy-clipboard-button>
 <template>
-  git clone https://github.com/elmsln/hax11ty
+  git clone https://github.com/elmsln/hax11ty.git
   cd hax11ty
   yarn install
   yarn start
