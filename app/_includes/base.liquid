@@ -18,6 +18,9 @@
   <link rel="preload" href="{% getGlobal 'cdn' %}build/es6/node_modules/{% getGlobal 'themePath' %}" as="script" crossorigin="anonymous" />
   <link rel="modulepreload" href="{% getGlobal 'cdn' %}build/es6/node_modules/{% getGlobal 'themePath' %}" />
 {% getContentPreloads content %}  <link rel="preload" href="{% getGlobal 'cdn' %}build/es6/node_modules/web-animations-js/web-animations-next-lite.min.js" as="script" />  
+  <link rel="preload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@lrnwebcomponents/haxcms-elements/lib/base.css" as="style" />
+  <link rel="preload" href="{% getGlobal 'basePath' %}theme/theme.css" as="style" />
+
   <meta name="generator" content="HAX11ty" />
   <link rel="manifest" href="{% getGlobal 'basePath' %}manifest.json">
   <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
