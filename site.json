@@ -1,5 +1,5 @@
 {
-  "id": "#2ec97ede-073c-ea84-5dbb-cdf1fa67049e",
+  "id": "#79069734-07a6-b0fb-90b3-75ccd2be4dcb",
   "title": "HAX11TY doc site",
   "author": "EdTechJoker",
   "description": "HAX + 11ty = bliss",
@@ -13,8 +13,8 @@
     },
     "site": {
       "name": "elmsln",
-      "created": 1596133424599,
-      "updated": 1596133424599,
+      "created": 1596133826634,
+      "updated": 1596133826634,
       "git": {
         "autoPush": false,
         "branch": "master",
@@ -49,6 +49,30 @@
   },
   "items": [
     {
+      "id": "--content-post-and-um-md",
+      "indent": 0,
+      "location": "./pages/post-and-um.md",
+      "slug": "content/post-and-um/",
+      "order": 0,
+      "title": "Page 1",
+      "description": "Page 1",
+      "parent": null,
+      "metadata": {
+        "created": 1596133766,
+        "updated": 1596133766,
+        "readtime": 1,
+        "contentDetails": {},
+        "files": [],
+        "haxcmsServiceWorker": true,
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "Page 1",
+        "banner": "/assets/images/photo-1498050108023-c5249f4df085.jpeg"
+      }
+    },
+    {
       "id": "--content-post1-md",
       "indent": 0,
       "location": "./pages/post1.md",
@@ -58,8 +82,8 @@
       "description": "fdsfdsfdsfds",
       "parent": null,
       "metadata": {
-        "created": 1596133368,
-        "updated": 1596133368,
+        "created": 1596133766,
+        "updated": 1596133766,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -82,8 +106,8 @@
       "description": "Top of things",
       "parent": null,
       "metadata": {
-        "created": 1596133368,
-        "updated": 1596133368,
+        "created": 1596133766,
+        "updated": 1596133766,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -102,13 +126,13 @@
       "indent": 0,
       "location": "./pages/stuff.md",
       "slug": "content/stuff/",
-      "order": 2,
+      "order": 3,
       "title": "Things and Brad",
       "description": "Things and Brad",
       "parent": null,
       "metadata": {
-        "created": 1596133368,
-        "updated": 1596133368,
+        "created": 1596133766,
+        "updated": 1596133766,
         "readtime": 19,
         "contentDetails": {},
         "files": [],
@@ -122,30 +146,6 @@
       }
     },
     {
-      "id": "--content-post-and-um-md",
-      "indent": 0,
-      "location": "./pages/post-and-um.md",
-      "slug": "content/post-and-um/",
-      "order": 3,
-      "title": "Page 1",
-      "description": "Page 1",
-      "parent": null,
-      "metadata": {
-        "created": 1596133368,
-        "updated": 1596133368,
-        "readtime": 1,
-        "contentDetails": {},
-        "files": [],
-        "haxcmsServiceWorker": true,
-        "tags": [
-          "content"
-        ],
-        "layout": "content.liquid",
-        "title": "Page 1",
-        "banner": "/assets/images/photo-1498050108023-c5249f4df085.jpeg"
-      }
-    },
-    {
       "id": "--content-other-things-cool-stuff-md",
       "indent": 0,
       "location": "./pages/other-things/cool-stuff.md",
@@ -155,8 +155,8 @@
       "description": "Cool Stuff",
       "parent": "--content-other-things-index-md",
       "metadata": {
-        "created": 1596133368,
-        "updated": 1596133368,
+        "created": 1596133766,
+        "updated": 1596133766,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -179,8 +179,8 @@
       "description": "Parent page",
       "parent": null,
       "metadata": {
-        "created": 1596133368,
-        "updated": 1596133368,
+        "created": 1596133766,
+        "updated": 1596133766,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -203,8 +203,8 @@
       "description": "Yes...more",
       "parent": "--content-other-things-index-md",
       "metadata": {
-        "created": 1596133368,
-        "updated": 1596133368,
+        "created": 1596133766,
+        "updated": 1596133766,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
