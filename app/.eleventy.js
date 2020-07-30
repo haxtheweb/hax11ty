@@ -107,6 +107,14 @@ module.exports = function (eleventyConfig) {
       orientation: "portrait"
     }, null, 2);
   });
+  // get the context from
+  eleventyConfig.addShortcode('getHAXCMSContext', function(){
+    if (process.env.HAXCMS_CONTEXT) {
+      return process.env.HAXCMS_CONTEXT;
+    }
+    return '11ty';
+  });
+  // excerpt
   eleventyConfig.addShortcode('excerpt', function(article) {
     if (!article.hasOwnProperty('templateContent')) {
       console.warn('Failed to extract excerpt: Document has no property "templateContent".');

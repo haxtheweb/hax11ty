@@ -261,7 +261,7 @@
         view our website correctly. <a href="http://outdatedbrowser.com/">Update my browser now</a></div>
     </div>
   </div>
-  <script>document.body.removeAttribute('no-js');window.__appCDN="{% getGlobal 'cdn' %}";window.__appForceUpgrade=true;</script>
+  <script>window.HAXCMSContext="{% getHAXCMSContext %}";document.body.removeAttribute('no-js');window.__appCDN="{% getGlobal 'cdn' %}";window.__appForceUpgrade=true;</script>
   <script src="{% getGlobal 'basePath' %}build.js"></script>
   <script src="{% getGlobal 'basePath' %}build-haxcms.js"></script>
   <link rel="stylesheet" type="text/css" href="{% getGlobal 'basePath' %}assets/css/styles.css" />
