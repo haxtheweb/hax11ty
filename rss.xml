@@ -4,7 +4,7 @@
   <subtitle>HAX + 11ty = bliss</subtitle>
   <link href="https://elmsln.github.io/hax11ty/rss.xml" rel="self"/>
   <link href="https://elmsln.github.io/hax11ty"/>
-  <updated>2020-07-30T16:44:27.554-00:00</updated>
+  <updated>2020-07-30T18:22:47.779-00:00</updated>
   <id>https://elmsln.github.io/hax11ty</id>
   <author>
     <name>EdTechJoker</name>
@@ -14,7 +14,7 @@
   <entry>
     <title>Cool Stuff</title>
     <link href="https://elmsln.github.io/hax11ty/content/other-things/cool-stuff/"/>
-    <updated>2020-07-30T16:44:27.554-00:00</updated>
+    <updated>2020-07-30T18:22:47.779-00:00</updated>
     <id>https://elmsln.github.io/hax11ty/content/other-things/cool-stuff/</id>
     <content type="html">&lt;meme-maker alt=&quot;Cat stalking a small toy&quot; image-url=&quot;https://cdn2.thecatapi.com/images/9j5.jpg&quot; top-text=&quot;I bring you&quot; bottom-text=&quot;the death&quot;&gt;
     &lt;div&gt;I bring you&lt;/div&gt;
@@ -35,7 +35,7 @@
   <entry>
     <title>Parent page</title>
     <link href="https://elmsln.github.io/hax11ty/content/other-things/"/>
-    <updated>2020-07-30T16:44:27.554-00:00</updated>
+    <updated>2020-07-30T18:22:47.779-00:00</updated>
     <id>https://elmsln.github.io/hax11ty/content/other-things/</id>
     <content type="html">&lt;p&gt;The parent is some stupid stuff here&lt;/p&gt;</content>
   </entry>
@@ -43,7 +43,7 @@
   <entry>
     <title>Yes...more</title>
     <link href="https://elmsln.github.io/hax11ty/content/other-things/yet-more/"/>
-    <updated>2020-07-30T16:44:27.554-00:00</updated>
+    <updated>2020-07-30T18:22:47.779-00:00</updated>
     <id>https://elmsln.github.io/hax11ty/content/other-things/yet-more/</id>
     <content type="html">&lt;p&gt;This is a new title\&lt;/p&gt;
 &lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops=&quot;&quot;&gt;&lt;wikipedia-query search=&quot;Drupal&quot; slot=&quot;col-1&quot;&gt;&lt;/wikipedia-query&gt;
@@ -55,7 +55,7 @@
   <entry>
     <title>Page 1</title>
     <link href="https://elmsln.github.io/hax11ty/content/post-and-um/"/>
-    <updated>2020-07-30T16:44:27.554-00:00</updated>
+    <updated>2020-07-30T18:22:47.779-00:00</updated>
     <id>https://elmsln.github.io/hax11ty/content/post-and-um/</id>
     <content type="html">&lt;p&gt;&lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops=&quot;&quot;&gt;&lt;h2 id=&quot;header-3d9237b9-c3f8-2f79-2f23-c51273fdc87b&quot; slot=&quot;col-1&quot;&gt;Header This is cool!&lt;/h2&gt;&lt;/grid-plate&gt;&lt;/p&gt;
 &lt;p slot=&quot;col-2&quot;&gt;fdsfdsfdsfdsfds!&lt;/p&gt;
@@ -67,7 +67,7 @@
   <entry>
     <title>fdsfdsfdsfds</title>
     <link href="https://elmsln.github.io/hax11ty/content/post1/"/>
-    <updated>2020-07-30T16:44:27.554-00:00</updated>
+    <updated>2020-07-30T18:22:47.779-00:00</updated>
     <id>https://elmsln.github.io/hax11ty/content/post1/</id>
     <content type="html">&lt;p&gt;&lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops=&quot;&quot;&gt;&lt;h2 id=&quot;header-3d9237b9-c3f8-2f79-2f23-c51273fdc87b&quot; slot=&quot;col-1&quot;&gt;Header This is cool!&lt;/h2&gt;&lt;/grid-plate&gt;&lt;/p&gt;
 &lt;p slot=&quot;col-2&quot;&gt;This was changed now!&lt;/p&gt;
@@ -79,7 +79,7 @@
   <entry>
     <title>Top of things</title>
     <link href="https://elmsln.github.io/hax11ty/content/post3/"/>
-    <updated>2020-07-30T16:44:27.554-00:00</updated>
+    <updated>2020-07-30T18:22:47.779-00:00</updated>
     <id>https://elmsln.github.io/hax11ty/content/post3/</id>
     <content type="html">&lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops=&quot;&quot;&gt;
   &lt;p slot=&quot;col-1&quot;&gt;ffff&lt;/p&gt;
@@ -95,7 +95,7 @@
   <entry>
     <title>Things and Brad</title>
     <link href="https://elmsln.github.io/hax11ty/content/stuff/"/>
-    <updated>2020-07-30T16:44:27.554-00:00</updated>
+    <updated>2020-07-30T18:22:47.779-00:00</updated>
     <id>https://elmsln.github.io/hax11ty/content/stuff/</id>
     <content type="html">&lt;grid-plate layout=&quot;1-1&quot; responsive-size=&quot;sm&quot; responsive-width=&quot;900&quot; breakpoint-sm=&quot;900&quot; breakpoint-md=&quot;1200&quot; breakpoint-lg=&quot;1500&quot; breakpoint-xl=&quot;1800&quot; hide-ops=&quot;&quot;&gt;
 &lt;p slot=&quot;col-1&quot;&gt;fgdfgdfgdfgdfgd&lt;/p&gt;
