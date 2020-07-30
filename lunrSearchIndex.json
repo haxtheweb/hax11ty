@@ -1,58 +1,18 @@
 [
   {
-   "id":"Cool Stuff",
-   "title":"Cool Stuff",
+   "id":"About",
+   "title":"About",
    "created": "",
-   "location":"/hax11ty/content/other-things/cool-stuff/",
-   "description":"I bring you          the deathThis is some stupfdfdsfdsfdsfdsfdsfdsfdsfdfgdfgdfgdfdgfgdfgdfgdfgdsfgdfghfghfghfghfdsfdsid stuff here",
-   "text":"I bring you          the deathThis is some stupfdfdsfdsfdsfdsfdsfdsfdsfdfgdfgdfgdfdgfgdfgdfgdfgdsfgdfghfghfghfghfdsfdsid stuff here"
+   "location":"/hax11ty/content/1_about/",
+   "description":"HAX11ty is a merger between HAX and 11ty. It uses these technologies in the following way:  User edits via HAX (future) or modifies files locally  hax11ty script watches for changes and rebuilds files w/ 11ty, refreshing the screen  this is compiled to a valid HAXcms data package to be used either completely static with a CDN or locally in HAXcms PHP version",
+   "text":"HAX11ty is a merger between HAX and 11ty. It uses these technologies in the following way:  User edits via HAX (future) or modifies files locally  hax11ty script watches for changes and rebuilds files w/ 11ty, refreshing the screen  this is compiled to a valid HAXcms data package to be used either completely static with a CDN or locally in HAXcms PHP version"
   },
   {
-   "id":"Page 1",
-   "title":"Page 1",
+   "id":"Installation",
+   "title":"Installation",
    "created": "",
-   "location":"/hax11ty/content/post-and-um/",
-   "description":"Header This is cool!fdsfdsfdsfdsfds!",
-   "text":"Header This is cool!fdsfdsfdsfdsfds!"
-  },
-  {
-   "id":"Parent page",
-   "title":"Parent page",
-   "created": "",
-   "location":"/hax11ty/content/other-things/",
-   "description":"The parent is some stupid stuff here",
-   "text":"The parent is some stupid stuff here"
-  },
-  {
-   "id":"Things and Brad",
-   "title":"Things and Brad",
-   "created": "",
-   "location":"/hax11ty/content/stuff/",
-   "description":"fgdfgdfgdfgdfgdfgdfgdfgdfgdfgdStuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand thing",
-   "text":"fgdfgdfgdfgdfgdfgdfgdfgdfgdfgdStuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand things Stuff aand thing"
-  },
-  {
-   "id":"Top of things",
-   "title":"Top of things",
-   "created": "",
-   "location":"/hax11ty/content/post3/",
-   "description":"ffff  fffffgh222  I bring you    Yummmmm",
-   "text":"ffff  fffffgh222  I bring you    Yummmmm"
-  },
-  {
-   "id":"Yes...more",
-   "title":"Yes...more",
-   "created": "",
-   "location":"/hax11ty/content/other-things/yet-more/",
-   "description":"This is a new title jhust hax in context",
-   "text":"This is a new title jhust hax in context"
-  },
-  {
-   "id":"fdsfdsfdsfds",
-   "title":"fdsfdsfdsfds",
-   "created": "",
-   "location":"/hax11ty/content/post1/",
-   "description":"Header This is cool!This was changed now!",
-   "text":"Header This is cool!This was changed now!"
+   "location":"/hax11ty/content/2_install/",
+   "description":"git clone https://github.com/elmsln/hax11ty  cd hax11ty  yarn install  yarn startThis is the fastest way to get up and running. If you instead want to build new sites with this and push them back up to gh-pages rapidly, start by using this repo as a template. This will copy the github actions workflows as well so all you need to do is change our repo in the git clone above to yours in order to start on what will easily become a live website!",
+   "text":"git clone https://github.com/elmsln/hax11ty  cd hax11ty  yarn install  yarn startThis is the fastest way to get up and running. If you instead want to build new sites with this and push them back up to gh-pages rapidly, start by using this repo as a template. This will copy the github actions workflows as well so all you need to do is change our repo in the git clone above to yours in order to start on what will easily become a live website!"
   }
 ]

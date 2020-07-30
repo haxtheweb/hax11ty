@@ -1,5 +1,5 @@
 {
-  "id": "#89bdca87-7b0f-c43e-950f-3ab52e5bf739",
+  "id": "#21515603-9be7-78b3-49cb-4f8f1cbb38b4",
   "title": "HAX11TY doc site",
   "author": "EdTechJoker",
   "description": "HAX + 11ty = bliss",
@@ -13,8 +13,8 @@
     },
     "site": {
       "name": "elmsln",
-      "created": 1596134334647,
-      "updated": 1596134334647,
+      "created": 1596135037455,
+      "updated": 1596135037455,
       "git": {
         "autoPush": false,
         "branch": "master",
@@ -49,17 +49,17 @@
   },
   "items": [
     {
-      "id": "--content-post-and-um-md",
+      "id": "--content-1_about-md",
       "indent": 0,
-      "location": "./pages/post-and-um.md",
-      "slug": "content/post-and-um/",
+      "location": "./pages/1_about.md",
+      "slug": "content/1_about/",
       "order": 0,
-      "title": "Page 1",
-      "description": "Page 1",
+      "title": "About",
+      "description": "About",
       "parent": null,
       "metadata": {
-        "created": 1596134281,
-        "updated": 1596134281,
+        "created": 1596134985,
+        "updated": 1596134985,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -68,22 +68,22 @@
           "content"
         ],
         "layout": "content.liquid",
-        "title": "Page 1",
-        "banner": "/assets/images/photo-1498050108023-c5249f4df085.jpeg"
+        "title": "About",
+        "slug": "about"
       }
     },
     {
-      "id": "--content-post1-md",
+      "id": "--content-2_install-md",
       "indent": 0,
-      "location": "./pages/post1.md",
-      "slug": "content/post1/",
-      "order": -10000,
-      "title": "fdsfdsfdsfds",
-      "description": "fdsfdsfdsfds",
+      "location": "./pages/2_install.md",
+      "slug": "content/2_install/",
+      "order": 1,
+      "title": "Installation",
+      "description": "Installation",
       "parent": null,
       "metadata": {
-        "created": 1596134281,
-        "updated": 1596134281,
+        "created": 1596134985,
+        "updated": 1596134985,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -92,128 +92,8 @@
           "content"
         ],
         "layout": "content.liquid",
-        "title": "fdsfdsfdsfds",
-        "order": -10000
-      }
-    },
-    {
-      "id": "--content-post3-md",
-      "indent": 0,
-      "location": "./pages/post3.md",
-      "slug": "content/post3/",
-      "order": -100,
-      "title": "Top of things",
-      "description": "Top of things",
-      "parent": null,
-      "metadata": {
-        "created": 1596134281,
-        "updated": 1596134281,
-        "readtime": 1,
-        "contentDetails": {},
-        "files": [],
-        "haxcmsServiceWorker": true,
-        "tags": [
-          "content"
-        ],
-        "layout": "content.liquid",
-        "title": "Top of things",
-        "banner": "/assets/images/photo-1562813733-b31f71025d54.jpeg",
-        "order": -100
-      }
-    },
-    {
-      "id": "--content-stuff-md",
-      "indent": 0,
-      "location": "./pages/stuff.md",
-      "slug": "content/stuff/",
-      "order": 3,
-      "title": "Things and Brad",
-      "description": "Things and Brad",
-      "parent": null,
-      "metadata": {
-        "created": 1596134281,
-        "updated": 1596134281,
-        "readtime": 19,
-        "contentDetails": {},
-        "files": [],
-        "haxcmsServiceWorker": true,
-        "tags": [
-          "content"
-        ],
-        "layout": "content.liquid",
-        "title": "Things and Brad",
-        "banner": "/assets/images/photo-1534972195531-d756b9bfa9f2.jpeg"
-      }
-    },
-    {
-      "id": "--content-other-things-cool-stuff-md",
-      "indent": 0,
-      "location": "./pages/other-things/cool-stuff.md",
-      "slug": "content/other-things/cool-stuff/",
-      "order": 4,
-      "title": "Cool Stuff",
-      "description": "Cool Stuff",
-      "parent": "--content-other-things-index-md",
-      "metadata": {
-        "created": 1596134281,
-        "updated": 1596134281,
-        "readtime": 1,
-        "contentDetails": {},
-        "files": [],
-        "haxcmsServiceWorker": true,
-        "tags": [
-          "content"
-        ],
-        "layout": "content.liquid",
-        "title": "Cool Stuff",
-        "banner": "/assets/images/photo-1498050108023-c5249f4df085.jpeg"
-      }
-    },
-    {
-      "id": "--content-other-things-index-md",
-      "indent": 0,
-      "location": "./pages/other-things/index.md",
-      "slug": "content/other-things/",
-      "order": 5,
-      "title": "Parent page",
-      "description": "Parent page",
-      "parent": null,
-      "metadata": {
-        "created": 1596134281,
-        "updated": 1596134281,
-        "readtime": 1,
-        "contentDetails": {},
-        "files": [],
-        "haxcmsServiceWorker": true,
-        "tags": [
-          "content"
-        ],
-        "layout": "content.liquid",
-        "title": "Parent page",
-        "banner": "/assets/images/photo-1498050108023-c5249f4df085.jpeg"
-      }
-    },
-    {
-      "id": "--content-other-things-yet-more-md",
-      "indent": 0,
-      "location": "./pages/other-things/yet-more.md",
-      "slug": "content/other-things/yet-more/",
-      "order": 6,
-      "title": "Yes...more",
-      "description": "Yes...more",
-      "parent": "--content-other-things-index-md",
-      "metadata": {
-        "created": 1596134281,
-        "updated": 1596134281,
-        "readtime": 1,
-        "contentDetails": {},
-        "files": [],
-        "haxcmsServiceWorker": true,
-        "tags": [
-          "content"
-        ],
-        "layout": "content.liquid",
-        "title": "Yes...more"
+        "title": "Installation",
+        "slug": "install"
       }
     }
   ]
