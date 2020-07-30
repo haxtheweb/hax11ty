@@ -38,7 +38,7 @@ module.exports = () => {
         // set this to 0 if you have a vanity URL
         //segmentCount = 0;
     }
-    else if (process.env.HAXCMS_LOCAL) {
+    else if (process.env.HAXCMS_CONTEXT == 'haxcms') {
         // change these if you have a custom domain
         basePath = `/sites/${gitProject}/`;
         url = `https://${gitOrg}.github.io/${gitProject}`;
