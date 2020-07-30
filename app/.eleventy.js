@@ -126,14 +126,15 @@ module.exports = function (eleventyConfig) {
     });
   });
   eleventyConfig.addCollection("swHashData", function (collection) {
-    const items = collection.items.map(({ outputPath, url, data }, i) => {
+    let items = collection.items.map(({ outputPath, url, data }, i) => {
       if (!url.includes("/build/")) {
         return [
-          url,
+          (settings.basePath + url).replace('//', '/'),
           hashFromValue(data.page.date.toString()).substr(0, 16).replace(/\//g,'z').replace(/\+/g,'y').replace(/\=/g,'x').replace(/\-/g,'w', settings.siteUuid)
         ];
       }
     });
+    items.push([settings.basePath,items[0][1]]);
     const itemsFiltered = items.filter((item) => {
       if (item && item.length > 0) {
         return true;
