@@ -1,5 +1,5 @@
 {
-  "id": "#f79c0fc5-d7e7-478a-6734-18fe4fb00174",
+  "id": "#b0d0d4bb-3598-8abf-318c-9ce4d0f97b18",
   "title": "HAX11TY doc site",
   "author": "EdTechJoker",
   "description": "HAX + 11ty = bliss",
@@ -13,14 +13,14 @@
     },
     "site": {
       "name": "elmsln",
-      "created": 1596074525755,
-      "updated": 1596074525755,
+      "created": 1596075778092,
+      "updated": 1596075778092,
       "git": {
         "autoPush": false,
         "branch": "master",
         "staticBranch": "gh-pages",
         "vendor": "github",
-        "publicRepoUrl": "https://github.com/elmsln/hax11ty/blob/master/",
+        "publicRepoUrl": "https://github.com/elmsln/hax11ty/blob/master/src/",
         "url": "git@github.com:elmsln/hax11ty.git"
       },
       "version": "1.2.9-11ty",
@@ -58,8 +58,8 @@
       "description": "Page 1",
       "parent": null,
       "metadata": {
-        "created": 1596074480,
-        "updated": 1596074480,
+        "created": 1596075753,
+        "updated": 1596075753,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -82,8 +82,8 @@
       "description": "fdsfdsfdsfds",
       "parent": null,
       "metadata": {
-        "created": 1596074480,
-        "updated": 1596074480,
+        "created": 1596075753,
+        "updated": 1596075753,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -106,8 +106,8 @@
       "description": "Top of things",
       "parent": null,
       "metadata": {
-        "created": 1596074480,
-        "updated": 1596074480,
+        "created": 1596075753,
+        "updated": 1596075753,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -131,8 +131,8 @@
       "description": "Things and Brad",
       "parent": null,
       "metadata": {
-        "created": 1596074480,
-        "updated": 1596074480,
+        "created": 1596075753,
+        "updated": 1596075753,
         "readtime": 19,
         "contentDetails": {},
         "files": [],
@@ -155,8 +155,8 @@
       "description": "Cool Stuff",
       "parent": "--content-other-things-index-md",
       "metadata": {
-        "created": 1596074480,
-        "updated": 1596074480,
+        "created": 1596075753,
+        "updated": 1596075753,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -179,8 +179,8 @@
       "description": "Parent page",
       "parent": null,
       "metadata": {
-        "created": 1596074480,
-        "updated": 1596074480,
+        "created": 1596075753,
+        "updated": 1596075753,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -203,8 +203,8 @@
       "description": "Yes...more",
       "parent": "--content-other-things-index-md",
       "metadata": {
-        "created": 1596074480,
-        "updated": 1596074480,
+        "created": 1596075753,
+        "updated": 1596075753,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
