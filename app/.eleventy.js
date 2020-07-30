@@ -203,9 +203,15 @@ module.exports = function (eleventyConfig) {
         // @todo try and wire this up after verifying this file exists
         // if the file exists then we know it's a parent of the current folder in the tree
         // which means we can set the parent id and it'll work
-        let slug = url.split('/');
-        slug.shift();
-        slug = slug.join('/');
+        let slug;
+        if (data.slug) {
+          slug = data.slug;
+        }
+        else {
+          slug = url.split('/');
+          slug.shift();
+          slug = slug.join('/');
+        }
         let order = (data.order ? data.order : i);
         // get page contents to analyze
         const pageContent = fs.readFileSync(process.cwd() + inputPath.replace('./','/'), "utf8");
