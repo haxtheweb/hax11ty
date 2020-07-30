@@ -83,7 +83,7 @@ module.exports = () => {
             branch: "master",
             staticBranch: "gh-pages",
             vendor: "github",
-            publicRepoUrl: `https://github.com/${gitOrg}/${gitProject}/blob/master/`,
+            publicRepoUrl: `https://github.com/${gitOrg}/${gitProject}/blob/master/src/`,
             url: `git@github.com:${gitOrg}/${gitProject}.git`
         },
         // language to set on content
