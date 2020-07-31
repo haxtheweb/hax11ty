@@ -1,6 +1,6 @@
 ---
 title: About
-slug: about
+slug: about 
 ---
 <p>HAX11ty is a merger between HAX and 11ty. It uses these technologies in the following way:
 <ul>
