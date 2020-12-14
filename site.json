@@ -1,5 +1,5 @@
 {
-  "id": "#df2d3e9e-3d7b-6ee9-0319-cf00a15b191e",
+  "id": "#823cfda7-a802-308d-3a50-dcb41640e0bd",
   "title": "HAX11TY doc site",
   "author": "EdTechJoker",
   "description": "HAX + 11ty = bliss",
@@ -13,8 +13,8 @@
     },
     "site": {
       "name": "elmsln",
-      "created": 1599826737782,
-      "updated": 1599826737782,
+      "created": 1607956646282,
+      "updated": 1607956646282,
       "git": {
         "autoPush": false,
         "branch": "master",
@@ -49,17 +49,17 @@
   },
   "items": [
     {
-      "id": "--content-1_about-md",
+      "id": "--content-3_why-md",
       "indent": 0,
-      "location": "./pages/1_about.md",
-      "slug": "about",
+      "location": "./pages/3_why.md",
+      "slug": "why",
       "order": 0,
-      "title": "About",
-      "description": "About",
+      "title": "Why HAX11ty",
+      "description": "Why HAX11ty",
       "parent": null,
       "metadata": {
-        "created": 1599826710,
-        "updated": 1599826710,
+        "created": 1607956622,
+        "updated": 1607956622,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -68,8 +68,8 @@
           "content"
         ],
         "layout": "content.liquid",
-        "title": "About",
-        "slug": "about"
+        "title": "Why HAX11ty",
+        "slug": "why"
       }
     },
     {
@@ -82,8 +82,8 @@
       "description": "Installation",
       "parent": null,
       "metadata": {
-        "created": 1599826710,
-        "updated": 1599826710,
+        "created": 1607956622,
+        "updated": 1607956622,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -97,17 +97,17 @@
       }
     },
     {
-      "id": "--content-3_why-md",
+      "id": "--content-1_about-md",
       "indent": 0,
-      "location": "./pages/3_why.md",
-      "slug": "why",
+      "location": "./pages/1_about.md",
+      "slug": "about",
       "order": 2,
-      "title": "Why HAX11ty",
-      "description": "Why HAX11ty",
+      "title": "About",
+      "description": "About",
       "parent": null,
       "metadata": {
-        "created": 1599826710,
-        "updated": 1599826710,
+        "created": 1607956622,
+        "updated": 1607956622,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -116,8 +116,8 @@
           "content"
         ],
         "layout": "content.liquid",
-        "title": "Why HAX11ty",
-        "slug": "why"
+        "title": "About",
+        "slug": "about"
       }
     }
   ]
