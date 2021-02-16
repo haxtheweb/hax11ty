@@ -6,6 +6,13 @@ This wrapper on 11ty provides conventions to simplify how you build and deploy H
 - `yarn install`
 - `yarn start` to work locally and view changes
 
+## gh-pages workflow
+There are already github actions setup that will work out of the box after you change these two settings:
+- Use this repo as a template to make your own
+- Edit `src/settings.js` and ensure the line that has `var gitOrg` is set to your organization (gitRepo as well if you change the repo name)
+- Then make sure you enable actions by clicking the Actions tab and telling it to run
+By changing these settings up front all changes to the repo should automatically build out your github pages site!
+
 ## Adding content / working locally
 All files that you'll want to modify are found in the `src/` directory
 - Add pages into the `src/content/` directory, `.md` with greymatter allows you to set title of the page and order
