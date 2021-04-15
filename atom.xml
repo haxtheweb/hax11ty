@@ -3,7 +3,7 @@
   <title>HAX11TY doc site</title>
   <link href="https://elmsln.github.io/hax11ty/atom.xml" rel="self" />
   <subtitle>HAX + 11ty = bliss</subtitle>
-  <updated>2021-02-16T03:58:00.536+00:00</updated>
+  <updated>2021-04-15T17:50:54.945+00:00</updated>
   <author>
       <name>EdTechJoker</name>
   </author>
@@ -11,8 +11,8 @@
   <entry>
     <title>About</title>
     <id>https://elmsln.github.io/hax11ty/content/1_about/</id>
-    <updated>2021-02-16T03:58:00.536+00:00</updated>
-    <published>2021-02-16T03:58:00.536+00:00</published>
+    <updated>2021-04-15T17:50:54.945+00:00</updated>
+    <published>2021-04-15T17:50:54.945+00:00</published>
     <summary></summary>
     <link href="https://elmsln.github.io/hax11ty/content/1_about/"/>
     <content type="html">
@@ -29,8 +29,8 @@
   <entry>
     <title>Installation</title>
     <id>https://elmsln.github.io/hax11ty/content/2_install/</id>
-    <updated>2021-02-16T03:58:00.536+00:00</updated>
-    <published>2021-02-16T03:58:00.536+00:00</published>
+    <updated>2021-04-15T17:50:54.945+00:00</updated>
+    <published>2021-04-15T17:50:54.945+00:00</published>
     <summary></summary>
     <link href="https://elmsln.github.io/hax11ty/content/2_install/"/>
     <content type="html">
@@ -43,14 +43,16 @@
 &lt;/template&gt;
 &lt;/code-sample&gt;
 &lt;p&gt;This is the fastest way to get up and running. If you instead want to build new sites with this and push them back up to gh-pages rapidly, start by &lt;a href=&quot;https://github.com/elmsln/hax11ty/generate&quot;&gt;using this repo as a template&lt;/a&gt;. This will copy the github actions workflows as well so all you need to do is change our repo in the git clone above to yours in order to start on what will easily become a live website!&lt;/p&gt;
+&lt;h2&gt;DO IT!&lt;/h2&gt;
+&lt;p&gt;Youll have to take a copy of the repo tho! :)&lt;/p&gt;
 
     </content>
   </entry>
   <entry>
     <title>Why HAX11ty</title>
     <id>https://elmsln.github.io/hax11ty/content/3_why/</id>
-    <updated>2021-02-16T03:58:00.536+00:00</updated>
-    <published>2021-02-16T03:58:00.536+00:00</published>
+    <updated>2021-04-15T17:50:54.945+00:00</updated>
+    <published>2021-04-15T17:50:54.945+00:00</published>
     <summary></summary>
     <link href="https://elmsln.github.io/hax11ty/content/3_why/"/>
     <content type="html">
