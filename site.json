@@ -1,5 +1,5 @@
 {
-  "id": "#10f07cc8-0e28-4417-94e9-c42f400f858c",
+  "id": "#ab20908c-6839-ffb5-fbac-45e75cc262d4",
   "title": "HAX11TY doc site",
   "author": "EdTechJoker",
   "description": "HAX + 11ty = bliss",
@@ -13,8 +13,8 @@
     },
     "site": {
       "name": "elmsln",
-      "created": 1618509080568,
-      "updated": 1618509080568,
+      "created": 1619474421058,
+      "updated": 1619474421058,
       "git": {
         "autoPush": false,
         "branch": "master",
@@ -58,8 +58,8 @@
       "description": "About",
       "parent": null,
       "metadata": {
-        "created": 1618509055,
-        "updated": 1618509055,
+        "created": 1619474398,
+        "updated": 1619474398,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -82,8 +82,8 @@
       "description": "Installation",
       "parent": null,
       "metadata": {
-        "created": 1618509055,
-        "updated": 1618509055,
+        "created": 1619474398,
+        "updated": 1619474398,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -106,8 +106,8 @@
       "description": "Why HAX11ty",
       "parent": null,
       "metadata": {
-        "created": 1618509055,
-        "updated": 1618509055,
+        "created": 1619474398,
+        "updated": 1619474398,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
