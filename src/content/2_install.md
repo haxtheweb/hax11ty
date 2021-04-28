@@ -2,6 +2,13 @@
 title: Installation
 slug: install
 ---
+<h2> Quick Installation Script </h2>
+<code-sample copy-clipboard-button>
+  <template>
+    curl -fsSL https://raw.githubusercontent.com/elmsln/hax11ty/master/hax11tyme.sh -o hax11tyme.sh && sh hax11tyme.sh
+  </template>
+</code-sample>
+<h2> Manual Installation </h2>
 <code-sample copy-clipboard-button>
 <template>
   git clone https://github.com/elmsln/hax11ty.git
