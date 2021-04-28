@@ -19,6 +19,8 @@
   <link rel="modulepreload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/clean-one/clean-one.js" />
   <link rel="preload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/code-sample/code-sample.js" as="script" crossorigin="anonymous" />
   <link rel="modulepreload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/code-sample/code-sample.js" />
+  <link rel="preload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/code-sample/code-sample.js" as="script" crossorigin="anonymous" />
+  <link rel="modulepreload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/code-sample/code-sample.js" />
   <link rel="preload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/web-animations-js/web-animations-next-lite.min.js" as="script" />  
   <link rel="preload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/haxcms-elements/lib/base.css" as="style" />
   <link rel="preload" href="/hax11ty/theme/theme.css" as="style" />
@@ -257,6 +259,13 @@
     </div>
   </div>
   <haxcms-site-builder id="site" file="site.json">
+<h2> Quick Installation Script </h2>
+<code-sample copy-clipboard-button>
+  <template>
+    curl -fsSL https://raw.githubusercontent.com/elmsln/hax11ty/master/hax11tyme.sh -o hax11tyme.sh && sh hax11tyme.sh
+  </template>
+</code-sample>
+<h2> Manual Installation </h2>
 <code-sample copy-clipboard-button>
 <template>
   git clone https://github.com/elmsln/hax11ty.git

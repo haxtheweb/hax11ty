@@ -3,7 +3,7 @@
   <title>HAX11TY doc site</title>
   <link href="https://elmsln.github.io/hax11ty/atom.xml" rel="self" />
   <subtitle>HAX + 11ty = bliss</subtitle>
-  <updated>2021-04-26T21:59:57.732+00:00</updated>
+  <updated>2021-04-28T19:36:01.640+00:00</updated>
   <author>
       <name>EdTechJoker</name>
   </author>
@@ -11,8 +11,8 @@
   <entry>
     <title>About</title>
     <id>https://elmsln.github.io/hax11ty/content/1_about/</id>
-    <updated>2021-04-26T21:59:57.732+00:00</updated>
-    <published>2021-04-26T21:59:57.732+00:00</published>
+    <updated>2021-04-28T19:36:01.640+00:00</updated>
+    <published>2021-04-28T19:36:01.640+00:00</published>
     <summary></summary>
     <link href="https://elmsln.github.io/hax11ty/content/1_about/"/>
     <content type="html">
@@ -29,12 +29,19 @@
   <entry>
     <title>Installation</title>
     <id>https://elmsln.github.io/hax11ty/content/2_install/</id>
-    <updated>2021-04-26T21:59:57.732+00:00</updated>
-    <published>2021-04-26T21:59:57.732+00:00</published>
+    <updated>2021-04-28T19:36:01.640+00:00</updated>
+    <published>2021-04-28T19:36:01.640+00:00</published>
     <summary></summary>
     <link href="https://elmsln.github.io/hax11ty/content/2_install/"/>
     <content type="html">
-      &lt;code-sample copy-clipboard-button&gt;
+      &lt;h2&gt; Quick Installation Script &lt;/h2&gt;
+&lt;code-sample copy-clipboard-button&gt;
+  &lt;template&gt;
+    curl -fsSL https://raw.githubusercontent.com/elmsln/hax11ty/master/hax11tyme.sh -o hax11tyme.sh &amp;&amp; sh hax11tyme.sh
+  &lt;/template&gt;
+&lt;/code-sample&gt;
+&lt;h2&gt; Manual Installation &lt;/h2&gt;
+&lt;code-sample copy-clipboard-button&gt;
 &lt;template&gt;
   git clone https://github.com/elmsln/hax11ty.git
   cd hax11ty
@@ -51,8 +58,8 @@
   <entry>
     <title>Why HAX11ty</title>
     <id>https://elmsln.github.io/hax11ty/content/3_why/</id>
-    <updated>2021-04-26T21:59:57.732+00:00</updated>
-    <published>2021-04-26T21:59:57.732+00:00</published>
+    <updated>2021-04-28T19:36:01.640+00:00</updated>
+    <published>2021-04-28T19:36:01.640+00:00</published>
     <summary></summary>
     <link href="https://elmsln.github.io/hax11ty/content/3_why/"/>
     <content type="html">
