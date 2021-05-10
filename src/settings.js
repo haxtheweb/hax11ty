@@ -9,11 +9,15 @@ module.exports = () => {
     // github.com/elmsln/WHATEVER - hax11ty here implies building against the repo itself to produce it's own docs :)
     var gitProject = "hax11ty";
     // if doing github builds, automatically set these to whatever the repo issuing the call is
+    if (process.env.GITHUB_REPOSITORY) {
+        let parts = process.env.GITHUB_REPOSITORY.split("/");
+        gitOrg = parts[0];
+        gitProject = parts[1];
+    }
+    var authorName = "btopro";
+    // person kicking off the job gets author name by default
     if (process.env.GITHUB_ACTOR) {
-        gitOrg = process.env.GITHUB_ACTOR;
-        if (process.env.GITHUB_REPOSITORY) {
-            gitProject = process.env.GITHUB_REPOSITORY.replace(gitOrg+"/","");
-        }
+        authorName = process.env.GITHUB_ACTOR;
     }
     // URL, default for local testing
     var url = "https://localhost:8000";
@@ -52,9 +56,9 @@ module.exports = () => {
     return {
         // this is where most things you'll want to change reside
         // folder / machine name to represent your site
-        siteMachineName: "elmsln",
+        siteMachineName: gitProject,
         // Your name as referenced as the author in files
-        siteAuthorName: "EdTechJoker",
+        siteAuthorName: authorName,
         // email address, optional
         siteAuthorEmail: "hax@psu.edu",
         // an image of you, could be in the local files directory
