@@ -1,6 +1,5 @@
 ---
 title: Installation
-slug: install
 ---
 <h2> Quick Installation Script </h2>
 <code-sample copy-clipboard-button>

@@ -1,6 +1,5 @@
 ---
 title: Why this is better
-slug: why-stuff
 ---
 <p><ul>
     <li>Power of <a href="https://www.11ty.dev/">11ty</a> for publishing static / high SEO</li>
