@@ -14,7 +14,6 @@ module.exports = () => {
         if (process.env.GITHUB_REPOSITORY) {
             gitProject = process.env.GITHUB_REPOSITORY.replace(gitOrg+"/","");
         }
-        console.log(process.env.GITHUB_REPOSITORY.replace(gitOrg+"/",""));
     }
     // URL, default for local testing
     var url = "https://localhost:8000";
