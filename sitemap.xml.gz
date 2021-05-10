@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <pre><code>&lt;url&gt;
   &lt;loc&gt;https://btopro.github.io/elmsln/hax11ty/content/1_about/&lt;/loc&gt;
-  &lt;lastmod&gt;2021-05-10T21:53:03+00:00&lt;/lastmod&gt;
+  &lt;lastmod&gt;2021-05-10T21:54:56+00:00&lt;/lastmod&gt;
   &lt;changefreq&gt;daily&lt;/changefreq&gt;
   &lt;priority&gt;1.0&lt;/priority&gt;
 &lt;/url&gt;
 
 &lt;url&gt;
   &lt;loc&gt;https://btopro.github.io/elmsln/hax11ty/content/2_install/&lt;/loc&gt;
-  &lt;lastmod&gt;2021-05-10T21:53:03+00:00&lt;/lastmod&gt;
+  &lt;lastmod&gt;2021-05-10T21:54:56+00:00&lt;/lastmod&gt;
   &lt;changefreq&gt;daily&lt;/changefreq&gt;
   &lt;priority&gt;1.0&lt;/priority&gt;
 &lt;/url&gt;
 
 &lt;url&gt;
   &lt;loc&gt;https://btopro.github.io/elmsln/hax11ty/content/3_why/&lt;/loc&gt;
-  &lt;lastmod&gt;2021-05-10T21:53:03+00:00&lt;/lastmod&gt;
+  &lt;lastmod&gt;2021-05-10T21:54:56+00:00&lt;/lastmod&gt;
   &lt;changefreq&gt;daily&lt;/changefreq&gt;
   &lt;priority&gt;1.0&lt;/priority&gt;
 &lt;/url&gt;
