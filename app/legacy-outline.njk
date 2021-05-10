@@ -12,7 +12,7 @@ eleventyExcludeFromCollections: true
     <body>
         <ul>
         {% for page in collections.searchDataOrder %} 
-            <li><a href="{% absoluteBasePath page.data.slug %}">{{ page.data.title }}</a></li>
+            <li><a href="{% absoluteBasePath page.url %}">{{ page.data.title }}</a></li>
         {% endfor %}
         </ul>
     </body>
