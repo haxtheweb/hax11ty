@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
    "id":"{{page.data.title}}",
    "title":"{{page.data.title}}",
    "created": "{{page.data.date}}",
-   "location":"{% absoluteBasePath page.url %}",
+   "location":"{% absoluteBasePath page.data.slug %}",
    "description":"{% excerpt page %}",
    "text":"{% excerpt page %}"
   }{% if loop.last == false %},{% endif %}
