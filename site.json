@@ -1,5 +1,5 @@
 {
-  "id": "#1968b4e7-7992-2c52-36f0-cc184d38b5ee",
+  "id": "#d8d31ce4-ac85-197b-8842-65f25ea1467b",
   "title": "HAX11TY doc site",
   "author": "EdTechJoker",
   "description": "HAX + 11ty = bliss",
@@ -13,8 +13,8 @@
     },
     "site": {
       "name": "elmsln",
-      "created": 1619638587151,
-      "updated": 1619638587151,
+      "created": 1620671655951,
+      "updated": 1620671655951,
       "git": {
         "autoPush": false,
         "branch": "master",
@@ -58,8 +58,8 @@
       "description": "About",
       "parent": null,
       "metadata": {
-        "created": 1619638562,
-        "updated": 1619638562,
+        "created": 1620671625,
+        "updated": 1620671625,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -82,8 +82,8 @@
       "description": "Installation",
       "parent": null,
       "metadata": {
-        "created": 1619638562,
-        "updated": 1619638562,
+        "created": 1620671625,
+        "updated": 1620671625,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -100,14 +100,14 @@
       "id": "--content-3_why-md",
       "indent": 0,
       "location": "./pages/3_why.md",
-      "slug": "why",
+      "slug": "why-stuff",
       "order": 2,
-      "title": "Why HAX11ty",
-      "description": "Why HAX11ty",
+      "title": "Why this is better",
+      "description": "Why this is better",
       "parent": null,
       "metadata": {
-        "created": 1619638562,
-        "updated": 1619638562,
+        "created": 1620671625,
+        "updated": 1620671625,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -116,8 +116,8 @@
           "content"
         ],
         "layout": "content.liquid",
-        "title": "Why HAX11ty",
-        "slug": "why"
+        "title": "Why this is better",
+        "slug": "why-stuff"
       }
     }
   ]
