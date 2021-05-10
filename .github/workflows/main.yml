@@ -15,11 +15,11 @@ jobs:
 
       - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         env:
-          actor: $GITHUB_ACTOR
-          fullrepo: $GITHUB_REPOSITORY
+          GITHUB_ACTOR: $GITHUB_ACTOR
+          GITHUB_REPOSITORY: $GITHUB_REPOSITORY
         run: |
           yarn install
-          yarn run build --actor=$actor --fullrepo=$fullrepo
+          yarn run build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.5.7
         with:
