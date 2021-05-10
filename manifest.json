@@ -47,12 +47,12 @@
       "density": "4.0"
     }
   ],
-  "scope": "/elmsln/hax11ty/",
-  "start_url": "/elmsln/hax11ty/",
+  "scope": "/hax11ty/",
+  "start_url": "/hax11ty/",
   "display": "standalone",
   "theme_color": "#55FF55",
   "background_color": "#55FF55",
-  "url": "https://btopro.github.io/elmsln/hax11ty",
+  "url": "https://elmsln.github.io/hax11ty",
   "lang": "en",
   "screenshots": [],
   "orientation": "portrait"

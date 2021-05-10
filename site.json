@@ -1,27 +1,27 @@
 {
-  "id": "#a03e2f14-219d-71a8-e254-dd7623825cad",
+  "id": "#30e5cb4a-6a5a-8c8f-1d84-9e16d055ba9a",
   "title": "HAX11TY doc site",
-  "author": "EdTechJoker",
+  "author": "btopro",
   "description": "HAX + 11ty = bliss",
   "license": "by-sa",
   "metadata": {
     "author": {
       "image": "files/headshot511743.1799999904.jpg",
-      "name": "EdTechJoker",
+      "name": "btopro",
       "email": "hax@psu.edu",
       "socialLink": "https://twitter.com/elmsln"
     },
     "site": {
-      "name": "elmsln",
-      "created": 1620684145379,
-      "updated": 1620684145379,
+      "name": "hax11ty",
+      "created": 1620685975992,
+      "updated": 1620685975992,
       "git": {
         "autoPush": false,
         "branch": "master",
         "staticBranch": "gh-pages",
         "vendor": "github",
-        "publicRepoUrl": "https://github.com/btopro/elmsln/hax11ty/blob/master/src/",
-        "url": "git@github.com:btopro/elmsln/hax11ty.git"
+        "publicRepoUrl": "https://github.com/elmsln/hax11ty/blob/master/src/",
+        "url": "git@github.com:elmsln/hax11ty.git"
       },
       "version": "1.2.9-11ty",
       "domain": "https://localhost:8000",
@@ -58,8 +58,8 @@
       "description": "About",
       "parent": null,
       "metadata": {
-        "created": 1620684123,
-        "updated": 1620684123,
+        "created": 1620685951,
+        "updated": 1620685951,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -81,8 +81,8 @@
       "description": "Installation",
       "parent": null,
       "metadata": {
-        "created": 1620684123,
-        "updated": 1620684123,
+        "created": 1620685951,
+        "updated": 1620685951,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -104,8 +104,8 @@
       "description": "Why this is better",
       "parent": null,
       "metadata": {
-        "created": 1620684123,
-        "updated": 1620684123,
+        "created": 1620685951,
+        "updated": 1620685951,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
