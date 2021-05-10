@@ -6,9 +6,15 @@ module.exports = () => {
     // github organization / username
     // github.com/WHATEVER
     var gitOrg = "elmsln";
-    // project name
     // github.com/elmsln/WHATEVER - hax11ty here implies building against the repo itself to produce it's own docs :)
     var gitProject = "hax11ty";
+    // if doing github builds, automatically set these to whatever the repo issuing the call is
+    if (process.env.GITHUB_ACTOR) {
+        gitOrg = process.env.GITHUB_ACTOR;
+        if (process.env.GITHUB_REPOSITORY) {
+            gitProject = process.env.GITHUB_REPOSITORY.replace(gitOrg+"/","");
+        }
+    }
     // URL, default for local testing
     var url = "https://localhost:8000";
     // CDN for requesting the location of the build directory
