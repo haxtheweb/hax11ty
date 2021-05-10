@@ -1,5 +1,5 @@
 {
-  "id": "#d8d31ce4-ac85-197b-8842-65f25ea1467b",
+  "id": "#2700b25c-455c-8a0f-3420-91d7be7dc9e8",
   "title": "HAX11TY doc site",
   "author": "EdTechJoker",
   "description": "HAX + 11ty = bliss",
@@ -13,8 +13,8 @@
     },
     "site": {
       "name": "elmsln",
-      "created": 1620671655951,
-      "updated": 1620671655951,
+      "created": 1620676192018,
+      "updated": 1620676192018,
       "git": {
         "autoPush": false,
         "branch": "master",
@@ -38,7 +38,7 @@
       }
     },
     "theme": {
-      "element": "clean-one",
+      "element": "clean-two",
       "variables": {
         "image": "assets/banner.jpg",
         "hexCode": "#55FF55",
@@ -52,14 +52,14 @@
       "id": "--content-1_about-md",
       "indent": 0,
       "location": "./pages/1_about.md",
-      "slug": "about",
+      "slug": "content/1_about/",
       "order": 0,
       "title": "About",
       "description": "About",
       "parent": null,
       "metadata": {
-        "created": 1620671625,
-        "updated": 1620671625,
+        "created": 1620676163,
+        "updated": 1620676163,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -68,22 +68,21 @@
           "content"
         ],
         "layout": "content.liquid",
-        "title": "About",
-        "slug": "about"
+        "title": "About"
       }
     },
     {
       "id": "--content-2_install-md",
       "indent": 0,
       "location": "./pages/2_install.md",
-      "slug": "install",
+      "slug": "content/2_install/",
       "order": 1,
       "title": "Installation",
       "description": "Installation",
       "parent": null,
       "metadata": {
-        "created": 1620671625,
-        "updated": 1620671625,
+        "created": 1620676163,
+        "updated": 1620676163,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -92,22 +91,21 @@
           "content"
         ],
         "layout": "content.liquid",
-        "title": "Installation",
-        "slug": "install"
+        "title": "Installation"
       }
     },
     {
       "id": "--content-3_why-md",
       "indent": 0,
       "location": "./pages/3_why.md",
-      "slug": "why-stuff",
+      "slug": "content/3_why/",
       "order": 2,
       "title": "Why this is better",
       "description": "Why this is better",
       "parent": null,
       "metadata": {
-        "created": 1620671625,
-        "updated": 1620671625,
+        "created": 1620676163,
+        "updated": 1620676163,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -116,8 +114,7 @@
           "content"
         ],
         "layout": "content.liquid",
-        "title": "Why this is better",
-        "slug": "why-stuff"
+        "title": "Why this is better"
       }
     }
   ]

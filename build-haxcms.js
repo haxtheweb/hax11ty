@@ -27,15 +27,15 @@ if (/^h/.test(document.location)) {
     catch (err) {
       ancient = true;
     }
-    if (!ancient) {
+    // try and serve IE11 / Safari 9.1
+    if (!ancient || (!!window.MSInputMethodContext && !!document.documentMode) || (/^((?!chrome|android).)*safari/i.test(navigator.userAgent))) {
       // remove fallback cause if we passed dynamic import then we are evergreen
       if (document.getElementById("haxcmsoutdatedfallback")) {
         document.body.removeChild(document.getElementById("haxcmsoutdatedfallback"));
       }
     }
     else {
-      // we bombed somewhere above, this implies that it's some odd between version
-      // most likely Safari 9ish, IE pre 11 and anything uber old. Serve no JS variation
+      // we bombed somewhere above, this implies its VERY old or something we don't know about
       if (document.getElementById('site')) {
         document.getElementById('site').style.display = 'none';
         document.getElementById('haxcmsoutdatedfallbacksuperold').style.display = 'block';
