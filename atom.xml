@@ -3,7 +3,7 @@
   <title>HAX11TY doc site</title>
   <link href="https://elmsln.github.io/hax11ty/atom.xml" rel="self" />
   <subtitle>HAX + 11ty = bliss</subtitle>
-  <updated>2021-05-10T19:49:23.496+00:00</updated>
+  <updated>2021-05-10T19:54:17.633+00:00</updated>
   <author>
       <name>EdTechJoker</name>
   </author>
@@ -11,8 +11,8 @@
   <entry>
     <title>About</title>
     <id>https://elmsln.github.io/hax11ty/content/1_about/</id>
-    <updated>2021-05-10T19:49:23.492+00:00</updated>
-    <published>2021-05-10T19:49:23.492+00:00</published>
+    <updated>2021-05-10T19:54:17.633+00:00</updated>
+    <published>2021-05-10T19:54:17.633+00:00</published>
     <summary></summary>
     <link href="https://elmsln.github.io/hax11ty/content/1_about/"/>
     <content type="html">
@@ -29,8 +29,8 @@
   <entry>
     <title>Installation</title>
     <id>https://elmsln.github.io/hax11ty/content/2_install/</id>
-    <updated>2021-05-10T19:49:23.496+00:00</updated>
-    <published>2021-05-10T19:49:23.496+00:00</published>
+    <updated>2021-05-10T19:54:17.633+00:00</updated>
+    <published>2021-05-10T19:54:17.633+00:00</published>
     <summary></summary>
     <link href="https://elmsln.github.io/hax11ty/content/2_install/"/>
     <content type="html">
@@ -58,8 +58,8 @@
   <entry>
     <title>Why this is better</title>
     <id>https://elmsln.github.io/hax11ty/content/3_why/</id>
-    <updated>2021-05-10T19:49:23.496+00:00</updated>
-    <published>2021-05-10T19:49:23.496+00:00</published>
+    <updated>2021-05-10T19:54:17.633+00:00</updated>
+    <published>2021-05-10T19:54:17.633+00:00</published>
     <summary></summary>
     <link href="https://elmsln.github.io/hax11ty/content/3_why/"/>
     <content type="html">

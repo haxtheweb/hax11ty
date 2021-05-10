@@ -4,7 +4,7 @@
   <subtitle>HAX + 11ty = bliss</subtitle>
   <link href="https://elmsln.github.io/hax11ty/rss.xml" rel="self"/>
   <link href="https://elmsln.github.io/hax11ty"/>
-  <updated>2021-05-10T19:49:23.496+00:00</updated>
+  <updated>2021-05-10T19:54:17.633+00:00</updated>
   <id>https://elmsln.github.io/hax11ty</id>
   <author>
     <name>EdTechJoker</name>
@@ -14,7 +14,7 @@
   <entry>
     <title>About</title>
     <link href="https://elmsln.github.io/hax11ty/content/1_about/"/>
-    <updated>2021-05-10T19:49:23.492+00:00</updated>
+    <updated>2021-05-10T19:54:17.633+00:00</updated>
     <id>https://elmsln.github.io/hax11ty/content/1_about/</id>
     <content type="html">&lt;p&gt;HAX11ty is a merger between HAX and 11ty. It uses these technologies in the following way:
 &lt;ul&gt;
@@ -29,7 +29,7 @@
   <entry>
     <title>Installation</title>
     <link href="https://elmsln.github.io/hax11ty/content/2_install/"/>
-    <updated>2021-05-10T19:49:23.496+00:00</updated>
+    <updated>2021-05-10T19:54:17.633+00:00</updated>
     <id>https://elmsln.github.io/hax11ty/content/2_install/</id>
     <content type="html">&lt;h2&gt; Quick Installation Script &lt;/h2&gt;
 &lt;code-sample copy-clipboard-button=&quot;&quot;&gt;
@@ -55,7 +55,7 @@
   <entry>
     <title>Why this is better</title>
     <link href="https://elmsln.github.io/hax11ty/content/3_why/"/>
-    <updated>2021-05-10T19:49:23.496+00:00</updated>
+    <updated>2021-05-10T19:54:17.633+00:00</updated>
     <id>https://elmsln.github.io/hax11ty/content/3_why/</id>
     <content type="html">&lt;p&gt;&lt;ul&gt;
     &lt;li&gt;Power of &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;11ty&lt;/a&gt; for publishing static / high SEO&lt;/li&gt;
