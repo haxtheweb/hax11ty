@@ -15,9 +15,11 @@ module.exports = () => {
         gitProject = parts[1];
     }
     var authorName = "btopro";
+    var siteAuthorImage = "files/headshot511743.1799999904.jpg";
     // person kicking off the job gets author name by default
     if (process.env.GITHUB_ACTOR) {
         authorName = process.env.GITHUB_ACTOR;
+        siteAuthorImage = `https://github.com/${authorName}.png`;
     }
     // URL, default for local testing
     var url = "https://localhost:8000";
@@ -63,7 +65,7 @@ module.exports = () => {
         siteAuthorEmail: "hax@psu.edu",
         // an image of you, could be in the local files directory
         // this is used in some themes
-        siteAuthorImage: "files/headshot511743.1799999904.jpg",
+        siteAuthorImage: siteAuthorImage,
         // visual name of your site
         siteName: "HAX11TY doc site",
         // CC license, see https://creativecommons.org/licenses/ for a list
