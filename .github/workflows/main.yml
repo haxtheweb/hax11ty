@@ -10,7 +10,10 @@ jobs:
 
       - name: set env variable actor
         run: echo 'GITHUB_ACTOR=$GITHUB_ACTOR' >> $GITHUB_ENV
-        
+
+      - name: LISTING
+        run: ls -las
+
       - name: Read CNAME
         id: cname
         uses: juliangruber/read-file-action@v1
