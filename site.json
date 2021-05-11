@@ -1,5 +1,5 @@
 {
-  "id": "#776c73fd-efd8-abf8-bb16-a0775916ac1b",
+  "id": "#046be29a-1e7d-9630-2460-7e2a94cc0725",
   "title": "HAX11TY doc site",
   "author": "btopro",
   "description": "HAX + 11ty = bliss",
@@ -13,8 +13,8 @@
     },
     "site": {
       "name": "hax11ty",
-      "created": 1620695828718,
-      "updated": 1620695828718,
+      "created": 1620695836211,
+      "updated": 1620695836211,
       "git": {
         "autoPush": false,
         "branch": "master",
@@ -58,8 +58,8 @@
       "description": "About",
       "parent": null,
       "metadata": {
-        "created": 1620695802,
-        "updated": 1620695802,
+        "created": 1620695812,
+        "updated": 1620695812,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -81,8 +81,8 @@
       "description": "Installation",
       "parent": null,
       "metadata": {
-        "created": 1620695802,
-        "updated": 1620695802,
+        "created": 1620695812,
+        "updated": 1620695812,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -104,8 +104,8 @@
       "description": "Why this is better",
       "parent": null,
       "metadata": {
-        "created": 1620695802,
-        "updated": 1620695802,
+        "created": 1620695812,
+        "updated": 1620695812,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
