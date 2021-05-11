@@ -9,11 +9,13 @@ module.exports = () => {
     // github.com/elmsln/WHATEVER - hax11ty here implies building against the repo itself to produce it's own docs :)
     var gitProject = "hax11ty";
     // if doing github builds, automatically set these to whatever the repo issuing the call is
+    // the above is just for SOME default so things below publish correctly locally
     if (process.env.GITHUB_REPOSITORY) {
         let parts = process.env.GITHUB_REPOSITORY.split("/");
         gitOrg = parts[0];
         gitProject = parts[1];
     }
+    // author name will be set by the github publishing agent based on who kicks it off
     var authorName = "btopro";
     var siteAuthorImage = "files/headshot511743.1799999904.jpg";
     // person kicking off the job gets author name by default
@@ -57,25 +59,20 @@ module.exports = () => {
     }
     return {
         // this is where most things you'll want to change reside
-        // folder / machine name to represent your site
-        siteMachineName: gitProject,
-        // Your name as referenced as the author in files
-        siteAuthorName: authorName,
+        // these defaults will at least publish but if you want to
+        // modify theme specific settings or meta data for SEO, then
+        // change these settings
+
         // email address, optional
-        siteAuthorEmail: "hax@psu.edu",
-        // an image of you, could be in the local files directory
-        // this is used in some themes
-        siteAuthorImage: siteAuthorImage,
-        // visual name of your site
-        siteName: "HAX11TY doc site",
-        // CC license, see https://creativecommons.org/licenses/ for a list
-        siteLicense: "by-sa",
+        siteAuthorEmail: "",
+        // optional twitter handle
+        twitterName: "",
         // short description of the site for SEO
-        siteDescription: "HAX + 11ty = bliss",
+        siteDescription: "project documentation",
         // logo to represent the site
         siteLogo: "assets/images/photo-1497493292307-31c376b6e479.jpeg",
         // theme to use HAXcms valid theme as it appears in the wc-factory listing
-        themeElement: "clean-two", // clean-two, learn-two-theme, or any other valid HAXcms theme
+        themeElement: "clean-two", // clean-two, clean-one, bootstrap-theme, learn-two-theme, or any other valid HAXcms theme
         // path to the entryway for the theme file. Not required but improves load times to have this for preloading
         themePath: "@lrnwebcomponents/clean-two/clean-two.js", // @lrnwebcomponents/clean-two/clean-two.js, @lrnwebcomponents/learn-two-theme/learn-two-theme.js, or any other valid HAXcms theme path
         // banner image used in your theme
@@ -86,8 +83,19 @@ module.exports = () => {
         themeLogo: "lrn:network",
         // general theme color
         themeColor: "green",
-        // optional twitter handle
-        twitterName: "elmsln",
+        // CC license, see https://creativecommons.org/licenses/ for a list
+        siteLicense: "by-sa",
+        // folder / machine name to represent your site
+        siteMachineName: gitProject,
+        // Your name as referenced as the author in files
+        siteAuthorName: authorName,
+        // an image of you, could be in the local files directory
+        // this is used in some themes
+        siteAuthorImage: siteAuthorImage,
+        // visual name of your site, defaults to project repo name
+        siteName: gitProject,
+        // language to set on content
+        lang: "en",
         // git configuration settings. This stuff is relatively specific to HAXcms
         // so set these things to your gitOrg / project from above as needed
         git: {
@@ -98,8 +106,6 @@ module.exports = () => {
             publicRepoUrl: `https://github.com/${gitOrg}/${gitProject}/blob/master/src/`,
             url: `git@github.com:${gitOrg}/${gitProject}.git`
         },
-        // language to set on content
-        lang: "en",
         // advanced settings don't modify unless you have a reason to do so
         version: "1.2.9-11ty", // version number of HAXcms this was created from
         cdnBuild: cdnBase + cdnPart + "build/es6/node_modules/", // deeper path directly into the build location
