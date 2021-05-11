@@ -1,6 +1,6 @@
 {
-    "title": "HAX11TY doc site",
-    "description": "HAX + 11ty = bliss",
+    "title": "hax11ty",
+    "description": "project documentation",
     "type": [
         "website", "HAXcms"
     ],

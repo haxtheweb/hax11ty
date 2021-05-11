@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>HAX11TY doc site</title>
-  <subtitle>HAX + 11ty = bliss</subtitle>
+  <title>hax11ty</title>
+  <subtitle>project documentation</subtitle>
   <link href="https://elmsln.github.io/hax11ty/rss.xml" rel="self"/>
   <link href="https://elmsln.github.io/hax11ty"/>
-  <updated>2021-05-11T01:16:52.452+00:00</updated>
+  <updated>2021-05-11T13:57:38.448+00:00</updated>
   <id>https://elmsln.github.io/hax11ty</id>
   <author>
     <name>btopro</name>
-    <email>hax@psu.edu
+    <email>
   </author>
   
   <entry>
     <title>About</title>
     <link href="https://elmsln.github.io/hax11ty/content/1_about/"/>
-    <updated>2021-05-11T01:16:52.452+00:00</updated>
+    <updated>2021-05-11T13:57:38.448+00:00</updated>
     <id>https://elmsln.github.io/hax11ty/content/1_about/</id>
     <content type="html">&lt;p&gt;HAX11ty is a merger between HAX and 11ty. It uses these technologies in the following way:
 &lt;ul&gt;
@@ -29,7 +29,7 @@
   <entry>
     <title>Installation</title>
     <link href="https://elmsln.github.io/hax11ty/content/2_install/"/>
-    <updated>2021-05-11T01:16:52.452+00:00</updated>
+    <updated>2021-05-11T13:57:38.448+00:00</updated>
     <id>https://elmsln.github.io/hax11ty/content/2_install/</id>
     <content type="html">&lt;h2&gt; Quick Installation Script &lt;/h2&gt;
 &lt;code-sample copy-clipboard-button=&quot;&quot;&gt;
@@ -55,7 +55,7 @@
   <entry>
     <title>Why this is better</title>
     <link href="https://elmsln.github.io/hax11ty/content/3_why/"/>
-    <updated>2021-05-11T01:16:52.452+00:00</updated>
+    <updated>2021-05-11T13:57:38.448+00:00</updated>
     <id>https://elmsln.github.io/hax11ty/content/3_why/</id>
     <content type="html">&lt;p&gt;&lt;ul&gt;
     &lt;li&gt;Power of &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;11ty&lt;/a&gt; for publishing static / high SEO&lt;/li&gt;

@@ -1,7 +1,7 @@
 {
-  "name": "HAX11TY doc site",
-  "short_name": "HAX11TY doc site",
-  "description": "HAX + 11ty = bliss",
+  "name": "hax11ty",
+  "short_name": "hax11ty",
+  "description": "project documentation",
   "icons": [
     {
       "src": "assets/android-icon-36x36.png",

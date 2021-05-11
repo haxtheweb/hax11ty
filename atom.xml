@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>HAX11TY doc site</title>
+  <title>hax11ty</title>
   <link href="https://elmsln.github.io/hax11ty/atom.xml" rel="self" />
-  <subtitle>HAX + 11ty = bliss</subtitle>
-  <updated>2021-05-11T01:16:52.452+00:00</updated>
+  <subtitle>project documentation</subtitle>
+  <updated>2021-05-11T13:57:38.448+00:00</updated>
   <author>
       <name>btopro</name>
   </author>
@@ -11,8 +11,8 @@
   <entry>
     <title>About</title>
     <id>https://elmsln.github.io/hax11ty/content/1_about/</id>
-    <updated>2021-05-11T01:16:52.452+00:00</updated>
-    <published>2021-05-11T01:16:52.452+00:00</published>
+    <updated>2021-05-11T13:57:38.448+00:00</updated>
+    <published>2021-05-11T13:57:38.448+00:00</published>
     <summary></summary>
     <link href="https://elmsln.github.io/hax11ty/content/1_about/"/>
     <content type="html">
@@ -29,8 +29,8 @@
   <entry>
     <title>Installation</title>
     <id>https://elmsln.github.io/hax11ty/content/2_install/</id>
-    <updated>2021-05-11T01:16:52.452+00:00</updated>
-    <published>2021-05-11T01:16:52.452+00:00</published>
+    <updated>2021-05-11T13:57:38.448+00:00</updated>
+    <published>2021-05-11T13:57:38.448+00:00</published>
     <summary></summary>
     <link href="https://elmsln.github.io/hax11ty/content/2_install/"/>
     <content type="html">
@@ -58,8 +58,8 @@
   <entry>
     <title>Why this is better</title>
     <id>https://elmsln.github.io/hax11ty/content/3_why/</id>
-    <updated>2021-05-11T01:16:52.452+00:00</updated>
-    <published>2021-05-11T01:16:52.452+00:00</published>
+    <updated>2021-05-11T13:57:38.448+00:00</updated>
+    <published>2021-05-11T13:57:38.448+00:00</published>
     <summary></summary>
     <link href="https://elmsln.github.io/hax11ty/content/3_why/"/>
     <content type="html">
