@@ -44,13 +44,17 @@ module.exports = () => {
     var basePath = "/";
     // useful with github exclusively
     var segmentCount = 1;
+    // if the repo has a CNAME, use this for the url
+    if (process.env.CNAME && process.env.CNAME != "") {
+        url = process.env.CNAME;
+        // set this to 0 if you have a vanity URL
+        segmentCount = 0;
+    }
     // when building for production, we form a github based path
-    if (process.env.HAXCMS_GITHUB) {
+    else if (process.env.HAXCMS_GITHUB) {
         // change these if you have a custom domain
         basePath = `/${gitProject}/`;
         url = `https://${gitOrg}.github.io/${gitProject}`;
-        // set this to 0 if you have a vanity URL
-        //segmentCount = 0;
     }
     else if (process.env.HAXCMS_CONTEXT == 'haxcms') {
         // change these if you have a custom domain
