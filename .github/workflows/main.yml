@@ -11,13 +11,21 @@ jobs:
       - name: set env variable actor
         run: echo 'GITHUB_ACTOR=$GITHUB_ACTOR' >> $GITHUB_ENV
         
-      - name: Read package.json
-        id: package
+      - name: Read CNAME
+        id: cname
         uses: juliangruber/read-file-action@v1
         with:
           path: ./CNAME
       - name: set env variable CNAME
-        run: echo 'CNAME=${{ steps.package.outputs.content }}' >> $GITHUB_ENV
+        run: echo 'CNAME=${{ steps.cname.outputs.content }}' >> $GITHUB_ENV
+      
+      - name: Read license
+        id: license
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: ./LICENSE
+      - name: set env variable LICENSE
+        run: echo 'LICENSE=${{ steps.license.outputs.content }}' >> $GITHUB_ENV
         
       - name: set env variable repo
         run: echo 'GITHUB_REPOSITORY=$GITHUB_REPOSITORY' >> $GITHUB_ENV
