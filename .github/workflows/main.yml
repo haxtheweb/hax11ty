@@ -18,14 +18,6 @@ jobs:
           path: ./CNAME
       - name: set env variable CNAME
         run: echo 'CNAME=${{ steps.cname.outputs.content }}' >> $GITHUB_ENV
-      
-      - name: Read license
-        id: license
-        uses: juliangruber/read-file-action@v1
-        with:
-          path: ./LICENSE
-      - name: set env variable LICENSE
-        run: echo 'LICENSE=${{ steps.license.outputs.content }}' >> $GITHUB_ENV
         
       - name: set env variable repo
         run: echo 'GITHUB_REPOSITORY=$GITHUB_REPOSITORY' >> $GITHUB_ENV
