@@ -1,5 +1,6 @@
 ---
 title: Installation
+order: 1
 ---
 <h2> Quick Installation Script </h2>
 <code-sample copy-clipboard-button>

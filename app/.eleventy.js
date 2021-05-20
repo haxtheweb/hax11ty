@@ -262,6 +262,8 @@ module.exports = function (eleventyConfig) {
         return true;
       }
       return false;
+    }).sort(function(a, b) {
+      return parseFloat(a.order) - parseFloat(b.order);
     });
     return JSON.stringify({ 
       id: settings.siteUuid,

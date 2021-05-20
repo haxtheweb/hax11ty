@@ -1,5 +1,6 @@
 ---
 title: Why this is better
+order: 2
 ---
 <p><ul>
     <li>Power of <a href="https://www.11ty.dev/">11ty</a> for publishing static / high SEO</li>
