@@ -3,7 +3,7 @@
   "scripts": {
     "start": "cd app && hax11ty serve",
     "clean-up-pre": "rm -rf dist/build",
-    "clean-up-post": "rm dist/assets/styles.css && cp src/styles.css dist/assets/styles.css",
+    "clean-up-post": "rm dist/assets/styles.css && cp src/styles.css dist/assets/styles.css && rm -rf dist/custom && cp -R src/custom dist/custom",
     "build": "yarn run clean-up-pre && cd app && env HAXCMS_CDN=true env HAXCMS_SERVICE_WORKER=true env HAXCMS_GITHUB=true hax11ty build && yarn run clean-up-post",
     "local-build": "yarn run clean-up-pre && cd app &&  env HAXCMS_CONTEXT=haxcms hax11ty build && yarn run clean-up-post"
   },
