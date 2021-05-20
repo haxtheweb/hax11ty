@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <base href="/hax11ty/" />
+  <link rel="preconnect" crossorigin href="https://cdn.webcomponents.psu.edu" />
+  <link rel="preconnect" crossorigin href="https://fonts.googleapis.com" />
+  <link rel="preconnect" crossorigin href="https://cdnjs.cloudflare.com" />
+  <link rel="preconnect" crossorigin href="https://i.creativecommons.org" />
+  <link rel="preconnect" crossorigin href="https://licensebuttons.net" />
+  <link rel="preload" href="/hax11ty/build.js" as="script" />
+  <link rel="preload" href="/hax11ty/build-haxcms.js" as="script" />
+  <link rel="preload" href="https://cdn.webcomponents.psu.edu/cdn/wc-registry.json" as="fetch" crossorigin="anonymous" />
+  <link rel="preload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/dynamic-import-registry/dynamic-import-registry.js" as="script" crossorigin="anonymous" />
+  <link rel="modulepreload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/dynamic-import-registry/dynamic-import-registry.js" />
+  <link rel="preload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/wc-autoload/wc-autoload.js" as="script" crossorigin="anonymous" />
+  <link rel="modulepreload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/wc-autoload/wc-autoload.js" />
+  <link rel="preload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/clean-two/clean-two.js" as="script" crossorigin="anonymous" />
+  <link rel="modulepreload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/clean-two/clean-two.js" />
+  <link rel="preload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/code-sample/code-sample.js" as="script" crossorigin="anonymous" />
+  <link rel="modulepreload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/code-sample/code-sample.js" />
+  <link rel="preload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/code-sample/code-sample.js" as="script" crossorigin="anonymous" />
+  <link rel="modulepreload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/code-sample/code-sample.js" />
+  <link rel="preload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/web-animations-js/web-animations-next-lite.min.js" as="script" />  
+  <link rel="preload" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/haxcms-elements/lib/base.css" as="style" />
+  <link rel="preload" href="/hax11ty/theme/theme.css" as="style" />
+
+  <meta name="generator" content="HAX11ty" />
+  <link rel="manifest" href="/hax11ty/manifest.json">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+  <title>hax11ty</title>
+  <link rel="icon" href="/hax11ty/assets/favicon.ico">
+  <meta name="theme-color" content="#55FF55">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="robots" content="index, follow">
+  <meta name="application-name" content="hax11ty">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="hax11ty">
+  <link rel="apple-touch-icon" sizes="48x48" href="/hax11ty/assets/icon-48x48.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/hax11ty/assets/icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="96x96" href="/hax11ty/assets/icon-96x96.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/hax11ty/assets/icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="/hax11ty/assets/icon-192x192.png">
+  <meta name="msapplication-TileImage" content="/hax11ty/assets/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#55FF55">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="description" content="project documentation" />
+  <meta name="og:sitename" property="og:sitename" content="hax11ty" />
+  <meta name="og:title" property="og:title" content="hax11ty" />
+  <meta name="og:type" property="og:type" content="article" />
+  <meta name="og:url" property="og:url" content="https://elmsln.github.io/hax11ty" />
+  <meta name="og:description" property="og:description" content="project documentation" />
+  <meta name="og:image" property="og:image" content="assets/banner.jpg" />
+  <meta name="twitter:card" property="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" property="twitter:site" content="https://elmsln.github.io/hax11ty" />
+  <meta name="twitter:title" property="twitter:title" content="hax11ty" />
+  <meta name="twitter:description" property="twitter:description" content="project documentation" />
+  <meta name="twitter:image" property="twitter:image" content="assets/banner.jpg" />
+  <meta rel="cc:license" href="https://creativecommons.org/licenses/by-sa/4.0/" content="License: Creative Commons: Attribution Share a like"/>
+  <meta name="twitter:creator" content="@" />
+  
+  <script>
+    if ('serviceWorker' in navigator) {
+      var sitePath = "/hax11ty/";
+      // discover this path downstream of the root of the domain
+      var swScope = window.location.pathname.substring(0, window.location.pathname.indexOf(sitePath)) + sitePath;
+      if (swScope != document.head.getElementsByTagName('base')[0].href) {
+        document.head.getElementsByTagName('base')[0].href = swScope;
+      }
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('service-worker.js', {
+          scope: swScope
+        }).then(function (registration) {
+          registration.onupdatefound = function () {
+            // The updatefound event implies that registration.installing is set; see
+            // https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#service-worker-container-updatefound-event
+            var installingWorker = registration.installing;
+            installingWorker.onstatechange = function () {
+              switch (installingWorker.state) {
+                case 'installed':
+                  if (!navigator.serviceWorker.controller) {
+                    window.dispatchEvent(new CustomEvent('simple-toast-show', {
+                      bubbles: true,
+                      cancelable: false,
+                      detail: {
+                        text: 'Pages you view are cached for offline use.',
+                        duration: 8000
+                      }
+                    }));
+                  }
+                break;
+                case 'redundant':
+                  throw Error('The installing service worker became redundant.');
+                break;
+              }
+            };
+          };
+        }).catch(function (e) {
+          console.warn('Service worker registration failed:', e);
+        });
+        // Check to see if the service worker controlling the page at initial load
+        // has become redundant, since this implies there's a new service worker with fresh content.
+        if (navigator.serviceWorker.controller) {
+          navigator.serviceWorker.controller.onstatechange = function(event) {
+            if (event.target.state === 'redundant') {
+              var b = document.createElement('mwc-button');
+              b.appendChild(document.createTextNode('Reload'));
+              b.raised = true;
+              b.addEventListener('click', function(e){ window.location.reload(true); });
+              window.dispatchEvent(new CustomEvent('simple-toast-show', {
+                bubbles: true,
+                cancelable: false,
+                detail: {
+                  text: 'A site update is available. Reload for latest content.',
+                  duration: 12000,
+                  slot: b,
+                  clone: false
+                }
+              }));
+            }
+          };
+        }
+      });
+    }
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 98vh;
+    }
+    .use-modern-browser a {
+      font-size: 22px;
+    }
+    .use-modern-browser {
+      font-size: 22px;
+      text-align: center;
+      width: 100%;
+    }
+  </style>
+  <style id="loadingstyles">
+    haxcms-site-builder {
+      display: block;
+    }
+    body[no-js] haxcms-site-builder {
+      display: none !important;
+    }
+    #loading {
+      background-color: white;
+      bottom: 0px;
+      left: 0px;
+      opacity: 1;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      transition: all linear 300ms;
+      -webkit-transition: all linear 300ms;
+      z-index: 99999999;
+    }
+
+    #loading.loaded {
+      animation: fade-out .7s ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    #loading div.messaging {
+      color: rgba(255,255,255, 0.7);
+      font-family: Roboto;
+      left: 0px;
+      margin-top: -75px;
+      position: absolute;
+      right: 0px;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    #loading div.messaging h1 {
+      color: white;
+      font-family: 'Open Sans', 'arial', 'serif';
+      font-size: 40px;
+      background-color: #55FF55;
+      transition: .4s ease-in-out all;
+    }
+    #loading img {
+      transition: .4s all ease-in-out;
+      width: 300px;
+      height: 300px;
+      margin-bottom: 50px;
+      border-radius: 50%;
+      border: 8px solid #55FF55;
+      box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.45);
+      -moz-box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.45);
+	    -webkit-box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.45);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
+    }
+    .progress-line,
+    .progress-line:before {
+      height: 8px;
+      width: 100%;
+      margin: auto;
+    }
+    .progress-line {
+      background-color: rgba(0,0,0, 0.05);
+      display: -webkit-flex;
+      display: flex;
+      width: 300px;
+    }
+    .progress-line:before {
+      background-color: #55FF55;
+      content: '';
+      animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    @keyframes running-progress {
+      0% {
+        margin-left: 0px;
+        margin-right: 100%;
+      }
+      50% {
+        margin-left: 25%;
+        margin-right: 0%;
+      }
+      100% {
+        margin-left: 100%;
+        margin-right: 0;
+      }
+    }
+    @keyframes fade-out {
+      0% {
+        opacity: 1;
+      }
+      99% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+  <script id="loadingscript">
+    window.addEventListener('load', function(e) {
+      // give the web components a second to build
+      setTimeout(function() {
+        document.querySelector('#loading').classList.add('loaded');
+        setTimeout(function() {
+          document.querySelector('#loading').parentNode.removeChild(document.querySelector('#loading'));
+          document.querySelector('#loadingstyles').parentNode.removeChild(document.querySelector('#loadingstyles'));
+          document.querySelector('#loadingscript').parentNode.removeChild(document.querySelector('#loadingscript'));
+        }, 600);
+      }, 1000)
+    });
+  </script>
+</head>
+<body no-js vocab="http://schema.org/" prefix="oer:http://oerschema.org cc:http://creativecommons.org/ns dc:http://purl.org/dc/terms/">
+  <div id="loading">
+    <div class="messaging">
+      <img src="assets/images/photo-1497493292307-31c376b6e479.jpeg" alt="" loading="lazy" height="300px" width="300px" />
+      <div class="progress-line"></div>
+      <h1>Loading hax11ty</h1>
+    </div>
+  </div>
+  <haxcms-site-builder id="site" file="site.json">
+<h2> Quick Installation Script </h2>
+<code-sample copy-clipboard-button>
+  <template>
+    curl -fsSL https://raw.githubusercontent.com/elmsln/hax11ty/master/hax11tyme.sh -o hax11tyme.sh && sh hax11tyme.sh
+  </template>
+</code-sample>
+<h2> Manual Installation </h2>
+<code-sample copy-clipboard-button>
+<template>
+  git clone https://github.com/elmsln/hax11ty.git
+  cd hax11ty
+  yarn install
+  yarn start
+</template>
+</code-sample>
+<p>This is the fastest way to get up and running. If you instead want to build new sites with this and push them back up to gh-pages rapidly, start by <a href="https://github.com/elmsln/hax11ty/generate">using this repo as a template</a>. This will copy the github actions workflows as well so all you need to do is change our repo in the git clone above to yours in order to start on what will easily become a live website!</p>
+<h2>DO IT!</h2>
+<p>Youll have to take a copy of the repo tho! :)</p>
+
+</haxcms-site-builder>
+  <div id="haxcmsoutdatedfallback">
+    <div id="haxcmsoutdatedfallbacksuperold"> 
+      <iframe id="outline" style="width:18%;float:left;height:90vh;padding:0;margin:0;" name="outline" id="frame1"
+        src="/hax11ty/legacy-outline.html" loading="lazy"></iframe>
+      <iframe id="content" style="width:80%;float:left;height:90vh;padding:0;margin:0;" name="content" id="frame2" src="" loading="lazy"></iframe>
+      <div class="use-modern-browser">Please use a modern browser to
+        view our website correctly. <a href="http://outdatedbrowser.com/">Update my browser now</a></div>
+    </div>
+  </div>
+  <script>window.HAXCMSContext="11ty";document.body.removeAttribute('no-js');window.__appCDN="https://cdn.webcomponents.psu.edu/cdn/";window.__appForceUpgrade=true;</script>
+  <script src="/hax11ty/build.js"></script>
+  <script src="/hax11ty/build-haxcms.js"></script>
+  <link rel="stylesheet" type="text/css" href="/hax11ty/assets/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.webcomponents.psu.edu/cdn/build/es6/node_modules/@lrnwebcomponents/haxcms-elements/lib/base.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+</body>
+</html>

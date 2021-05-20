@@ -3,15 +3,47 @@
    "id":"About",
    "title":"About",
    "created": "",
-   "location":"/hax11ty/content/1_about/",
+   "location":"/hax11ty/content/about/",
    "description":"HAX11ty is a merger between HAX and 11ty. It uses these technologies in the following way:  User edits via HAX (future) or modifies files locally  hax11ty script watches for changes and rebuilds files w/ 11ty, refreshing the screen  this is compiled to a valid HAXcms data package to be used either completely static with a CDN or locally in HAXcms PHP version",
    "text":"HAX11ty is a merger between HAX and 11ty. It uses these technologies in the following way:  User edits via HAX (future) or modifies files locally  hax11ty script watches for changes and rebuilds files w/ 11ty, refreshing the screen  this is compiled to a valid HAXcms data package to be used either completely static with a CDN or locally in HAXcms PHP version"
+  },
+  {
+   "id":"Community examples",
+   "title":"Community examples",
+   "created": "",
+   "location":"/hax11ty/content/examples/Community/",
+   "description":"Have an example site in production using HAX11ty? Contact us to let us know or add a PR via github",
+   "text":"Have an example site in production using HAX11ty? Contact us to let us know or add a PR via github"
+  },
+  {
+   "id":"Examples",
+   "title":"Examples",
+   "created": "",
+   "location":"/hax11ty/content/examples/",
+   "description":"Have an example site in production using HAX11ty? We'd love to highlight it and spread the good vibes! Contact us and make sure to click around to the other great examples of HAX11ty out there in the wild",
+   "text":"Have an example site in production using HAX11ty? We'd love to highlight it and spread the good vibes! Contact us and make sure to click around to the other great examples of HAX11ty out there in the wild"
+  },
+  {
+   "id":"Get involved!",
+   "title":"Get involved!",
+   "created": "",
+   "location":"/hax11ty/content/contact/",
+   "description":"The HAXTheWeb team hangs out on slack and would love to chat about all things 11ty, HAX11ty, HAX, and beyond. HAX11ty is one of many creations in the HAX universe and we'd love to hear from those using it. Join us on slack today! or follow us on twitter @HAXTheWeb",
+   "text":"The HAXTheWeb team hangs out on slack and would love to chat about all things 11ty, HAX11ty, HAX, and beyond. HAX11ty is one of many creations in the HAX universe and we'd love to hear from those using it. Join us on slack today! or follow us on twitter @HAXTheWeb"
+  },
+  {
+   "id":"HAXTheWeb",
+   "title":"HAXTheWeb",
+   "created": "",
+   "location":"/hax11ty/content/examples/HAXTeam/",
+   "description":"We loves us some HAX11ty and dogfood it for many project sites. Here's a link farm:	This site... duh :)	WCFactory",
+   "text":"We loves us some HAX11ty and dogfood it for many project sites. Here's a link farm:	This site... duh :)	WCFactory"
   },
   {
    "id":"Installation",
    "title":"Installation",
    "created": "",
-   "location":"/hax11ty/content/2_install/",
+   "location":"/hax11ty/content/install/",
    "description":"Quick Installation Script       curl -fsSL https://raw.githubusercontent.com/elmsln/hax11ty/master/hax11tyme.sh -o hax11tyme.sh && sh hax11tyme.sh   Manual Installation   git clone https://github.com/elmsln/hax11ty.git  cd hax11ty  yarn install  yarn startThis is the fastest way to get up and running. If you instead want to build new sites with this and push them back up to gh-pages rapidly, start by using this repo as a template. This will copy the github actions workflows as well so all you need to do is change our repo in the git clone above to yours in order to start on what will easily become a live website!DO IT!Youll have to take a copy of the repo tho! :)",
    "text":"Quick Installation Script       curl -fsSL https://raw.githubusercontent.com/elmsln/hax11ty/master/hax11tyme.sh -o hax11tyme.sh && sh hax11tyme.sh   Manual Installation   git clone https://github.com/elmsln/hax11ty.git  cd hax11ty  yarn install  yarn startThis is the fastest way to get up and running. If you instead want to build new sites with this and push them back up to gh-pages rapidly, start by using this repo as a template. This will copy the github actions workflows as well so all you need to do is change our repo in the git clone above to yours in order to start on what will easily become a live website!DO IT!Youll have to take a copy of the repo tho! :)"
   },
@@ -19,7 +51,7 @@
    "id":"Why this is better",
    "title":"Why this is better",
    "created": "",
-   "location":"/hax11ty/content/3_why/",
+   "location":"/hax11ty/content/why/",
    "description":"Power of 11ty for publishing static / high SEO    Easier than 11ty, 0 config solution for publishing    Power of HAXcms for rocket fast PWA in a forever format    Extendable via web components    HAX as web editor to skip markdown    Easy github pages based publishing workflow    All files requiring change are in src/ directory    Output can plug into HAXcms SaaS and HAXcms PaaS solutionsPerformanceHigh lighthouse scores are achieved with certain constraints that will keep it from hitting max possible scores:    We keep things unbundled to allow for maximal reuse. This has an initial performance hit in the name of page to page speed.    We do this so that if you put, for example, meme-maker into a page of content, hax11ty will generate the preload statements for that element from the CDN. This is done on a page by page level.    That's it. All other mettrics we can hit the same scores as any other app!",
    "text":"Power of 11ty for publishing static / high SEO    Easier than 11ty, 0 config solution for publishing    Power of HAXcms for rocket fast PWA in a forever format    Extendable via web components    HAX as web editor to skip markdown    Easy github pages based publishing workflow    All files requiring change are in src/ directory    Output can plug into HAXcms SaaS and HAXcms PaaS solutionsPerformanceHigh lighthouse scores are achieved with certain constraints that will keep it from hitting max possible scores:    We keep things unbundled to allow for maximal reuse. This has an initial performance hit in the name of page to page speed.    We do this so that if you put, for example, meme-maker into a page of content, hax11ty will generate the preload statements for that element from the CDN. This is done on a page by page level.    That's it. All other mettrics we can hit the same scores as any other app!"
   }
