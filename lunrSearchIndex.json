@@ -48,6 +48,14 @@
    "text":"Quick Installation Script       curl -fsSL https://raw.githubusercontent.com/elmsln/hax11ty/master/hax11tyme.sh -o hax11tyme.sh && sh hax11tyme.sh   Manual Installation   git clone https://github.com/elmsln/hax11ty.git  cd hax11ty  yarn install  yarn startThis is the fastest way to get up and running. If you instead want to build new sites with this and push them back up to gh-pages rapidly, start by using this repo as a template. This will copy the github actions workflows as well so all you need to do is change our repo in the git clone above to yours in order to start on what will easily become a live website!DO IT!Youll have to take a copy of the repo tho! :)"
   },
   {
+   "id":"Roadmap",
+   "title":"Roadmap",
+   "created": "",
+   "location":"/hax11ty/content/roadmap/",
+   "description":"The goal of HAX11ty is to combine the best of HAX / HAXcms with the best of 11ty. To that end we seek to produce the following workflow (things done first, followed by things needed):Working / exists currently    11ty static site publishing workflow    Abstract content files / settings / structure of 11ty away as much as possible so user deals only with content files    CI / workflow / gh-actions routine automatically setup    Interface with the HAXcms data structure / automatically generate site.json filesThings needed    Turn 11ty abstraction (which mirrors HAXcms data structure) into a stand alone npm package / tooling    Get the NodeJS based version of HAXcms wired up to hax11ty to allow for full HAXcms editing tools / endpoints    Allow inclusion of custom assets (which then includes custom theme development) just like HAXcms sites allow    Docker / containerized workflows",
+   "text":"The goal of HAX11ty is to combine the best of HAX / HAXcms with the best of 11ty. To that end we seek to produce the following workflow (things done first, followed by things needed):Working / exists currently    11ty static site publishing workflow    Abstract content files / settings / structure of 11ty away as much as possible so user deals only with content files    CI / workflow / gh-actions routine automatically setup    Interface with the HAXcms data structure / automatically generate site.json filesThings needed    Turn 11ty abstraction (which mirrors HAXcms data structure) into a stand alone npm package / tooling    Get the NodeJS based version of HAXcms wired up to hax11ty to allow for full HAXcms editing tools / endpoints    Allow inclusion of custom assets (which then includes custom theme development) just like HAXcms sites allow    Docker / containerized workflows"
+  },
+  {
    "id":"Why this is better",
    "title":"Why this is better",
    "created": "",
