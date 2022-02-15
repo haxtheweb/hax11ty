@@ -7,14 +7,9 @@ if ! command -v node;then
 	exit
 fi
 
-# if yarn isn't installed install it
-if ! command -v yarn;then
-	npm -g install yarn
-fi
-
 # clone and install
 git clone https://github.com/elmsln/hax11ty.git
 
 cd hax11ty/
-
-yarn install
+# install
+npm install
