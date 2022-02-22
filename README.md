@@ -13,8 +13,8 @@ curl -fsSL https://raw.githubusercontent.com/elmsln/hax11ty/master/hax11tyme.sh 
 ## Starting the repo usage
 
 - Clone the repo / use it as a template
-- `yarn install`
-- `yarn start` to work locally and view changes
+- `npm install`
+- `npm start` to work locally and view changes
 
 ## gh-pages workflow
 
@@ -40,12 +40,12 @@ Publishing with hax11ty is a snap and we have multiple methods of publishing we 
 
 ### Publishing to github
 
-- `yarn run build` will build it into the `dist` directory
+- `npm run build` will build it into the `dist` directory
 - Or, if you use github actions, you should be able to just change files
 
 ### Taking into HAXiam or HAXcms local versions
 
-`yarn run local-build` will build it into the `dist` directory, tweaking paths to be more compatible with HAXcms local and shared hosting solutions
+`npm run local-build` will build it into the `dist` directory, tweaking paths to be more compatible with HAXcms local and shared hosting solutions
 
 ## 11ty expert
 
