@@ -8,11 +8,10 @@
   "repository": "https://github.com/elmsln/haxcms",
   "scripts": {
     "build": "rollup -c rollup.config.js",
-    "start": "yarn run watch",
+    "start": "npm run watch",
     "watch": "rollup --watch -c rollup.config.js"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/plugin-transform-modules-amd": "^7.2.0",
     "@babel/core": "^7.3.3",
