@@ -9,7 +9,7 @@ COPY --from=haxcms /var/www/html/package.json /haxcms/package.json
 WORKDIR /haxcms/_sites/site/custom/
 
 COPY package.json package*.json ./
-RUN yarn install
+RUN npm install
 COPY . .
 
 CMD [ "npm", "start" ]

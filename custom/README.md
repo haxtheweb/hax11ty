@@ -6,8 +6,8 @@ or to add new elements into scope of HAXcms to use in pages.
 
 ## Usage
 
-1. After creating a new site, go into `_sites/MYSITE/custom` and run `yarn install`.
-2. Now run `yarn start` to begin watching the src directory for changes
+1. After creating a new site, go into `_sites/MYSITE/custom` and run `npm install`.
+2. Now run `npm start` to begin watching the src directory for changes
 3. Edit the `src/custom.js` as you would any web component / ESM compliant code.
 4. Open a web browser to `http://HAXCMS/_sites/MYSITE` and see changes as you work on them
 
@@ -17,4 +17,4 @@ best practices. A watch is happening that will automatically build it for ES6 / 
 
 ## Building to ship
 
-To build to ship to all browsers that HAXcms supports, run `yarn run build`. Now you're good to go!
+To build to ship to all browsers that HAXcms supports, run `npm run build`. Now you're good to go!

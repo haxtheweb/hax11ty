@@ -1,5 +1,5 @@
 {
-  "id": "#a171d2cb-dcf5-4bc9-95f8-c018d44ee20f",
+  "id": "#9be2a908-4586-eb9b-a1e3-f31fb97c2943",
   "title": "hax11ty",
   "author": "btopro",
   "description": "project documentation",
@@ -13,8 +13,8 @@
     },
     "site": {
       "name": "hax11ty",
-      "created": 1645555827280,
-      "updated": 1645555827281,
+      "created": 1645717487133,
+      "updated": 1645717487133,
       "git": {
         "autoPush": false,
         "branch": "master",
@@ -58,8 +58,8 @@
       "description": "HAXTheWeb",
       "parent": "--content-examples-index-md",
       "metadata": {
-        "created": 1645555785,
-        "updated": 1645555785,
+        "created": 1645717448,
+        "updated": 1645717448,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -73,30 +73,6 @@
       }
     },
     {
-      "id": "--content-install-md",
-      "indent": 0,
-      "location": "./pages/install.md",
-      "slug": "content/install/",
-      "order": 1,
-      "title": "Installation",
-      "description": "Installation",
-      "parent": null,
-      "metadata": {
-        "created": 1645555785,
-        "updated": 1645555785,
-        "readtime": 1,
-        "contentDetails": {},
-        "files": [],
-        "haxcmsServiceWorker": true,
-        "tags": [
-          "content"
-        ],
-        "layout": "content.liquid",
-        "title": "Installation",
-        "order": 1
-      }
-    },
-    {
       "id": "--content-about-md",
       "indent": 0,
       "location": "./pages/about.md",
@@ -106,8 +82,8 @@
       "description": "About",
       "parent": null,
       "metadata": {
-        "created": 1645555785,
-        "updated": 1645555785,
+        "created": 1645717448,
+        "updated": 1645717448,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -121,6 +97,30 @@
       }
     },
     {
+      "id": "--content-install-md",
+      "indent": 0,
+      "location": "./pages/install.md",
+      "slug": "content/install/",
+      "order": 1,
+      "title": "Installation",
+      "description": "Installation",
+      "parent": null,
+      "metadata": {
+        "created": 1645717448,
+        "updated": 1645717448,
+        "readtime": 1,
+        "contentDetails": {},
+        "files": [],
+        "haxcmsServiceWorker": true,
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "Installation",
+        "order": 1
+      }
+    },
+    {
       "id": "--content-examples-Community-md",
       "indent": 0,
       "location": "./pages/examples/Community.md",
@@ -130,8 +130,8 @@
       "description": "Community examples",
       "parent": "--content-examples-index-md",
       "metadata": {
-        "created": 1645555785,
-        "updated": 1645555785,
+        "created": 1645717448,
+        "updated": 1645717448,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -154,8 +154,8 @@
       "description": "Examples",
       "parent": null,
       "metadata": {
-        "created": 1645555785,
-        "updated": 1645555785,
+        "created": 1645717448,
+        "updated": 1645717448,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -178,8 +178,8 @@
       "description": "Why this is better",
       "parent": null,
       "metadata": {
-        "created": 1645555785,
-        "updated": 1645555785,
+        "created": 1645717448,
+        "updated": 1645717448,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -202,8 +202,8 @@
       "description": "Roadmap",
       "parent": null,
       "metadata": {
-        "created": 1645555785,
-        "updated": 1645555785,
+        "created": 1645717448,
+        "updated": 1645717448,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -226,8 +226,8 @@
       "description": "Get involved!",
       "parent": null,
       "metadata": {
-        "created": 1645555785,
-        "updated": 1645555785,
+        "created": 1645717448,
+        "updated": 1645717448,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
