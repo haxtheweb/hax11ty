@@ -810,7 +810,7 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@haxcms/11ty@^0.0.13":
+"@haxcms/11ty@0.0.13":
   version "0.0.13"
   resolved "https://registry.yarnpkg.com/@haxcms/11ty/-/11ty-0.0.13.tgz#ac867275e37b270530733fbb5dc960941268a3a6"
   integrity sha512-11cMkw3UWqeanPVibhMnkxMvrJzz+52t7WqjKcGGUEtOQ6Fhhex6CUEDzOT93I3OQlC6zfDCqi56KiPkycp32w==
