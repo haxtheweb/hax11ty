@@ -9,14 +9,19 @@
     "local-build": "yarn run clean-up-pre && cd src/custom && yarn run build && cd ../../app &&  env HAXCMS_CONTEXT=haxcms hax11ty build && yarn run clean-up-post"
   },
   "devDependencies": {
-    "@haxcms/11ty": "0.0.13",
     "@11ty/eleventy-plugin-rss": "1.0.7",
-    "eleventy-xml-plugin": "0.1.0",
+    "@haxcms/11ty": "0.0.13",
+    "browserslist": "4.20.2",
     "crypto": "1.0.1",
-    "gray-matter": "4.0.2",
-    "fs-extra": "8.1.0"
+    "eleventy-xml-plugin": "0.1.0",
+    "fs-extra": "8.1.0",
+    "gray-matter": "4.0.2"
+  },
+  "resolutions": {
+    "browserslist": "4.20.2"
   },
   "dependencies": {
-    "es-module-shims": "^0.4.6"
+    "es-module-shims": "^0.4.6",
+    "yarn": "^1.22.18"
   }
 }
