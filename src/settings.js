@@ -44,8 +44,15 @@ module.exports = () => {
     var basePath = "/";
     // useful with github exclusively
     var segmentCount = 1;
+    // when building for vercel, use that path
+    if (process.env.VERCEL) {
+        // change these if you have a custom domain
+        url = `https://${process.env.VERCEL_URL}`;
+        // set this to 0 if you have a vanity URL
+        segmentCount = 0;
+    }
     // if the repo has a CNAME, use this for the url
-    if (process.env.CNAME && process.env.CNAME != "") {
+    else if (process.env.CNAME && process.env.CNAME != "") {
         url = process.env.CNAME;
         // set this to 0 if you have a vanity URL
         segmentCount = 0;

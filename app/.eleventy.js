@@ -36,6 +36,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "theme": "theme",
     "custom": "custom",
+    "../src/files": "files",
     "unbundled-webcomponents/app/dist/assets": "assets",
     "unbundled-webcomponents/app/dist/build.js": "build.js",
     "unbundled-webcomponents/app/dist/wc-registry.json": "wc-registry.json",
