@@ -8,7 +8,14 @@
     "build": "yarn run clean-up-pre && cd src/custom && yarn run build && cd ../../app && env HAXCMS_CDN=true env HAXCMS_SERVICE_WORKER=true env HAXCMS_GITHUB=true hax11ty build && yarn run clean-up-post",
     "local-build": "yarn run clean-up-pre && cd src/custom && yarn run build && cd ../../app &&  env HAXCMS_CONTEXT=haxcms hax11ty build && yarn run clean-up-post"
   },
+  "bin": {
+    "eleventy": ".bin/eleventy"
+  },
   "devDependencies": {
+    "es-module-shims": "^0.4.6",
+    "pnpm": "6.33.1",
+    "@11ty/eleventy": "1.0.1",
+    "@oclif/plugin-help": "5.1.12",
     "@11ty/eleventy-plugin-rss": "1.0.7",
     "@haxcms/11ty": "0.0.13",
     "browserslist": "4.20.2",
