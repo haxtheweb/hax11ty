@@ -1,5 +1,5 @@
 {
-  "id": "#0ea7dc9c-b1fd-d1d2-9338-566197c8640b",
+  "id": "#8d248f8b-2c0b-598e-ab28-efe46f527d18",
   "title": "hax11ty",
   "author": "btopro",
   "description": "project documentation",
@@ -13,8 +13,8 @@
     },
     "site": {
       "name": "hax11ty",
-      "created": 1652889281414,
-      "updated": 1652889281414,
+      "created": 1658251975956,
+      "updated": 1658251975956,
       "git": {
         "autoPush": false,
         "branch": "master",
@@ -58,12 +58,21 @@
       "description": "HAXTheWeb",
       "parent": "--content-examples-index-md",
       "metadata": {
-        "created": 1652889261,
-        "updated": 1652889261,
+        "created": 1658251943,
+        "updated": 1658251943,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
         "haxcmsServiceWorker": true,
+        "eleventy": {
+          "version": "1.0.1",
+          "generator": "Eleventy v1.0.1",
+          "env": {
+            "config": "/home/runner/work/hax11ty/hax11ty/app/.eleventy.js",
+            "root": "/home/runner/work/hax11ty/hax11ty/app",
+            "source": "cli"
+          }
+        },
         "tags": [
           "content"
         ],
@@ -82,12 +91,21 @@
       "description": "About",
       "parent": null,
       "metadata": {
-        "created": 1652889261,
-        "updated": 1652889261,
+        "created": 1658251943,
+        "updated": 1658251943,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
         "haxcmsServiceWorker": true,
+        "eleventy": {
+          "version": "1.0.1",
+          "generator": "Eleventy v1.0.1",
+          "env": {
+            "config": "/home/runner/work/hax11ty/hax11ty/app/.eleventy.js",
+            "root": "/home/runner/work/hax11ty/hax11ty/app",
+            "source": "cli"
+          }
+        },
         "tags": [
           "content"
         ],
@@ -106,12 +124,21 @@
       "description": "Installation",
       "parent": null,
       "metadata": {
-        "created": 1652889261,
-        "updated": 1652889261,
+        "created": 1658251943,
+        "updated": 1658251943,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
         "haxcmsServiceWorker": true,
+        "eleventy": {
+          "version": "1.0.1",
+          "generator": "Eleventy v1.0.1",
+          "env": {
+            "config": "/home/runner/work/hax11ty/hax11ty/app/.eleventy.js",
+            "root": "/home/runner/work/hax11ty/hax11ty/app",
+            "source": "cli"
+          }
+        },
         "tags": [
           "content"
         ],
@@ -130,12 +157,21 @@
       "description": "Community examples",
       "parent": "--content-examples-index-md",
       "metadata": {
-        "created": 1652889261,
-        "updated": 1652889261,
+        "created": 1658251943,
+        "updated": 1658251943,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
         "haxcmsServiceWorker": true,
+        "eleventy": {
+          "version": "1.0.1",
+          "generator": "Eleventy v1.0.1",
+          "env": {
+            "config": "/home/runner/work/hax11ty/hax11ty/app/.eleventy.js",
+            "root": "/home/runner/work/hax11ty/hax11ty/app",
+            "source": "cli"
+          }
+        },
         "tags": [
           "content"
         ],
@@ -154,12 +190,21 @@
       "description": "Examples",
       "parent": null,
       "metadata": {
-        "created": 1652889261,
-        "updated": 1652889261,
+        "created": 1658251943,
+        "updated": 1658251943,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
         "haxcmsServiceWorker": true,
+        "eleventy": {
+          "version": "1.0.1",
+          "generator": "Eleventy v1.0.1",
+          "env": {
+            "config": "/home/runner/work/hax11ty/hax11ty/app/.eleventy.js",
+            "root": "/home/runner/work/hax11ty/hax11ty/app",
+            "source": "cli"
+          }
+        },
         "tags": [
           "content"
         ],
@@ -178,12 +223,21 @@
       "description": "Why this is better",
       "parent": null,
       "metadata": {
-        "created": 1652889261,
-        "updated": 1652889261,
+        "created": 1658251943,
+        "updated": 1658251943,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
         "haxcmsServiceWorker": true,
+        "eleventy": {
+          "version": "1.0.1",
+          "generator": "Eleventy v1.0.1",
+          "env": {
+            "config": "/home/runner/work/hax11ty/hax11ty/app/.eleventy.js",
+            "root": "/home/runner/work/hax11ty/hax11ty/app",
+            "source": "cli"
+          }
+        },
         "tags": [
           "content"
         ],
@@ -202,12 +256,21 @@
       "description": "Roadmap",
       "parent": null,
       "metadata": {
-        "created": 1652889261,
-        "updated": 1652889261,
+        "created": 1658251943,
+        "updated": 1658251943,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
         "haxcmsServiceWorker": true,
+        "eleventy": {
+          "version": "1.0.1",
+          "generator": "Eleventy v1.0.1",
+          "env": {
+            "config": "/home/runner/work/hax11ty/hax11ty/app/.eleventy.js",
+            "root": "/home/runner/work/hax11ty/hax11ty/app",
+            "source": "cli"
+          }
+        },
         "tags": [
           "content"
         ],
@@ -226,12 +289,21 @@
       "description": "Get involved!",
       "parent": null,
       "metadata": {
-        "created": 1652889261,
-        "updated": 1652889261,
+        "created": 1658251943,
+        "updated": 1658251943,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
         "haxcmsServiceWorker": true,
+        "eleventy": {
+          "version": "1.0.1",
+          "generator": "Eleventy v1.0.1",
+          "env": {
+            "config": "/home/runner/work/hax11ty/hax11ty/app/.eleventy.js",
+            "root": "/home/runner/work/hax11ty/hax11ty/app",
+            "source": "cli"
+          }
+        },
         "tags": [
           "content"
         ],
