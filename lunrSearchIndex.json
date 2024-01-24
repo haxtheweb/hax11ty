@@ -28,8 +28,8 @@
    "title":"Get involved!",
    "created": "",
    "location":"/hax11ty/content/contact/",
-   "description":"The HAXTheWeb team hangs out on slack and would love to chat about all things 11ty, HAX11ty, HAX, and beyond. HAX11ty is one of many creations in the HAX universe and we'd love to hear from those using it. Join us on slack today! or follow us on twitter @HAXTheWeb",
-   "text":"The HAXTheWeb team hangs out on slack and would love to chat about all things 11ty, HAX11ty, HAX, and beyond. HAX11ty is one of many creations in the HAX universe and we'd love to hear from those using it. Join us on slack today! or follow us on twitter @HAXTheWeb"
+   "description":"The HAXTheWeb team hangs out on slack and would love to chat about all things 11ty, HAX11ty, HAX, and beyond. HAX11ty is one of many creations in the HAX universe and we'd love to hear from those using it. Join us on Discord today! or follow us on [X] @HAXTheWeb",
+   "text":"The HAXTheWeb team hangs out on slack and would love to chat about all things 11ty, HAX11ty, HAX, and beyond. HAX11ty is one of many creations in the HAX universe and we'd love to hear from those using it. Join us on Discord today! or follow us on [X] @HAXTheWeb"
   },
   {
    "id":"HAXTheWeb",
@@ -52,8 +52,8 @@
    "title":"Roadmap",
    "created": "",
    "location":"/hax11ty/content/roadmap/",
-   "description":"The goal of HAX11ty is to combine the best of HAX / HAXcms with the best of 11ty. To that end we seek to produce the following workflow (things done first, followed by things needed):Working / exists currently    11ty static site publishing workflow    Abstract content files / settings / structure of 11ty away as much as possible so user deals only with content files    CI / workflow / gh-actions routine automatically setup    Interface with the HAXcms data structure / automatically generate site.json filesThings needed    Turn 11ty abstraction (which mirrors HAXcms data structure) into a stand alone npm package / tooling    Get the NodeJS based version of HAXcms wired up to hax11ty to allow for full HAXcms editing tools / endpoints    Allow inclusion of custom assets (which then includes custom theme development) just like HAXcms sites allow    Docker / containerized workflows",
-   "text":"The goal of HAX11ty is to combine the best of HAX / HAXcms with the best of 11ty. To that end we seek to produce the following workflow (things done first, followed by things needed):Working / exists currently    11ty static site publishing workflow    Abstract content files / settings / structure of 11ty away as much as possible so user deals only with content files    CI / workflow / gh-actions routine automatically setup    Interface with the HAXcms data structure / automatically generate site.json filesThings needed    Turn 11ty abstraction (which mirrors HAXcms data structure) into a stand alone npm package / tooling    Get the NodeJS based version of HAXcms wired up to hax11ty to allow for full HAXcms editing tools / endpoints    Allow inclusion of custom assets (which then includes custom theme development) just like HAXcms sites allow    Docker / containerized workflows"
+   "description":"The goal of HAX11ty is to combine the best of HAX / HAXcms with the best of 11ty. To that end we seek to produce the following workflow (things done first, followed by things needed):Working / exists currently    11ty static site publishing workflow    Abstract content files / settings / structure of 11ty away as much as possible so user deals only with content files    CI / workflow / gh-actions routine automatically setup    Interface with the HAXcms data structure / automatically generate site.json filesThings neededIssue queue for hax11ty",
+   "text":"The goal of HAX11ty is to combine the best of HAX / HAXcms with the best of 11ty. To that end we seek to produce the following workflow (things done first, followed by things needed):Working / exists currently    11ty static site publishing workflow    Abstract content files / settings / structure of 11ty away as much as possible so user deals only with content files    CI / workflow / gh-actions routine automatically setup    Interface with the HAXcms data structure / automatically generate site.json filesThings neededIssue queue for hax11ty"
   },
   {
    "id":"Why this is better",

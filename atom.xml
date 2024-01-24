@@ -3,7 +3,7 @@
   <title>hax11ty</title>
   <link href="https://elmsln.github.io/hax11ty/atom.xml" rel="self" />
   <subtitle>project documentation</subtitle>
-  <updated>2023-10-13T15:26:16.078-00:00</updated>
+  <updated>2024-01-24T22:22:06.996-00:00</updated>
   <author>
       <name>btopro</name>
   </author>
@@ -11,8 +11,8 @@
   <entry>
     <title>About</title>
     <id>https://elmsln.github.io/hax11ty/content/about/</id>
-    <updated>2023-10-13T15:26:16.078-00:00</updated>
-    <published>2023-10-13T15:26:16.078-00:00</published>
+    <updated>2024-01-24T22:22:06.992-00:00</updated>
+    <published>2024-01-24T22:22:06.992-00:00</published>
     <summary></summary>
     <link href="https://elmsln.github.io/hax11ty/content/about/"/>
     <content type="html">
@@ -29,20 +29,20 @@
   <entry>
     <title>Get involved!</title>
     <id>https://elmsln.github.io/hax11ty/content/contact/</id>
-    <updated>2023-10-13T15:26:16.078-00:00</updated>
-    <published>2023-10-13T15:26:16.078-00:00</published>
+    <updated>2024-01-24T22:22:06.992-00:00</updated>
+    <published>2024-01-24T22:22:06.992-00:00</published>
     <summary></summary>
     <link href="https://elmsln.github.io/hax11ty/content/contact/"/>
     <content type="html">
-      &lt;p&gt;The HAXTheWeb team hangs out on slack and would love to chat about all things 11ty, HAX11ty, HAX, and beyond. HAX11ty is one of many creations in the HAX universe and we&#39;d love to hear from those using it. &lt;a href=&quot;https://bit.ly/haxslack&quot;&gt;Join us on slack today!&lt;/a&gt; or follow us on twitter &lt;a href=&quot;https://twitter.com/haxtheweb&quot;&gt;@HAXTheWeb&lt;/a&gt;
+      &lt;p&gt;The HAXTheWeb team hangs out on slack and would love to chat about all things 11ty, HAX11ty, HAX, and beyond. HAX11ty is one of many creations in the HAX universe and we&#39;d love to hear from those using it. &lt;a href=&quot;https://bit.ly/hax-discord&quot;&gt;Join us on Discord today!&lt;/a&gt; or follow us on [X] &lt;a href=&quot;https://twitter.com/haxtheweb&quot;&gt;@HAXTheWeb&lt;/a&gt;
 
     </content>
   </entry>
   <entry>
     <title>Community examples</title>
     <id>https://elmsln.github.io/hax11ty/content/examples/Community/</id>
-    <updated>2023-10-13T15:26:16.078-00:00</updated>
-    <published>2023-10-13T15:26:16.078-00:00</published>
+    <updated>2024-01-24T22:22:06.996-00:00</updated>
+    <published>2024-01-24T22:22:06.996-00:00</published>
     <summary></summary>
     <link href="https://elmsln.github.io/hax11ty/content/examples/Community/"/>
     <content type="html">
@@ -53,8 +53,8 @@
   <entry>
     <title>HAXTheWeb</title>
     <id>https://elmsln.github.io/hax11ty/content/examples/HAXTeam/</id>
-    <updated>2023-10-13T15:26:16.078-00:00</updated>
-    <published>2023-10-13T15:26:16.078-00:00</published>
+    <updated>2024-01-24T22:22:06.996-00:00</updated>
+    <published>2024-01-24T22:22:06.996-00:00</published>
     <summary></summary>
     <link href="https://elmsln.github.io/hax11ty/content/examples/HAXTeam/"/>
     <content type="html">
@@ -69,8 +69,8 @@
   <entry>
     <title>Examples</title>
     <id>https://elmsln.github.io/hax11ty/content/examples/</id>
-    <updated>2023-10-13T15:26:16.078-00:00</updated>
-    <published>2023-10-13T15:26:16.078-00:00</published>
+    <updated>2024-01-24T22:22:06.996-00:00</updated>
+    <published>2024-01-24T22:22:06.996-00:00</published>
     <summary></summary>
     <link href="https://elmsln.github.io/hax11ty/content/examples/"/>
     <content type="html">
@@ -81,8 +81,8 @@
   <entry>
     <title>Installation</title>
     <id>https://elmsln.github.io/hax11ty/content/install/</id>
-    <updated>2023-10-13T15:26:16.078-00:00</updated>
-    <published>2023-10-13T15:26:16.078-00:00</published>
+    <updated>2024-01-24T22:22:06.996-00:00</updated>
+    <published>2024-01-24T22:22:06.996-00:00</published>
     <summary></summary>
     <link href="https://elmsln.github.io/hax11ty/content/install/"/>
     <content type="html">
@@ -110,8 +110,8 @@
   <entry>
     <title>Roadmap</title>
     <id>https://elmsln.github.io/hax11ty/content/roadmap/</id>
-    <updated>2023-10-13T15:26:16.078-00:00</updated>
-    <published>2023-10-13T15:26:16.078-00:00</published>
+    <updated>2024-01-24T22:22:06.996-00:00</updated>
+    <published>2024-01-24T22:22:06.996-00:00</published>
     <summary></summary>
     <link href="https://elmsln.github.io/hax11ty/content/roadmap/"/>
     <content type="html">
@@ -124,20 +124,14 @@
     &lt;li&gt;Interface with the HAXcms data structure / automatically generate site.json files&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Things needed&lt;/h3&gt;
-&lt;ul&gt;
-    &lt;li&gt;Turn 11ty abstraction (which mirrors HAXcms data structure) into a stand alone npm package / tooling&lt;/li&gt;
-    &lt;li&gt;Get the NodeJS based version of HAXcms wired up to hax11ty to allow for full HAXcms editing tools / endpoints&lt;/li&gt;
-    &lt;li&gt;Allow inclusion of custom assets (which then includes custom theme development) just like HAXcms sites allow&lt;/li&gt;
-    &lt;li&gt;Docker / containerized workflows&lt;/li&gt;
-&lt;/ul&gt;
-
+&lt;a href=&quot;https://github.com/elmsln/issues/labels/hax11ty&quot;&gt;Issue queue for hax11ty&lt;/a&gt;
     </content>
   </entry>
   <entry>
     <title>Why this is better</title>
     <id>https://elmsln.github.io/hax11ty/content/why/</id>
-    <updated>2023-10-13T15:26:16.078-00:00</updated>
-    <published>2023-10-13T15:26:16.078-00:00</published>
+    <updated>2024-01-24T22:22:06.996-00:00</updated>
+    <published>2024-01-24T22:22:06.996-00:00</published>
     <summary></summary>
     <link href="https://elmsln.github.io/hax11ty/content/why/"/>
     <content type="html">
