@@ -53,10 +53,14 @@ All files that you'll want to modify are found in the `src/` directory
 
 Publishing with hax11ty is a snap and we have multiple methods of publishing we support. As long as you stick to just modifying the files mentioned
 
-### Publishing to github
+### Publishing to github with assets included
 
 - `npm run build` will build it into the `dist` directory
 - Or, if you use github actions, you should be able to just change files
+
+### Publishing to github leveraging CDN network
+- `npm run build:cdn` will publish your site as if it is leveraging our CDN network
+- This will default to cdn.webcomponents.psu.edu but can be set to point to other sources in `src/settings.js`
 
 ### Taking into HAXiam or HAXcms local versions
 
