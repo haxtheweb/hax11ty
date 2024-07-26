@@ -6,7 +6,7 @@
     <li><a href="https://haxtheweb.org">HAX</a> as web editor to skip markdown</li>
     <li>Easy github pages based publishing workflow</li>
     <li>All files requiring change are in <code>src/</code> directory</li>
-    <li>Output can plug into <a href="https://github.com/elmsln/haxcms">HAXcms SaaS</a> and <a href="https://github.com/elmsln/haxiam">HAXcms PaaS</a> solutions</li>
+    <li>Output can plug into <a href="https://github.com/haxtheweb/haxcms">HAXcms SaaS</a> and <a href="https://github.com/haxtheweb/haxiam">HAXcms PaaS</a> solutions</li>
 </ul></p>
 <h3>Performance</h3>
 <p>High lighthouse scores are achieved with certain constraints that will keep it from hitting max possible scores:
