@@ -3,7 +3,7 @@
   <title>hax11ty</title>
   <link href="https://haxtheweb.github.io/hax11ty/atom.xml" rel="self" />
   <subtitle>project documentation</subtitle>
-  <updated>2024-07-26T15:35:40.795-00:00</updated>
+  <updated>2024-07-26T16:00:06.741+00:00</updated>
   <author>
       <name>btopro</name>
   </author>
@@ -11,8 +11,8 @@
   <entry>
     <title>About</title>
     <id>https://haxtheweb.github.io/hax11ty/content/about/</id>
-    <updated>2024-07-26T15:35:40.795-00:00</updated>
-    <published>2024-07-26T15:35:40.795-00:00</published>
+    <updated>2024-07-26T16:00:06.741+00:00</updated>
+    <published>2024-07-26T16:00:06.741+00:00</published>
     <summary></summary>
     <link href="https://haxtheweb.github.io/hax11ty/content/about/"/>
     <content type="html">
@@ -29,8 +29,8 @@
   <entry>
     <title>Get involved!</title>
     <id>https://haxtheweb.github.io/hax11ty/content/contact/</id>
-    <updated>2024-07-26T15:35:40.795-00:00</updated>
-    <published>2024-07-26T15:35:40.795-00:00</published>
+    <updated>2024-07-26T16:00:06.741+00:00</updated>
+    <published>2024-07-26T16:00:06.741+00:00</published>
     <summary></summary>
     <link href="https://haxtheweb.github.io/hax11ty/content/contact/"/>
     <content type="html">
@@ -41,8 +41,8 @@
   <entry>
     <title>Community examples</title>
     <id>https://haxtheweb.github.io/hax11ty/content/examples/Community/</id>
-    <updated>2024-07-26T15:35:40.795-00:00</updated>
-    <published>2024-07-26T15:35:40.795-00:00</published>
+    <updated>2024-07-26T16:00:06.741+00:00</updated>
+    <published>2024-07-26T16:00:06.741+00:00</published>
     <summary></summary>
     <link href="https://haxtheweb.github.io/hax11ty/content/examples/Community/"/>
     <content type="html">
@@ -53,8 +53,8 @@
   <entry>
     <title>HAXTheWeb</title>
     <id>https://haxtheweb.github.io/hax11ty/content/examples/HAXTeam/</id>
-    <updated>2024-07-26T15:35:40.795-00:00</updated>
-    <published>2024-07-26T15:35:40.795-00:00</published>
+    <updated>2024-07-26T16:00:06.741+00:00</updated>
+    <published>2024-07-26T16:00:06.741+00:00</published>
     <summary></summary>
     <link href="https://haxtheweb.github.io/hax11ty/content/examples/HAXTeam/"/>
     <content type="html">
@@ -69,8 +69,8 @@
   <entry>
     <title>Examples</title>
     <id>https://haxtheweb.github.io/hax11ty/content/examples/</id>
-    <updated>2024-07-26T15:35:40.795-00:00</updated>
-    <published>2024-07-26T15:35:40.795-00:00</published>
+    <updated>2024-07-26T16:00:06.741+00:00</updated>
+    <published>2024-07-26T16:00:06.741+00:00</published>
     <summary></summary>
     <link href="https://haxtheweb.github.io/hax11ty/content/examples/"/>
     <content type="html">
@@ -81,8 +81,8 @@
   <entry>
     <title>Installation</title>
     <id>https://haxtheweb.github.io/hax11ty/content/install/</id>
-    <updated>2024-07-26T15:35:40.795-00:00</updated>
-    <published>2024-07-26T15:35:40.795-00:00</published>
+    <updated>2024-07-26T16:00:06.741+00:00</updated>
+    <published>2024-07-26T16:00:06.741+00:00</published>
     <summary></summary>
     <link href="https://haxtheweb.github.io/hax11ty/content/install/"/>
     <content type="html">
@@ -110,8 +110,8 @@
   <entry>
     <title>Roadmap</title>
     <id>https://haxtheweb.github.io/hax11ty/content/roadmap/</id>
-    <updated>2024-07-26T15:35:40.795-00:00</updated>
-    <published>2024-07-26T15:35:40.795-00:00</published>
+    <updated>2024-07-26T16:00:06.741+00:00</updated>
+    <published>2024-07-26T16:00:06.741+00:00</published>
     <summary></summary>
     <link href="https://haxtheweb.github.io/hax11ty/content/roadmap/"/>
     <content type="html">
@@ -124,14 +124,14 @@
     &lt;li&gt;Interface with the HAXcms data structure / automatically generate site.json files&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;Things needed&lt;/h3&gt;
-&lt;a href=&quot;https://github.com/elmsln/issues/labels/hax11ty&quot;&gt;Issue queue for hax11ty&lt;/a&gt;
+&lt;a href=&quot;https://github.com/haxtheweb/issues/labels/hax11ty&quot;&gt;Issue queue for hax11ty&lt;/a&gt;
     </content>
   </entry>
   <entry>
     <title>Why this is better</title>
     <id>https://haxtheweb.github.io/hax11ty/content/why/</id>
-    <updated>2024-07-26T15:35:40.795-00:00</updated>
-    <published>2024-07-26T15:35:40.795-00:00</published>
+    <updated>2024-07-26T16:00:06.741+00:00</updated>
+    <published>2024-07-26T16:00:06.741+00:00</published>
     <summary></summary>
     <link href="https://haxtheweb.github.io/hax11ty/content/why/"/>
     <content type="html">
@@ -143,7 +143,7 @@
     &lt;li&gt;&lt;a href=&quot;https://haxtheweb.org&quot;&gt;HAX&lt;/a&gt; as web editor to skip markdown&lt;/li&gt;
     &lt;li&gt;Easy github pages based publishing workflow&lt;/li&gt;
     &lt;li&gt;All files requiring change are in &lt;code&gt;src/&lt;/code&gt; directory&lt;/li&gt;
-    &lt;li&gt;Output can plug into &lt;a href=&quot;https://github.com/haxtheweb/haxcms&quot;&gt;HAXcms SaaS&lt;/a&gt; and &lt;a href=&quot;https://github.com/haxtheweb/haxiam&quot;&gt;HAXcms PaaS&lt;/a&gt; solutions&lt;/li&gt;
+    &lt;li&gt;Output can plug into &lt;a href=&quot;https://github.com/haxtheweb/haxcms-nodejs&quot;&gt;HAXcms-php&lt;/a&gt;, &lt;a href=&quot;https://github.com/haxtheweb/haxcms-nodejs&quot;&gt;HAXcms-nodejs&lt;/a&gt; and &lt;a href=&quot;https://github.com/haxtheweb/haxiam&quot;&gt;HAXiam&lt;/a&gt; solutions&lt;/li&gt;
 &lt;/ul&gt;&lt;/p&gt;
 &lt;h3&gt;Performance&lt;/h3&gt;
 &lt;p&gt;High lighthouse scores are achieved with certain constraints that will keep it from hitting max possible scores:
