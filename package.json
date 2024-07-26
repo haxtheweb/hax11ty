@@ -31,5 +31,6 @@
   "dependencies": {
     "es-module-shims": "^0.4.6",
     "yarn": "^1.22.18"
-  }
+  },
+  "version": "9.0.2"
 }
