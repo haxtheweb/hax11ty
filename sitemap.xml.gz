@@ -2,56 +2,56 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <pre><code>&lt;url&gt;
   &lt;loc&gt;https://haxtheweb.github.io/hax11ty/content/about/&lt;/loc&gt;
-  &lt;lastmod&gt;Fri Jul 26 2024 16:33:01 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
+  &lt;lastmod&gt;Fri Jul 26 2024 16:45:03 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
   &lt;changefreq&gt;daily&lt;/changefreq&gt;
   &lt;priority&gt;1.0&lt;/priority&gt;
 &lt;/url&gt;
 
 &lt;url&gt;
   &lt;loc&gt;https://haxtheweb.github.io/hax11ty/content/contact/&lt;/loc&gt;
-  &lt;lastmod&gt;Fri Jul 26 2024 16:33:01 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
+  &lt;lastmod&gt;Fri Jul 26 2024 16:45:03 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
   &lt;changefreq&gt;daily&lt;/changefreq&gt;
   &lt;priority&gt;1.0&lt;/priority&gt;
 &lt;/url&gt;
 
 &lt;url&gt;
   &lt;loc&gt;https://haxtheweb.github.io/hax11ty/content/examples/Community/&lt;/loc&gt;
-  &lt;lastmod&gt;Fri Jul 26 2024 16:33:01 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
+  &lt;lastmod&gt;Fri Jul 26 2024 16:45:03 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
   &lt;changefreq&gt;daily&lt;/changefreq&gt;
   &lt;priority&gt;1.0&lt;/priority&gt;
 &lt;/url&gt;
 
 &lt;url&gt;
   &lt;loc&gt;https://haxtheweb.github.io/hax11ty/content/examples/HAXTeam/&lt;/loc&gt;
-  &lt;lastmod&gt;Fri Jul 26 2024 16:33:01 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
+  &lt;lastmod&gt;Fri Jul 26 2024 16:45:03 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
   &lt;changefreq&gt;daily&lt;/changefreq&gt;
   &lt;priority&gt;1.0&lt;/priority&gt;
 &lt;/url&gt;
 
 &lt;url&gt;
   &lt;loc&gt;https://haxtheweb.github.io/hax11ty/content/examples/&lt;/loc&gt;
-  &lt;lastmod&gt;Fri Jul 26 2024 16:33:01 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
+  &lt;lastmod&gt;Fri Jul 26 2024 16:45:03 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
   &lt;changefreq&gt;daily&lt;/changefreq&gt;
   &lt;priority&gt;1.0&lt;/priority&gt;
 &lt;/url&gt;
 
 &lt;url&gt;
   &lt;loc&gt;https://haxtheweb.github.io/hax11ty/content/install/&lt;/loc&gt;
-  &lt;lastmod&gt;Fri Jul 26 2024 16:33:01 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
+  &lt;lastmod&gt;Fri Jul 26 2024 16:45:03 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
   &lt;changefreq&gt;daily&lt;/changefreq&gt;
   &lt;priority&gt;1.0&lt;/priority&gt;
 &lt;/url&gt;
 
 &lt;url&gt;
   &lt;loc&gt;https://haxtheweb.github.io/hax11ty/content/roadmap/&lt;/loc&gt;
-  &lt;lastmod&gt;Fri Jul 26 2024 16:33:01 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
+  &lt;lastmod&gt;Fri Jul 26 2024 16:45:03 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
   &lt;changefreq&gt;daily&lt;/changefreq&gt;
   &lt;priority&gt;1.0&lt;/priority&gt;
 &lt;/url&gt;
 
 &lt;url&gt;
   &lt;loc&gt;https://haxtheweb.github.io/hax11ty/content/why/&lt;/loc&gt;
-  &lt;lastmod&gt;Fri Jul 26 2024 16:33:01 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
+  &lt;lastmod&gt;Fri Jul 26 2024 16:45:03 GMT+0000 (Coordinated Universal Time)&lt;/lastmod&gt;
   &lt;changefreq&gt;daily&lt;/changefreq&gt;
   &lt;priority&gt;1.0&lt;/priority&gt;
 &lt;/url&gt;
