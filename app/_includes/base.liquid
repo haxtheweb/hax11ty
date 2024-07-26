@@ -6,8 +6,14 @@
   <link rel="preconnect" crossorigin href="{% getGlobal 'preconnect' %}" />
   <link rel="preconnect" crossorigin href="https://fonts.googleapis.com" />
   <link rel="preconnect" crossorigin href="https://cdnjs.cloudflare.com" />
-  <link rel="preconnect" crossorigin href="https://i.creativecommons.org" />
-  <link rel="preconnect" crossorigin href="https://licensebuttons.net" />
+  <title>{% getGlobal 'siteName' %}</title>
+  <meta name="application-name" content="{% getGlobal 'siteName' %}">
+  <meta name="apple-mobile-web-app-title" content="{% getGlobal 'siteName' %}">
+  <meta name="og:sitename" property="og:sitename" content="{% getGlobal 'siteName' %}" />
+  <meta name="og:title" property="og:title" content="{% getGlobal 'siteName' %}" />
+  <meta name="twitter:title" property="twitter:title" content="{% getGlobal 'siteName' %}" />
+  <meta name="og:url" property="og:url" content="{% getGlobal 'url' %}" />
+  <meta name="twitter:site" property="twitter:site" content="{% getGlobal 'url' %}" />
   <link rel="preload" href="{% getGlobal 'basePath' %}build.js" as="script" />
   <link rel="preload" href="{% getGlobal 'basePath' %}build-haxcms.js" as="script" />
   <link rel="preload" href="{% getGlobal 'cdn' %}wc-registry.json" as="fetch" crossorigin="anonymous" />
@@ -24,15 +30,12 @@
   <meta name="generator" content="HAX11ty" />
   <link rel="manifest" href="{% getGlobal 'basePath' %}manifest.json">
   <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
-  <title>{% getGlobal 'siteName' %}</title>
   <link rel="icon" href="{% getGlobal 'basePath' %}assets/favicon.ico">
   <meta name="theme-color" content="{% getGlobal 'themeHexCode' %}">
-  <meta name="mobile-web-app-capable" content="yes">
   <meta name="robots" content="index, follow">
-  <meta name="application-name" content="{% getGlobal 'siteName' %}">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="{% getGlobal 'siteName' %}">
   <link rel="apple-touch-icon" sizes="48x48" href="{% getGlobal 'basePath' %}assets/icon-48x48.png">
   <link rel="apple-touch-icon" sizes="72x72" href="{% getGlobal 'basePath' %}assets/icon-72x72.png">
   <link rel="apple-touch-icon" sizes="96x96" href="{% getGlobal 'basePath' %}assets/icon-96x96.png">
@@ -42,15 +45,10 @@
   <meta name="msapplication-TileColor" content="{% getGlobal 'themeHexCode' %}">
   <meta name="msapplication-tap-highlight" content="no">
   <meta name="description" content="{% getGlobal 'siteDescription' %}" />
-  <meta name="og:sitename" property="og:sitename" content="{% getGlobal 'siteName' %}" />
-  <meta name="og:title" property="og:title" content="{% getGlobal 'siteName' %}" />
   <meta name="og:type" property="og:type" content="article" />
-  <meta name="og:url" property="og:url" content="{% getGlobal 'url' %}" />
   <meta name="og:description" property="og:description" content="{% getGlobal 'siteDescription' %}" />
   <meta name="og:image" property="og:image" content="{% getGlobal 'themeImage' %}" />
   <meta name="twitter:card" property="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" property="twitter:site" content="{% getGlobal 'url' %}" />
-  <meta name="twitter:title" property="twitter:title" content="{% getGlobal 'siteName' %}" />
   <meta name="twitter:description" property="twitter:description" content="{% getGlobal 'siteDescription' %}" />
   <meta name="twitter:image" property="twitter:image" content="{% getGlobal 'themeImage' %}" />
   <meta rel="cc:license" href="{% getLicenseInfo settings.siteLicense,'link' %}" content="License: {% getLicenseInfo settings.siteLicense,'name' %}"/>
@@ -121,7 +119,7 @@
     }
   </script>
 {% else %}<!-- Service worker disabled via settings -->{% endif %}
-  <style>
+   <style>
     body {
       margin: 0;
       min-height: 98vh;
@@ -170,25 +168,7 @@
       top: 50%;
       transform: translateY(-50%);
     }
-    #loading div.messaging h1 {
-      color: white;
-      font-family: 'Open Sans', 'arial', 'serif';
-      font-size: 40px;
-      background-color: {% getGlobal 'themeHexCode' %};
-      transition: .4s ease-in-out all;
-    }
-    #loading img {
-      transition: .4s all ease-in-out;
-      width: 300px;
-      height: 300px;
-      margin-bottom: 50px;
-      border-radius: 50%;
-      border: 8px solid {% getGlobal 'themeHexCode' %};
-      box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.45);
-      -moz-box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.45);
-	    -webkit-box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.45);
-      -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#444444')";
-    }
+
     .progress-line,
     .progress-line:before {
       height: 8px;
@@ -199,10 +179,10 @@
       background-color: rgba(0,0,0, 0.05);
       display: -webkit-flex;
       display: flex;
-      width: 300px;
+      width: 30vw;
     }
     .progress-line:before {
-      background-color: {% getGlobal 'themeHexCode' %};
+      background-color: var(--simple-colors-default-theme--7, #FF2222);
       content: '';
       animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
     }
@@ -231,27 +211,41 @@
         opacity: 0;
       }
     }
-    </style>
-    <script id="loadingscript">
+    .progress-line:before {
+      background-color: {% getGlobal 'themeHexCode' %};
+    }
+  </style>
+  <script id="loadingscript">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
     window.addEventListener('haxcms-ready', function(e) {
+      var s = document.createElement('script');
+      s.async = true;
+      document.body.appendChild(s);
       // give the web components a second to build
       setTimeout(function() {
-        document.querySelector('#loading').classList.add('loaded');
         setTimeout(function() {
+          if (window.HAXCMS.requestAvailability().store.getManifest()) {
+          var gaid = window.HAXCMS.requestAvailability().store.getManifest().metadata.site.settings.gaID || null;
+          if (gaid) {
+            gtag('config', gaid);
+            s.src = `https://www.googletagmanager.com/gtag/js?id=${gaid}`;
+          }
+        }
           document.querySelector('#loading').parentNode.removeChild(document.querySelector('#loading'));
           document.querySelector('#loadingstyles').parentNode.removeChild(document.querySelector('#loadingstyles'));
           document.querySelector('#loadingscript').parentNode.removeChild(document.querySelector('#loadingscript'));
         }, 600);
-      }, 100)
+      }, 100);
     });
   </script>
 </head>
 <body no-js vocab="http://schema.org/" prefix="oer:http://oerschema.org cc:http://creativecommons.org/ns dc:http://purl.org/dc/terms/">
   <div id="loading">
     <div class="messaging">
-      <img src="{% getGlobal 'siteLogo' %}" alt="" loading="lazy" height="300px" width="300px" />
       <div class="progress-line"></div>
-      <h1>Loading {% getGlobal 'siteName' %}</h1>
+      <h1 role="alert" aria-busy="true">Loading {% getGlobal 'siteName' %}</h1>
     </div>
   </div>
   {{ content }}
@@ -264,11 +258,12 @@
         view our website correctly. <a href="http://outdatedbrowser.com/">Update my browser now</a></div>
     </div>
   </div>
-  <script>window.HAXCMSContext="{% getHAXCMSContext %}";document.body.removeAttribute('no-js');window.__appCDN="{% getGlobal 'cdn' %}";window.__appForceUpgrade=true;</script>
+  <script>
+    window.MicroFrontendRegistryConfig = window.MicroFrontendRegistryConfig || {};
+    window.HAXCMSContext="{% getHAXCMSContext %}";document.body.removeAttribute('no-js');window.__appCDN="{% getGlobal 'cdn' %}";window.__appForceUpgrade=true;</script>
   <script src="{% getGlobal 'basePath' %}build.js"></script>
   <script src="{% getGlobal 'basePath' %}build-haxcms.js"></script>
+  <!-- 11ty specific override -->
   <link rel="stylesheet" type="text/css" href="{% getGlobal 'basePath' %}assets/css/styles.css" />
-  <link rel="stylesheet" type="text/css" href="{% getGlobal 'cdn' %}build/es6/node_modules/@haxtheweb/haxcms-elements/lib/base.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
 </body>
 </html>
