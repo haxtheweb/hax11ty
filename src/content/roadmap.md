@@ -11,4 +11,4 @@ order: 3
     <li>Interface with the HAXcms data structure / automatically generate site.json files</li>
 </ul>
 <h3>Things needed</h3>
-<a href="https://github.com/elmsln/issues/labels/hax11ty">Issue queue for hax11ty</a>
+<a href="https://github.com/haxtheweb/issues/labels/hax11ty">Issue queue for hax11ty</a>

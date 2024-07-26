@@ -6,7 +6,7 @@ module.exports = () => {
     // github organization / username
     // github.com/WHATEVER
     var gitOrg = "haxtheweb";
-    // github.com/elmsln/WHATEVER - hax11ty here implies building against the repo itself to produce it's own docs :)
+    // github.com/haxtheweb/WHATEVER - hax11ty here implies building against the repo itself to produce it's own docs :)
     var gitProject = "hax11ty";
     // if doing github builds, automatically set these to whatever the repo issuing the call is
     // the above is just for SOME default so things below publish correctly locally

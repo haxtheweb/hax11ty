@@ -5,8 +5,8 @@
     "preinstall": "cd src/custom && yarn install && cd ../..",
     "clean-up-pre": "rm -rf dist/build",
     "clean-up-post": "rm dist/assets/styles.css && cp src/styles.css dist/assets/styles.css && rm -rf dist/custom && cp -R src/custom dist/custom",
-    "build": "yarn run clean-up-pre && cd src/custom && yarn run build && cd ../../app && env HAXCMS_CDN=true env HAXCMS_SERVICE_WORKER=true env HAXCMS_GITHUB=true hax11ty build && yarn run clean-up-post",
-    "local-build": "yarn run clean-up-pre && cd src/custom && yarn run build && cd ../../app &&  env HAXCMS_CONTEXT=haxcms hax11ty build && yarn run clean-up-post"
+    "build:cdn": "yarn run clean-up-pre && cd src/custom && yarn run build && cd ../../app && env HAXCMS_CDN=true env HAXCMS_SERVICE_WORKER=true env HAXCMS_GITHUB=true hax11ty build && yarn run clean-up-post",
+    "build": "yarn run clean-up-pre && cd src/custom && yarn run build && cd ../../app &&  env HAXCMS_CONTEXT=haxcms env HAXCMS_SERVICE_WORKER=true env HAXCMS_GITHUB=true hax11ty build && yarn run clean-up-post"
   },
   "bin": {
     "eleventy": ".bin/eleventy"
