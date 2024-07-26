@@ -22,7 +22,8 @@
     "crypto": "1.0.1",
     "eleventy-xml-plugin": "0.1.0",
     "fs-extra": "8.1.0",
-    "gray-matter": "4.0.2"
+    "gray-matter": "4.0.2",
+    "commit-and-tag-version": "^12.4.1"
   },
   "resolutions": {
     "browserslist": "4.20.2"
