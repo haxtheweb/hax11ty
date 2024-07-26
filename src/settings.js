@@ -61,6 +61,9 @@ module.exports = () => {
     else if (process.env.HAXCMS_GITHUB) {
         // change these if you have a custom domain
         basePath = `/${gitProject}/`;
+        if (!process.env.HAXCMS_CDN) {
+            cdnBase = `/${gitProject}/`
+        }
         url = `https://${gitOrg}.github.io/${gitProject}`;
     }
     else if (process.env.HAXCMS_CONTEXT == 'haxcms') {
