@@ -4,7 +4,7 @@
   <subtitle>project documentation</subtitle>
   <link href="https://haxtheweb.github.io/hax11ty/rss.xml" rel="self"/>
   <link href="https://haxtheweb.github.io/hax11ty"/>
-  <updated>2024-07-26T16:09:36.661+00:00</updated>
+  <updated>2024-07-26T16:21:31.935+00:00</updated>
   <id>https://haxtheweb.github.io/hax11ty</id>
   <author>
     <name>btopro</name>
@@ -14,7 +14,7 @@
   <entry>
     <title>About</title>
     <link href="https://haxtheweb.github.io/hax11ty/content/about/"/>
-    <updated>2024-07-26T16:09:36.661+00:00</updated>
+    <updated>2024-07-26T16:21:31.935+00:00</updated>
     <id>https://haxtheweb.github.io/hax11ty/content/about/</id>
     <content type="html">&lt;p&gt;HAX11ty is a merger between HAX and 11ty. It uses these technologies in the following way:
 &lt;ul&gt;
@@ -29,7 +29,7 @@
   <entry>
     <title>Get involved!</title>
     <link href="https://haxtheweb.github.io/hax11ty/content/contact/"/>
-    <updated>2024-07-26T16:09:36.661+00:00</updated>
+    <updated>2024-07-26T16:21:31.935+00:00</updated>
     <id>https://haxtheweb.github.io/hax11ty/content/contact/</id>
     <content type="html">&lt;p&gt;The HAXTheWeb team hangs out on slack and would love to chat about all things 11ty, HAX11ty, HAX, and beyond. HAX11ty is one of many creations in the HAX universe and we&#39;d love to hear from those using it. &lt;a href=&quot;https://bit.ly/hax-discord&quot;&gt;Join us on Discord today!&lt;/a&gt; or follow us on [X] &lt;a href=&quot;https://twitter.com/haxtheweb&quot;&gt;@HAXTheWeb&lt;/a&gt;
 &lt;/p&gt;</content>
@@ -38,7 +38,7 @@
   <entry>
     <title>Community examples</title>
     <link href="https://haxtheweb.github.io/hax11ty/content/examples/Community/"/>
-    <updated>2024-07-26T16:09:36.661+00:00</updated>
+    <updated>2024-07-26T16:21:31.935+00:00</updated>
     <id>https://haxtheweb.github.io/hax11ty/content/examples/Community/</id>
     <content type="html">&lt;p&gt;Have an example site in production using HAX11ty? &lt;a href=&quot;https://haxtheweb.github.io/hax11ty/content/examples/contact&quot;&gt;Contact us&lt;/a&gt; to let us know or &lt;a href=&quot;https://github.com/haxtheweb/hax11ty/tree/master/src/content&quot;&gt;add a PR via github&lt;/a&gt;&lt;/p&gt;
 </content>
@@ -47,7 +47,7 @@
   <entry>
     <title>HAXTheWeb</title>
     <link href="https://haxtheweb.github.io/hax11ty/content/examples/HAXTeam/"/>
-    <updated>2024-07-26T16:09:36.661+00:00</updated>
+    <updated>2024-07-26T16:21:31.935+00:00</updated>
     <id>https://haxtheweb.github.io/hax11ty/content/examples/HAXTeam/</id>
     <content type="html">&lt;p&gt;We loves us some HAX11ty and dogfood it for many project sites. Here&#39;s a link farm:&lt;/p&gt;
 &lt;ul&gt;
@@ -60,7 +60,7 @@
   <entry>
     <title>Examples</title>
     <link href="https://haxtheweb.github.io/hax11ty/content/examples/"/>
-    <updated>2024-07-26T16:09:36.661+00:00</updated>
+    <updated>2024-07-26T16:21:31.935+00:00</updated>
     <id>https://haxtheweb.github.io/hax11ty/content/examples/</id>
     <content type="html">&lt;p&gt;Have an example site in production using HAX11ty? We&#39;d love to highlight it and spread the good vibes! Contact us and make sure to click around to the other great examples of HAX11ty out there in the wild&lt;/p&gt;
 </content>
@@ -69,7 +69,7 @@
   <entry>
     <title>Installation</title>
     <link href="https://haxtheweb.github.io/hax11ty/content/install/"/>
-    <updated>2024-07-26T16:09:36.661+00:00</updated>
+    <updated>2024-07-26T16:21:31.935+00:00</updated>
     <id>https://haxtheweb.github.io/hax11ty/content/install/</id>
     <content type="html">&lt;h2&gt; Quick Installation Script &lt;/h2&gt;
 &lt;code-sample copy-clipboard-button=&quot;&quot;&gt;
@@ -95,7 +95,7 @@
   <entry>
     <title>Roadmap</title>
     <link href="https://haxtheweb.github.io/hax11ty/content/roadmap/"/>
-    <updated>2024-07-26T16:09:36.661+00:00</updated>
+    <updated>2024-07-26T16:21:31.935+00:00</updated>
     <id>https://haxtheweb.github.io/hax11ty/content/roadmap/</id>
     <content type="html">&lt;p&gt;The goal of HAX11ty is to combine the best of HAX / HAXcms with the best of 11ty. To that end we seek to produce the following workflow (things done first, followed by things needed):&lt;/p&gt;
 &lt;h3&gt;Working / exists currently&lt;/h3&gt;
@@ -112,7 +112,7 @@
   <entry>
     <title>Why this is better</title>
     <link href="https://haxtheweb.github.io/hax11ty/content/why/"/>
-    <updated>2024-07-26T16:09:36.661+00:00</updated>
+    <updated>2024-07-26T16:21:31.935+00:00</updated>
     <id>https://haxtheweb.github.io/hax11ty/content/why/</id>
     <content type="html">&lt;p&gt;&lt;ul&gt;
     &lt;li&gt;Power of &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;11ty&lt;/a&gt; for publishing static / high SEO&lt;/li&gt;
