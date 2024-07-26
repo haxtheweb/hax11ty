@@ -8,7 +8,7 @@ if ! command -v node;then
 fi
 
 # clone and install
-git clone https://github.com/elmsln/hax11ty.git
+git clone https://github.com/haxtheweb/hax11ty.git
 
 cd hax11ty/
 # install

@@ -21,7 +21,7 @@ This wrapper on 11ty provides conventions to simplify how you build and deploy H
 ## Quick Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/elmsln/hax11ty/master/hax11tyme.sh -o hax11tyme.sh && sh hax11tyme.sh
+curl -fsSL https://raw.githubusercontent.com/haxtheweb/hax11ty/master/hax11tyme.sh -o hax11tyme.sh && sh hax11tyme.sh
 ```
 
 

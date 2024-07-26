@@ -24,8 +24,8 @@ Well, polymer.json happens to do unbundled builds. It is a bundler / compiler bu
 
 ### Using this repo in Drupal CMS (as an example of implementation, works with anything though)
 - download this repo
-- add new web components via `yarn add @lrnwebcomponents/h-a-x`
-- add `import "@lrnwebcomponents/h-a-x/h-a-x.js";` to the `app/src/app.js` file
+- add new web components via `yarn add @haxtheweb/h-a-x`
+- add `import "@haxtheweb/h-a-x/h-a-x.js";` to the `app/src/app.js` file
 - do the build routine spelled out above
 - after `yarn run build`, rename the `app/dist/` folder to `webcomponents`
 - place this in `sites/all/libraries/`
