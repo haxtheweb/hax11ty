@@ -38,40 +38,40 @@
 'use strict';
 var precacheConfig = [
   [
-    "/hax11ty/content/contact/",
-    "ZX4FpJkq1KQ7ErOz"
+    "/hax11ty/content/about/",
+    "0yPxed8rfod7NklS"
   ],
   [
-    "/hax11ty/content/about/",
-    "ZX4FpJkq1KQ7ErOz"
+    "/hax11ty/content/contact/",
+    "0yPxed8rfod7NklS"
   ],
   [
     "/hax11ty/content/install/",
-    "ZX4FpJkq1KQ7ErOz"
-  ],
-  [
-    "/hax11ty/content/roadmap/",
-    "ZX4FpJkq1KQ7ErOz"
+    "0yPxed8rfod7NklS"
   ],
   [
     "/hax11ty/content/why/",
-    "ZX4FpJkq1KQ7ErOz"
-  ],
-  [
-    "/hax11ty/content/examples/Community/",
-    "ZX4FpJkq1KQ7ErOz"
+    "0yPxed8rfod7NklS"
   ],
   [
     "/hax11ty/content/examples/HAXTeam/",
-    "ZX4FpJkq1KQ7ErOz"
+    "0yPxed8rfod7NklS"
+  ],
+  [
+    "/hax11ty/content/roadmap/",
+    "0yPxed8rfod7NklS"
   ],
   [
     "/hax11ty/content/examples/",
-    "ZX4FpJkq1KQ7ErOz"
+    "0yPxed8rfod7NklS"
+  ],
+  [
+    "/hax11ty/content/examples/Community/",
+    "0yPxed8rfod7NklS"
   ],
   [
     "/hax11ty/",
-    "ZX4FpJkq1KQ7ErOz"
+    "0yPxed8rfod7NklS"
   ]
 ];
 var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');
