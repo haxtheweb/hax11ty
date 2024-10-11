@@ -1,5 +1,5 @@
 {
-  "id": "#43fa8d8f-c5d0-e81a-7539-c02c1d7dbfde",
+  "id": "#3b571395-4d26-7d05-0bc1-32d9fd91471e",
   "title": "hax11ty",
   "author": "btopro",
   "description": "project documentation",
@@ -13,8 +13,8 @@
     },
     "site": {
       "name": "hax11ty",
-      "created": 1724358003966,
-      "updated": 1724358003966,
+      "created": 1728659208596,
+      "updated": 1728659208596,
       "git": {
         "autoPush": false,
         "branch": "master",
@@ -49,17 +49,17 @@
   },
   "items": [
     {
-      "id": "--content-examples-HAXTeam-md",
+      "id": "--content-examples-md",
       "indent": 0,
-      "location": "./pages/examples/HAXTeam.md",
-      "slug": "content/examples/HAXTeam/",
-      "order": -100,
-      "title": "HAXTheWeb",
-      "description": "HAXTheWeb",
-      "parent": "--content-examples-index-md",
+      "location": "./pages/examples.md",
+      "slug": "content/examples/",
+      "order": 1,
+      "title": "Examples",
+      "description": "Examples",
+      "parent": null,
       "metadata": {
-        "created": 1724357984,
-        "updated": 1724357984,
+        "created": 1728659190,
+        "updated": 1728659190,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -77,8 +77,8 @@
           "content"
         ],
         "layout": "content.liquid",
-        "title": "HAXTheWeb",
-        "order": -100
+        "title": "Examples",
+        "order": 1
       }
     },
     {
@@ -91,8 +91,8 @@
       "description": "About",
       "parent": null,
       "metadata": {
-        "created": 1724357984,
-        "updated": 1724357984,
+        "created": 1728659190,
+        "updated": 1728659190,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -124,8 +124,8 @@
       "description": "Installation",
       "parent": null,
       "metadata": {
-        "created": 1724357984,
-        "updated": 1724357984,
+        "created": 1728659190,
+        "updated": 1728659190,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -148,72 +148,6 @@
       }
     },
     {
-      "id": "--content-examples-index-md",
-      "indent": 0,
-      "location": "./pages/examples/index.md",
-      "slug": "content/examples/",
-      "order": 1,
-      "title": "Examples",
-      "description": "Examples",
-      "parent": null,
-      "metadata": {
-        "created": 1724357984,
-        "updated": 1724357984,
-        "readtime": 1,
-        "contentDetails": {},
-        "files": [],
-        "haxcmsServiceWorker": true,
-        "eleventy": {
-          "version": "1.0.1",
-          "generator": "Eleventy v1.0.1",
-          "env": {
-            "config": "/home/runner/work/hax11ty/hax11ty/app/.eleventy.js",
-            "root": "/home/runner/work/hax11ty/hax11ty/app",
-            "source": "cli"
-          }
-        },
-        "tags": [
-          "content"
-        ],
-        "layout": "content.liquid",
-        "title": "Examples",
-        "order": 1
-      }
-    },
-    {
-      "id": "--content-examples-Community-md",
-      "indent": 0,
-      "location": "./pages/examples/Community.md",
-      "slug": "content/examples/Community/",
-      "order": 1,
-      "title": "Community examples",
-      "description": "Community examples",
-      "parent": "--content-examples-index-md",
-      "metadata": {
-        "created": 1724357984,
-        "updated": 1724357984,
-        "readtime": 1,
-        "contentDetails": {},
-        "files": [],
-        "haxcmsServiceWorker": true,
-        "eleventy": {
-          "version": "1.0.1",
-          "generator": "Eleventy v1.0.1",
-          "env": {
-            "config": "/home/runner/work/hax11ty/hax11ty/app/.eleventy.js",
-            "root": "/home/runner/work/hax11ty/hax11ty/app",
-            "source": "cli"
-          }
-        },
-        "tags": [
-          "content"
-        ],
-        "layout": "content.liquid",
-        "title": "Community examples",
-        "order": 1
-      }
-    },
-    {
       "id": "--content-why-md",
       "indent": 0,
       "location": "./pages/why.md",
@@ -223,8 +157,8 @@
       "description": "Why this is better",
       "parent": null,
       "metadata": {
-        "created": 1724357984,
-        "updated": 1724357984,
+        "created": 1728659190,
+        "updated": 1728659190,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -256,8 +190,8 @@
       "description": "Roadmap",
       "parent": null,
       "metadata": {
-        "created": 1724357984,
-        "updated": 1724357984,
+        "created": 1728659190,
+        "updated": 1728659190,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -289,8 +223,8 @@
       "description": "Get involved!",
       "parent": null,
       "metadata": {
-        "created": 1724357984,
-        "updated": 1724357984,
+        "created": 1728659190,
+        "updated": 1728659190,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
