@@ -1,5 +1,5 @@
 {
-  "id": "#3b571395-4d26-7d05-0bc1-32d9fd91471e",
+  "id": "#03e7495f-8241-dc89-cc81-344a92a208a5",
   "title": "hax11ty",
   "author": "btopro",
   "description": "project documentation",
@@ -13,8 +13,8 @@
     },
     "site": {
       "name": "hax11ty",
-      "created": 1728659208596,
-      "updated": 1728659208596,
+      "created": 1731515986093,
+      "updated": 1731515986093,
       "git": {
         "autoPush": false,
         "branch": "master",
@@ -58,8 +58,8 @@
       "description": "Examples",
       "parent": null,
       "metadata": {
-        "created": 1728659190,
-        "updated": 1728659190,
+        "created": 1731515967,
+        "updated": 1731515967,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -82,39 +82,6 @@
       }
     },
     {
-      "id": "--content-about-md",
-      "indent": 0,
-      "location": "./pages/about.md",
-      "slug": "content/about/",
-      "order": 1,
-      "title": "About",
-      "description": "About",
-      "parent": null,
-      "metadata": {
-        "created": 1728659190,
-        "updated": 1728659190,
-        "readtime": 1,
-        "contentDetails": {},
-        "files": [],
-        "haxcmsServiceWorker": true,
-        "eleventy": {
-          "version": "1.0.1",
-          "generator": "Eleventy v1.0.1",
-          "env": {
-            "config": "/home/runner/work/hax11ty/hax11ty/app/.eleventy.js",
-            "root": "/home/runner/work/hax11ty/hax11ty/app",
-            "source": "cli"
-          }
-        },
-        "tags": [
-          "content"
-        ],
-        "layout": "content.liquid",
-        "title": "About",
-        "order": 1
-      }
-    },
-    {
       "id": "--content-install-md",
       "indent": 0,
       "location": "./pages/install.md",
@@ -124,8 +91,8 @@
       "description": "Installation",
       "parent": null,
       "metadata": {
-        "created": 1728659190,
-        "updated": 1728659190,
+        "created": 1731515967,
+        "updated": 1731515967,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -148,6 +115,39 @@
       }
     },
     {
+      "id": "--content-about-md",
+      "indent": 0,
+      "location": "./pages/about.md",
+      "slug": "content/about/",
+      "order": 1,
+      "title": "About",
+      "description": "About",
+      "parent": null,
+      "metadata": {
+        "created": 1731515967,
+        "updated": 1731515967,
+        "readtime": 1,
+        "contentDetails": {},
+        "files": [],
+        "haxcmsServiceWorker": true,
+        "eleventy": {
+          "version": "1.0.1",
+          "generator": "Eleventy v1.0.1",
+          "env": {
+            "config": "/home/runner/work/hax11ty/hax11ty/app/.eleventy.js",
+            "root": "/home/runner/work/hax11ty/hax11ty/app",
+            "source": "cli"
+          }
+        },
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "About",
+        "order": 1
+      }
+    },
+    {
       "id": "--content-why-md",
       "indent": 0,
       "location": "./pages/why.md",
@@ -157,8 +157,8 @@
       "description": "Why this is better",
       "parent": null,
       "metadata": {
-        "created": 1728659190,
-        "updated": 1728659190,
+        "created": 1731515967,
+        "updated": 1731515967,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -190,8 +190,8 @@
       "description": "Roadmap",
       "parent": null,
       "metadata": {
-        "created": 1728659190,
-        "updated": 1728659190,
+        "created": 1731515967,
+        "updated": 1731515967,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -223,8 +223,8 @@
       "description": "Get involved!",
       "parent": null,
       "metadata": {
-        "created": 1728659190,
-        "updated": 1728659190,
+        "created": 1731515967,
+        "updated": 1731515967,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
