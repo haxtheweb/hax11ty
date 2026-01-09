@@ -1299,7 +1299,8 @@
       "q-r": "@haxtheweb/q-r/q-r.js",
       "full-width-image": "@haxtheweb/full-width-image/full-width-image.js",
       "lrndesign-gallery": "@haxtheweb/lrndesign-gallery/lrndesign-gallery.js",
-      "lrndesign-timeline": "@haxtheweb/lrndesign-timeline/lrndesign-timeline.js"
+      "lrndesign-timeline": "@haxtheweb/lrndesign-timeline/lrndesign-timeline.js",
+      "flash-card": "@haxtheweb/flash-card/flash-card.js"
     }
   }
   
