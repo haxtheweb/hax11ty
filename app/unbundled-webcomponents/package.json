@@ -22,7 +22,7 @@
     "gulp-terser": "1.2.0",
     "polymer-build": "3.1.4",
     "polymer-cli": "1.9.11",
-    "glob": "^7.1.6"
+    "glob": "7.1.6"
   },
   "scripts": {
     "postinstall": "cd app && yarn install && cd ../",

@@ -12,7 +12,7 @@
     "eleventy": ".bin/eleventy"
   },
   "devDependencies": {
-    "es-module-shims": "^0.4.6",
+    "es-module-shims": "0.4.6",
     "pnpm": "6.33.1",
     "@11ty/eleventy": "1.0.1",
     "@oclif/plugin-help": "5.1.12",
@@ -23,14 +23,14 @@
     "eleventy-xml-plugin": "0.1.0",
     "fs-extra": "8.1.0",
     "gray-matter": "4.0.2",
-    "commit-and-tag-version": "^12.4.1"
+    "commit-and-tag-version": "12.7.3"
   },
   "resolutions": {
     "browserslist": "4.20.2"
   },
   "dependencies": {
-    "es-module-shims": "^0.4.6",
-    "yarn": "^1.22.18"
+    "es-module-shims": "0.4.6",
+    "yarn": "1.22.22"
   },
   "version": "25.0.0"
 }
