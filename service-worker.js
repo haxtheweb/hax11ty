@@ -38,32 +38,32 @@
 'use strict';
 var precacheConfig = [
   [
+    "/hax11ty/content/install/",
+    "rMDOR7e5zWcKB2Tx"
+  ],
+  [
     "/hax11ty/content/about/",
-    "aP4r4HeyGT7krhdq"
-  ],
-  [
-    "/hax11ty/content/contact/",
-    "aP4r4HeyGT7krhdq"
-  ],
-  [
-    "/hax11ty/content/why/",
-    "aP4r4HeyGT7krhdq"
+    "rMDOR7e5zWcKB2Tx"
   ],
   [
     "/hax11ty/content/examples/",
-    "aP4r4HeyGT7krhdq"
+    "rMDOR7e5zWcKB2Tx"
   ],
   [
     "/hax11ty/content/roadmap/",
-    "aP4r4HeyGT7krhdq"
+    "rMDOR7e5zWcKB2Tx"
   ],
   [
-    "/hax11ty/content/install/",
-    "aP4r4HeyGT7krhdq"
+    "/hax11ty/content/contact/",
+    "rMDOR7e5zWcKB2Tx"
+  ],
+  [
+    "/hax11ty/content/why/",
+    "rMDOR7e5zWcKB2Tx"
   ],
   [
     "/hax11ty/",
-    "aP4r4HeyGT7krhdq"
+    "rMDOR7e5zWcKB2Tx"
   ]
 ];
 var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');
