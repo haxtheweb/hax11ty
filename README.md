@@ -68,7 +68,7 @@ Publishing with hax11ty is a snap and we have multiple methods of publishing we 
 You can find all 11ty configuration and settings inside the `app/` folder. Only modify these things if you have experience with 11ty as you'll be forking from the suported build workflows.
 
 # Get Help / Issues / Support
-- Discord Channel - https://discord.gg/EKYJAjqGhf
+- Discord Channel - https://discord.gg/aCGxmRHEJP
 - Unified issue queue - https://github.com/haxtheweb/issues/issues
 - Using Merlin directly in any HAX spaces and type "Issue" to jump start a report!
 
