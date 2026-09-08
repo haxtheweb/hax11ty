@@ -3,6 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <base href="/hax11ty/" />
+  <script type="importmap">
+    {
+      "scopes": {
+        "./custom/build/": {
+          "@haxtheweb/": "./build/es6/node_modules/@haxtheweb/"
+        }
+      }
+    }
+  </script>
+  <link rel="llms" href="llms.txt" title="LLM Content Map">
+  <link rel="alternate" type="text/markdown" href="llms.txt" title="Markdown Summary">
   <link rel="preconnect" crossorigin href="/hax11ty/" />
   <link rel="preconnect" crossorigin href="https://fonts.googleapis.com" />
   <link rel="preconnect" crossorigin href="https://cdnjs.cloudflare.com" />
@@ -16,14 +27,17 @@
   <meta name="twitter:site" property="twitter:site" content="https://haxtheweb.github.io/hax11ty" />
   <link rel="preload" href="/hax11ty/build.js" as="script" />
   <link rel="preload" href="/hax11ty/build-haxcms.js" as="script" />
-  <link rel="preload" href="/hax11ty/wc-registry.json" as="fetch" crossorigin="anonymous" />
-  <link rel="preload" href="/hax11ty/build/es6/node_modules/@haxtheweb/dynamic-import-registry/dynamic-import-registry.js" as="script" crossorigin="anonymous" />
-  <link rel="modulepreload" href="/hax11ty/build/es6/node_modules/@haxtheweb/dynamic-import-registry/dynamic-import-registry.js" />
-  <link rel="preload" href="/hax11ty/build/es6/node_modules/@haxtheweb/wc-autoload/wc-autoload.js" as="script" crossorigin="anonymous" />
-  <link rel="modulepreload" href="/hax11ty/build/es6/node_modules/@haxtheweb/wc-autoload/wc-autoload.js" />
+  <link rel="preload" href="/hax11ty/wc-registry.json" as="fetch" crossorigin="anonymous" fetchpriority="high" />
+  <link rel="modulepreload" href="/hax11ty/build/es6/node_modules/@haxtheweb/wc-autoload/wc-autoload.js" crossorigin="anonymous" />
+  <link rel="modulepreload" href="/hax11ty/build/es6/node_modules/@haxtheweb/dynamic-import-registry/dynamic-import-registry.js" crossorigin="anonymous" />
+  <link rel="modulepreload" href="/hax11ty/build/es6/node_modules/@haxtheweb/haxcms-elements/lib/core/haxcms-site-builder.js" crossorigin="anonymous" />
+  <link rel="modulepreload" href="/hax11ty/build/es6/node_modules/@haxtheweb/haxcms-elements/lib/core/haxcms-site-store.js" crossorigin="anonymous" />
+  <link rel="modulepreload" href="/hax11ty/build/es6/node_modules/@haxtheweb/haxcms-elements/lib/core/haxcms-site-router.js" crossorigin="anonymous" />
+  <link rel="modulepreload" href="/hax11ty/build/es6/node_modules/@haxtheweb/haxcms-elements/lib/core/HAXCMSThemeWiring.js" crossorigin="anonymous" />
+  <link rel="modulepreload" href="/hax11ty/build/es6/node_modules/@haxtheweb/haxcms-elements/lib/core/HAXCMSLitElementTheme.js" crossorigin="anonymous" />
+  <link rel="modulepreload" href="/hax11ty/build/es6/node_modules/@haxtheweb/utils/utils.js" crossorigin="anonymous" />
   <link rel="preload" href="/hax11ty/build/es6/node_modules/@haxtheweb/clean-two/clean-two.js" as="script" crossorigin="anonymous" />
   <link rel="modulepreload" href="/hax11ty/build/es6/node_modules/@haxtheweb/clean-two/clean-two.js" />
-  <link rel="preload" href="/hax11ty/build/es6/node_modules/web-animations-js/web-animations-next-lite.min.js" as="script" />  
   <link rel="preload" href="/hax11ty/build/es6/node_modules/@haxtheweb/haxcms-elements/lib/base.css" as="style" />
   <link rel="preload" href="/hax11ty/theme/theme.css" as="style" />
 
@@ -58,11 +72,11 @@
     if ('serviceWorker' in navigator) {
       var sitePath = "/hax11ty/";
       // discover this path downstream of the root of the domain
-      var swScope = window.location.pathname.substring(0, window.location.pathname.indexOf(sitePath)) + sitePath;
+      var swScope = globalThis.location.pathname.substring(0, globalThis.location.pathname.indexOf(sitePath)) + sitePath;
       if (swScope != document.head.getElementsByTagName('base')[0].href) {
         document.head.getElementsByTagName('base')[0].href = swScope;
       }
-      window.addEventListener('load', function () {
+      globalThis.addEventListener('load', function () {
         navigator.serviceWorker.register('service-worker.js', {
           scope: swScope
         }).then(function (registration) {
@@ -74,7 +88,7 @@
               switch (installingWorker.state) {
                 case 'installed':
                   if (!navigator.serviceWorker.controller) {
-                    window.dispatchEvent(new CustomEvent('simple-toast-show', {
+                    globalThis.dispatchEvent(new CustomEvent('simple-toast-show', {
                       bubbles: true,
                       cancelable: false,
                       detail: {
@@ -101,8 +115,8 @@
               var b = document.createElement('mwc-button');
               b.appendChild(document.createTextNode('Reload'));
               b.raised = true;
-              b.addEventListener('click', function(e){ window.location.reload(true); });
-              window.dispatchEvent(new CustomEvent('simple-toast-show', {
+              b.addEventListener('click', function(e){ globalThis.location.reload(true); });
+              globalThis.dispatchEvent(new CustomEvent('simple-toast-show', {
                 bubbles: true,
                 cancelable: false,
                 detail: {
@@ -182,7 +196,7 @@
       width: 30vw;
     }
     .progress-line:before {
-      background-color: var(--simple-colors-default-theme--7, #FF2222);
+      background-color: #55FF55;
       content: '';
       animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
     }
@@ -211,33 +225,54 @@
         opacity: 0;
       }
     }
-    .progress-line:before {
-      background-color: #55FF55;
+    @media (prefers-color-scheme: dark) {
+      #loading {
+        background-color: #333333;
+      }
+      #loading div.messaging {
+        color: rgba(255,255,255, 0.7);
+      }
+      .progress-line {
+        background-color: rgba(255,255,255, 0.1);
+      }
     }
   </style>
   <script id="loadingscript">
-    window.dataLayer = window.dataLayer || [];
+    globalThis.dataLayer = globalThis.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    window.addEventListener('haxcms-ready', function(e) {
+    globalThis.addEventListener('haxcms-ready', function(e) {
       var s = document.createElement('script');
       s.async = true;
       document.body.appendChild(s);
       // give the web components a second to build
       setTimeout(function() {
-        setTimeout(function() {
-          if (window.HAXCMS.requestAvailability().store.getManifest()) {
-          var gaid = window.HAXCMS.requestAvailability().store.getManifest().metadata.site.settings.gaID || null;
-          if (gaid) {
-            gtag('config', gaid);
-            s.src = `https://www.googletagmanager.com/gtag/js?id=${gaid}`;
-          }
+        var loadingEl = document.querySelector('#loading');
+        if (loadingEl) {
+          loadingEl.classList.add('loaded');
         }
-          document.querySelector('#loading').parentNode.removeChild(document.querySelector('#loading'));
-          document.querySelector('#loadingstyles').parentNode.removeChild(document.querySelector('#loadingstyles'));
-          document.querySelector('#loadingscript').parentNode.removeChild(document.querySelector('#loadingscript'));
-        }, 600);
-      }, 100);
+        setTimeout(function() {
+          if (globalThis.HAXCMS.requestAvailability().store.getManifest()) {
+            var gaid = globalThis.HAXCMS.requestAvailability().store.getManifest().metadata.site.settings.gaID || null;
+            if (gaid) {
+              gtag('config', gaid);
+              s.src = `https://www.googletagmanager.com/gtag/js?id=${gaid}`;
+            }
+          }
+          var loadingEl = document.querySelector('#loading');
+          if (loadingEl && loadingEl.parentNode) {
+            loadingEl.parentNode.removeChild(loadingEl);
+          }
+          var loadingStylesEl = document.querySelector('#loadingstyles');
+          if (loadingStylesEl && loadingStylesEl.parentNode) {
+            loadingStylesEl.parentNode.removeChild(loadingStylesEl);
+          }
+          var loadingScriptEl = document.querySelector('#loadingscript');
+          if (loadingScriptEl && loadingScriptEl.parentNode) {
+            loadingScriptEl.parentNode.removeChild(loadingScriptEl);
+          }
+        }, 100);
+      }, 300);
     });
   </script>
 </head>
@@ -267,10 +302,10 @@
     </div>
   </div>
   <script>
-    window.MicroFrontendRegistryConfig = window.MicroFrontendRegistryConfig || {};
-    window.HAXCMSContext="haxcms";document.body.removeAttribute('no-js');window.__appCDN="/hax11ty/";window.__appForceUpgrade=true;</script>
-  <script src="/hax11ty/build.js"></script>
+    globalThis.MicroFrontendRegistryConfig = globalThis.MicroFrontendRegistryConfig || {};
+    globalThis.HAXCMSContext="haxcms";document.body.removeAttribute('no-js');globalThis.__appCDN="/hax11ty/";globalThis.__appForceUpgrade=true;</script>
   <script src="/hax11ty/build-haxcms.js"></script>
+  <script src="/hax11ty/build.js"></script>
   <!-- 11ty specific override -->
   <link rel="stylesheet" type="text/css" href="/hax11ty/assets/css/styles.css" />
 </body>

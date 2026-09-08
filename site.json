@@ -1,20 +1,20 @@
 {
-  "id": "#cebcc282-26c3-b477-a14f-183364dd03ef",
+  "id": "#a5288a12-a8a0-cbb3-cad1-c113a793be38",
   "title": "hax11ty",
-  "author": "btopro",
+  "author": "Copilot",
   "description": "project documentation",
   "license": "by-sa",
   "metadata": {
     "author": {
-      "image": "https://github.com/btopro.png",
-      "name": "btopro",
+      "image": "https://github.com/Copilot.png",
+      "name": "Copilot",
       "email": "",
       "socialLink": "https://twitter.com/"
     },
     "site": {
       "name": "hax11ty",
-      "created": 1788876965334,
-      "updated": 1788876965334,
+      "created": 1788887989856,
+      "updated": 1788887989856,
       "git": {
         "autoPush": false,
         "branch": "master",
@@ -58,8 +58,8 @@
       "description": "About",
       "parent": null,
       "metadata": {
-        "created": 1788876945,
-        "updated": 1788876945,
+        "created": 1788887960,
+        "updated": 1788887960,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -91,8 +91,8 @@
       "description": "Examples",
       "parent": null,
       "metadata": {
-        "created": 1788876945,
-        "updated": 1788876945,
+        "created": 1788887960,
+        "updated": 1788887960,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -124,8 +124,8 @@
       "description": "Installation",
       "parent": null,
       "metadata": {
-        "created": 1788876945,
-        "updated": 1788876945,
+        "created": 1788887960,
+        "updated": 1788887960,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -157,8 +157,8 @@
       "description": "Why this is better",
       "parent": null,
       "metadata": {
-        "created": 1788876945,
-        "updated": 1788876945,
+        "created": 1788887960,
+        "updated": 1788887960,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -190,8 +190,8 @@
       "description": "Roadmap",
       "parent": null,
       "metadata": {
-        "created": 1788876945,
-        "updated": 1788876945,
+        "created": 1788887960,
+        "updated": 1788887960,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -223,8 +223,8 @@
       "description": "Get involved!",
       "parent": null,
       "metadata": {
-        "created": 1788876945,
-        "updated": 1788876945,
+        "created": 1788887960,
+        "updated": 1788887960,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
