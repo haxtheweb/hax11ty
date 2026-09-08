@@ -4,3 +4,5 @@ node_modules
 /files/
 !build/es6/node_modules
 !build/es6/node_modules/**
+!app/build/es6/node_modules
+!app/build/es6/node_modules/**

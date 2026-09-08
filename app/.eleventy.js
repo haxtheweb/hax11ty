@@ -8,7 +8,7 @@ const matter = require('gray-matter');
 const xmlFiltersPlugin = require('eleventy-xml-plugin');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const settings = require('./_data/settings.js')();
-const wcRegistry = require('./unbundled-webcomponents/app/dist/wc-registry.json');
+const wcRegistry = require('./wc-registry.json');
 module.exports = function (eleventyConfig) {
   if (!eleventyConfig.dir) {
     eleventyConfig.dir = {};
@@ -35,16 +35,16 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy({
     "theme": "theme",
-    "custom": "custom",
+    "../src/custom/build": "custom/build",
     "../src/files": "files",
-    "unbundled-webcomponents/app/dist/assets": "assets",
-    "unbundled-webcomponents/app/dist/build.js": "build.js",
-    "unbundled-webcomponents/app/dist/wc-registry.json": "wc-registry.json",
+    "build.js": "build.js",
+    "build-haxcms.js": "build-haxcms.js",
+    "wc-registry.json": "wc-registry.json",
   });
   // don't copy the build directory if we are using a CDN
   if (!process.env.HAXCMS_CDN) {
     eleventyConfig.addPassthroughCopy({
-      "unbundled-webcomponents/app/dist/build": "build",
+      "build": "build",
     });
   }
   // collections make it easier to work with the data in templates

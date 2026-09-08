@@ -1,0 +1,250 @@
+{
+  "id": "#f8734cf2-a138-525c-d10f-59831948b288",
+  "title": "hax11ty",
+  "author": "btopro",
+  "description": "project documentation",
+  "license": "by-sa",
+  "metadata": {
+    "author": {
+      "image": "files/headshot511743.1799999904.jpg",
+      "name": "btopro",
+      "email": "",
+      "socialLink": "https://twitter.com/"
+    },
+    "site": {
+      "name": "hax11ty",
+      "created": 1788884569601,
+      "updated": 1788884569601,
+      "git": {
+        "autoPush": false,
+        "branch": "master",
+        "staticBranch": "gh-pages",
+        "vendor": "github",
+        "publicRepoUrl": "https://github.com/haxtheweb/hax11ty/blob/master/src/",
+        "url": "git@github.com:haxtheweb/hax11ty.git"
+      },
+      "version": "1.2.9-11ty",
+      "domain": "https://localhost:8000",
+      "logo": "assets/images/photo-1497493292307-31c376b6e479.jpeg",
+      "static": {
+        "cdn": "build",
+        "offline": false
+      },
+      "settings": {
+        "pathauto": false,
+        "publishPagesOn": false,
+        "forceUpgrade": true,
+        "sw": false
+      }
+    },
+    "theme": {
+      "element": "clean-two",
+      "variables": {
+        "image": "assets/banner.jpg",
+        "hexCode": "#55FF55",
+        "cssVariable": "--simple-colors-default-theme-green-7",
+        "logo": "lrn:network"
+      }
+    }
+  },
+  "items": [
+    {
+      "id": "--content-examples-md",
+      "indent": 0,
+      "location": "./pages/examples.md",
+      "slug": "content/examples/",
+      "order": 1,
+      "title": "Examples",
+      "description": "Examples",
+      "parent": null,
+      "metadata": {
+        "created": 1727207645,
+        "updated": 1728658765,
+        "readtime": 1,
+        "contentDetails": {},
+        "files": [],
+        "haxcmsServiceWorker": false,
+        "eleventy": {
+          "version": "1.0.1",
+          "generator": "Eleventy v1.0.1",
+          "env": {
+            "config": "/home/bto108a/Documents/git/haxtheweb/hax11ty/app/.eleventy.js",
+            "root": "/home/bto108a/Documents/git/haxtheweb/hax11ty/app",
+            "source": "cli"
+          }
+        },
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "Examples",
+        "order": 1
+      }
+    },
+    {
+      "id": "--content-install-md",
+      "indent": 0,
+      "location": "./pages/install.md",
+      "slug": "content/install/",
+      "order": 1,
+      "title": "Installation",
+      "description": "Installation",
+      "parent": null,
+      "metadata": {
+        "created": 1727207645,
+        "updated": 1728658761,
+        "readtime": 1,
+        "contentDetails": {},
+        "files": [],
+        "haxcmsServiceWorker": false,
+        "eleventy": {
+          "version": "1.0.1",
+          "generator": "Eleventy v1.0.1",
+          "env": {
+            "config": "/home/bto108a/Documents/git/haxtheweb/hax11ty/app/.eleventy.js",
+            "root": "/home/bto108a/Documents/git/haxtheweb/hax11ty/app",
+            "source": "cli"
+          }
+        },
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "Installation",
+        "order": 1
+      }
+    },
+    {
+      "id": "--content-about-md",
+      "indent": 0,
+      "location": "./pages/about.md",
+      "slug": "content/about/",
+      "order": 1,
+      "title": "About",
+      "description": "About",
+      "parent": null,
+      "metadata": {
+        "created": 1727207645,
+        "updated": 1727207645,
+        "readtime": 1,
+        "contentDetails": {},
+        "files": [],
+        "haxcmsServiceWorker": false,
+        "eleventy": {
+          "version": "1.0.1",
+          "generator": "Eleventy v1.0.1",
+          "env": {
+            "config": "/home/bto108a/Documents/git/haxtheweb/hax11ty/app/.eleventy.js",
+            "root": "/home/bto108a/Documents/git/haxtheweb/hax11ty/app",
+            "source": "cli"
+          }
+        },
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "About",
+        "order": 1
+      }
+    },
+    {
+      "id": "--content-why-md",
+      "indent": 0,
+      "location": "./pages/why.md",
+      "slug": "content/why/",
+      "order": 2,
+      "title": "Why this is better",
+      "description": "Why this is better",
+      "parent": null,
+      "metadata": {
+        "created": 1727207645,
+        "updated": 1727207645,
+        "readtime": 1,
+        "contentDetails": {},
+        "files": [],
+        "haxcmsServiceWorker": false,
+        "eleventy": {
+          "version": "1.0.1",
+          "generator": "Eleventy v1.0.1",
+          "env": {
+            "config": "/home/bto108a/Documents/git/haxtheweb/hax11ty/app/.eleventy.js",
+            "root": "/home/bto108a/Documents/git/haxtheweb/hax11ty/app",
+            "source": "cli"
+          }
+        },
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "Why this is better",
+        "order": 2
+      }
+    },
+    {
+      "id": "--content-roadmap-md",
+      "indent": 0,
+      "location": "./pages/roadmap.md",
+      "slug": "content/roadmap/",
+      "order": 3,
+      "title": "Roadmap",
+      "description": "Roadmap",
+      "parent": null,
+      "metadata": {
+        "created": 1727207645,
+        "updated": 1728658733,
+        "readtime": 1,
+        "contentDetails": {},
+        "files": [],
+        "haxcmsServiceWorker": false,
+        "eleventy": {
+          "version": "1.0.1",
+          "generator": "Eleventy v1.0.1",
+          "env": {
+            "config": "/home/bto108a/Documents/git/haxtheweb/hax11ty/app/.eleventy.js",
+            "root": "/home/bto108a/Documents/git/haxtheweb/hax11ty/app",
+            "source": "cli"
+          }
+        },
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "Roadmap",
+        "order": 3
+      }
+    },
+    {
+      "id": "--content-contact-md",
+      "indent": 0,
+      "location": "./pages/contact.md",
+      "slug": "content/contact/",
+      "order": 4,
+      "title": "Get involved!",
+      "description": "Get involved!",
+      "parent": null,
+      "metadata": {
+        "created": 1788876481,
+        "updated": 1788876481,
+        "readtime": 1,
+        "contentDetails": {},
+        "files": [],
+        "haxcmsServiceWorker": false,
+        "eleventy": {
+          "version": "1.0.1",
+          "generator": "Eleventy v1.0.1",
+          "env": {
+            "config": "/home/bto108a/Documents/git/haxtheweb/hax11ty/app/.eleventy.js",
+            "root": "/home/bto108a/Documents/git/haxtheweb/hax11ty/app",
+            "source": "cli"
+          }
+        },
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "Get involved!",
+        "order": 4
+      }
+    }
+  ]
+}

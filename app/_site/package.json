@@ -1,0 +1,20 @@
+{
+  "name": "hax11ty",
+  "version": "1.2.9-11ty",
+  "description": "project documentation",
+  "main": "index.html",
+  "author": {
+    "name": "btopro"
+  },
+  "license": "Apache-2.0",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "start": "npm run serve",
+    "ghpages:build": "rm -f index.html && mv ghpages.html index.html && rm -f assets/babel* && rm -f build && rm -f wc-registry.json",
+    "serve": "npx @haxtheweb/haxcms-nodejs",
+    "dev": "NODE_ENV=development npm run serve"
+  }
+}

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>hax11ty</title>
+  <link href="https://haxtheweb.github.io/hax11ty/atom.xml" rel="self" />
+  <subtitle>project documentation</subtitle>
+  <updated>2026-09-08T10:08:01.037-04:00</updated>
+  <author>
+      <name>btopro</name>
+  </author>
+  <id>https://haxtheweb.github.io/hax11ty/atom.xml</id>
+  <entry>
+    <title>About</title>
+    <id>https://haxtheweb.github.io/hax11ty/content/about/</id>
+    <updated>2024-09-24T15:54:04.836-04:00</updated>
+    <published>2024-09-24T15:54:04.836-04:00</published>
+    <summary></summary>
+    <link href="https://haxtheweb.github.io/hax11ty/content/about/"/>
+    <content type="html">
+      &lt;p&gt;HAX11ty is a merger between HAX and 11ty. It uses these technologies in the following way:
+&lt;ul&gt;
+  &lt;li&gt;User edits via HAX (future) or modifies files locally&lt;/li&gt;
+  &lt;li&gt;hax11ty script watches for changes and rebuilds files w/ 11ty, refreshing the screen&lt;/li&gt;
+  &lt;li&gt;this is compiled to a valid HAXcms data package to be used either completely static with a CDN or locally in HAXcms PHP version&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+    </content>
+  </entry>
+  <entry>
+    <title>Examples</title>
+    <id>https://haxtheweb.github.io/hax11ty/content/examples/</id>
+    <updated>2024-09-24T15:54:04.836-04:00</updated>
+    <published>2024-09-24T15:54:04.836-04:00</published>
+    <summary></summary>
+    <link href="https://haxtheweb.github.io/hax11ty/content/examples/"/>
+    <content type="html">
+      &lt;p&gt;We loves us some HAX11ty and dogfood it for many project sites.&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;This site&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;https://tsv-dbfp.libraries.psu.edu/&quot; target=&quot;_blank&quot;&gt;Digital Beaumont and Fletcher&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;https://wcfactory.js.org/&quot; target=&quot;_blank&quot;&gt;WCFactory&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+    </content>
+  </entry>
+  <entry>
+    <title>Installation</title>
+    <id>https://haxtheweb.github.io/hax11ty/content/install/</id>
+    <updated>2024-09-24T15:54:04.836-04:00</updated>
+    <published>2024-09-24T15:54:04.836-04:00</published>
+    <summary></summary>
+    <link href="https://haxtheweb.github.io/hax11ty/content/install/"/>
+    <content type="html">
+      &lt;h2&gt; Quick Installation Script &lt;/h2&gt;
+&lt;code-sample copy-clipboard-button&gt;
+  &lt;template&gt;
+    curl -fsSL https://raw.githubusercontent.com/haxtheweb/hax11ty/master/hax11tyme.sh -o hax11tyme.sh &amp;&amp; sh hax11tyme.sh
+  &lt;/template&gt;
+&lt;/code-sample&gt;
+&lt;h2&gt; Manual Installation &lt;/h2&gt;
+&lt;code-sample copy-clipboard-button&gt;
+&lt;template&gt;
+  git clone https://github.com/haxtheweb/hax11ty.git
+  cd hax11ty
+  npm install
+  npm start
+&lt;/template&gt;
+&lt;/code-sample&gt;
+&lt;p&gt;This is the fastest way to get up and running. If you instead want to build new sites with this and push them back up to gh-pages rapidly, start by &lt;a href=&quot;https://github.com/haxtheweb/hax11ty/generate&quot;&gt;using this repo as a template&lt;/a&gt;. This will copy the github actions workflows as well so all you need to do is change our repo in the git clone above to yours in order to start on what will easily become a live website!&lt;/p&gt;
+
+    </content>
+  </entry>
+  <entry>
+    <title>Roadmap</title>
+    <id>https://haxtheweb.github.io/hax11ty/content/roadmap/</id>
+    <updated>2024-09-24T15:54:04.836-04:00</updated>
+    <published>2024-09-24T15:54:04.836-04:00</published>
+    <summary></summary>
+    <link href="https://haxtheweb.github.io/hax11ty/content/roadmap/"/>
+    <content type="html">
+      &lt;p&gt;The goal of HAX11ty is to combine the best of HAX / HAXcms with the best of 11ty. To that end we seek to produce the following workflow (things done first, followed by things needed):&lt;/p&gt;
+&lt;h3&gt;Working / exists currently&lt;/h3&gt;
+&lt;ul&gt;
+    &lt;li&gt;11ty static site publishing workflow&lt;/li&gt;
+    &lt;li&gt;Abstract content files / settings / structure of 11ty away as much as possible so user deals only with content files&lt;/li&gt;
+    &lt;li&gt;CI / workflow / gh-actions routine automatically setup&lt;/li&gt;
+    &lt;li&gt;Interface with the HAXcms data structure / automatically generate site.json files&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Things needed&lt;/h3&gt;
+&lt;a href=&quot;https://github.com/haxtheweb/issues/issues?q=is%3Aopen+hax11ty&quot;&gt;Issue queue for hax11ty&lt;/a&gt;
+    </content>
+  </entry>
+  <entry>
+    <title>Why this is better</title>
+    <id>https://haxtheweb.github.io/hax11ty/content/why/</id>
+    <updated>2024-09-24T15:54:04.836-04:00</updated>
+    <published>2024-09-24T15:54:04.836-04:00</published>
+    <summary></summary>
+    <link href="https://haxtheweb.github.io/hax11ty/content/why/"/>
+    <content type="html">
+      &lt;p&gt;&lt;ul&gt;
+    &lt;li&gt;Power of &lt;a href=&quot;https://www.11ty.dev/&quot;&gt;11ty&lt;/a&gt; for publishing static / high SEO&lt;/li&gt;
+    &lt;li&gt;Easier than 11ty, 0 config solution for publishing&lt;/li&gt;
+    &lt;li&gt;Power of HAXcms for rocket fast PWA in a forever format&lt;/li&gt;
+    &lt;li&gt;Extendable via web components&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://haxtheweb.org&quot;&gt;HAX&lt;/a&gt; as web editor to skip markdown&lt;/li&gt;
+    &lt;li&gt;Easy github pages based publishing workflow&lt;/li&gt;
+    &lt;li&gt;All files requiring change are in &lt;code&gt;src/&lt;/code&gt; directory&lt;/li&gt;
+    &lt;li&gt;Output can plug into &lt;a href=&quot;https://github.com/haxtheweb/haxcms-nodejs&quot;&gt;HAXcms-php&lt;/a&gt;, &lt;a href=&quot;https://github.com/haxtheweb/haxcms-nodejs&quot;&gt;HAXcms-nodejs&lt;/a&gt; and &lt;a href=&quot;https://github.com/haxtheweb/haxiam&quot;&gt;HAXiam&lt;/a&gt; solutions&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;h3&gt;Performance&lt;/h3&gt;
+&lt;p&gt;High lighthouse scores are achieved with certain constraints that will keep it from hitting max possible scores:
+&lt;ul&gt;
+    &lt;li&gt;We keep things unbundled to allow for maximal reuse. This has an initial performance hit in the name of page to page speed.&lt;/li&gt;
+    &lt;li&gt;We do this so that if you put, for example, meme-maker into a page of content, hax11ty will generate the preload statements for that element from the CDN. This is done on a page by page level.&lt;/li&gt;
+    &lt;li&gt;That&#39;s it. All other mettrics we can hit the same scores as any other app!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;
+
+    </content>
+  </entry>
+  <entry>
+    <title>Get involved!</title>
+    <id>https://haxtheweb.github.io/hax11ty/content/contact/</id>
+    <updated>2026-09-08T10:08:01.037-04:00</updated>
+    <published>2026-09-08T10:08:01.037-04:00</published>
+    <summary></summary>
+    <link href="https://haxtheweb.github.io/hax11ty/content/contact/"/>
+    <content type="html">
+      &lt;p&gt;The HAXTheWeb team hangs out on slack and would love to chat about all things 11ty, HAX11ty, HAX, and beyond. HAX11ty is one of many creations in the HAX universe and we&#39;d love to hear from those using it. &lt;a href=&quot;https://discord.gg/aCGxmRHEJP&quot;&gt;Join us on Discord today!&lt;/a&gt; or follow us on [X] &lt;a href=&quot;https://x.com/haxtheweb&quot;&gt;@HAXTheWeb&lt;/a&gt;
+
+    </content>
+  </entry>
+</feed>

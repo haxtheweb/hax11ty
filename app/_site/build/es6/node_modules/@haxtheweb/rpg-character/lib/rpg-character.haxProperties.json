@@ -1,0 +1,85 @@
+{
+  "canScale": false,
+  "designSystem": false,
+  "canEditSource": true,
+  "gizmo": {
+    "title": "RPG Character",
+    "description": "Fun character from HAX.",
+    "icon": "hax:hax2022",
+    "color": "red",
+    "tags": ["Other", "fun", "8bit", "game"],
+    "handles": [],
+    "meta": {
+      "author": "HAXTheWeb core team"
+    }
+  },
+  "settings": {
+    "configure": [
+      {
+        "property": "seed",
+        "title": "Name",
+        "description": "Word used to generate a random character.",
+        "inputMethod": "textfield"
+      },
+      {
+        "property": "hat",
+        "title": "Hat",
+        "description": "Hat style.",
+        "inputMethod": "select",
+        "options": {
+          "none": "Default",
+          "random": "Random",
+          "bunny": "Bunny",
+          "cowboy": "Cowboy",
+          "education": "Education",
+          "construction": "Construction",
+          "warning": "Warning",
+          "watermelon": "Watermelon",
+          "coffee": "Coffee",
+          "knight": "Knight",
+          "ninja": "Ninja",
+          "party": "Party",
+          "error": "Error",
+          "edit": "Edit"
+        }
+      },
+      {
+        "property": "width",
+        "title": "Width",
+        "description": "Character width in pixels.",
+        "inputMethod": "number"
+      },
+      {
+        "property": "height",
+        "title": "Height",
+        "description": "Character height in pixels.",
+        "inputMethod": "number"
+      },
+      {
+        "property": "fire",
+        "title": "On fire?",
+        "description": "Whether the character is on fire.",
+        "inputMethod": "boolean"
+      },
+      {
+        "property": "walking",
+        "title": "Walking?",
+        "description": "Walk animation; runs when on fire.",
+        "inputMethod": "boolean"
+      }
+    ]
+  },
+  "saveOptions": {
+    "unsetAttributes": ["colors"]
+  },
+  "demoSchema": [
+    {
+      "tag": "rpg-character",
+      "properties": {
+        "seed": "haxtheweb",
+        "hat": "random"
+      },
+      "content": ""
+    }
+  ]
+}

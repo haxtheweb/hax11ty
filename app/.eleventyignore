@@ -1,4 +1,5 @@
 README
-unbundled-webcomponents
 assets
 custom
+build
+*.hbs
