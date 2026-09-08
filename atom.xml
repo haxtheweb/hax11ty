@@ -3,7 +3,7 @@
   <title>hax11ty</title>
   <link href="https://haxtheweb.github.io/hax11ty/atom.xml" rel="self" />
   <subtitle>project documentation</subtitle>
-  <updated>2026-08-27T20:02:36.313+00:00</updated>
+  <updated>2026-09-08T14:15:45.059+00:00</updated>
   <author>
       <name>btopro</name>
   </author>
@@ -11,8 +11,8 @@
   <entry>
     <title>About</title>
     <id>https://haxtheweb.github.io/hax11ty/content/about/</id>
-    <updated>2026-08-27T20:02:36.313+00:00</updated>
-    <published>2026-08-27T20:02:36.313+00:00</published>
+    <updated>2026-09-08T14:15:45.059+00:00</updated>
+    <published>2026-09-08T14:15:45.059+00:00</published>
     <summary></summary>
     <link href="https://haxtheweb.github.io/hax11ty/content/about/"/>
     <content type="html">
@@ -29,20 +29,20 @@
   <entry>
     <title>Get involved!</title>
     <id>https://haxtheweb.github.io/hax11ty/content/contact/</id>
-    <updated>2026-08-27T20:02:36.313+00:00</updated>
-    <published>2026-08-27T20:02:36.313+00:00</published>
+    <updated>2026-09-08T14:15:45.059+00:00</updated>
+    <published>2026-09-08T14:15:45.059+00:00</published>
     <summary></summary>
     <link href="https://haxtheweb.github.io/hax11ty/content/contact/"/>
     <content type="html">
-      &lt;p&gt;The HAXTheWeb team hangs out on slack and would love to chat about all things 11ty, HAX11ty, HAX, and beyond. HAX11ty is one of many creations in the HAX universe and we&#39;d love to hear from those using it. &lt;a href=&quot;https://discord.gg/EKYJAjqGhf&quot;&gt;Join us on Discord today!&lt;/a&gt; or follow us on [X] &lt;a href=&quot;https://x.com/haxtheweb&quot;&gt;@HAXTheWeb&lt;/a&gt;
+      &lt;p&gt;The HAXTheWeb team hangs out on slack and would love to chat about all things 11ty, HAX11ty, HAX, and beyond. HAX11ty is one of many creations in the HAX universe and we&#39;d love to hear from those using it. &lt;a href=&quot;https://discord.gg/aCGxmRHEJP&quot;&gt;Join us on Discord today!&lt;/a&gt; or follow us on [X] &lt;a href=&quot;https://x.com/haxtheweb&quot;&gt;@HAXTheWeb&lt;/a&gt;
 
     </content>
   </entry>
   <entry>
     <title>Examples</title>
     <id>https://haxtheweb.github.io/hax11ty/content/examples/</id>
-    <updated>2026-08-27T20:02:36.313+00:00</updated>
-    <published>2026-08-27T20:02:36.313+00:00</published>
+    <updated>2026-09-08T14:15:45.059+00:00</updated>
+    <published>2026-09-08T14:15:45.059+00:00</published>
     <summary></summary>
     <link href="https://haxtheweb.github.io/hax11ty/content/examples/"/>
     <content type="html">
@@ -58,8 +58,8 @@
   <entry>
     <title>Installation</title>
     <id>https://haxtheweb.github.io/hax11ty/content/install/</id>
-    <updated>2026-08-27T20:02:36.313+00:00</updated>
-    <published>2026-08-27T20:02:36.313+00:00</published>
+    <updated>2026-09-08T14:15:45.059+00:00</updated>
+    <published>2026-09-08T14:15:45.059+00:00</published>
     <summary></summary>
     <link href="https://haxtheweb.github.io/hax11ty/content/install/"/>
     <content type="html">
@@ -85,8 +85,8 @@
   <entry>
     <title>Roadmap</title>
     <id>https://haxtheweb.github.io/hax11ty/content/roadmap/</id>
-    <updated>2026-08-27T20:02:36.313+00:00</updated>
-    <published>2026-08-27T20:02:36.313+00:00</published>
+    <updated>2026-09-08T14:15:45.059+00:00</updated>
+    <published>2026-09-08T14:15:45.059+00:00</published>
     <summary></summary>
     <link href="https://haxtheweb.github.io/hax11ty/content/roadmap/"/>
     <content type="html">
@@ -105,8 +105,8 @@
   <entry>
     <title>Why this is better</title>
     <id>https://haxtheweb.github.io/hax11ty/content/why/</id>
-    <updated>2026-08-27T20:02:36.313+00:00</updated>
-    <published>2026-08-27T20:02:36.313+00:00</published>
+    <updated>2026-09-08T14:15:45.059+00:00</updated>
+    <published>2026-09-08T14:15:45.059+00:00</published>
     <summary></summary>
     <link href="https://haxtheweb.github.io/hax11ty/content/why/"/>
     <content type="html">
