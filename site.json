@@ -1,5 +1,5 @@
 {
-  "id": "#11f7345d-2dc3-7944-a4f0-21216e3faa39",
+  "id": "#6006189c-7e52-2bf9-1efd-480a49a6b0c6",
   "title": "hax11ty",
   "author": "btopro",
   "description": "project documentation",
@@ -13,8 +13,8 @@
     },
     "site": {
       "name": "hax11ty",
-      "created": 1792079290087,
-      "updated": 1792079290087,
+      "created": 1792525145330,
+      "updated": 1792525145330,
       "git": {
         "autoPush": false,
         "branch": "master",
@@ -49,39 +49,6 @@
   },
   "items": [
     {
-      "id": "--content-examples-md",
-      "indent": 0,
-      "location": "./pages/examples.md",
-      "slug": "content/examples/",
-      "order": 1,
-      "title": "Examples",
-      "description": "Examples",
-      "parent": null,
-      "metadata": {
-        "created": 1792079271,
-        "updated": 1792079271,
-        "readtime": 1,
-        "contentDetails": {},
-        "files": [],
-        "haxcmsServiceWorker": true,
-        "eleventy": {
-          "version": "1.0.1",
-          "generator": "Eleventy v1.0.1",
-          "env": {
-            "config": "/home/runner/work/hax11ty/hax11ty/app/.eleventy.js",
-            "root": "/home/runner/work/hax11ty/hax11ty/app",
-            "source": "cli"
-          }
-        },
-        "tags": [
-          "content"
-        ],
-        "layout": "content.liquid",
-        "title": "Examples",
-        "order": 1
-      }
-    },
-    {
       "id": "--content-install-md",
       "indent": 0,
       "location": "./pages/install.md",
@@ -91,8 +58,8 @@
       "description": "Installation",
       "parent": null,
       "metadata": {
-        "created": 1792079271,
-        "updated": 1792079271,
+        "created": 1792525127,
+        "updated": 1792525127,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -124,8 +91,8 @@
       "description": "About",
       "parent": null,
       "metadata": {
-        "created": 1792079271,
-        "updated": 1792079271,
+        "created": 1792525127,
+        "updated": 1792525127,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -148,6 +115,39 @@
       }
     },
     {
+      "id": "--content-examples-md",
+      "indent": 0,
+      "location": "./pages/examples.md",
+      "slug": "content/examples/",
+      "order": 1,
+      "title": "Examples",
+      "description": "Examples",
+      "parent": null,
+      "metadata": {
+        "created": 1792525127,
+        "updated": 1792525127,
+        "readtime": 1,
+        "contentDetails": {},
+        "files": [],
+        "haxcmsServiceWorker": true,
+        "eleventy": {
+          "version": "1.0.1",
+          "generator": "Eleventy v1.0.1",
+          "env": {
+            "config": "/home/runner/work/hax11ty/hax11ty/app/.eleventy.js",
+            "root": "/home/runner/work/hax11ty/hax11ty/app",
+            "source": "cli"
+          }
+        },
+        "tags": [
+          "content"
+        ],
+        "layout": "content.liquid",
+        "title": "Examples",
+        "order": 1
+      }
+    },
+    {
       "id": "--content-why-md",
       "indent": 0,
       "location": "./pages/why.md",
@@ -157,8 +157,8 @@
       "description": "Why this is better",
       "parent": null,
       "metadata": {
-        "created": 1792079271,
-        "updated": 1792079271,
+        "created": 1792525127,
+        "updated": 1792525127,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -190,8 +190,8 @@
       "description": "Roadmap",
       "parent": null,
       "metadata": {
-        "created": 1792079271,
-        "updated": 1792079271,
+        "created": 1792525127,
+        "updated": 1792525127,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
@@ -223,8 +223,8 @@
       "description": "Get involved!",
       "parent": null,
       "metadata": {
-        "created": 1792079271,
-        "updated": 1792079271,
+        "created": 1792525127,
+        "updated": 1792525127,
         "readtime": 1,
         "contentDetails": {},
         "files": [],
