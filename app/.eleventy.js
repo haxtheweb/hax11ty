@@ -3,8 +3,8 @@ const CONTENTDIR = "content";
 //let Nunjucks = require("nunjucks");  
 const crypto = require('crypto');
 const fs = require('fs-extra');
-const path = require('path');
 const matter = require('gray-matter');
+const { buildOutline, pageMetadata } = require('./lib/outline.js');
 const xmlFiltersPlugin = require('eleventy-xml-plugin');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const settings = require('./_data/settings.js')();
@@ -19,13 +19,7 @@ module.exports = function (eleventyConfig) {
     new Nunjucks.FileSystemLoader("_includes")
   );
   eleventyConfig.setLibrary("njk", nunjucksEnvironment);*/
-  eleventyConfig.setTemplateFormats(["html","md", "njk"]);
-  // copy this directory but DO NOT inject grey matter
-  // this allows HAXcms to render content bare but with DX writing title data in head matter
-  if (!fs.existsSync(process.cwd() + '/' + SITEDIR + '/')) {
-    fs.mkdirSync(process.cwd() + '/' + SITEDIR + '/');
-  }
-  copyFolderSyncWithoutGreyMatter(CONTENTDIR, 'pages')
+  eleventyConfig.setTemplateFormats(["html", "md", "njk", "11ty.js"]);
 
   // add plugins to handle xml and rss files
   eleventyConfig.addPlugin(xmlFiltersPlugin);
@@ -139,6 +133,20 @@ module.exports = function (eleventyConfig) {
     }
     return '11ty';
   });
+  // plain text summary of rendered HTML, for meta descriptions and search
+  eleventyConfig.addFilter('hax11tyExcerpt', function(html, length = 200) {
+    if (typeof html !== 'string') {
+      return '';
+    }
+    return html
+      .replace(/<(script|style|template)[^>]*>[\s\S]*?<\/\1>/gi, ' ')
+      .replace(/<\/?[^>]+(>|$)/g, ' ')
+      .replace(/&nbsp;/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim()
+      .substr(0, length)
+      .trim();
+  });
   // excerpt
   eleventyConfig.addShortcode('excerpt', function(article) {
     if (!article.hasOwnProperty('templateContent')) {
@@ -150,13 +158,6 @@ module.exports = function (eleventyConfig) {
     const content = article.templateContent;
     excerpt = content.replace(/<\/?[^>]+(>|$)/g, "").replace(/\\/g, " ").replace(/\n/g, "").substr(0, 1000).trim();
     return excerpt;
-  });
-  eleventyConfig.addCollection("searchDataOrder", function(collection) {
-    return collection.getFilteredByGlob(CONTENTDIR + "/**/*.md").sort((a,b) => {
-      if(a.data.title < b.data.title) return -1;
-      if(a.data.title > b.data.title) return 1;
-      return 0;
-    });
   });
   eleventyConfig.addCollection("swHashData", function (collection) {
     let items = collection.items.map(({ outputPath, url, data }, i) => {
@@ -183,89 +184,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addShortcode("getGlobal", function(varName) {
     return settings[varName];
   });
+  // Every page under content/, with its place in the HAXcms outline.
+  // Returns [{ page: <11ty collection item>, outline: <site.json item> }] in
+  // outline order. Page bodies (page.templateContent) are only available once
+  // 11ty renders, so templates read them from here at render time.
+  eleventyConfig.addCollection("hax11tyOutline", computeOutline);
+  // site.json: the HAXcms outline, same shape HAXcms writes
   eleventyConfig.addCollection("haxcms", function (collection) {
-    const items = collection.items.map(({ outputPath, inputPath, url, data }, i) => {
-      if (url.includes("/" + CONTENTDIR + "/")) {
-        let parentID = null;
-        // parent test path
-        let test = inputPath.split('/');
-        test.pop();
-        // you have to use index.whatever for accurate parent nesting
-        test = (test.join('/') + '/index.').replace(/\./g,'-').replace(/\//g,'-');
-        // ensure that we don't set ourselves as the parent
-        if (test != inputPath.replace('md', '').replace('html', '').replace('njk', '').replace(/\./g,'-').replace(/\//g,'-')) {
-          data.collections.all.forEach((item) => {
-            if (item.inputPath.replace('md', '').replace('html', '').replace('njk', '').replace(/\./g,'-').replace(/\//g,'-') == test) {
-              parentID = item.inputPath.replace(/\./g,'-').replace(/\//g,'-');
-            }
-          });
-        }
-        // @todo try and wire this up after verifying this file exists
-        // if the file exists then we know it's a parent of the current folder in the tree
-        // which means we can set the parent id and it'll work
-        let slug;
-        if (data.slug) {
-          slug = data.slug;
-        }
-        else {
-          slug = url.split('/');
-          slug.shift();
-          slug = slug.join('/');
-        }
-        let order = (data.order ? data.order : i);
-        // get page contents to analyze
-        const pageContent = fs.readFileSync(process.cwd() + inputPath.replace('./','/'), "utf8");
-        // get read time
-        let readtime = Math.round(countWords(pageContent) / 200);
-        // get file stats
-        const stats = fs.statSync(inputPath);
-        let created = Math.round(stats.birthtimeMs / 1000);
-        let updated = Math.round(stats.mtimeMs / 1000);
-        // account for uber small body
-        if (readtime == 0) {
-          readtime = 1;
-        }
-        const pageData = data;
-        // strip off these globals we don't need
-        // @note DO NOT DELETE LAYOUT. 11ty needs this to process the templates
-        delete pageData.collections;
-        delete pageData.haxcms;
-        delete pageData.pkg;
-        delete pageData.haxcmsAppstore;
-        delete pageData.settings;
-        delete pageData.HAXenabled;
-        // this is actually page processing data so drop it too
-        delete pageData.page;
-        // load up headmatter
-        return {
-          id: inputPath.replace(/\./g,'-').replace(/\//g,'-'),
-          indent: 0,
-          location: inputPath.replace('/' + CONTENTDIR + '/','/pages/'),
-          slug: slug,
-          order: order,
-          title: data.title ? data.title : 'Title',
-          description: data.title ? data.title : 'Description',
-          parent: parentID,
-          metadata: {
-            created: created,
-            updated: updated,
-            readtime: readtime,
-            contentDetails: {},
-            files: [],
-            ...pageData
-          }
-        };
-      }
-    });
-    const pageItems = items.filter((item) => {
-      if (item && item.slug) {
-        return true;
-      }
-      return false;
-    }).sort(function(a, b) {
-      return parseFloat(a.order) - parseFloat(b.order);
-    });
-    return JSON.stringify({ 
+    return JSON.stringify({
       id: settings.siteUuid,
       title: settings.siteName,
       author: settings.siteAuthorName,
@@ -307,7 +233,7 @@ module.exports = function (eleventyConfig) {
           }
         }
       },
-      items: pageItems
+      items: computeOutline(collection).map((entry) => entry.outline)
     }, null, 2);
   });
   // basePath always has / and 11ty always puts / in front of the URLs
@@ -322,30 +248,37 @@ module.exports = function (eleventyConfig) {
     return getLicenseInfo(license)[varName];
   });
 };
-/**
- * This strips off the grey matter from input files and writes to output folder
- */
-function copyFolderSyncWithoutGreyMatter(from, to, appendBase = true) {
-  if (appendBase) {
-    from = process.cwd() + '/' + from;
-    to = process.cwd() + '/' + SITEDIR + '/' + to;
-  }
-  if (!fs.existsSync(to)) {
-    fs.mkdirSync(to);
-  }
-  fs.readdirSync(from).forEach(element => {
-    if (fs.lstatSync(path.join(from, element)).isFile()) {
-      // read in data
-      var fileData = matter.read(path.join(from, element));
-      if (fs.lstatSync(path.join(from, element)).isFile()) {
-        fs.writeFileSync(path.join(to, element).replace('.md','.json').replace('.html','.json'), JSON.stringify(fileData.data, null, 2));
-      }
-      fileData.data = {};
-      fs.writeFileSync(path.join(to, element), matter.stringify(fileData));
-    } else {
-      copyFolderSyncWithoutGreyMatter(path.join(from, element), path.join(to, element), false);
-    }
+function computeOutline(collection) {
+  const pages = collection.getFilteredByTag("content");
+  const entries = pages.map((page) => {
+    // only the file's own front matter, not the merged data cascade
+    const source = fs.readFileSync(page.inputPath, "utf8");
+    const frontMatter = matter(source).data || {};
+    const stats = fs.statSync(page.inputPath);
+    const created = toEpoch(frontMatter.date, stats.birthtimeMs);
+    const updated = toEpoch(frontMatter.updated, stats.mtimeMs);
+    return {
+      slug: page.data.haxSlug,
+      title: page.data.title ? String(page.data.title) : page.data.haxSlug,
+      description: frontMatter.description,
+      order: frontMatter.order !== undefined && frontMatter.order !== null && frontMatter.order !== '' && Number.isFinite(Number(frontMatter.order)) ? Number(frontMatter.order) : undefined,
+      created: created,
+      updated: updated,
+      readtime: Math.max(1, Math.round(countWords(matter(source).content) / 200)),
+      metadata: pageMetadata(frontMatter),
+      __page: page,
+    };
   });
+  const items = buildOutline(entries);
+  const bySlug = new Map(entries.map((entry) => [entry.slug, entry.__page]));
+  return items.map((outline) => ({ page: bySlug.get(outline.slug), outline }));
+}
+/**
+ * Seconds since the epoch from a front matter date, else from a file time in ms
+ */
+function toEpoch(value, fallbackMs) {
+  const parsed = value ? new Date(value).getTime() : NaN;
+  return Math.round((isNaN(parsed) ? fallbackMs : parsed) / 1000);
 }
 /**
  * Count words
