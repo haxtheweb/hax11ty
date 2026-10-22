@@ -59,6 +59,22 @@ Publishing with hax11ty is a snap and we have multiple methods of publishing we 
 - `npm run build:cdn` will publish your site as if it is leveraging our CDN network
 - This will default to cdn.webcomponents.psu.edu but can be set to point to other sources in `src/settings.js`
 
+### Publishing without the assets (pages only)
+
+A build that includes `build/` falls back to the CDN at runtime if that folder is not in the published files. You can host just the generated pages (for example on surge, netlify or github pages) and the web components are read from `https://cdn.hax.cloud/cdn/`. Change the fallback in `src/settings.js` (`fallbackCdn`).
+
+### Keeping the assets current
+
+`app/build/` (the unbundled web components), `app/wc-registry*.json` and `app/.well-known/agent-skills/` are copies of what [haxcms-nodejs](https://github.com/haxtheweb/haxcms-nodejs) ships. Refresh them with:
+
+```bash
+npm run sync-assets                         # shallow-clones haxcms-nodejs main
+npm run sync-assets -- --from <checkout>    # or use a checkout you already have
+npm run sync-assets -- --dry-run            # report what would change
+```
+
+`app/assets-source.json` records which haxcms-nodejs commit the assets came from. Translation files are left as they are unless you pass `--locales all`.
+
 ### Taking into HAXiam or HAXcms local versions
 
 `npm run local-build` will build it into the `dist` directory, tweaking paths to be more compatible with HAXcms local and shared hosting solutions

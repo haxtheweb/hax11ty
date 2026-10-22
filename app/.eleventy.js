@@ -40,6 +40,8 @@ module.exports = function (eleventyConfig) {
     "build.js": "build.js",
     "build-haxcms.js": "build-haxcms.js",
     "wc-registry.json": "wc-registry.json",
+    "wc-registry-graph.json": "wc-registry-graph.json",
+    ".well-known/agent-skills": ".well-known/agent-skills",
   });
   // don't copy the build directory if we are using a CDN
   if (!process.env.HAXCMS_CDN) {
@@ -114,21 +116,18 @@ module.exports = function (eleventyConfig) {
     if (!content) {
       return '';
     }
-    const regex = /<(?:\"-[^\"]*\"['\"]*|'[^']*'['\"]*|[^'\">])+>/g;
-    const found = content.match(regex);
-    let preloadTags = [];
-    found.map((val, i) => {
-      let test = val.replace('>', '').replace('</', '');
-      if (test.includes('-') && test != 'haxcms-site-builder') {
-        preloadTags.push(test);
-      }
-    });
+    // custom element tag names used anywhere in the page (with or without attributes)
+    const tags = new Set();
+    const regex = /<([a-z][a-z0-9._]*-[a-z0-9._-]*)(?=[\s/>])/gi;
+    let found;
+    while ((found = regex.exec(content)) !== null) {
+      tags.add(found[1].toLowerCase());
+    }
+    tags.delete('haxcms-site-builder');
     let contentPreload = '';
-    // load wc-registry.json
-    for (var tag in preloadTags) {
-      if (wcRegistry[preloadTags[tag]]) {
-        contentPreload += '  <link rel="preload" href="' + settings.cdn + 'build/es6/node_modules/' + wcRegistry[preloadTags[tag]] + '" as="script" crossorigin="anonymous" />' + "\n";
-        contentPreload += '  <link rel="modulepreload" href="' + settings.cdn + 'build/es6/node_modules/' + wcRegistry[preloadTags[tag]] + '" />' + "\n";
+    for (const tag of tags) {
+      if (wcRegistry[tag]) {
+        contentPreload += '  <link rel="modulepreload" href="' + settings.assetBase + 'build/es6/node_modules/' + wcRegistry[tag] + '" />' + "\n";
       }
     }
     return contentPreload;

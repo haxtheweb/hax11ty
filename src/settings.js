@@ -124,6 +124,14 @@ module.exports = () => {
         version: "1.2.9-11ty", // version number of HAXcms this was created from
         cdnBuild: cdnBase + cdnPart + "build/es6/node_modules/", // deeper path directly into the build location
         cdn: cdnBase + cdnPart, // CDN full address
+        // true when this build leaves the build/ folder out and reads it from the CDN
+        useCdn: !!process.env.HAXCMS_CDN,
+        // where pages look for build/ (wc-registry.json, web components): the CDN
+        // for a CDN build, otherwise next to the page (resolved against <base>)
+        assetBase: process.env.HAXCMS_CDN ? cdnBase + cdnPart : "./",
+        // builds that ship build/ fall back to this CDN at runtime if the folder
+        // was left out of the published files
+        fallbackCdn: "https://cdn.hax.cloud/cdn/",
         preconnect: cdnBase, // preconnection domain address, performance thing
         basePath: basePath, // <base> tag's path value
         domain: domain, // domain, most likely same as url
