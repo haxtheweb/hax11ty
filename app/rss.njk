@@ -12,7 +12,7 @@ eleventyExcludeFromCollections: true
   <id>{{ settings.url }}</id>
   <author>
     <name>{{ settings.siteAuthorName }}</name>
-    <email>{{ settings.siteAuthorEmail }}
+    <email>{{ settings.siteAuthorEmail }}</email>
   </author>
   {%- for post in collections.all %}
   {% set absolutePostUrl %}{{ settings.url }}{{ post.url | url }}{% endset %}

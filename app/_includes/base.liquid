@@ -3,44 +3,77 @@
 <head>
   <meta charset="utf-8" />
   <base href="{% getGlobal 'basePath' %}" />
+{%- capture pageTitle %}{% if title %}{{ title | escape }} | {% endif %}{{ settings.siteName | escape }}{% endcapture %}
+{%- capture pageDescription %}{% if description %}{{ description | escape }}{% elsif haxSlug %}{{ content | hax11tyExcerpt: 200 | escape }}{% else %}{{ settings.siteDescription | escape }}{% endif %}{% endcapture %}
+{%- capture pageUrl %}{{ settings.url }}{{ page.url }}{% endcapture %}
+{% assign shellModules = "wc-autoload/wc-autoload.js,dynamic-import-registry/dynamic-import-registry.js,haxcms-elements/lib/core/haxcms-site-builder.js,haxcms-elements/lib/core/haxcms-site-store.js,haxcms-elements/lib/core/haxcms-site-router.js,haxcms-elements/lib/core/HAXCMSThemeWiring.js,haxcms-elements/lib/core/HAXCMSLitElementTheme.js,utils/utils.js" | split: "," %}
+{% if settings.useCdn %}
   <script type="importmap">
     {
       "scopes": {
         "./custom/build/": {
-          "@haxtheweb/": "./build/es6/node_modules/@haxtheweb/"
+          "@haxtheweb/": "{% getGlobal 'assetBase' %}build/es6/node_modules/@haxtheweb/"
         }
       }
     }
   </script>
+{% else %}
+  <script>
+    // Works with or without the build/ folder. If the site was published with
+    // its assets, they are used. If it was published as pages only, the same
+    // files are read from the CDN instead. Written here, ahead of any module,
+    // because an import map cannot be changed after it has been parsed.
+    (function() {
+      var cdn = "./";
+      try {
+        var xhr = new XMLHttpRequest();
+        xhr.open('HEAD', './build/es6/node_modules/@haxtheweb/wc-autoload/wc-autoload.js', false);
+        xhr.send();
+        if (xhr.status >= 400) {
+          cdn = "{% getGlobal 'fallbackCdn' %}";
+        }
+      } catch (e) {}
+      globalThis.__appCDN = cdn;
+      var nm = cdn + 'build/es6/node_modules/';
+      var shell = [{% for m in shellModules %}'{{ m }}'{% unless forloop.last %}, {% endunless %}{% endfor %}];
+      var out = '<script type="importmap">' +
+        JSON.stringify({ scopes: { './custom/build/': { '@haxtheweb/': nm + '@haxtheweb/' } } }) +
+        '<\/script>';
+      for (var i = 0; i < shell.length; i++) {
+        out += '<link rel="modulepreload" href="' + nm + '@haxtheweb/' + shell[i] + '" crossorigin="anonymous" />';
+      }
+      out += '<link rel="preload" href="' + nm + '@haxtheweb/haxcms-elements/lib/base.css" as="style" />';
+      document.write(out);
+    })();
+  </script>
+{% endif %}
   <link rel="llms" href="llms.txt" title="LLM Content Map">
   <link rel="alternate" type="text/markdown" href="llms.txt" title="Markdown Summary">
+  <link rel="https://agentskills.io/rels/skills-index" type="application/json" href=".well-known/agent-skills/index.json" title="Agent Skills Discovery Index">
   <link rel="preconnect" crossorigin href="{% getGlobal 'preconnect' %}" />
   <link rel="preconnect" crossorigin href="https://fonts.googleapis.com" />
   <link rel="preconnect" crossorigin href="https://cdnjs.cloudflare.com" />
-  <title>{% getGlobal 'siteName' %}</title>
+  <title>{{ pageTitle }}</title>
   <meta name="application-name" content="{% getGlobal 'siteName' %}">
   <meta name="apple-mobile-web-app-title" content="{% getGlobal 'siteName' %}">
-  <meta name="og:sitename" property="og:sitename" content="{% getGlobal 'siteName' %}" />
-  <meta name="og:title" property="og:title" content="{% getGlobal 'siteName' %}" />
-  <meta name="twitter:title" property="twitter:title" content="{% getGlobal 'siteName' %}" />
-  <meta name="og:url" property="og:url" content="{% getGlobal 'url' %}" />
+  <meta name="og:site_name" property="og:site_name" content="{% getGlobal 'siteName' %}" />
+  <meta name="og:title" property="og:title" content="{{ pageTitle }}" />
+  <meta name="twitter:title" property="twitter:title" content="{{ pageTitle }}" />
+  <meta name="og:url" property="og:url" content="{{ pageUrl }}" />
   <meta name="twitter:site" property="twitter:site" content="{% getGlobal 'url' %}" />
-  <link rel="preload" href="{% getGlobal 'basePath' %}build.js" as="script" />
-  <link rel="preload" href="{% getGlobal 'basePath' %}build-haxcms.js" as="script" />
-  <link rel="preload" href="{% getGlobal 'cdn' %}wc-registry.json" as="fetch" crossorigin="anonymous" fetchpriority="high" />
-  <link rel="modulepreload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@haxtheweb/wc-autoload/wc-autoload.js" crossorigin="anonymous" />
-  <link rel="modulepreload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@haxtheweb/dynamic-import-registry/dynamic-import-registry.js" crossorigin="anonymous" />
-  <link rel="modulepreload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@haxtheweb/haxcms-elements/lib/core/haxcms-site-builder.js" crossorigin="anonymous" />
-  <link rel="modulepreload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@haxtheweb/haxcms-elements/lib/core/haxcms-site-store.js" crossorigin="anonymous" />
-  <link rel="modulepreload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@haxtheweb/haxcms-elements/lib/core/haxcms-site-router.js" crossorigin="anonymous" />
-  <link rel="modulepreload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@haxtheweb/haxcms-elements/lib/core/HAXCMSThemeWiring.js" crossorigin="anonymous" />
-  <link rel="modulepreload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@haxtheweb/haxcms-elements/lib/core/HAXCMSLitElementTheme.js" crossorigin="anonymous" />
-  <link rel="modulepreload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@haxtheweb/utils/utils.js" crossorigin="anonymous" />
-  <link rel="preload" href="{% getGlobal 'cdn' %}build/es6/node_modules/{% getGlobal 'themePath' %}" as="script" crossorigin="anonymous" />
-  <link rel="modulepreload" href="{% getGlobal 'cdn' %}build/es6/node_modules/{% getGlobal 'themePath' %}" />
-{% getContentPreloads content %}  <link rel="preload" href="{% getGlobal 'cdn' %}build/es6/node_modules/@haxtheweb/haxcms-elements/lib/base.css" as="style" />
-  <link rel="preload" href="{% getGlobal 'basePath' %}theme/theme.css" as="style" />
-
+  <link rel="canonical" href="{{ pageUrl }}" />
+{% if haxSlug %}  <link rel="alternate" type="text/markdown" href="pages/{{ haxSlug }}/index.md" title="{{ pageTitle }} (markdown)" />
+{% endif %}
+  <!-- build.js and build-haxcms.js are plain scripts at the end of body; preloading them is redundant -->
+  <link rel="preload" href="{% getGlobal 'assetBase' %}wc-registry.json" as="fetch" crossorigin="anonymous" fetchpriority="high" />
+{% if settings.useCdn %}
+  <!-- Fixed shell modulepreload set, mirroring the graceful-degradation list in
+       haxcms-nodejs boilerplate/site/index.html -->
+{% for m in shellModules %}  <link rel="modulepreload" href="{% getGlobal 'assetBase' %}build/es6/node_modules/@haxtheweb/{{ m }}" crossorigin="anonymous" />
+{% endfor %}  <link rel="preload" href="{% getGlobal 'assetBase' %}build/es6/node_modules/@haxtheweb/haxcms-elements/lib/base.css" as="style" />
+{% endif %}
+  <link rel="modulepreload" href="{% getGlobal 'assetBase' %}build/es6/node_modules/{% getGlobal 'themePath' %}" crossorigin="anonymous" />
+{% getContentPreloads content %}  <link rel="preload" href="{% getGlobal 'basePath' %}theme/theme.css" as="style" />
   <meta name="generator" content="HAX11ty" />
   <link rel="manifest" href="{% getGlobal 'basePath' %}manifest.json">
   <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
@@ -58,14 +91,14 @@
   <meta name="msapplication-TileImage" content="{% getGlobal 'basePath' %}assets/icon-144x144.png">
   <meta name="msapplication-TileColor" content="{% getGlobal 'themeHexCode' %}">
   <meta name="msapplication-tap-highlight" content="no">
-  <meta name="description" content="{% getGlobal 'siteDescription' %}" />
+  <meta name="description" content="{{ pageDescription }}" />
   <meta name="og:type" property="og:type" content="article" />
-  <meta name="og:description" property="og:description" content="{% getGlobal 'siteDescription' %}" />
+  <meta name="og:description" property="og:description" content="{{ pageDescription }}" />
   <meta name="og:image" property="og:image" content="{% getGlobal 'themeImage' %}" />
   <meta name="twitter:card" property="twitter:card" content="summary_large_image" />
-  <meta name="twitter:description" property="twitter:description" content="{% getGlobal 'siteDescription' %}" />
+  <meta name="twitter:description" property="twitter:description" content="{{ pageDescription }}" />
   <meta name="twitter:image" property="twitter:image" content="{% getGlobal 'themeImage' %}" />
-  <meta rel="cc:license" href="{% getLicenseInfo settings.siteLicense,'link' %}" content="License: {% getLicenseInfo settings.siteLicense,'name' %}"/>
+  <link rel="license" href="{% getLicenseInfo settings.siteLicense,'link' %}" title="{% getLicenseInfo settings.siteLicense,'name' %}" />
   <meta name="twitter:creator" content="@{% getGlobal 'twitterName' %}" />
   {% if haxcmsServiceWorker == true %}
   <script>
@@ -133,70 +166,89 @@
     }
   </script>
 {% else %}<!-- Service worker disabled via settings -->{% endif %}
-   <style>
+  <style>
+    :root {
+      color-scheme: light dark;
+    }
     body {
       margin: 0;
+      padding: 0;
       min-height: 98vh;
     }
-    .use-modern-browser a {
-      font-size: 22px;
+    haxcms-site-builder {
+      display: block;
+      min-height: 100svh;
     }
-    .use-modern-browser {
-      font-size: 22px;
-      text-align: center;
-      width: 100%;
+    .haxcms-theme-element:not(:defined) {
+      display: block;
+      min-height: 100svh;
+      padding: 48px 32px;
+      font-size: 20px;
+      background-color: light-dark(#dadada, #222222);
+      color: light-dark(#222222, #dadada);
     }
+
   </style>
+  <noscript>
+    <!-- without JavaScript the loading screen would never go away and would cover the page -->
+    <style>#loading { display: none !important; }</style>
+  </noscript>
   <style id="loadingstyles">
     haxcms-site-builder {
       display: block;
     }
-    body[no-js] haxcms-site-builder {
-      display: none !important;
-    }
     #loading {
-      background-color: white;
-      bottom: 0px;
-      left: 0px;
+      color-scheme: light dark;
+      background-color: light-dark(#dadada, #15202b);
+      color: light-dark(#15202b, #dadada);
+      inset: 0;
       opacity: 1;
-      position: absolute;
-      right: 0px;
-      top: 0px;
-      transition: all linear 300ms;
-      -webkit-transition: all linear 300ms;
+      position: fixed;
       z-index: 99999999;
     }
-
+    #loading .loading-circle {
+      width: 20vw;
+      height: 20vw;
+      background-color: #06b9a5;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 24px auto;
+    }
     #loading.loaded {
-      animation: fade-out .7s ease-in-out;
+      animation: fade-out .1s ease-in-out;
       animation-fill-mode: forwards;
     }
     #loading div.messaging {
-      color: rgba(255,255,255, 0.7);
-      font-family: Roboto;
       left: 0px;
-      margin-top: -75px;
       position: absolute;
       right: 0px;
       text-align: center;
-      top: 50%;
-      transform: translateY(-50%);
+      top: 10vh;
+    }
+    #loading div.messaging h1 {
+      font-family: Helvetica, Verdana, sans-serif !important;
+      font-size: 4vw !important;
+      margin: 24px auto 0;
+      padding: 0;
     }
 
     .progress-line,
     .progress-line:before {
-      height: 8px;
+      border-radius: 8px;
+      height: 20px;
       width: 100%;
       margin: auto;
     }
     .progress-line {
-      background-color: rgba(0,0,0, 0.05);
+      background-color: #ab2101;
+      border-radius: 8px;
       display: -webkit-flex;
       display: flex;
-      width: 30vw;
+      width: 40vw;
     }
     .progress-line:before {
-      background-color: {% getGlobal 'themeHexCode' %};
+      border-radius: 8px;
+      background-color: #930d0d;
       content: '';
       animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
     }
@@ -225,15 +277,12 @@
         opacity: 0;
       }
     }
-    @media (prefers-color-scheme: dark) {
-      #loading {
-        background-color: #333333;
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
       }
-      #loading div.messaging {
-        color: rgba(255,255,255, 0.7);
-      }
-      .progress-line {
-        background-color: rgba(255,255,255, 0.1);
+      100% {
+        transform: rotate(360deg);
       }
     }
   </style>
@@ -241,61 +290,105 @@
     globalThis.dataLayer = globalThis.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    globalThis.addEventListener('haxcms-ready', function(e) {
-      var s = document.createElement('script');
-      s.async = true;
-      document.body.appendChild(s);
-      // give the web components a second to build
-      setTimeout(function() {
-        var loadingEl = document.querySelector('#loading');
-        if (loadingEl) {
-          loadingEl.classList.add('loaded');
+    (function () {
+      var loadingDismissed = false;
+      var analyticsLoaded = false;
+      function loadAnalyticsFromManifest() {
+        if (analyticsLoaded) {
+          return;
         }
-        setTimeout(function() {
-          if (globalThis.HAXCMS.requestAvailability().store.getManifest()) {
-            var gaid = globalThis.HAXCMS.requestAvailability().store.getManifest().metadata.site.settings.gaID || null;
-            if (gaid) {
-              gtag('config', gaid);
-              s.src = `https://www.googletagmanager.com/gtag/js?id=${gaid}`;
-            }
+        analyticsLoaded = true;
+        var script = document.createElement('script');
+        script.async = true;
+        document.body.appendChild(script);
+        if (
+          globalThis.HAXCMS &&
+          globalThis.HAXCMS.requestAvailability &&
+          globalThis.HAXCMS.requestAvailability().store.getManifest()
+        ) {
+          var gaid =
+            globalThis.HAXCMS.requestAvailability().store.getManifest()
+              .metadata.site.settings.gaID || null;
+          if (gaid) {
+            gtag('config', gaid);
+            script.src =
+              'https://www.googletagmanager.com/gtag/js?id=' + gaid;
           }
-          var loadingEl = document.querySelector('#loading');
-          if (loadingEl && loadingEl.parentNode) {
-            loadingEl.parentNode.removeChild(loadingEl);
-          }
-          var loadingStylesEl = document.querySelector('#loadingstyles');
-          if (loadingStylesEl && loadingStylesEl.parentNode) {
-            loadingStylesEl.parentNode.removeChild(loadingStylesEl);
-          }
-          var loadingScriptEl = document.querySelector('#loadingscript');
-          if (loadingScriptEl && loadingScriptEl.parentNode) {
-            loadingScriptEl.parentNode.removeChild(loadingScriptEl);
-          }
-        }, 100);
-      }, 300);
-    });
+        }
+      }
+      function hideLoading() {
+        if (loadingDismissed) {
+          return;
+        }
+        loadingDismissed = true;
+        // styles added for server rendered content only apply until the app takes over
+        var ssrOnly = document.querySelectorAll('[data-ssr-only]');
+        for (var i = 0; i < ssrOnly.length; i++) {
+          ssrOnly[i].remove();
+        }
+        var loadingEl = document.querySelector('#loading');
+        if (!loadingEl) {
+          return;
+        }
+        globalThis.requestAnimationFrame(function () {
+          globalThis.requestAnimationFrame(function () {
+            loadingEl.classList.add('loaded');
+            loadingEl.setAttribute('aria-busy', 'false');
+            setTimeout(function () {
+              loadingEl.setAttribute('hidden', 'hidden');
+            }, 120);
+          });
+        });
+      }
+      globalThis.addEventListener(
+        'json-outline-schema-active-body-changed',
+        function () {
+          hideLoading();
+        },
+        { once: true }
+      );
+      globalThis.addEventListener(
+        'haxcms-ready',
+        function () {
+          setTimeout(function () {
+            loadAnalyticsFromManifest();
+          }, 150);
+          setTimeout(function () {
+            hideLoading();
+          }, 2500);
+        },
+        { once: true }
+      );
+    })();
   </script>
 </head>
-<body no-js vocab="http://schema.org/" prefix="oer:http://oerschema.org cc:http://creativecommons.org/ns dc:http://purl.org/dc/terms/">
-  <div id="loading">
+<body vocab="http://schema.org/" prefix="oer:http://oerschema.org cc:http://creativecommons.org/ns dc:http://purl.org/dc/terms/">
+  <section role="alert" id="loading" aria-busy="true">
     <div class="messaging">
+      <div class="loading-circle"></div>
       <div class="progress-line"></div>
-      <h1 role="alert" aria-busy="true">Loading {% getGlobal 'siteName' %}</h1>
+      <h1>Loading {% getGlobal 'siteName' %}</h1>
     </div>
-  </div>
+  </section>
   {{ content }}
-  <div id="haxcmsoutdatedfallback">
-    <div id="haxcmsoutdatedfallbacksuperold"> 
-      <iframe id="outline" style="width:18%;float:left;height:90vh;padding:0;margin:0;" name="outline" id="frame1"
-        src="{% getGlobal 'basePath' %}legacy-outline.html" loading="lazy"></iframe>
-      <iframe id="content" style="width:80%;float:left;height:90vh;padding:0;margin:0;" name="content" id="frame2" src="" loading="lazy"></iframe>
-      <div class="use-modern-browser">Please use a modern browser to
-        view our website correctly. <a href="http://outdatedbrowser.com/">Update my browser now</a></div>
-    </div>
-  </div>
   <script>
+    // reduce FOUC for dark mode so it starts in dark rapidly if selected
+    (function () {
+      try {
+        var ls = globalThis.localStorage;
+        var stored = ls ? ls.getItem('app-hax-darkMode') : null;
+        var dark = stored !== null
+          ? stored === 'true'
+          : !!(globalThis.matchMedia && globalThis.matchMedia('(prefers-color-scheme: dark)').matches);
+        if (dark) {
+          document.body.classList.add('dark-mode');
+        } else {
+          document.body.classList.remove('dark-mode');
+        }
+      } catch (e) {}
+    })();
     globalThis.MicroFrontendRegistryConfig = globalThis.MicroFrontendRegistryConfig || {};
-    globalThis.HAXCMSContext="{% getHAXCMSContext %}";document.body.removeAttribute('no-js');globalThis.__appCDN="{% getGlobal 'cdn' %}";globalThis.__appForceUpgrade=true;</script>
+    globalThis.HAXCMSContext="{% getHAXCMSContext %}";globalThis.__appCDN=globalThis.__appCDN || "{% getGlobal 'assetBase' %}";</script>
   <script src="{% getGlobal 'basePath' %}build-haxcms.js"></script>
   <script src="{% getGlobal 'basePath' %}build.js"></script>
   <!-- 11ty specific override -->
