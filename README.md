@@ -58,6 +58,18 @@ The build follows the layout a HAXcms site has, so the result can be opened with
 - `<slug>/index.html`: the page as its own address, with the content already in the HTML so it can be read before any script runs
 - `llms.txt`, `robots.txt`, `sitemap.xml`, `rss.xml`, `atom.xml`, `lunrSearchIndex.json`, `manifest.json`, `service-worker.js`
 
+## Server rendering the web components (SSR)
+
+`npm run build` renders the web components in each page to HTML with [Lit SSR](https://lit.dev/docs/ssr/overview/), so a page's content is in the file before any script runs. Search engines, AI crawlers, feed readers and visitors with JavaScript off see the rendered elements (as declarative shadow DOM) instead of empty tags, and when the page loads the web components take over as usual.
+
+- It never fails a build. An element that throws, hangs, renders nothing or is too large keeps the markup you wrote and the rest of the page is still rendered. A page grows by at most 8 MB.
+- The build prints a summary (how many elements rendered, how many fell back and why) and writes `app/ssr-report.json`. It is a report, not a check.
+- Turn it off with `HAX11TY_SSR=0 npm run build`, or set `ssr: false` in `src/settings.js`.
+- Skip a single element by adding `data-ssr="false"` to it.
+- Rendered pages are larger (each element repeats its shadow styles; about 10x before compression for pages with many elements). Pages link one shared `assets/hax11ty-ssr.css` (design system variables and basic tag styles) that is removed again once the page's scripts take over.
+- `npm start` (the dev server) does not render. Run `npm run build` to see the result, or `npm run ssr` to render an existing `app/_site`.
+- The rendering kit in `scripts/ssr/` is copied from [haxcms-nodejs](https://github.com/haxtheweb/haxcms-nodejs/tree/main/src/lib/ssr) until it is published as a package.
+
 ## Publishing
 
 Publishing with hax11ty is a snap and we have multiple methods of publishing we support. As long as you stick to just modifying the files mentioned

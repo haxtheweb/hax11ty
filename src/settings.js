@@ -110,6 +110,11 @@ module.exports = () => {
         siteName: gitProject,
         // language to set on content
         lang: "en",
+        // server render the web components in each page at build time, so the
+        // HTML has their content before any script runs (SEO, AI crawlers, no JS).
+        // On by default; it never fails a build, elements that cannot be rendered
+        // keep their authored markup. false turns it off; so does HAX11TY_SSR=0
+        ssr: true,
         // git configuration settings. This stuff is relatively specific to HAXcms
         // so set these things to your gitOrg / project from above as needed
         git: {
