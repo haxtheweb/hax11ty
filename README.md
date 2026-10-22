@@ -41,10 +41,34 @@ There are already github actions setup that will work out of the box after you c
 
 All files that you'll want to modify are found in the `src/` directory
 
-- Add pages into the `src/content/` directory, `.md` with greymatter allows you to set title of the page and order
+- Add pages into the `src/content/` directory, `.md` or `.html` with greymatter allows you to set title, description, order and slug of the page
+  - A page's address comes from its file: `src/content/guides/install.md` is `/guides/install/`, and `src/content/guides/index.md` is the page for `/guides/`. Set `slug:` in the front matter to choose another.
+  - A page whose address starts with another page's (`guides/install` under `guides`) is nested under it in the menu. `order:` sorts pages within the same level.
+  - The first page in the outline is also the home page (`/`)
 - `src/files/` is where you can place files you manually want to include in your site, referenced within content
 - `src/styles.css` has some default settings and styles which you can modify
 - `src/settings.js` - modify theme used, additional settings
+
+## What gets built
+
+The build follows the layout a HAXcms site has, so the result can be opened with HAXcms or the HAX CLI:
+
+- `site.json`: the outline, with each page's `slug` and `location`
+- `pages/<slug>/index.html`: the page's content, and `pages/<slug>/index.md`, a markdown copy (linked from `llms.txt`)
+- `<slug>/index.html`: the page as its own address, with the content already in the HTML so it can be read before any script runs
+- `llms.txt`, `robots.txt`, `sitemap.xml`, `rss.xml`, `atom.xml`, `lunrSearchIndex.json`, `manifest.json`, `service-worker.js`
+
+## Server rendering the web components (SSR)
+
+`npm run build` renders the web components in each page to HTML with [Lit SSR](https://lit.dev/docs/ssr/overview/), so a page's content is in the file before any script runs. Search engines, AI crawlers, feed readers and visitors with JavaScript off see the rendered elements (as declarative shadow DOM) instead of empty tags, and when the page loads the web components take over as usual.
+
+- It never fails a build. An element that throws, hangs, renders nothing or is too large keeps the markup you wrote and the rest of the page is still rendered. A page grows by at most 8 MB.
+- The build prints a summary (how many elements rendered, how many fell back and why) and writes `app/ssr-report.json`. It is a report, not a check.
+- Turn it off with `HAX11TY_SSR=0 npm run build`, or set `ssr: false` in `src/settings.js`.
+- Skip a single element by adding `data-ssr="false"` to it.
+- Rendered pages are larger (each element repeats its shadow styles; about 10x before compression for pages with many elements). Pages link one shared `assets/hax11ty-ssr.css` (design system variables and basic tag styles) that is removed again once the page's scripts take over.
+- `npm start` (the dev server) does not render. Run `npm run build` to see the result, or `npm run ssr` to render an existing `app/_site`.
+- The rendering kit in `scripts/ssr/` is copied from [haxcms-nodejs](https://github.com/haxtheweb/haxcms-nodejs/tree/main/src/lib/ssr) until it is published as a package.
 
 ## Publishing
 

@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <base href="{% getGlobal 'basePath' %}" />
+{%- capture pageTitle %}{% if title %}{{ title | escape }} | {% endif %}{{ settings.siteName | escape }}{% endcapture %}
+{%- capture pageDescription %}{% if description %}{{ description | escape }}{% elsif haxSlug %}{{ content | hax11tyExcerpt: 200 | escape }}{% else %}{{ settings.siteDescription | escape }}{% endif %}{% endcapture %}
+{%- capture pageUrl %}{{ settings.url }}{{ page.url }}{% endcapture %}
 {% assign shellModules = "wc-autoload/wc-autoload.js,dynamic-import-registry/dynamic-import-registry.js,haxcms-elements/lib/core/haxcms-site-builder.js,haxcms-elements/lib/core/haxcms-site-store.js,haxcms-elements/lib/core/haxcms-site-router.js,haxcms-elements/lib/core/HAXCMSThemeWiring.js,haxcms-elements/lib/core/HAXCMSLitElementTheme.js,utils/utils.js" | split: "," %}
 {% if settings.useCdn %}
   <script type="importmap">
@@ -50,14 +53,17 @@
   <link rel="preconnect" crossorigin href="{% getGlobal 'preconnect' %}" />
   <link rel="preconnect" crossorigin href="https://fonts.googleapis.com" />
   <link rel="preconnect" crossorigin href="https://cdnjs.cloudflare.com" />
-  <title>{% getGlobal 'siteName' %}</title>
+  <title>{{ pageTitle }}</title>
   <meta name="application-name" content="{% getGlobal 'siteName' %}">
   <meta name="apple-mobile-web-app-title" content="{% getGlobal 'siteName' %}">
   <meta name="og:site_name" property="og:site_name" content="{% getGlobal 'siteName' %}" />
-  <meta name="og:title" property="og:title" content="{% getGlobal 'siteName' %}" />
-  <meta name="twitter:title" property="twitter:title" content="{% getGlobal 'siteName' %}" />
-  <meta name="og:url" property="og:url" content="{% getGlobal 'url' %}" />
+  <meta name="og:title" property="og:title" content="{{ pageTitle }}" />
+  <meta name="twitter:title" property="twitter:title" content="{{ pageTitle }}" />
+  <meta name="og:url" property="og:url" content="{{ pageUrl }}" />
   <meta name="twitter:site" property="twitter:site" content="{% getGlobal 'url' %}" />
+  <link rel="canonical" href="{{ pageUrl }}" />
+{% if haxSlug %}  <link rel="alternate" type="text/markdown" href="pages/{{ haxSlug }}/index.md" title="{{ pageTitle }} (markdown)" />
+{% endif %}
   <!-- build.js and build-haxcms.js are plain scripts at the end of body; preloading them is redundant -->
   <link rel="preload" href="{% getGlobal 'assetBase' %}wc-registry.json" as="fetch" crossorigin="anonymous" fetchpriority="high" />
 {% if settings.useCdn %}
@@ -85,12 +91,12 @@
   <meta name="msapplication-TileImage" content="{% getGlobal 'basePath' %}assets/icon-144x144.png">
   <meta name="msapplication-TileColor" content="{% getGlobal 'themeHexCode' %}">
   <meta name="msapplication-tap-highlight" content="no">
-  <meta name="description" content="{% getGlobal 'siteDescription' %}" />
+  <meta name="description" content="{{ pageDescription }}" />
   <meta name="og:type" property="og:type" content="article" />
-  <meta name="og:description" property="og:description" content="{% getGlobal 'siteDescription' %}" />
+  <meta name="og:description" property="og:description" content="{{ pageDescription }}" />
   <meta name="og:image" property="og:image" content="{% getGlobal 'themeImage' %}" />
   <meta name="twitter:card" property="twitter:card" content="summary_large_image" />
-  <meta name="twitter:description" property="twitter:description" content="{% getGlobal 'siteDescription' %}" />
+  <meta name="twitter:description" property="twitter:description" content="{{ pageDescription }}" />
   <meta name="twitter:image" property="twitter:image" content="{% getGlobal 'themeImage' %}" />
   <link rel="license" href="{% getLicenseInfo settings.siteLicense,'link' %}" title="{% getLicenseInfo settings.siteLicense,'name' %}" />
   <meta name="twitter:creator" content="@{% getGlobal 'twitterName' %}" />
@@ -183,6 +189,10 @@
     }
 
   </style>
+  <noscript>
+    <!-- without JavaScript the loading screen would never go away and would cover the page -->
+    <style>#loading { display: none !important; }</style>
+  </noscript>
   <style id="loadingstyles">
     haxcms-site-builder {
       display: block;
@@ -311,6 +321,11 @@
           return;
         }
         loadingDismissed = true;
+        // styles added for server rendered content only apply until the app takes over
+        var ssrOnly = document.querySelectorAll('[data-ssr-only]');
+        for (var i = 0; i < ssrOnly.length; i++) {
+          ssrOnly[i].remove();
+        }
         var loadingEl = document.querySelector('#loading');
         if (!loadingEl) {
           return;

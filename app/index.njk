@@ -2,4 +2,7 @@
 layout: base.liquid
 eleventyExcludeFromCollections: true
 ---
-<haxcms-site-builder id="site" file="site.json"></haxcms-site-builder>
+{#- The home page is the first page of the outline; its body is in the shell so it is readable before any script runs -#}
+<haxcms-site-builder id="site" file="site.json">{% set home = collections.hax11tyOutline[0] %}{% if home %}
+{{ home.page.templateContent | safe }}
+{% endif %}</haxcms-site-builder>

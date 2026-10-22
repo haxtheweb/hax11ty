@@ -27,6 +27,11 @@ jobs:
       - name: set env variable CNAME
         run: echo 'CNAME=${{ steps.cname.outputs.content }}' >> $GITHUB_ENV
         
+      - name: Install and test 🧪
+        run: |
+          yarn install
+          yarn run test
+
       - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
         run: |
           yarn install

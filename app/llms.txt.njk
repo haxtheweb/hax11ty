@@ -17,8 +17,10 @@ The canonical structure is expressed in `site.json` using JSON Outline Schema (`
 
 ## Pages
 
-{% for page in collections.searchDataOrder -%}
-- [{{ page.data.title }}]({{ settings.url }}{{ page.url }})
+Each page is available as markdown. The same page as a web page is at `{{ settings.url }}/<slug>/`.
+
+{% for entry in collections.hax11tyOutline -%}
+- [{{ entry.outline.title }}]({{ settings.url }}/pages/{{ entry.outline.slug }}/index.md){% if entry.outline.description %}: {{ entry.outline.description }}{% endif %}
 {% endfor %}
 ## Optional
 
