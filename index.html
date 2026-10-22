@@ -170,6 +170,10 @@
     }
 
   </style>
+  <noscript>
+    <!-- without JavaScript the loading screen would never go away and would cover the page -->
+    <style>#loading { display: none !important; }</style>
+  </noscript>
   <style id="loadingstyles">
     haxcms-site-builder {
       display: block;
@@ -298,6 +302,11 @@
           return;
         }
         loadingDismissed = true;
+        // styles added for server rendered content only apply until the app takes over
+        var ssrOnly = document.querySelectorAll('[data-ssr-only]');
+        for (var i = 0; i < ssrOnly.length; i++) {
+          ssrOnly[i].remove();
+        }
         var loadingEl = document.querySelector('#loading');
         if (!loadingEl) {
           return;

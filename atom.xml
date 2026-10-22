@@ -3,7 +3,7 @@
   <title>hax11ty</title>
   <link href="https://haxtheweb.github.io/hax11ty/atom.xml" rel="self" />
   <subtitle>project documentation</subtitle>
-  <updated>2026-10-22T19:11:32.660+00:00</updated>
+  <updated>2026-10-22T19:39:44.813+00:00</updated>
   <author>
       <name>btopro</name>
   </author>
@@ -11,8 +11,8 @@
   <entry>
     <title>About</title>
     <id>https://haxtheweb.github.io/hax11ty/about/</id>
-    <updated>2026-10-22T19:11:32.659+00:00</updated>
-    <published>2026-10-22T19:11:32.659+00:00</published>
+    <updated>2026-10-22T19:39:44.813+00:00</updated>
+    <published>2026-10-22T19:39:44.813+00:00</published>
     <summary></summary>
     <link href="https://haxtheweb.github.io/hax11ty/about/"/>
     <content type="html">
@@ -29,8 +29,8 @@
   <entry>
     <title>Get involved!</title>
     <id>https://haxtheweb.github.io/hax11ty/contact/</id>
-    <updated>2026-10-22T19:11:32.659+00:00</updated>
-    <published>2026-10-22T19:11:32.659+00:00</published>
+    <updated>2026-10-22T19:39:44.813+00:00</updated>
+    <published>2026-10-22T19:39:44.813+00:00</published>
     <summary></summary>
     <link href="https://haxtheweb.github.io/hax11ty/contact/"/>
     <content type="html">
@@ -41,8 +41,8 @@
   <entry>
     <title>Examples</title>
     <id>https://haxtheweb.github.io/hax11ty/examples/</id>
-    <updated>2026-10-22T19:11:32.660+00:00</updated>
-    <published>2026-10-22T19:11:32.660+00:00</published>
+    <updated>2026-10-22T19:39:44.813+00:00</updated>
+    <published>2026-10-22T19:39:44.813+00:00</published>
     <summary></summary>
     <link href="https://haxtheweb.github.io/hax11ty/examples/"/>
     <content type="html">
@@ -58,8 +58,8 @@
   <entry>
     <title>Installation</title>
     <id>https://haxtheweb.github.io/hax11ty/install/</id>
-    <updated>2026-10-22T19:11:32.660+00:00</updated>
-    <published>2026-10-22T19:11:32.660+00:00</published>
+    <updated>2026-10-22T19:39:44.813+00:00</updated>
+    <published>2026-10-22T19:39:44.813+00:00</published>
     <summary></summary>
     <link href="https://haxtheweb.github.io/hax11ty/install/"/>
     <content type="html">
@@ -85,8 +85,8 @@
   <entry>
     <title>Roadmap</title>
     <id>https://haxtheweb.github.io/hax11ty/roadmap/</id>
-    <updated>2026-10-22T19:11:32.660+00:00</updated>
-    <published>2026-10-22T19:11:32.660+00:00</published>
+    <updated>2026-10-22T19:39:44.813+00:00</updated>
+    <published>2026-10-22T19:39:44.813+00:00</published>
     <summary></summary>
     <link href="https://haxtheweb.github.io/hax11ty/roadmap/"/>
     <content type="html">
@@ -105,8 +105,8 @@
   <entry>
     <title>Why this is better</title>
     <id>https://haxtheweb.github.io/hax11ty/why/</id>
-    <updated>2026-10-22T19:11:32.660+00:00</updated>
-    <published>2026-10-22T19:11:32.660+00:00</published>
+    <updated>2026-10-22T19:39:44.813+00:00</updated>
+    <published>2026-10-22T19:39:44.813+00:00</published>
     <summary></summary>
     <link href="https://haxtheweb.github.io/hax11ty/why/"/>
     <content type="html">
