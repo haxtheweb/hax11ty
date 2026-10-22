@@ -46,8 +46,10 @@
   <meta name="og:site_name" property="og:site_name" content="hax11ty" />
   <meta name="og:title" property="og:title" content="hax11ty" />
   <meta name="twitter:title" property="twitter:title" content="hax11ty" />
-  <meta name="og:url" property="og:url" content="https://haxtheweb.github.io/hax11ty" />
+  <meta name="og:url" property="og:url" content="https://haxtheweb.github.io/hax11ty/" />
   <meta name="twitter:site" property="twitter:site" content="https://haxtheweb.github.io/hax11ty" />
+  <link rel="canonical" href="https://haxtheweb.github.io/hax11ty/" />
+
   <!-- build.js and build-haxcms.js are plain scripts at the end of body; preloading them is redundant -->
   <link rel="preload" href="./wc-registry.json" as="fetch" crossorigin="anonymous" fetchpriority="high" />
 
@@ -77,7 +79,7 @@
   <meta name="twitter:card" property="twitter:card" content="summary_large_image" />
   <meta name="twitter:description" property="twitter:description" content="project documentation" />
   <meta name="twitter:image" property="twitter:image" content="assets/banner.jpg" />
-  <link rel="license" href="" title="" />
+  <link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" title="" />
   <meta name="twitter:creator" content="@" />
   
   <script>
@@ -340,7 +342,17 @@
       <h1>Loading hax11ty</h1>
     </div>
   </section>
-  <haxcms-site-builder id="site" file="site.json"></haxcms-site-builder>
+  <haxcms-site-builder id="site" file="site.json">
+<p>HAX11ty is a merger between HAX and 11ty. It uses these technologies in the following way:
+<ul>
+  <li>User edits via HAX (future) or modifies files locally</li>
+  <li>hax11ty script watches for changes and rebuilds files w/ 11ty, refreshing the screen</li>
+  <li>this is compiled to a valid HAXcms data package to be used either completely static with a CDN or locally in HAXcms PHP version</li>
+</ul>
+</p>
+
+</haxcms-site-builder>
+
   <script>
     // reduce FOUC for dark mode so it starts in dark rapidly if selected
     (function () {

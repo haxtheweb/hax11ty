@@ -40,14 +40,17 @@
   <link rel="preconnect" crossorigin href="/hax11ty/" />
   <link rel="preconnect" crossorigin href="https://fonts.googleapis.com" />
   <link rel="preconnect" crossorigin href="https://cdnjs.cloudflare.com" />
-  <title>hax11ty</title>
+  <title>About | hax11ty</title>
   <meta name="application-name" content="hax11ty">
   <meta name="apple-mobile-web-app-title" content="hax11ty">
   <meta name="og:site_name" property="og:site_name" content="hax11ty" />
-  <meta name="og:title" property="og:title" content="hax11ty" />
-  <meta name="twitter:title" property="twitter:title" content="hax11ty" />
-  <meta name="og:url" property="og:url" content="https://haxtheweb.github.io/hax11ty" />
+  <meta name="og:title" property="og:title" content="About | hax11ty" />
+  <meta name="twitter:title" property="twitter:title" content="About | hax11ty" />
+  <meta name="og:url" property="og:url" content="https://haxtheweb.github.io/hax11ty/about/" />
   <meta name="twitter:site" property="twitter:site" content="https://haxtheweb.github.io/hax11ty" />
+  <link rel="canonical" href="https://haxtheweb.github.io/hax11ty/about/" />
+  <link rel="alternate" type="text/markdown" href="pages/about/index.md" title="About | hax11ty (markdown)" />
+
   <!-- build.js and build-haxcms.js are plain scripts at the end of body; preloading them is redundant -->
   <link rel="preload" href="./wc-registry.json" as="fetch" crossorigin="anonymous" fetchpriority="high" />
 
@@ -70,12 +73,12 @@
   <meta name="msapplication-TileImage" content="/hax11ty/assets/icon-144x144.png">
   <meta name="msapplication-TileColor" content="#55FF55">
   <meta name="msapplication-tap-highlight" content="no">
-  <meta name="description" content="project documentation" />
+  <meta name="description" content="HAX11ty is a merger between HAX and 11ty. It uses these technologies in the following way: User edits via HAX (future) or modifies files locally hax11ty script watches for changes and rebuilds files w" />
   <meta name="og:type" property="og:type" content="article" />
-  <meta name="og:description" property="og:description" content="project documentation" />
+  <meta name="og:description" property="og:description" content="HAX11ty is a merger between HAX and 11ty. It uses these technologies in the following way: User edits via HAX (future) or modifies files locally hax11ty script watches for changes and rebuilds files w" />
   <meta name="og:image" property="og:image" content="assets/banner.jpg" />
   <meta name="twitter:card" property="twitter:card" content="summary_large_image" />
-  <meta name="twitter:description" property="twitter:description" content="project documentation" />
+  <meta name="twitter:description" property="twitter:description" content="HAX11ty is a merger between HAX and 11ty. It uses these technologies in the following way: User edits via HAX (future) or modifies files locally hax11ty script watches for changes and rebuilds files w" />
   <meta name="twitter:image" property="twitter:image" content="assets/banner.jpg" />
   <link rel="license" href="" title="" />
   <meta name="twitter:creator" content="@" />
@@ -341,12 +344,13 @@
     </div>
   </section>
   <haxcms-site-builder id="site" file="site.json">
-<p>We loves us some HAX11ty and dogfood it for many project sites.</p>
+<p>HAX11ty is a merger between HAX and 11ty. It uses these technologies in the following way:
 <ul>
-	<li>This site</a></li>
-	<li><a href="https://tsv-dbfp.libraries.psu.edu/" target="_blank">Digital Beaumont and Fletcher</a></li>
-	<li><a href="https://wcfactory.js.org/" target="_blank">WCFactory</a></li>
+  <li>User edits via HAX (future) or modifies files locally</li>
+  <li>hax11ty script watches for changes and rebuilds files w/ 11ty, refreshing the screen</li>
+  <li>this is compiled to a valid HAXcms data package to be used either completely static with a CDN or locally in HAXcms PHP version</li>
 </ul>
+</p>
 
 </haxcms-site-builder>
   <script>

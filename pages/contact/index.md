@@ -1,0 +1,1 @@
+The HAXTheWeb team hangs out on slack and would love to chat about all things 11ty, HAX11ty, HAX, and beyond. HAX11ty is one of many creations in the HAX universe and we'd love to hear from those using it. [Join us on Discord today!](https://discord.gg/aCGxmRHEJP) or follow us on \[X\] [@HAXTheWeb](https://x.com/haxtheweb)

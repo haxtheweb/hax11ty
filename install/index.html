@@ -40,18 +40,22 @@
   <link rel="preconnect" crossorigin href="/hax11ty/" />
   <link rel="preconnect" crossorigin href="https://fonts.googleapis.com" />
   <link rel="preconnect" crossorigin href="https://cdnjs.cloudflare.com" />
-  <title>hax11ty</title>
+  <title>Installation | hax11ty</title>
   <meta name="application-name" content="hax11ty">
   <meta name="apple-mobile-web-app-title" content="hax11ty">
   <meta name="og:site_name" property="og:site_name" content="hax11ty" />
-  <meta name="og:title" property="og:title" content="hax11ty" />
-  <meta name="twitter:title" property="twitter:title" content="hax11ty" />
-  <meta name="og:url" property="og:url" content="https://haxtheweb.github.io/hax11ty" />
+  <meta name="og:title" property="og:title" content="Installation | hax11ty" />
+  <meta name="twitter:title" property="twitter:title" content="Installation | hax11ty" />
+  <meta name="og:url" property="og:url" content="https://haxtheweb.github.io/hax11ty/install/" />
   <meta name="twitter:site" property="twitter:site" content="https://haxtheweb.github.io/hax11ty" />
+  <link rel="canonical" href="https://haxtheweb.github.io/hax11ty/install/" />
+  <link rel="alternate" type="text/markdown" href="pages/install/index.md" title="Installation | hax11ty (markdown)" />
+
   <!-- build.js and build-haxcms.js are plain scripts at the end of body; preloading them is redundant -->
   <link rel="preload" href="./wc-registry.json" as="fetch" crossorigin="anonymous" fetchpriority="high" />
 
   <link rel="modulepreload" href="./build/es6/node_modules/@haxtheweb/clean-two/clean-two.js" crossorigin="anonymous" />
+  <link rel="modulepreload" href="./build/es6/node_modules/@haxtheweb/code-sample/code-sample.js" />
   <link rel="preload" href="/hax11ty/theme/theme.css" as="style" />
   <meta name="generator" content="HAX11ty" />
   <link rel="manifest" href="/hax11ty/manifest.json">
@@ -70,12 +74,12 @@
   <meta name="msapplication-TileImage" content="/hax11ty/assets/icon-144x144.png">
   <meta name="msapplication-TileColor" content="#55FF55">
   <meta name="msapplication-tap-highlight" content="no">
-  <meta name="description" content="project documentation" />
+  <meta name="description" content="Quick Installation Script Manual Installation This is the fastest way to get up and running. If you instead want to build new sites with this and push them back up to gh-pages rapidly, start by using" />
   <meta name="og:type" property="og:type" content="article" />
-  <meta name="og:description" property="og:description" content="project documentation" />
+  <meta name="og:description" property="og:description" content="Quick Installation Script Manual Installation This is the fastest way to get up and running. If you instead want to build new sites with this and push them back up to gh-pages rapidly, start by using" />
   <meta name="og:image" property="og:image" content="assets/banner.jpg" />
   <meta name="twitter:card" property="twitter:card" content="summary_large_image" />
-  <meta name="twitter:description" property="twitter:description" content="project documentation" />
+  <meta name="twitter:description" property="twitter:description" content="Quick Installation Script Manual Installation This is the fastest way to get up and running. If you instead want to build new sites with this and push them back up to gh-pages rapidly, start by using" />
   <meta name="twitter:image" property="twitter:image" content="assets/banner.jpg" />
   <link rel="license" href="" title="" />
   <meta name="twitter:creator" content="@" />
@@ -341,13 +345,22 @@
     </div>
   </section>
   <haxcms-site-builder id="site" file="site.json">
-<p>HAX11ty is a merger between HAX and 11ty. It uses these technologies in the following way:
-<ul>
-  <li>User edits via HAX (future) or modifies files locally</li>
-  <li>hax11ty script watches for changes and rebuilds files w/ 11ty, refreshing the screen</li>
-  <li>this is compiled to a valid HAXcms data package to be used either completely static with a CDN or locally in HAXcms PHP version</li>
-</ul>
-</p>
+<h2> Quick Installation Script </h2>
+<code-sample copy-clipboard-button>
+  <template>
+    curl -fsSL https://raw.githubusercontent.com/haxtheweb/hax11ty/master/hax11tyme.sh -o hax11tyme.sh && sh hax11tyme.sh
+  </template>
+</code-sample>
+<h2> Manual Installation </h2>
+<code-sample copy-clipboard-button>
+<template>
+  git clone https://github.com/haxtheweb/hax11ty.git
+  cd hax11ty
+  npm install
+  npm start
+</template>
+</code-sample>
+<p>This is the fastest way to get up and running. If you instead want to build new sites with this and push them back up to gh-pages rapidly, start by <a href="https://github.com/haxtheweb/hax11ty/generate">using this repo as a template</a>. This will copy the github actions workflows as well so all you need to do is change our repo in the git clone above to yours in order to start on what will easily become a live website!</p>
 
 </haxcms-site-builder>
   <script>

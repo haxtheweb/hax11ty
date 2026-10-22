@@ -13,12 +13,14 @@ The canonical structure is expressed in `site.json` using JSON Outline Schema (`
 
 ## Pages
 
-- [About](https://haxtheweb.github.io/hax11ty/content/about/)
-- [Examples](https://haxtheweb.github.io/hax11ty/content/examples/)
-- [Get involved!](https://haxtheweb.github.io/hax11ty/content/contact/)
-- [Installation](https://haxtheweb.github.io/hax11ty/content/install/)
-- [Roadmap](https://haxtheweb.github.io/hax11ty/content/roadmap/)
-- [Why this is better](https://haxtheweb.github.io/hax11ty/content/why/)
+Each page is available as markdown. The same page as a web page is at `https://haxtheweb.github.io/hax11ty/<slug>/`.
+
+- [About](https://haxtheweb.github.io/hax11ty/pages/about/index.md)
+- [Examples](https://haxtheweb.github.io/hax11ty/pages/examples/index.md)
+- [Installation](https://haxtheweb.github.io/hax11ty/pages/install/index.md)
+- [Why this is better](https://haxtheweb.github.io/hax11ty/pages/why/index.md)
+- [Roadmap](https://haxtheweb.github.io/hax11ty/pages/roadmap/index.md)
+- [Get involved!](https://haxtheweb.github.io/hax11ty/pages/contact/index.md)
 
 ## Optional
 
