@@ -18,6 +18,12 @@
  *   app/.well-known/agent-skills/ <- src/boilerplate/site/.well-known/agent-skills/
  *     (only the static skills; api-catalog and security.txt describe a running
  *     HAXcms server and are templates, so a static site does not ship them)
+ *   app/_haxcms/site/<file>    <- src/boilerplate/site/<file>, for each file in
+ *     app/lib/managed.js MANAGED_FILES: the HAXcms managed-file templates
+ *     (robots.txt, manifest.json, service-worker.js, ...). The build renders
+ *     these exact files, so a site from hax11ty matches one from HAXcms.
+ *   app/assets/<file>          <- src/boilerplate/site/assets/<file>, only for
+ *     boilerplate icons the site does not have yet (a site's own icons win)
  *
  * Locales: haxcms-nodejs ships a translation file per element per language
  * (tens of thousands of files). A static site only needs them for non-English
@@ -40,11 +46,15 @@ import {
 } from "node:fs";
 import os from "node:os";
 import path from "node:path";
+import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
 
 const UPSTREAM = "https://github.com/haxtheweb/haxcms-nodejs";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const app = path.join(root, "app");
+const { MANAGED_FILES } = createRequire(import.meta.url)(
+  path.join(app, "lib", "managed.js"),
+);
 
 const args = process.argv.slice(2);
 const flag = (name) => args.includes(`--${name}`);
@@ -84,7 +94,16 @@ function resolveSource() {
       process.exit(1);
     }
   }
-  const sparse = git(dir, "sparse-checkout", "set", "src/public", "src/boilerplate/site/.well-known/agent-skills");
+  const sparse = git(
+    dir,
+    "sparse-checkout",
+    "set",
+    "--no-cone",
+    "/src/public/",
+    "/src/boilerplate/site/.well-known/agent-skills/",
+    "/src/boilerplate/site/assets/",
+    ...MANAGED_FILES.map((file) => `/src/boilerplate/site/${file}`),
+  );
   if (sparse.status !== 0) {
     console.error(sparse.stderr);
     process.exit(1);
@@ -177,6 +196,24 @@ try {
     mirror(skills, path.join(app, ".well-known", "agent-skills"), {
       skipLocales: false,
     });
+  }
+  const boilerplate = path.join(source.dir, "src", "boilerplate", "site");
+  for (const file of MANAGED_FILES) {
+    const from = path.join(boilerplate, file);
+    if (!existsSync(from)) {
+      console.error(`haxcms-nodejs has no boilerplate ${file}; update MANAGED_FILES`);
+      process.exit(1);
+    }
+    copyIfChanged(from, path.join(app, "_haxcms", "site", file));
+  }
+  const icons = path.join(boilerplate, "assets");
+  for (const name of existsSync(icons) ? readdirSync(icons) : []) {
+    if (/^(icon-\d+x\d+\.png|upgrade-browser\.html)$/.test(name)) {
+      const dest = path.join(app, "assets", name);
+      if (name === "upgrade-browser.html" || !existsSync(dest)) {
+        copyIfChanged(path.join(icons, name), dest);
+      }
+    }
   }
   const commit = git(source.dir, "rev-parse", "HEAD").stdout.trim();
   const provenance = {

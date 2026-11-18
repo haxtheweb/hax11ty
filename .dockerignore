@@ -1,0 +1,6 @@
+node_modules
+src/custom/node_modules
+dist
+app/_site
+app/ssr-report.json
+.git

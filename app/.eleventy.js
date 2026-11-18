@@ -1,19 +1,14 @@
 const SITEDIR = "_site";
 const CONTENTDIR = "content";
 //let Nunjucks = require("nunjucks");  
-const crypto = require('crypto');
 const fs = require('fs-extra');
-const matter = require('gray-matter');
+const matter = require('@11ty/gray-matter');
 const { buildOutline, pageMetadata } = require('./lib/outline.js');
-const xmlFiltersPlugin = require('eleventy-xml-plugin');
-const pluginRss = require("@11ty/eleventy-plugin-rss");
+const { rssPlugin } = require("@11ty/eleventy-plugin-rss");
 const settings = require('./_data/settings.js')();
 const wcRegistry = require('./wc-registry.json');
 module.exports = function (eleventyConfig) {
-  if (!eleventyConfig.dir) {
-    eleventyConfig.dir = {};
-  }
-  eleventyConfig.dir.output = SITEDIR;
+  eleventyConfig.setOutputDirectory(SITEDIR);
   // establish environment nunjuck things for templating
   /*let nunjucksEnvironment = new Nunjucks.Environment(
     new Nunjucks.FileSystemLoader("_includes")
@@ -21,14 +16,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary("njk", nunjucksEnvironment);*/
   eleventyConfig.setTemplateFormats(["html", "md", "njk", "11ty.js"]);
 
-  // add plugins to handle xml and rss files
-  eleventyConfig.addPlugin(xmlFiltersPlugin);
-  eleventyConfig.addPlugin(pluginRss);
+  // feed filters (dateToRfc3339, getNewestCollectionItemDate, htmlToAbsoluteUrls)
+  eleventyConfig.addPlugin(rssPlugin);
 
   // copy these but don't process them
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy({
-    "theme": "theme",
     "../src/custom/build": "custom/build",
     "../src/files": "files",
     "build.js": "build.js",
@@ -43,68 +36,6 @@ module.exports = function (eleventyConfig) {
       "build": "build",
     });
   }
-  // collections make it easier to work with the data in templates
-  eleventyConfig.addCollection("manifest", function (collection) {
-    return JSON.stringify({
-      name: settings.siteName,
-      short_name: settings.siteName,
-      description: settings.siteDescription,
-      icons: [
-        {
-          "src": "assets/android-icon-36x36.png",
-          "sizes": "36x36",
-          "type": "image/png",
-          "density": "0.75"
-        },
-        {
-          "src": "assets/android-icon-48x48.png",
-          "sizes": "48x48",
-          "type": "image/png",
-          "density": "1.0"
-        },
-        {
-          "src": "assets/android-icon-72x72.png",
-          "sizes": "72x72",
-          "type": "image/png",
-          "density": "1.5"
-        },
-        {
-          "src":"assets/android-icon-96x96.png",
-          "sizes": "96x96",
-          "type": "image/png",
-          "density": "2.0"
-        },
-        {
-          "src": "assets/android-icon-144x144.png",
-          "sizes": "144x144",
-          "type": "image/png",
-          "density": "3.0"
-        },
-        {
-          "src": "assets/android-icon-192x192.png",
-          "sizes": "192x192",
-          "type": "image/png",
-          "density": "4.0",
-          "purpose": "any maskable" 
-        },
-        {
-          "src": "assets/ms-icon-310x310.png",
-          "sizes": "512x512",
-          "type": "image/png",
-          "density": "4.0"
-        }
-      ],
-      scope: settings.basePath,
-      start_url: settings.basePath,
-      display: "standalone",
-      theme_color: settings.themeHexCode,
-      background_color: settings.themeHexCode,
-      url: settings.url,
-      lang: settings.lang,
-      screenshots: [],
-      orientation: "portrait"
-    }, null, 2);
-  });
   // Read off the content and generate preload statements to match
   eleventyConfig.addShortcode('getContentPreloads', function(content){
     if (!content) {
@@ -158,24 +89,6 @@ module.exports = function (eleventyConfig) {
     const content = article.templateContent;
     excerpt = content.replace(/<\/?[^>]+(>|$)/g, "").replace(/\\/g, " ").replace(/\n/g, "").substr(0, 1000).trim();
     return excerpt;
-  });
-  eleventyConfig.addCollection("swHashData", function (collection) {
-    let items = collection.items.map(({ outputPath, url, data }, i) => {
-      if (!url.includes("/build/")) {
-        return [
-          (settings.basePath + url).replace('//', '/'),
-          hashFromValue(data.page.date.toString()).substr(0, 16).replace(/\//g,'z').replace(/\+/g,'y').replace(/\=/g,'x').replace(/\-/g,'w', settings.siteUuid)
-        ];
-      }
-    });
-    items.push([settings.basePath,items[0][1]]);
-    const itemsFiltered = items.filter((item) => {
-      if (item && item.length > 0) {
-        return true;
-      }
-      return false;
-    });
-    return JSON.stringify(itemsFiltered, null, 2);
   });
   // simplify access to the flobal settings
   eleventyConfig.addCollection("globals", function (collection) {
@@ -331,15 +244,4 @@ function getLicenseInfo(license = 'by-sa')
       return list[license];
     }
     return {};
-}
-function hashFromValue(value = '', uuid = '')
-{
-  return hmacBase64(value, uuid);
-}
-function hmacBase64(data, key)
-{
-  var buf1 = crypto.createHmac("sha256", "0").update(data).digest();
-  var buf2 = Buffer.from(key);
-  // generate the hash
-  return Buffer.concat([buf1, buf2]).toString('base64');
 }

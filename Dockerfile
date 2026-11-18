@@ -1,15 +1,12 @@
-FROM node:12-alpine as dev
+FROM node:22-slim AS dev
 WORKDIR /app
-COPY package.json .
-RUN npm install
 COPY . .
-CMD [ "npm", "start" ]
+RUN yarn install --frozen-lockfile
+EXPOSE 8080
+CMD [ "yarn", "start", "--port=8080" ]
 
-FROM node:12-alpine as build
-WORKDIR /app
-COPY --from=dev /app /app
-RUN npm build
-CMD [ "npm", "build" ]
+FROM dev AS build
+RUN yarn run build
 
-FROM nginx as prod
-COPY --from=build /app/_site /usr/share/nginx/html
+FROM nginx AS prod
+COPY --from=build /app/dist /usr/share/nginx/html

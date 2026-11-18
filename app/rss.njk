@@ -8,7 +8,7 @@ eleventyExcludeFromCollections: true
   <subtitle>{{ settings.siteDescription }}</subtitle>
   <link href="{{ settings.url }}/rss.xml" rel="self"/>
   <link href="{{ settings.url }}"/>
-  <updated>{{ collections.all | rssLastUpdatedDate }}</updated>
+  <updated>{{ collections.all | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ settings.url }}</id>
   <author>
     <name>{{ settings.siteAuthorName }}</name>
@@ -19,7 +19,7 @@ eleventyExcludeFromCollections: true
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}"/>
-    <updated>{{ post.date | rssDate }}</updated>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
     <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
   </entry>

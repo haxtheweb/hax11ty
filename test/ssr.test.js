@@ -128,3 +128,16 @@ test("HAX11TY_SSR=0 or ssr: false turns it off", async () => {
   assert.strictEqual(ssrEnabled({ HAX11TY_SSR: "off" }, {}), false);
   assert.strictEqual(ssrEnabled({ HAX11TY_SSR: "1" }, { ssr: false }), true);
 });
+
+test("rendered markup never points at a file on the build machine", async () => {
+  const { publishUrls } = await import("../scripts/ssr/publishUrls.mjs");
+  const { pathToFileURL } = await import("node:url");
+  const buildDir = fs.mkdtempSync(path.join(os.tmpdir(), "hax11ty-build-"));
+  const inBuild = pathToFileURL(buildDir).href + "/@haxtheweb/simple-icon/lib/simple-icons.js/../svgs/code.svg";
+  const published = publishUrls(`<image href="${inBuild}">`, buildDir, "./build/es6/node_modules/");
+  assert.strictEqual(published, '<image href="./build/es6/node_modules/@haxtheweb/simple-icon/lib/svgs/code.svg">');
+  const cdn = publishUrls(`<img src='${inBuild}'>`, buildDir, "https://cdn.example/build/es6/node_modules/");
+  assert.strictEqual(cdn, "<img src='https://cdn.example/build/es6/node_modules/@haxtheweb/simple-icon/lib/svgs/code.svg'>");
+  const elsewhere = '<img src="file:///etc/hosts">';
+  assert.strictEqual(publishUrls(elsewhere, buildDir, "./"), elsewhere, "other file: URLs are left for the worker to refuse");
+});

@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
   <title>{{ settings.siteName }}</title>
   <link href="{{ settings.url }}/atom.xml" rel="self" />
   <subtitle>{{ settings.siteDescription }}</subtitle>
-  <updated>{{ collections.all | rssLastUpdatedDate }}</updated>
+  <updated>{{ collections.all | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <author>
       <name>{{ settings.siteAuthorName }}</name>
   </author>
@@ -16,8 +16,8 @@ eleventyExcludeFromCollections: true
   <entry>
     <title>{{ post.data.title }}</title>
     <id>{{ settings.url }}{{ post.url | url }}</id>
-    <updated>{{ post.date | rssDate }}</updated>
-    <published>{{ post.date | rssDate }}</published>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <published>{{ post.date | dateToRfc3339 }}</published>
     <summary>{{ post.data.description }}</summary>
     <link href="{{ settings.url }}{{ post.url | url }}"/>
     <content type="html">

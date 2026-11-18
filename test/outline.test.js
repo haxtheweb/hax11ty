@@ -54,8 +54,8 @@ test("siblings sort by order then title and get consecutive order values", () =>
 
 test("items point at the page folder layout HAXcms uses", () => {
   const [item] = buildOutline([entry("guides/install")]);
-  assert.strictEqual(item.location, "pages/guides/install/index.html");
   assert.match(item.id, /^item-[0-9a-f]{16}$/);
+  assert.strictEqual(item.location, `pages/${item.id}/index.html`);
 });
 
 test("duplicate slugs fail the build", () => {

@@ -1,5 +1,5 @@
 /**
- * pages/<slug>/index.html: the page body alone, without the site shell. This is
+ * pages/<item id>/index.html: the page body alone, without the site shell. This is
  * the file site.json points at and the HAXcms page loader fetches, the same
  * layout and file name HAXcms writes for every page.
  */
