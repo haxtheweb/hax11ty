@@ -14,12 +14,13 @@
 const crypto = require("crypto");
 const nunjucks = require("nunjucks");
 
-// Files a static site ships, as named in haxcms-nodejs getManagedTemplateFiles().
-// Left out on purpose: index.html (hax11ty renders its own, with page
-// content), llms.txt (generated from the outline), package.json, config.php,
-// index.php, AGENTS.md, the SCORM files, web-dev-server config and the
-// .well-known server descriptions (security.txt, api-catalog), which describe
-// a running HAXcms server rather than a static copy.
+// What hax11ty does with each file haxcms-nodejs manages
+// (getManagedTemplateFiles(), plus index.php and config.php, which
+// rebuildManagedFiles() adds). `npm run sync-assets` fails when upstream
+// manages a file that is in none of these three lists, so a new managed file
+// is a decision here, never silent drift.
+//
+// Rendered from the boilerplate template by haxcms-managed.11ty.js:
 const MANAGED_FILES = [
   ".htaccess",
   "404.html",
@@ -31,6 +32,29 @@ const MANAGED_FILES = [
   "robots.txt",
   "service-worker.js",
 ];
+// Copied unchanged by sync-assets (they are not templates):
+const COPIED_MANAGED_FILES = [
+  "build.js",
+  "build-haxcms.js",
+  "assets/upgrade-browser.html",
+];
+// Not shipped, and why:
+const SKIPPED_MANAGED_FILES = {
+  "index.html": "hax11ty renders its own, with each page's content in it",
+  "ghpages.html": "the gh-pages fallback is the rendered 404.html",
+  "package.json": "describes a HAXcms-managed site, not this generator",
+  "AGENTS.md": "only its HAXcms-owned block is managed; a site's own file",
+  "web-dev-server.haxcms.config.cjs": "local HAXcms development tooling",
+  ".well-known/security.txt": "describes a running HAXcms server",
+  ".well-known/api-catalog": "describes a running HAXcms server",
+  "index.php": "hax11ty writes its own (app/index.php.njk)",
+  "config.php": "PHP hosting configuration for a HAXcms backend",
+  "imsmanifest.xml": "SCORM packaging belongs to HAXcms export",
+  "imsmd_rootv1p2p1.xsd": "SCORM packaging belongs to HAXcms export",
+  "imscp_rootv1p1p2.xsd": "SCORM packaging belongs to HAXcms export",
+  "adlcp_rootv1p2.xsd": "SCORM packaging belongs to HAXcms export",
+  "ims_xml.xsd": "SCORM packaging belongs to HAXcms export",
+};
 
 // Files the service worker precaches; the rest are cached as visitors use them.
 const SHELL_FILES = ["index.html", "site.json", "manifest.json", "offline.html"];
@@ -189,6 +213,8 @@ function renderManagedFile(file, source, settings) {
 
 module.exports = {
   MANAGED_FILES,
+  COPIED_MANAGED_FILES,
+  SKIPPED_MANAGED_FILES,
   renderManagedFile,
   templateVars,
   escapeHTMLAttribute,

@@ -89,7 +89,7 @@ A build that includes `build/` falls back to the CDN at runtime if that folder i
 
 ### Keeping the assets current
 
-`app/build/` (the unbundled web components), `app/wc-registry*.json` and `app/.well-known/agent-skills/` are copies of what [haxcms-nodejs](https://github.com/haxtheweb/haxcms-nodejs) ships. Refresh them with:
+`app/build/` (the unbundled web components), `build.js` / `build-haxcms.js`, `app/wc-registry*.json`, `app/.well-known/agent-skills/`, the managed-file templates in `app/_haxcms/site/` (robots.txt, manifest.json, service-worker.js, ...) and the SSR kit in `scripts/ssr/` are copies of what [haxcms-nodejs](https://github.com/haxtheweb/haxcms-nodejs) ships. Refresh them with:
 
 ```bash
 npm run sync-assets                         # shallow-clones haxcms-nodejs main
@@ -98,6 +98,10 @@ npm run sync-assets -- --dry-run            # report what would change
 ```
 
 `app/assets-source.json` records which haxcms-nodejs commit the assets came from. Translation files are left as they are unless you pass `--locales all`.
+
+When haxcms-nodejs starts or stops managing a file, `sync-assets` stops and asks for a decision: add the file to the rendered, copied or skipped list in `app/lib/managed.js`.
+
+The **Sync with HAX core** workflow (`.github/workflows/sync-core.yml`) does this weekly: it syncs from haxcms-nodejs main, builds, tests and checks the output against the HAXcms site contract, then opens or updates one pull request (`sync/haxcms-nodejs`) with the results and any decisions needed. It can also be started by hand from the Actions tab.
 
 ### Taking into HAXiam or HAXcms local versions
 
