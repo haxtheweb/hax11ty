@@ -73,7 +73,7 @@
 {% endfor %}  <link rel="preload" href="{% getGlobal 'assetBase' %}build/es6/node_modules/@haxtheweb/haxcms-elements/lib/base.css" as="style" />
 {% endif %}
   <link rel="modulepreload" href="{% getGlobal 'assetBase' %}build/es6/node_modules/{% getGlobal 'themePath' %}" crossorigin="anonymous" />
-{% getContentPreloads content %}  <link rel="preload" href="{% getGlobal 'basePath' %}theme/theme.css" as="style" />
+{% getContentPreloads content %}
   <meta name="generator" content="HAX11ty" />
   <link rel="manifest" href="{% getGlobal 'basePath' %}manifest.json">
   <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
@@ -121,12 +121,12 @@
               switch (installingWorker.state) {
                 case 'installed':
                   if (!navigator.serviceWorker.controller) {
-                    globalThis.dispatchEvent(new CustomEvent('simple-toast-show', {
+                    globalThis.dispatchEvent(new CustomEvent('haxcms-toast-show', {
                       bubbles: true,
                       cancelable: false,
                       detail: {
                         text: 'Pages you view are cached for offline use.',
-                        duration: 8000
+                        duration: 5000
                       }
                     }));
                   }
@@ -145,16 +145,16 @@
         if (navigator.serviceWorker.controller) {
           navigator.serviceWorker.controller.onstatechange = function(event) {
             if (event.target.state === 'redundant') {
-              var b = document.createElement('mwc-button');
+              var b = document.createElement('button');
+              b.type = 'button';
               b.appendChild(document.createTextNode('Reload'));
-              b.raised = true;
-              b.addEventListener('click', function(e){ globalThis.location.reload(true); });
-              globalThis.dispatchEvent(new CustomEvent('simple-toast-show', {
+              b.addEventListener('click', function(e){ globalThis.location.reload(); });
+              globalThis.dispatchEvent(new CustomEvent('haxcms-toast-show', {
                 bubbles: true,
                 cancelable: false,
                 detail: {
                   text: 'A site update is available. Reload for latest content.',
-                  duration: 12000,
+                  duration: 8000,
                   slot: b,
                   clone: false
                 }

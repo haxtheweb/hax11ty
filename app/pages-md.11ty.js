@@ -1,5 +1,5 @@
 /**
- * pages/<slug>/index.md: a markdown copy of each page, next to its index.html
+ * pages/<item id>/index.md: a markdown copy of each page, next to its index.html
  * like HAXcms writes it. llms.txt links to these for agents and AI crawlers.
  * Made from the rendered HTML so it matches what a HAXcms site would produce
  * whether the source file was markdown or HTML.

@@ -99,10 +99,12 @@ function buildOutline(entries) {
   const visit = (parentSlug, indent) => {
     const siblings = (children.get(parentSlug) || []).sort(compareSiblings);
     siblings.forEach((entry, index) => {
+      const id = itemId(entry.slug);
       items.push({
-        id: itemId(entry.slug),
+        id,
         indent,
-        location: `pages/${entry.slug}/index.html`,
+        // HAXcms keeps each page body in a folder named for the item id
+        location: `pages/${id}/index.html`,
         slug: entry.slug,
         order: index,
         title: entry.title,

@@ -83,7 +83,7 @@ function pagesToRender(siteDir) {
  * Run the worker over the files. Resolves with one result per page that came
  * back, plus the pages that did not.
  */
-function runWorker({ files, buildDir, registry, skipTags }, onResult, onGlobals) {
+function runWorker({ files, buildDir, publicBuild, registry, skipTags }, onResult, onGlobals) {
   return new Promise((resolve) => {
     const child = spawn(process.execPath, [path.join(root, "scripts", "ssr", "worker.mjs")], {
       cwd: root,
@@ -139,7 +139,7 @@ function runWorker({ files, buildDir, registry, skipTags }, onResult, onGlobals)
     });
     child.stdin.on("error", () => {});
     child.stdin.end(
-      JSON.stringify({ buildDir, registry, files, skipTags, elementTimeout: ELEMENT_TIMEOUT }),
+      JSON.stringify({ buildDir, publicBuild, registry, files, skipTags, elementTimeout: ELEMENT_TIMEOUT }),
     );
     arm();
   });
@@ -155,7 +155,13 @@ function writePage(file, html) {
   renameSync(tmp, file);
 }
 
-export async function renderSite(siteDir, buildDir, log = console.log) {
+/**
+ * @param {object} [options]
+ * @param {string} [options.publicBuild] where the published pages load the web
+ *   component build from (settings.assetBase + "build/es6/node_modules/")
+ */
+export async function renderSite(siteDir, buildDir, log = console.log, options = {}) {
+  const publicBuild = options.publicBuild || "./build/es6/node_modules/";
   const report = { pages: [], elements: {}, errors: {}, skippedPages: [] };
   let registry = {};
   try {
@@ -173,7 +179,7 @@ export async function renderSite(siteDir, buildDir, log = console.log) {
     if (!files.length) {
       break;
     }
-    const outcome = await runWorker({ files, buildDir, registry, skipTags }, (doc) => {
+    const outcome = await runWorker({ files, buildDir, publicBuild, registry, skipTags }, (doc) => {
       done.add(doc.file);
       const entry = { file: path.relative(siteDir, doc.file), elements: doc.elements || [] };
       report.pages.push(entry);
@@ -278,7 +284,9 @@ async function main() {
     return;
   }
   const started = Date.now();
-  const report = await renderSite(siteDir, buildDir);
+  const report = await renderSite(siteDir, buildDir, console.log, {
+    publicBuild: (settings.assetBase || "./") + "build/es6/node_modules/",
+  });
   console.log(summarize(report) + `\n  ${((Date.now() - started) / 1000).toFixed(1)}s`);
   try {
     writeFileSync(path.join(root, "app", "ssr-report.json"), JSON.stringify(report, null, 2) + "\n");

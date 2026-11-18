@@ -4,3 +4,4 @@ custom
 build
 *.hbs
 .well-known
+_haxcms

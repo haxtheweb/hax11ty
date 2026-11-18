@@ -1,7 +1,7 @@
 {
   "license": "Apache-2.0",
   "scripts": {
-    "start": "cd app && env NODE_OPTIONS=--openssl-legacy-provider hax11ty serve",
+    "start": "cd app && eleventy --serve",
     "preinstall": "cd src/custom && yarn install && cd ../..",
     "clean-up-pre": "rm -rf dist && mkdir dist",
     "clean-up-post": "rm dist/assets/styles.css && cp src/styles.css dist/assets/styles.css && rm -rf dist/custom && mkdir -p dist/custom && cp -R src/custom/build src/custom/src dist/custom/",
@@ -11,31 +11,18 @@
     "ssr": "node scripts/ssr-pages.mjs",
     "test": "node --test test/*.test.js"
   },
-  "bin": {
-    "eleventy": ".bin/eleventy"
-  },
   "devDependencies": {
-    "es-module-shims": "0.4.6",
-    "pnpm": "6.33.1",
-    "@11ty/eleventy": "1.0.1",
-    "@oclif/plugin-help": "5.1.12",
-    "@11ty/eleventy-plugin-rss": "1.0.7",
-    "@haxcms/11ty": "0.0.13",
-    "browserslist": "4.20.2",
-    "crypto": "1.0.1",
-    "eleventy-xml-plugin": "0.1.0",
-    "fs-extra": "8.1.0",
+    "@11ty/eleventy": "3.1.8",
+    "@11ty/eleventy-plugin-rss": "3.1.0",
+    "@11ty/gray-matter": "1.0.0",
     "@lit-labs/ssr": "4.1.0",
-    "gray-matter": "4.0.2",
+    "commit-and-tag-version": "13.3.0",
+    "fs-extra": "11.4.1",
     "lit": "3.3.3",
-    "turndown": "7.1.1",
-    "commit-and-tag-version": "12.7.3"
-  },
-  "resolutions": {
-    "browserslist": "4.20.2"
+    "nunjucks": "3.2.4",
+    "turndown": "7.2.5"
   },
   "dependencies": {
-    "es-module-shims": "0.4.6",
     "yarn": "1.22.22"
   },
   "version": "26.0.0"

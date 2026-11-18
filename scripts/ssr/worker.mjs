@@ -7,7 +7,7 @@
  * the inert browser surface from the vendored kit.
  *
  * Protocol: one JSON document on stdin
- *   { buildDir, registry, files: [path], skipTags: [tag], elementTimeout }
+ *   { buildDir, publicBuild, registry, files: [path], skipTags: [tag], elementTimeout }
  * and one JSON document per line on stdout:
  *   { fatal, message }                       cannot run at all
  *   { start: path, tag }                     about to render an element (watchdog)
@@ -21,6 +21,7 @@
  *   threw            import or render failed; the authored markup was kept
  *   timeout          did not finish in time; the authored markup was kept
  *   truncated        output passed the size cap; the authored markup was kept
+ *   local-path       output pointed at a file on the build machine; the authored markup was kept
  *   over-budget      the page already grew by the page cap; the authored markup was kept
  *   skipped          on the skip list or marked data-ssr="false"
  */
@@ -33,6 +34,7 @@ import { installInertDom } from "./inertDom.mjs";
 import { SSR_PRIMITIVE_CSS } from "./primitives.mjs";
 import { ssrSkipReason } from "./skip.mjs";
 import { MAX_HTML_BYTES, collectCapped, hasContent } from "./renderTag.mjs";
+import { publishUrls } from "./publishUrls.mjs";
 
 // Elements found to hang node while rendering (an endless loop in synchronous
 // code, which no timeout can interrupt). Kept apart from the vendored kit's
@@ -182,7 +184,14 @@ function classify(html, tag) {
 }
 
 async function main() {
-  const { buildDir, registry, files, skipTags = [], elementTimeout = 5000 } = await readStdin();
+  const {
+    buildDir,
+    publicBuild = "./build/es6/node_modules/",
+    registry,
+    files,
+    skipTags = [],
+    elementTimeout = 5000,
+  } = await readStdin();
   const ssrPackage = require.resolve("@lit-labs/ssr/package.json");
   const ssrDir = path.dirname(ssrPackage);
   const ssrRequire = createRequire(ssrPackage);
@@ -345,14 +354,20 @@ async function main() {
           entry.status = "truncated";
           continue;
         }
-        const status = classify(result.html, tag);
+        const rendered = publishUrls(result.html, buildDir, publicBuild);
+        if (/file:\/\//i.test(rendered)) {
+          entry.status = "local-path";
+          entry.error = "rendered markup points at a file on the build machine";
+          continue;
+        }
+        const status = classify(rendered, tag);
         entry.status = status;
-        entry.bytes = result.html.length;
+        entry.bytes = rendered.length;
         if (status === "empty") {
           continue;
         }
-        grown += result.html.length - raw.length;
-        accepted.push({ start: el.start, end: el.end, html: result.html });
+        grown += rendered.length - raw.length;
+        accepted.push({ start: el.start, end: el.end, html: rendered });
       } catch (error) {
         entry.status = "threw";
         entry.error = firstLine(error);
