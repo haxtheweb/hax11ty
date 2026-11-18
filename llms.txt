@@ -15,12 +15,12 @@ The canonical structure is expressed in `site.json` using JSON Outline Schema (`
 
 Each page is available as markdown. The same page as a web page is at `https://haxtheweb.github.io/hax11ty/<slug>/`.
 
-- [About](https://haxtheweb.github.io/hax11ty/pages/about/index.md)
-- [Examples](https://haxtheweb.github.io/hax11ty/pages/examples/index.md)
-- [Installation](https://haxtheweb.github.io/hax11ty/pages/install/index.md)
-- [Why this is better](https://haxtheweb.github.io/hax11ty/pages/why/index.md)
-- [Roadmap](https://haxtheweb.github.io/hax11ty/pages/roadmap/index.md)
-- [Get involved!](https://haxtheweb.github.io/hax11ty/pages/contact/index.md)
+- [About](https://haxtheweb.github.io/hax11ty/pages/item-5780daf6db0b013d/index.md)
+- [Examples](https://haxtheweb.github.io/hax11ty/pages/item-99345ce680cd3e48/index.md)
+- [Installation](https://haxtheweb.github.io/hax11ty/pages/item-89fb511ffe93ee78/index.md)
+- [Why this is better](https://haxtheweb.github.io/hax11ty/pages/item-10cff4034cedfb92/index.md)
+- [Roadmap](https://haxtheweb.github.io/hax11ty/pages/item-02acf9bb232eb70e/index.md)
+- [Get involved!](https://haxtheweb.github.io/hax11ty/pages/item-1a73af9e7ae00182/index.md)
 
 ## Optional
 

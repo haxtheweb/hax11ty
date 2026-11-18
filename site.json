@@ -1,5 +1,5 @@
 {
-  "id": "#26ecb1bc-cbd3-c7e4-ed28-e47fa61cb56f",
+  "id": "#33eee5ec-34f7-1d98-b294-43ff2e00082f",
   "title": "hax11ty",
   "author": "btopro",
   "description": "project documentation",
@@ -13,8 +13,8 @@
     },
     "site": {
       "name": "hax11ty",
-      "created": 1795024622503,
-      "updated": 1795024622503,
+      "created": 1795029680046,
+      "updated": 1795029680046,
       "git": {
         "autoPush": false,
         "branch": "master",
@@ -51,15 +51,15 @@
     {
       "id": "item-5780daf6db0b013d",
       "indent": 0,
-      "location": "pages/about/index.html",
+      "location": "pages/item-5780daf6db0b013d/index.html",
       "slug": "about",
       "order": 0,
       "title": "About",
       "description": "",
       "parent": null,
       "metadata": {
-        "created": 1795024584,
-        "updated": 1795024584,
+        "created": 1795029647,
+        "updated": 1795029647,
         "readtime": 1,
         "contentDetails": {},
         "files": []
@@ -68,15 +68,15 @@
     {
       "id": "item-99345ce680cd3e48",
       "indent": 0,
-      "location": "pages/examples/index.html",
+      "location": "pages/item-99345ce680cd3e48/index.html",
       "slug": "examples",
       "order": 1,
       "title": "Examples",
       "description": "",
       "parent": null,
       "metadata": {
-        "created": 1795024584,
-        "updated": 1795024584,
+        "created": 1795029647,
+        "updated": 1795029647,
         "readtime": 1,
         "contentDetails": {},
         "files": []
@@ -85,15 +85,15 @@
     {
       "id": "item-89fb511ffe93ee78",
       "indent": 0,
-      "location": "pages/install/index.html",
+      "location": "pages/item-89fb511ffe93ee78/index.html",
       "slug": "install",
       "order": 2,
       "title": "Installation",
       "description": "",
       "parent": null,
       "metadata": {
-        "created": 1795024584,
-        "updated": 1795024584,
+        "created": 1795029647,
+        "updated": 1795029647,
         "readtime": 1,
         "contentDetails": {},
         "files": []
@@ -102,15 +102,15 @@
     {
       "id": "item-10cff4034cedfb92",
       "indent": 0,
-      "location": "pages/why/index.html",
+      "location": "pages/item-10cff4034cedfb92/index.html",
       "slug": "why",
       "order": 3,
       "title": "Why this is better",
       "description": "",
       "parent": null,
       "metadata": {
-        "created": 1795024584,
-        "updated": 1795024584,
+        "created": 1795029647,
+        "updated": 1795029647,
         "readtime": 1,
         "contentDetails": {},
         "files": []
@@ -119,15 +119,15 @@
     {
       "id": "item-02acf9bb232eb70e",
       "indent": 0,
-      "location": "pages/roadmap/index.html",
+      "location": "pages/item-02acf9bb232eb70e/index.html",
       "slug": "roadmap",
       "order": 4,
       "title": "Roadmap",
       "description": "",
       "parent": null,
       "metadata": {
-        "created": 1795024584,
-        "updated": 1795024584,
+        "created": 1795029647,
+        "updated": 1795029647,
         "readtime": 1,
         "contentDetails": {},
         "files": []
@@ -136,15 +136,15 @@
     {
       "id": "item-1a73af9e7ae00182",
       "indent": 0,
-      "location": "pages/contact/index.html",
+      "location": "pages/item-1a73af9e7ae00182/index.html",
       "slug": "contact",
       "order": 5,
       "title": "Get involved!",
       "description": "",
       "parent": null,
       "metadata": {
-        "created": 1795024584,
-        "updated": 1795024584,
+        "created": 1795029647,
+        "updated": 1795029647,
         "readtime": 1,
         "contentDetails": {},
         "files": []
