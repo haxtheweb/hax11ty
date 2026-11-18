@@ -34,7 +34,7 @@ import { installInertDom } from "./inertDom.mjs";
 import { SSR_PRIMITIVE_CSS } from "./primitives.mjs";
 import { ssrSkipReason } from "./skip.mjs";
 import { MAX_HTML_BYTES, collectCapped, hasContent } from "./renderTag.mjs";
-import { publishUrls } from "./publishUrls.mjs";
+import { hasLocalPath, publishUrls } from "./publishUrls.mjs";
 
 // Elements found to hang node while rendering (an endless loop in synchronous
 // code, which no timeout can interrupt). Kept apart from the vendored kit's
@@ -355,7 +355,7 @@ async function main() {
           continue;
         }
         const rendered = publishUrls(result.html, buildDir, publicBuild);
-        if (/file:\/\//i.test(rendered)) {
+        if (hasLocalPath(rendered)) {
           entry.status = "local-path";
           entry.error = "rendered markup points at a file on the build machine";
           continue;

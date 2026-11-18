@@ -8,6 +8,9 @@
  *   npm run sync-assets -- --from <dir>      sync from an existing haxcms-nodejs checkout
  *   npm run sync-assets -- --locales all     also refresh every translation file
  *   npm run sync-assets -- --dry-run         report what would change, write nothing
+ *   npm run sync-assets -- --report-decisions <file>
+ *                                            sync anyway and list the decisions
+ *                                            it needs in <file> (the weekly job)
  *
  * What is synced (target <- source, relative to the haxcms-nodejs repo):
  *   app/build/                 <- src/public/build/   (mirrored; locales kept as-is by default)
@@ -24,6 +27,15 @@
  *     these exact files, so a site from hax11ty matches one from HAXcms.
  *   app/assets/<file>          <- src/boilerplate/site/assets/<file>, only for
  *     boilerplate icons the site does not have yet (a site's own icons win)
+ *   scripts/ssr/<file>.mjs     <- src/lib/ssr/<file>.mjs, the SSR kit, each with
+ *     a header naming the commit it came from (index.mjs is not copied; the
+ *     worker imports the modules directly)
+ *
+ * Decisions it will not make: haxcms-nodejs lists the files it manages in
+ * getManagedTemplateFiles() (src/lib/HAXCMS.js). Each must be rendered,
+ * copied or skipped on purpose in app/lib/managed.js. When upstream adds one
+ * hax11ty has no answer for, or drops one hax11ty still ships, this exits
+ * with an error and writes nothing.
  *
  * Locales: haxcms-nodejs ships a translation file per element per language
  * (tens of thousands of files). A static site only needs them for non-English
@@ -52,9 +64,8 @@ import { fileURLToPath } from "node:url";
 const UPSTREAM = "https://github.com/haxtheweb/haxcms-nodejs";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const app = path.join(root, "app");
-const { MANAGED_FILES } = createRequire(import.meta.url)(
-  path.join(app, "lib", "managed.js"),
-);
+const { MANAGED_FILES, COPIED_MANAGED_FILES, SKIPPED_MANAGED_FILES } =
+  createRequire(import.meta.url)(path.join(app, "lib", "managed.js"));
 
 const args = process.argv.slice(2);
 const flag = (name) => args.includes(`--${name}`);
@@ -102,6 +113,8 @@ function resolveSource() {
     "/src/public/",
     "/src/boilerplate/site/.well-known/agent-skills/",
     "/src/boilerplate/site/assets/",
+    "/src/lib/ssr/",
+    "/src/lib/HAXCMS.js",
     ...MANAGED_FILES.map((file) => `/src/boilerplate/site/${file}`),
   );
   if (sparse.status !== 0) {
@@ -168,8 +181,115 @@ function mirror(srcDir, destDir, { skipLocales }) {
   }
 }
 
+/**
+ * Paths haxcms-nodejs manages: getManagedTemplateFiles() plus what
+ * rebuildManagedFiles() adds (index.php, config.php).
+ */
+function upstreamManagedFiles(sourceDir) {
+  const file = path.join(sourceDir, "src", "lib", "HAXCMS.js");
+  if (!existsSync(file)) {
+    return null;
+  }
+  const code = readFileSync(file, "utf8");
+  const start = code.indexOf("getManagedTemplateFiles() {");
+  const end = start === -1 ? -1 : code.indexOf("};", start);
+  if (end === -1) {
+    return null;
+  }
+  const paths = new Set();
+  for (const match of code.slice(start, end).matchAll(/:\s*"([^"]+)"/g)) {
+    paths.add(match[1]);
+  }
+  const rebuild = code.indexOf("rebuildManagedFiles() {");
+  if (rebuild !== -1) {
+    const body = code.slice(rebuild, rebuild + 2000);
+    for (const match of body.matchAll(/templates\["\w+"\]\s*=\s*"([^"]+)"/g)) {
+      paths.add(match[1]);
+    }
+  }
+  return paths;
+}
+
+function checkManagedDecisions(sourceDir) {
+  const upstream = upstreamManagedFiles(sourceDir);
+  if (!upstream || upstream.size === 0) {
+    return ["could not read getManagedTemplateFiles() from src/lib/HAXCMS.js"];
+  }
+  const decided = new Set([
+    ...MANAGED_FILES,
+    ...COPIED_MANAGED_FILES,
+    ...Object.keys(SKIPPED_MANAGED_FILES),
+  ]);
+  const problems = [];
+  for (const file of upstream) {
+    if (!decided.has(file)) {
+      problems.push(`haxcms-nodejs now manages ${file}; render, copy or skip it in app/lib/managed.js`);
+    }
+  }
+  for (const file of decided) {
+    if (!upstream.has(file)) {
+      problems.push(`haxcms-nodejs no longer manages ${file}; drop it from app/lib/managed.js`);
+    }
+  }
+  return problems;
+}
+
+const KIT_HEADER = (commit, file) =>
+  [
+    "// Vendored, unmodified apart from this header, from",
+    `// https://github.com/haxtheweb/haxcms-nodejs/blob/${commit}/src/lib/ssr/${file}`,
+    "// (Apache-2.0, same as this repository). The kit is not in a published",
+    "// @haxtheweb/haxcms-nodejs yet. When it ships, delete scripts/ssr/ kit files",
+    "// and import it from the package instead.",
+    "",
+  ].join("\n");
+
+/**
+ * Copy the SSR kit. A file whose upstream body is unchanged keeps its header,
+ * so a sync only touches the kit when the kit changed.
+ */
+function syncKit(sourceDir, commit) {
+  const kit = path.join(sourceDir, "src", "lib", "ssr");
+  if (!existsSync(kit)) {
+    return;
+  }
+  for (const name of readdirSync(kit)) {
+    if (!name.endsWith(".mjs") || name === "index.mjs") {
+      continue;
+    }
+    const body = readFileSync(path.join(kit, name), "utf8");
+    const dest = path.join(root, "scripts", "ssr", name);
+    if (existsSync(dest)) {
+      const current = readFileSync(dest, "utf8");
+      if (current.endsWith(body) && current.startsWith("// Vendored, unmodified")) {
+        stats.same += 1;
+        continue;
+      }
+    }
+    stats[existsSync(dest) ? "updated" : "added"] += 1;
+    if (!dryRun) {
+      writeFileSync(dest, KIT_HEADER(commit, name) + body);
+    }
+  }
+}
+
 const source = resolveSource();
 try {
+  const problems = checkManagedDecisions(source.dir);
+  const reportFile = option("report-decisions");
+  if (reportFile && !dryRun) {
+    writeFileSync(reportFile, problems.map((problem) => `- ${problem}\n`).join(""));
+  }
+  if (problems.length && reportFile) {
+    console.warn(`sync-assets: ${problems.length} decision(s) needed, listed in ${reportFile}`);
+  } else if (problems.length) {
+    console.error("sync-assets needs a decision before it can sync:");
+    for (const problem of problems) {
+      console.error(`  - ${problem}`);
+    }
+    source.cleanup();
+    process.exit(1);
+  }
   const pub = path.join(source.dir, "src", "public");
   mirror(path.join(pub, "build"), path.join(app, "build"), {
     skipLocales: localesMode === "keep",
@@ -216,6 +336,7 @@ try {
     }
   }
   const commit = git(source.dir, "rev-parse", "HEAD").stdout.trim();
+  syncKit(source.dir, commit || "main");
   const provenance = {
     source: UPSTREAM,
     commit: commit || null,

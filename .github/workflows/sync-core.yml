@@ -1,0 +1,121 @@
+name: Sync with HAX core
+# Weekly: pull haxcms-nodejs main into hax11ty (npm run sync-assets), then
+# build, test and check the output against the HAXcms site contract. The
+# result is one pull request, opened or updated in place, that says what
+# passed, what failed and any decisions the sync needs. Nothing merges on its
+# own. When core has not changed, no pull request is opened.
+on:
+  schedule:
+    # Wednesdays 13:17 UTC
+    - cron: "17 13 * * 3"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-core
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.7
+        with:
+          persist-credentials: false
+
+      - name: Node
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 22
+
+      - name: Install
+        run: yarn install --frozen-lockfile
+
+      - name: Sync from haxcms-nodejs main
+        id: sync
+        run: node scripts/sync-assets.mjs --report-decisions "$RUNNER_TEMP/decisions.md"
+
+      - name: Build
+        id: build
+        continue-on-error: true
+        run: yarn run build
+
+      - name: Test
+        id: test
+        continue-on-error: true
+        run: yarn test
+
+      - name: Site contract
+        id: contract
+        if: steps.build.outcome == 'success'
+        continue-on-error: true
+        run: |
+          git clone --depth 1 https://github.com/haxtheweb/json-outline-schema "$RUNNER_TEMP/jos"
+          (cd "$RUNNER_TEMP/jos" && npm install --ignore-scripts --no-audit --no-fund)
+          node "$RUNNER_TEMP/jos/scripts/validate.js" --site --level runnable dist | tee "$RUNNER_TEMP/contract.txt"
+
+      - name: Write the pull request body
+        id: body
+        env:
+          SYNC: ${{ steps.sync.outcome }}
+          BUILD: ${{ steps.build.outcome }}
+          TEST: ${{ steps.test.outcome }}
+          CONTRACT: ${{ steps.contract.outcome }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          commit=$(node -p "require('./app/assets-source.json').commit.slice(0, 7)")
+          echo "commit=$commit" >> "$GITHUB_OUTPUT"
+          mark() { case "$1" in success) echo "passed";; skipped) echo "not run";; *) echo "**failed**";; esac; }
+          body="$RUNNER_TEMP/body.md"
+          {
+            echo "Weekly sync of hax11ty with [haxcms-nodejs main @ $commit](https://github.com/haxtheweb/haxcms-nodejs/commit/$commit), from \`npm run sync-assets\`."
+            echo
+            if [ -s "$RUNNER_TEMP/decisions.md" ]; then
+              echo "## Decisions needed before merging"
+              echo "haxcms-nodejs changed which files it manages. Render, copy or skip each in \`app/lib/managed.js\`:"
+              echo
+              cat "$RUNNER_TEMP/decisions.md"
+              echo
+            fi
+            echo "## Checks (this run: $RUN_URL)"
+            echo "- build: $(mark "$BUILD")"
+            echo "- tests: $(mark "$TEST")"
+            echo "- site contract, runnable level: $(mark "$CONTRACT")"
+            if [ -s "$RUNNER_TEMP/contract.txt" ]; then
+              echo
+              echo '```'
+              head -40 "$RUNNER_TEMP/contract.txt"
+              echo '```'
+            fi
+            echo
+            echo "This pull request is opened by a scheduled workflow, so the usual pull request checks do not start on it; the results above are from the run that made it."
+          } > "$body"
+          cat "$body" >> "$GITHUB_STEP_SUMMARY"
+          if [ "$BUILD" != "success" ] || [ "$TEST" != "success" ] || [ "$CONTRACT" != "success" ] || [ -s "$RUNNER_TEMP/decisions.md" ]; then
+            echo "attention=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open or update the sync pull request
+        uses: peter-evans/create-pull-request@3ffccacd46053766916f087ce41d627c0b8cf2d1 # v8.1.3
+        with:
+          branch: sync/haxcms-nodejs
+          delete-branch: true
+          sign-commits: true
+          add-paths: |
+            app
+            scripts
+          commit-message: "[hax11ty] Sync with haxcms-nodejs ${{ steps.body.outputs.commit }}"
+          title: "[hax11ty] Sync with haxcms-nodejs ${{ steps.body.outputs.commit }}${{ steps.body.outputs.attention == 'true' && ' (needs attention)' || '' }}"
+          body-path: ${{ runner.temp }}/body.md
+
+      - name: Fail the run when the sync needs attention
+        if: steps.body.outputs.attention == 'true'
+        run: |
+          echo "The sync pull request lists what failed or needs a decision."
+          exit 1
