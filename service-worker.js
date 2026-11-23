@@ -18,23 +18,23 @@
 var shellFiles = [
     [
         "index.html",
-        "C3pcnvXCkLVU9g2ISdQGHbqCo62tnNHvZGI4KE2M"
+        "d4kXeTdWqIwtwV7jTuat5OV5CEC5PMpIcY5CRcJicc"
     ],
     [
         "site.json",
-        "dMVo7CWnGHcOFNHP1YXO3LF5z3QzBSZuXhizoPr9IQ"
+        "2WxUk1LPrMez0YKBC97FVbiH9vG1jKAsr9wKmsLZa8"
     ],
     [
         "manifest.json",
-        "MUGTDoCEY4o9DtQJIi0JBvFryJqkRtGGX5ij7W6QI"
+        "9FSwWxYqBJPiwpNFRpg5k6uf1cRBCKylr5Zpvfnf0"
     ],
     [
         "offline.html",
-        "U0pE6K5x3nwxAYVl5nQL9NqNlaHcv3ldIjoYAZCVIk"
+        "d0FZcO8zw0v6BKVhKY1vRnrz4vp4H4xG8jeKZFUR4"
     ],
     [
         "assets/icon-192x192.png",
-        "CK2bDYOOxp21GK5472IQFGrc7OYuj2LiT5I1653I"
+        "cXciG0iUxizoyjEirJ2397kEW8RYAcjneZi6buJIs"
     ]
 ];
 
