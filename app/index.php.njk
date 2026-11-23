@@ -64,10 +64,11 @@ eleventyExcludeFromCollections: true
       top: 50%;
       transform: translateY(-50%);
     }
-    #loading div.messaging h1 {
+    #loading div.messaging .loading-label {
       color: white;
       font-family: 'Open Sans', 'arial', 'serif';
       font-size: 40px;
+      font-weight: bold;
       background-color: <?php print $color; ?>;
       transition: .4s ease-in-out all;
     }
@@ -141,11 +142,11 @@ eleventyExcludeFromCollections: true
   </script>
 </head>
 <body no-js <?php print $site->getSitePageAttributes();?>>
-  <div id="loading">
+  <div id="loading" role="status">
     <div class="messaging">
       <img src="<?php print $site->getLogoSize('300', '300');?>" alt="" loading="lazy" height="300px" width="300px" />
-      <div class="progress-line"></div>
-      <h1>Loading <?php print $site->name; ?>..</h1>
+      <div class="progress-line" aria-hidden="true"></div>
+      <p class="loading-label">Loading <?php print $site->name; ?>..</p>
     </div>
   </div>
   <haxcms-site-builder id="site" file="site.json<?php print $HAXCMS->cacheBusterHash();?>">

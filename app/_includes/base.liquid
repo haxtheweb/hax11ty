@@ -225,9 +225,10 @@
       text-align: center;
       top: 10vh;
     }
-    #loading div.messaging h1 {
+    #loading div.messaging .loading-label {
       font-family: Helvetica, Verdana, sans-serif !important;
       font-size: 4vw !important;
+      font-weight: bold;
       margin: 24px auto 0;
       padding: 0;
     }
@@ -363,11 +364,11 @@
   </script>
 </head>
 <body vocab="http://schema.org/" prefix="oer:http://oerschema.org cc:http://creativecommons.org/ns dc:http://purl.org/dc/terms/">
-  <section role="alert" id="loading" aria-busy="true">
+  <section role="status" id="loading" aria-busy="true">
     <div class="messaging">
-      <div class="loading-circle"></div>
-      <div class="progress-line"></div>
-      <h1>Loading {% getGlobal 'siteName' %}</h1>
+      <div class="loading-circle" aria-hidden="true"></div>
+      <div class="progress-line" aria-hidden="true"></div>
+      <p class="loading-label">Loading {% getGlobal 'siteName' %}</p>
     </div>
   </section>
   {{ content }}
